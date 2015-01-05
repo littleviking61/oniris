@@ -1,0 +1,63 @@
+// variables
+
+$rem-base: 16px;
+//$body-font-family: "GandhiSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// color
+
+// foundation color
+
+$bgColor: #f2f2f2;
+$yellow: #ffbc16;
+$darkGrey: #5f5f5f;
+
+
+$primary-color: $yellow;
+// $body-font-color: $white;
+// $header-font-color: $white;
+
+// background
+
+// font size
+
+$ft-size-mini: rem-calc(11);
+$ft-size-normal: rem-calc(13);
+$ft-size-medium: rem-calc(15);
+$ft-size-large: rem-calc(18);
+$ft-size-larger: rem-calc(20);
+$ft-size-largest: rem-calc(24);
+
+// gutter
+
+$gutter: rem-calc(10);
+$gutter-medium: $gutter*1.5;
+$gutter-large: $gutter*2;
+$gutter-small: $gutter/2;
+$gutter-mini: $gutter/3;
+
+// // foundation other
+
+// $row-width: 100%;
+// $include-open-sans: false;
+// $column-width: rem-calc(74.5);
+
+// $button-font-weight: bold;
+// $button-font-color: $dark-blue;
+
+// $orbit-caption-bg: $white;
+// $orbit-caption-font-color: $dark-blue;
+
+// $orbit-nav-bg: $white;
+// $orbit-nav-arrow-color: $dark-blue;
+// $orbit-nav-arrow-color-hover: darken($dark-blue,10%);
+
+// $orbit-timer-bg: $dark-blue;
+
+// $accordion-navigation-bg-color: $dark-blue;
+// $accordion-navigation-padding: $gutter-small $gutter;
+// $accordion-navigation-font-color: white;
+// $accordion-navigation-border: thin solid transparent;
+// $accordion-navigation-border-hover: thin solid $dark-blue;
+// $accordion-navigation-hover-bg-color: transparent;
+// $accordion-navigation-active-bg-color: $dark-blue;
+// $accordion-navigation-font-color-hover: $dark-blue;

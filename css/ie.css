@@ -1,0 +1,13 @@
+body{
+	background: #f88b05; /* Old browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f88b05', endColorstr='#362e74',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+header.main {
+	float: left;
+	display: block;
+}
+
+section.main {
+	display: block;
+	margin-left: 260px;
+}

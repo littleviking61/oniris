@@ -1,0 +1,29 @@
+// layout.scss
+
+body{
+	@include display-flex;
+	@include flex-direction(column);
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+header.main {
+	@include display-flex;
+	width: 100%;
+	height: rem-calc(140);
+	@include justify-content(flex-start);
+}
+
+.wrap {
+	@include display-flex;
+	@include align-self(stretch);
+	@include flex(1);
+	overflow: hidden;
+}
+
+nav.main {
+	@include display-flex;
+	@include flex(0 0 auto);
+	width: rem-calc(200);
+}
