@@ -12,7 +12,7 @@
 	<!--[if IE]>
 	<link rel='stylesheet' id='ie-css'  href='/wp-content/themes/dyva/css/ie.css' type='text/css' media='all' />
 	<![endif]-->
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 
 </head>
 

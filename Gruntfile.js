@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             },
 
             other: {
-                files: ['**/*.php', 'css/*.css'],
+                files: ['**/*.php', 'css/*.css', '!css/style.css'],
                 options: {
                     livereload: true,
                     spawn: false
@@ -39,13 +39,13 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'css/style.css': 'scss/style.scss'
-                },
-                options: {
-                    compass: 'true',
-                    quiet: 'true',
-                    style: 'nested',
-                    sourcemap: 'true'
                 }
+            },
+            options: {
+                compass: true,
+                quiet: true,
+                style: 'nested',
+                require: 'susy'
             }
         }
 

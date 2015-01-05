@@ -117,8 +117,6 @@ function reverie_scripts_and_styles() {
     if( get_option( 'thread_comments' ) )  { wp_enqueue_script( 'comment-reply' ); }
 
     // adding Foundation scripts file in the footer
-    wp_register_script( 'reverie-js', get_template_directory_uri() . '/js/foundation.min.js', array( 'jquery' ), '', true );
-    wp_register_script( 'masonry-js', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'main-js', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '', true );
 
     global $is_IE;
@@ -136,10 +134,8 @@ function reverie_scripts_and_styles() {
     */
     wp_enqueue_script( 'jquery' );
 
-    wp_enqueue_script( 'reverie-js' );
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'main-js' );
-    wp_enqueue_script( 'masonry-js' );
   }
 }
 

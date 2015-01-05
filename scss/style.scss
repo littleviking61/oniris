@@ -1,12 +1,12 @@
 // Global.scss
-
-@import "foundation/functions";
-@import "foundation";
 @import "compass";
+@import "susy";
+
+@import "functions";
 @import "variables";
 @import "mixins";
-@import "basic";
 
+@import "basic";
 @import "font";
 
 @import "layout";

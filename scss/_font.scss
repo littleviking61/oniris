@@ -5,7 +5,5 @@
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-Bold-webfont',bold);
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
  */
-// Foundicon
 
-@include font-face-bb('foundation-icons', '../ft/foundation-icons/foundation-icons', normal, normal, 'fontcustom');
-@import "foundation-icons";
+// icon
