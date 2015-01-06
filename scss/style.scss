@@ -1,9 +1,16 @@
 // Global.scss
-@import "compass";
+
+@import "compass/css3";
+@import "compass/utilities";
+
 @import "susy";
+@import "font-awesome";
 
 @import "functions";
 @import "variables";
+
+@import "ink/ink-flex";
+
 @import "mixins";
 
 @import "basic";

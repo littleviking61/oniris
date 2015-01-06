@@ -33,7 +33,7 @@ init_css_sass();
 3. lib/foundation.php
 	- add pagination
 */
-require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
+// require_once('lib/foundation.php'); // load Foundation specific functions like top-bar
 /*
 4. lib/nav.php
 	- custom walker for top-bar and related

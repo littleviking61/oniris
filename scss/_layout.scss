@@ -1,29 +1,23 @@
 // layout.scss
 
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: 1120px,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box 
+);
+
 body{
-	@include display-flex;
-	@include flex-direction(column);
-	min-height: 100vh;
-	padding: 0;
-	margin: 0;
-}
+	@include container;
+	background-color: $bgColor;
 
-header.main {
-	@include display-flex;
-	width: 100%;
-	height: rem-calc(140);
-	@include justify-content(flex-start);
-}
+    > nav{
+		@include span(4); 
+	}
 
-.wrap {
-	@include display-flex;
-	@include align-self(stretch);
-	@include flex(1);
-	overflow: hidden;
-}
-
-nav.main {
-	@include display-flex;
-	@include flex(0 0 auto);
-	width: rem-calc(200);
+	> main{
+		@include span(8 last); 
+	}
 }
