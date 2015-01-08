@@ -202,6 +202,55 @@ function my_acf_result_query_salons( $args, $field, $post )
 add_filter('acf/fields/relationship/query/name=relation_artistes', 'my_acf_result_query_artistes', 10, 3);
 add_filter('acf/fields/relationship/query/name=relation_salons', 'my_acf_result_query_salons', 10, 3);
 
-
+// font on menu
+// 
+function menu( $nav ){
+    $menu_item = preg_replace_callback(
+        '/(<li[^>]+class=")([^"]+)("?[^>]+>[^>]+>)([^<]+)<\/a>/',
+        'replace',
+        $nav
+    );
+    return $menu_item;
+}
+    
+function replace( $a ){
+    $start = $a[ 1 ];
+    $classes = $a[ 2 ];
+    $rest = $a[ 3 ];
+    $text = $a[ 4 ];
+    $before = true;
+    
+    $class_array = explode( ' ', $classes );
+    $icon_class = array();
+    foreach( $class_array as $key => $val ){
+        if( 'icon' == substr( $val, 0, 2 ) ){
+            if( 'icon' == $val ){
+                unset( $class_array[ $key ] );
+            } elseif( 'fa-after' == $val ){
+                $before = false;
+                unset( $class_array[ $key ] );
+            } else {
+                $icon_class[] = $val;
+                unset( $class_array[ $key ] );
+            }
+        }
+    }
+    
+    if( !empty( $icon_class ) ){
+        $icon_class[] = 'icon';
+        //$settings = get_option( 'n9m-font-awesome-4-menus', $this->defaults );
+        if( $before ){
+            $newtext = '<i class="'.implode( ' ', $icon_class ).'"></i><span>'.$text.'</span>';
+        } else {
+            $newtext = '<span>'.$text.'</span><i class="'.implode( ' ', $icon_class ).'"></i>';
+        }
+    } else {
+        $newtext = $text;
+    }
+    
+    $item = $start.implode( ' ', $class_array ).$rest.$newtext.'</a>';
+    return $item;
+}
+add_filter( 'wp_nav_menu' , 'menu', 10, 2 );
 
 ?>
