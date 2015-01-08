@@ -223,10 +223,10 @@ function replace( $a ){
     $class_array = explode( ' ', $classes );
     $icon_class = array();
     foreach( $class_array as $key => $val ){
-        if( 'icon' == substr( $val, 0, 2 ) ){
+        if( 'icon' == substr( $val, 0, 4 ) ){
             if( 'icon' == $val ){
                 unset( $class_array[ $key ] );
-            } elseif( 'fa-after' == $val ){
+            } elseif( 'icon-after' == $val ){
                 $before = false;
                 unset( $class_array[ $key ] );
             } else {

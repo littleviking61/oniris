@@ -21,9 +21,11 @@
 		<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
 		<span class="hide"><?php bloginfo('name'); ?></span></a>
 	</h1>
-	<nav class="main">
-	    <?php wp_nav_menu( array( 'theme_location' => 'primary' )); ?>
-	</nav>
+    <?php wp_nav_menu( array( 
+    	'container' => 'nav',
+    	'container_class' => 'ink-navigation main',
+    	'menu_class'      => 'menu horizontal black',
+    	'theme_location' => 'primary' )); ?>
 
 	<!-- End of Top-Bar -->
 </header>
