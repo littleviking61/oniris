@@ -4349,11 +4349,37 @@ body {
 .hide {
   display: none; }
 
+header.main {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  header.main .go-right {
+    margin-left: auto; }
+  header.main .full {
+    -webkit-flex: 1;
+    flex: 1; }
+  header.main .unbreak {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0; }
+
 /* @include font-face-bb('GandhiSans', '../ft/GandhiSans-Regular-webfont');
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-Italic-webfont', normal, italic);
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-Bold-webfont',bold);
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
  */
+header.main {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  padding: 1.25rem;
+  padding-bottom: 0; }
+  header.main h1 {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    -webkit-flex: 1 0 16.875rem;
+    flex: 1 0 16.875rem;
+    margin-bottom: 0; }
+
 body {
   max-width: 100%;
   margin-left: 0;
@@ -4364,12 +4390,12 @@ body {
     display: block;
     clear: both; }
   body > nav {
-    width: 32.20339%;
+    width: 11.25rem;
     float: left;
     margin-right: 1.69492%; }
   body > main {
     width: 66.10169%;
-    float: right;
+    float: left;
     margin-right: 0; }
 
 /*# sourceMappingURL=style.css.map */

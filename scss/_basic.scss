@@ -13,3 +13,27 @@ body{
 .hide{
 	display: none;
 }
+
+%flex-column-wrap{
+	@include display-flex;
+	@include flex-wrap(wrap);
+
+	.go-right{
+		margin-left: auto;
+	}
+
+	.full{
+		@include flex(1);
+	}
+
+	.unbreak{
+		@include flex-shrink(0);
+	}
+}
+
+%flex-center-center{
+	@include display-flex;
+	@include flex-wrap(wrap);
+	@include align-items(center);
+	@include justify-content(center);
+}

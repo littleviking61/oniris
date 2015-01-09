@@ -202,8 +202,16 @@ function my_acf_result_query_salons( $args, $field, $post )
 add_filter('acf/fields/relationship/query/name=relation_artistes', 'my_acf_result_query_artistes', 10, 3);
 add_filter('acf/fields/relationship/query/name=relation_salons', 'my_acf_result_query_salons', 10, 3);
 
+// search box on menu
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+function add_search_form($items, $args) {
+if( $args->theme_location == 'primary' )
+        $items .=  file_get_contents(locate_template('search-home.php'));
+        return $items;
+}
+
 // font on menu
-// 
 function menu( $nav ){
     $menu_item = preg_replace_callback(
         '/(<li[^>]+class=")([^"]+)("?[^>]+>[^>]+>)([^<]+)<\/a>/',

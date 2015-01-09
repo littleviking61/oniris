@@ -1,25 +1,55 @@
 // layout.scss
 
 $susy: (
-  columns: 12,
-  container: auto,
-  container-position: left,
-  global-box-sizing: border-box,
-  gutter-width: $gutter
+	columns: 12,
+	container: auto,
+	container-position: left,
+	global-box-sizing: border-box,
+	gutter-width: $gutter,
+	last-flow: from,
+	math: fluid,
 );
+
+$susy-static: (
+	columns: 12,
+	container: 100%,
+	container-position: left,
+	global-box-sizing: border-box,
+	gutter-width: $gutter,
+	math: static,
+	column-width: $column-width,
+);
+
+$susy-right: (
+	last-flow: to,
+);
+
+header.main{
+	@extend %flex-column-wrap;
+	@include align-items(flex-end);
+
+	padding: $gutter-large;
+	padding-bottom: 0;
+
+	h1{
+		@include flex-shrink(0);
+		@include flex(1 0 rem-calc(270));
+		margin-bottom: 0;
+	}
+
+	nav{
+	}
+}
 
 body{
 	@include container;
 	background-color: $bgColor;
 
     > nav{
-		@include span(4); 
+		@include span(rem-calc(180)); 
 	}
 
 	> main{
 		@include span(8 last); 
 	}
-}
-
-header.main{
 }
