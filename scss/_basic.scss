@@ -10,9 +10,21 @@ body{
     width: 100%;
 }
 
+nav{
+	ul{
+		list-style: none;
+		padding-left: 0;
+	}
+}
+
+
+// utilities class
+
 .hide{
 	display: none;
 }
+
+// flex template
 
 %flex-column-wrap{
 	@include display-flex;

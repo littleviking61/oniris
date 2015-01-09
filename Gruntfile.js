@@ -9,7 +9,11 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['scss/**/*.{scss,sass}'],
-                tasks: ['sass:dist']
+                tasks: ['sass:dist'],
+                options: {
+                    livereloadOnError: false,
+                    spawn: false
+                }
             },
 
             js : {

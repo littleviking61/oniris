@@ -38,12 +38,15 @@ header.main{
 	}
 
 	nav{
+		ul{
+			@extend %flex-center-center;
+		}
 	}
 }
 
 body{
 	@include container;
-	background-color: $bgColor;
+	background-color: $bg-color;
 
     > nav{
 		@include span(rem-calc(180)); 
