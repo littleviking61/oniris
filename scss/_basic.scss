@@ -1,24 +1,38 @@
 // basic
 
 html{
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body{
-    min-height: 100%;
-    width: 100%;
+  min-height: 100%;
+  width: 100%;
 }
 
-nav{
+nav, aside{
 	ul{
 		list-style: none;
-		padding-left: 0;
+	 	padding-left: 0;
 	}
 }
 
+/* LINK BASIC */
 
-// utilities class
+a{
+	text-decoration: none;
+	color: $grey;
+
+	&:hover, &.active{
+		color: $yellow;
+	}
+}
+
+.current-menu-item a{
+	@extend a.active;
+}
+
+/* utilities class */
 
 .hide{
 	display: none;
@@ -26,10 +40,7 @@ nav{
 
 // flex template
 
-%flex-column-wrap{
-	@include display-flex;
-	@include flex-wrap(wrap);
-
+%flex-general{
 	.go-right{
 		margin-left: auto;
 	}
@@ -43,8 +54,24 @@ nav{
 	}
 }
 
-%flex-center-center{
+%flex-column{
 	@include display-flex;
+}
+
+%flex-row{
+	@include display-flex;
+	@include flex-direction(column);
+}
+
+%flex-column-wrap{
+	@extend %flex-column;
+	@include flex-wrap(wrap);
+
+	@extend %flex-general;
+}
+
+%flex-center-center{
+	@extend %flex-column;
 	@include flex-wrap(wrap);
 	@include align-items(center);
 	@include justify-content(center);

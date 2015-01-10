@@ -1,58 +1,80 @@
 // layout.scss
 
-$susy: (
-	columns: 12,
-	container: auto,
-	container-position: left,
-	global-box-sizing: border-box,
-	gutter-width: $gutter,
-	last-flow: from,
-	math: fluid,
-);
+/* GENERAL BODY */
 
-$susy-static: (
-	columns: 12,
-	container: 100%,
-	container-position: left,
-	global-box-sizing: border-box,
-	gutter-width: $gutter,
-	math: static,
-	column-width: $column-width,
-);
+body{
+	background-color: $bg-color;
+	font-family: $body-font-family;
+	font-size: $ft-size-normal;
+}
 
-$susy-right: (
-	last-flow: to,
-);
+/* HEADER */
 
 header.main{
 	@extend %flex-column-wrap;
 	@include align-items(flex-end);
 
-	padding: $gutter-large;
+	font-family: $title-font-family;	
+	padding: $gutter-extra-large;
 	padding-bottom: 0;
 
 	h1{
 		@include flex-shrink(0);
 		@include flex(1 0 rem-calc(270));
-		margin-bottom: 0;
+		margin: 0;
 	}
 
 	nav{
+
 		ul{
 			@extend %flex-center-center;
+
+			a{
+				@include display-flex;
+				@include transition(all .3s);
+
+				font-size: $ft-size-medium;
+				text-transform: lowercase;
+				padding-top: $gutter-small;
+				margin: 0 $gutter;
+				order-bottom: solid $two transparent;
+				
+				i:before{
+					margin-right: $gutter-small;
+				}
+			}
+
+			.current-menu-item a, a:hover, a.active{
+				&:not([href="#"]) {
+					border-bottom: solid $two	 $yellow;
+					margin-bottom: rem-calc(8);
+				}
+			}
 		}
+	}
+
+	.switch-lang{
+		margin-right: 80vw;
 	}
 }
 
-body{
-	@include container;
-	background-color: $bg-color;
+/* MAIN */
 
-    > nav{
-		@include span(rem-calc(180)); 
+main{
+	@extend %flex-column;
+	padding: $gutter-medium $gutter-extra-large 0;
+
+	aside.main{
+		min-width: rem-calc(180);
 	}
 
-	> main{
-		@include span(8 last); 
+	.content{
+		opacity: 0;
 	}
+}
+
+/* FOOTER */
+
+footer.main{
+	display: none;
 }

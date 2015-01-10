@@ -10,10 +10,6 @@ module.exports = function(grunt) {
             sass: {
                 files: ['scss/**/*.{scss,sass}'],
                 tasks: ['sass:dist'],
-                options: {
-                    livereloadOnError: false,
-                    spawn: false
-                }
             },
 
             js : {
@@ -30,6 +26,7 @@ module.exports = function(grunt) {
                 files: ['**/*.php', 'css/*.css', '!css/style.css'],
                 options: {
                     livereload: true,
+                    livereloadOnError: false,
                     spawn: false
                 }
             }

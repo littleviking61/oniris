@@ -1,37 +1,41 @@
 // variables
 
 $rem-base: 16px;
-//$body-font-family: "GandhiSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-font-family: "asapregular", Helvetica, Arial, sans-serif;
+$title-font-family: "roboto_slabregular" serif;
 
 // color
-
 $lightest-grey: #f2f2f2;
 $light-grey: #8c8c8c;
-$grey: #4d4d4d;
-$yellow: #ffbc16;
+$grey: #595959;
+$yellow: #ffbc17;
 $red: #f23518;
 $blue: #0252cf;
 $green: #42b04f;
 $progress: #ffbc16;
 
+// element color
 $bg-color: $lightest-grey;
 
-// background
-
 // font size
+$ft-size-smallest: rem-calc(8);
+$ft-size-small: rem-calc(10);
+$ft-size-normal: rem-calc(12);
+$ft-size-medium: rem-calc(14);
+$ft-size-large: rem-calc(16);
+$ft-size-larger: rem-calc(18);
+$ft-size-largest: rem-calc(22);
+$ft-size-big: rem-calc(40);
 
-$ft-size-mini: rem-calc(11);
-$ft-size-normal: rem-calc(13);
-$ft-size-medium: rem-calc(15);
-$ft-size-large: rem-calc(18);
-$ft-size-larger: rem-calc(20);
-$ft-size-largest: rem-calc(24);
+// size
+$one: rem-calc(1);
+$two: $one*2;
 
 // gutter
-
 $gutter: rem-calc(10);
 $gutter-medium: $gutter*1.5;
 $gutter-large: $gutter*2;
+$gutter-extra-large: $gutter*3;
 $gutter-small: $gutter/2;
 $gutter-mini: $gutter/3;
 

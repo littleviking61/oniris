@@ -1,1 +1,44 @@
 // element.scss
+
+/* aside */
+
+aside.main{
+	
+	ul{
+		@extend %flex-row;
+	}
+
+	> ul > li {
+
+		> a{
+			@include single-transition(background-color, .4s);
+
+			display: inline-block;
+			background-color: white;//lighten($yellow, 10%);
+
+			padding: $gutter-mini $gutter;
+			margin-bottom: $gutter-small;
+			
+			font-family: $title-font-family;
+			font-size: $ft-size-larger;
+			text-transform: lowercase;
+
+			&:hover{
+				background-color: lighten($yellow, 10%);
+				color: white;
+			}
+		}
+	}
+
+	ul li ul{
+		display: none;
+		margin-left: $gutter;
+		margin-bottom: $gutter-small;
+		margin-top: $gutter-small;
+
+		li{
+			margin: $gutter-small 0;
+		}
+	}
+
+}

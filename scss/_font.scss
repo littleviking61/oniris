@@ -6,4 +6,9 @@
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
  */
 
+@include font-face-bb('roboto_slabregular', '../ft/robotoslab-regular_0-webfont');
+@include font-face-bb('asapbold', '../ft/asap-bold-webfont', bold);
+@include font-face-bb('asapregular', '../ft/asap-regular-webfont');
+
+
 // icon

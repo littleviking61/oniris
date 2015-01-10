@@ -66,7 +66,7 @@ function reverie_theme_support() {
     add_theme_support('menus');
     register_nav_menus(array(
         'primary' => __('Primary Navigation', 'reverie'),
-        'utility' => __('Utility Navigation', 'reverie')
+        'secondary' => __('Secondary Navigation', 'reverie')
     ));
 
     // Add custom background support
@@ -82,26 +82,6 @@ function reverie_theme_support() {
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
-// create widget areas: sidebar, footer
-$sidebars = array('Sidebar');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<article id="%1$s" class="row widget %2$s"><div class="small-12 columns">',
-        'after_widget' => '</div></article>',
-        'before_title' => '<h6><strong>',
-        'after_title' => '</strong></h6>'
-    ));
-}
-$sidebars = array('Footer');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-        'before_widget' => '<article id="%1$s" class="large-4 columns widget %2$s">',
-        'after_widget' => '</article>',
-        'before_title' => '<h6><strong>',
-        'after_title' => '</strong></h6>'
-    ));
-}
-
 // return entry meta information for posts, used by multiple loops.
 if(!function_exists('reverie_entry_meta')) :
     function reverie_entry_meta() {
@@ -110,24 +90,6 @@ if(!function_exists('reverie_entry_meta')) :
     }
 endif;
 
-// add by nuagegraphik
-
-function custom_edit_post_link($output) {
-    $output = str_replace('class="post-edit-link"', 'class="post-edit-link button tiny secondary"', $output);
-    return $output;
-}
-add_filter('edit_post_link', 'custom_edit_post_link');
-
-function get_top_parent_page_id() {
-    global $post;
-    $ancestors = $post->ancestors;
-    if ($ancestors) {
-        return end($ancestors);
-    } else {
-        return $post->ID;
-    }
-}
-// add_action( 'admin_init', 'fixImageMeta' );
 /**
 * fix broken image metadata so that thumbs can be regenerated
 */
