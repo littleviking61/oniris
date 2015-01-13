@@ -6,16 +6,17 @@ if( have_rows('contenu') ):
 
         if( get_row_layout() == 'ligne' ):
 
+      		// ferme la ligne suivante si infini ou nouvelle ligne avant la fin
+      		if( (isset($closeAtEnd) && $closeAtEnd) || isset($closeAfter) ) {
+      			echo '</div>';
+      			unset($closeAtEnd);
+      		}
+
         	if(get_sub_field('nombre_de_bloc') > 0) {
         		// save number of bloc in this row
         		$closeAfter = get_sub_field('nombre_de_bloc');
-        		// ferme la ligne suivante
-        		if(isset($closeAtEnd) && $closeAtEnd) {
-        			echo '</div>';
-        			unset($closeAtEnd);
-        		}
         	}else{
-        		// if number is infinit
+        		// if number is infini
         		$closeAtEnd = true;
         	};
 
