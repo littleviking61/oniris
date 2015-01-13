@@ -67,9 +67,12 @@ main{
 	aside.main{
 		min-width: rem-calc(180);
 	}
+}
 
-	.content{
-		opacity: 0;
+.content{
+	.row{
+		background-color: pink;
+		margin-bottom: $gutter;
 	}
 }
 

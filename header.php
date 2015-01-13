@@ -15,20 +15,30 @@
 
 <body <?php body_class(); ?>>
 
-<header class="main" role="banner">
-	<!-- Starting the nav -->
-	<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-		<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
-		<span class="hide"><?php bloginfo('name'); ?></span></a>
-	</h1>
-	<?php wp_nav_menu( array( 
-		'container' => 'nav',
-		'container_class' => 'main',
-		'theme_location' => 'primary' )); 
-	?>
-	<div class="switch-lang">
-		<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
-	</div>
+	<header class="main" role="banner">
+		<!-- Starting the nav -->
+		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+			<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
+			<span class="hide"><?php bloginfo('name'); ?></span></a>
+		</h1>
+		<?php wp_nav_menu( array( 
+			'container' => 'nav',
+			'container_class' => 'main',
+			'theme_location' => 'primary' )); 
+		?>
+		<div class="switch-lang">
+			<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
+		</div>
 
-	<!-- End of Top-Bar -->
-</header>
+		<!-- End of Top-Bar -->
+	</header>
+
+	<main role="document">
+
+		<aside class="main">
+			<?php wp_nav_menu( array( 
+				'container' => 'aside',
+				'container_class' => 'main',
+				'theme_location' => 'secondary' )); 
+			?>
+		</aside>

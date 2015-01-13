@@ -1781,8 +1781,10 @@ main {
   padding: 0.9375rem 1.875rem 0; }
   main aside.main {
     min-width: 11.25rem; }
-  main .content {
-    opacity: 0; }
+
+.content .row {
+  background-color: pink;
+  margin-bottom: 0.625rem; }
 
 /* FOOTER */
 footer.main {

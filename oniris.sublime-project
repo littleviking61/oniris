@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"SOURCE",
+				".gitignore",
+				"Gruntfile.js",
+				"*.sublime-project",
+				"*.txt",
+				"*.md",
+				"*.json"
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules",
+				".sass-cache",
+				"lang"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris"
+		}
+	]
+}
