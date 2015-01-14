@@ -1675,24 +1675,44 @@ nav ul, aside ul {
 /* LINK BASIC */
 a {
   text-decoration: none;
-  color: #595959; }
+  color: #353535; }
   a:hover, a.active, .current-menu-item a {
     color: #ffbc17; }
+
+/* paragraphe and title basic */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility; }
+
+h2 {
+  color: #a6a6a6;
+  font-size: 1.875rem;
+  font-family: "roboto_slabthin" serif; }
+
+h4 {
+  font-family: "roboto_slabregular" serif;
+  color: #737373;
+  font-size: 0.875rem; }
+
+.content {
+  line-height: 1.2; }
+  .content p {
+    line-height: 1.4;
+    color: #353535; }
 
 /* utilities class */
 .hide {
   display: none; }
 
-header.main .go-right {
+header.main .go-right, .wrap > section .go-right, .wrap > .row .go-right {
   margin-left: auto; }
-header.main .full {
+header.main .full, .wrap > section .full, .wrap > .row .full {
   -webkit-flex: 1;
   flex: 1; }
-header.main .unbreak {
+header.main .unbreak, .wrap > section .unbreak, .wrap > .row .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-header.main, header.main nav ul, main {
+header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, main, section.simple {
   display: -webkit-flex;
   display: flex; }
 
@@ -1702,7 +1722,7 @@ aside.main ul {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header.main {
+header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -1726,6 +1746,12 @@ header.main nav ul {
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: "roboto_slabthin";
+  src: url("../ft/robotoslab-thin_0-webfont.eot");
+  src: url("../ft/robotoslab-thin_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-thin_0-webfont.woff") format("woff"), url("../ft/robotoslab-thin_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-thin_0-webfont.svg#roboto_slabthin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: "asapbold";
   src: url("../ft/asap-bold-webfont.eot");
   src: url("../ft/asap-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-bold-webfont.woff") format("woff"), url("../ft/asap-bold-webfont.ttf") format("truetype"), url("../ft/asap-bold-webfont.svg#asapbold") format("svg");
@@ -1737,6 +1763,54 @@ header.main nav ul {
   src: url("../ft/asap-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-regular-webfont.woff") format("woff"), url("../ft/asap-regular-webfont.ttf") format("truetype"), url("../ft/asap-regular-webfont.svg#asapregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+.flex-0 {
+  -webkit-flex-basis: -0.625rem;
+  flex-basis: -0.625rem; }
+
+.flex-1 {
+  -webkit-flex-basis: 6.875rem;
+  flex-basis: 6.875rem; }
+
+.flex-2 {
+  -webkit-flex-basis: 14.375rem;
+  flex-basis: 14.375rem; }
+
+.flex-3 {
+  -webkit-flex-basis: 21.875rem;
+  flex-basis: 21.875rem; }
+
+.flex-4 {
+  -webkit-flex-basis: 29.375rem;
+  flex-basis: 29.375rem; }
+
+.flex-5 {
+  -webkit-flex-basis: 36.875rem;
+  flex-basis: 36.875rem; }
+
+.flex-6 {
+  -webkit-flex-basis: 44.375rem;
+  flex-basis: 44.375rem; }
+
+.flex-7 {
+  -webkit-flex-basis: 51.875rem;
+  flex-basis: 51.875rem; }
+
+.flex-8 {
+  -webkit-flex-basis: 59.375rem;
+  flex-basis: 59.375rem; }
+
+.flex-9 {
+  -webkit-flex-basis: 66.875rem;
+  flex-basis: 66.875rem; }
+
+.flex-10 {
+  -webkit-flex-basis: 74.375rem;
+  flex-basis: 74.375rem; }
+
+.flex-11 {
+  -webkit-flex-basis: 81.875rem;
+  flex-basis: 81.875rem; }
+
 /* GENERAL BODY */
 body {
   background-color: #f2f2f2;
@@ -1782,9 +1856,16 @@ main {
   main aside.main {
     min-width: 11.25rem; }
 
-.content .row {
-  background-color: pink;
+.wrap > section, .wrap > .row {
+  margin-bottom: 2.5rem; }
+  .wrap > section > header, .wrap > .row > header {
+    width: 100%; }
+.wrap section {
+  margin-right: 0.625rem;
   margin-bottom: 0.625rem; }
+.wrap .container {
+  padding: 0.625rem;
+  background-color: white; }
 
 /* FOOTER */
 footer.main {
@@ -1813,5 +1894,17 @@ aside.main ul li ul {
   margin-top: 0.3125rem; }
   aside.main ul li ul li {
     margin: 0.3125rem 0; }
+
+/* simple bloc */
+section.simple .thumbnail {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  margin: -0.625rem;
+  margin-right: 1.25rem; }
+  section.simple .thumbnail img {
+    position: absolute; }
 
 /*# sourceMappingURL=style.css.map */

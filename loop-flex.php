@@ -6,6 +6,9 @@ if( have_rows('contenu') ):
 
         if( get_row_layout() == 'ligne' ):
 
+        	$title = get_sub_field('titre');
+        	$width = get_sub_field('largeur_du_titre');
+
       		// ferme la ligne suivante si infini ou nouvelle ligne avant la fin
       		if( (isset($closeAtEnd) && $closeAtEnd) || isset($closeAfter) ) {
       			echo '</div>';
@@ -20,10 +23,25 @@ if( have_rows('contenu') ):
         		$closeAtEnd = true;
         	};
 
-      		// then open a row
-        	echo '<div class= "row">';
+      		// then open a row 
+      		echo '<div class= "row">';
+      		
+      		if (!empty($title)): ?>
+        		<header>
+        			<h2 class="title<?= $width > 0 ? ' flex-' . $width : ' full' ?>"><?= $title ?></h2>
+        		</header>
+      		<?php endif;
+        
+        elseif( get_row_layout() == 'titre_de_section' ):
+					
+					$title = get_sub_field('titre'); 
+        	$width = get_sub_field('largeur_du_titre');
 
-        else: 
+        	if (!empty($title)): ?>
+      			<h2 class="title<?= $width > 0 ? ' flex-' . $width : ' full' ?>"><?= $title ?></h2>
+      		<?php endif;
+
+      	else:
 
         	// check if template exist and call it
         	$template = locate_template( 'templates/'.get_row_layout().'.php' );

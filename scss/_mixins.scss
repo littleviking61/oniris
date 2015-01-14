@@ -13,3 +13,16 @@
       font-style: $style;
   }
 }
+
+@mixin flex-grid( $prefix: ".", $class: flex, $total-columns: 12, $percentage:false){
+  @for $i from 0 through $total-columns - 1 {
+    #{$prefix}#{$class}-#{$i}{
+      @include flex-basis( grid-calc($i, $total-columns, $percentage) )
+    }
+  }
+}
+
+@function grid-calc($colNumber, $totalColumns, $percentage : false) {
+  @if $percentage == true { @return percentage(($colNumber / $totalColumns)); }
+  @if $percentage == false { @return ($colNumber * $column-width) + (($colNumber - 1) * $column-gutter) ; }
+}

@@ -40,5 +40,23 @@ aside.main{
 			margin: $gutter-small 0;
 		}
 	}
+}
 
+/* simple bloc */
+
+section.simple{
+	@extend %flex-column;
+
+	.thumbnail{
+		@include flex-shrink(0);
+		position: relative;
+		overflow: hidden;
+		width: 50%;
+		margin: -$gutter;
+		margin-right: $gutter-large;
+
+		img{
+			position: absolute;
+		}
+	}
 }

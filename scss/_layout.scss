@@ -15,7 +15,7 @@ header.main{
 	@include align-items(flex-end);
 
 	font-family: $title-font-family;	
-	padding: $gutter-extra-large;
+	padding: $gutter-big;
 	padding-bottom: 0;
 
 	h1{
@@ -62,17 +62,32 @@ header.main{
 
 main{
 	@extend %flex-column;
-	padding: $gutter-medium $gutter-extra-large 0;
+	padding: $gutter-medium $gutter-big 0;
 
 	aside.main{
 		min-width: rem-calc(180);
 	}
 }
 
-.content{
-	.row{
-		background-color: pink;
+.wrap{
+	> section, > .row{
+		@extend %flex-column-wrap;
+		margin-bottom: $gutter-hudge;
+
+		> header {
+			@extend %flex-column-wrap;
+			width: 100%;
+		}
+	}
+
+	section{
+		margin-right: $gutter;
 		margin-bottom: $gutter;
+	}
+
+	.container{
+		padding: $gutter;
+		background-color: white;
 	}
 }
 

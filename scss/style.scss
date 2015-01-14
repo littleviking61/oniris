@@ -15,6 +15,7 @@
 
 @import "basic";
 @import "font";
+@include flex-grid();
 
 @import "layout";
 @import "element";

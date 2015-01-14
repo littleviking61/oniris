@@ -3,11 +3,13 @@
 $rem-base: 16px;
 $body-font-family: "asapregular", Helvetica, Arial, sans-serif;
 $title-font-family: "roboto_slabregular" serif;
+$title-thin-font-family: "roboto_slabthin" serif;
 
 // color
 $lightest-grey: #f2f2f2;
-$light-grey: #8c8c8c;
-$grey: #595959;
+$lighter-grey: lighten(#8c8c8c, 10%);
+$light-grey: lighten(#666666, 5%);
+$grey: #353535;
 $yellow: #ffbc17;
 $red: #f23518;
 $blue: #0252cf;
@@ -25,7 +27,8 @@ $ft-size-medium: rem-calc(14);
 $ft-size-large: rem-calc(16);
 $ft-size-larger: rem-calc(18);
 $ft-size-largest: rem-calc(22);
-$ft-size-big: rem-calc(40);
+$ft-size-big: rem-calc(30);
+$ft-size-hudge: rem-calc(40);
 
 // size
 $one: rem-calc(1);
@@ -35,10 +38,11 @@ $two: $one*2;
 $gutter: rem-calc(10);
 $gutter-medium: $gutter*1.5;
 $gutter-large: $gutter*2;
-$gutter-extra-large: $gutter*3;
+$gutter-big: $gutter*3;
+$gutter-hudge: $gutter*4;
 $gutter-small: $gutter/2;
 $gutter-mini: $gutter/3;
 
 // 
-
 $column-width: rem-calc(110);
+$column-gutter: $gutter;

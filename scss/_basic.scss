@@ -32,6 +32,33 @@ a{
 	@extend a.active;
 }
 
+/* paragraphe and title basic */
+
+h1, h2, h3, h4, h5, h6{
+	text-rendering: optimizeLegibility;
+}
+
+h2{
+	color: $lighter-grey;
+	font-size: $ft-size-big;
+	font-family: $title-thin-font-family;
+}
+
+h4{
+	font-family: $title-font-family;
+	color: $light-grey;
+	font-size: $ft-size-medium;
+}
+
+.content{
+	line-height: 1.2;
+	
+	p{
+		line-height: 1.4;
+		color: $grey;
+	}
+}
+
 /* utilities class */
 
 .hide{
