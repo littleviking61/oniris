@@ -72,6 +72,7 @@ main{
 .wrap{
 	> section, > .row{
 		@extend %flex-column-wrap;
+		@include align-items(flex-start);
 		margin-bottom: $gutter-hudge;
 
 		> header {
@@ -81,8 +82,8 @@ main{
 	}
 
 	section{
-		margin-right: $gutter;
-		margin-bottom: $gutter;
+		margin-right: $column-gutter;
+		margin-bottom: $column-gutter;
 	}
 
 	.container{

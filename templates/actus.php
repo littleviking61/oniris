@@ -1,6 +1,6 @@
 <?php $width = get_sub_field('largeur_du_bloc'); ?>
 
-<section class="<?= $width > 0 ? 'flex-' . $width : 'full' ?>">
+<section class="actus <?= $width > 0 ? 'flex-' . $width : 'full' ?>">
 	<?php $title = get_sub_field('titre'); ?>
 
 	<?php if (!empty($title)): ?>
@@ -9,7 +9,7 @@
 		</header>
 	<?php endif ?>
 
-	<div class="container">
+	<div class="actualities">
 		<p>todo placer les articles en relations</p>
 	</div>
 </section>

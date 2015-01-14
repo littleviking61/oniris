@@ -1,5 +1,9 @@
 // basic
 
+*, *:before, *:after {
+	@include box-sizing;
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -52,10 +56,10 @@ h4{
 }
 
 .content{
-	line-height: 1.2;
+	line-height: 1.4;
 	
 	p{
-		line-height: 1.4;
+		// line-height: 1.4;
 		color: $grey;
 	}
 }

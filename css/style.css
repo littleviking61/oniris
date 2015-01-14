@@ -1660,6 +1660,11 @@
 .fa-meanpath:before {
   content: ""; }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   height: 100%;
   width: 100%; }
@@ -1695,9 +1700,8 @@ h4 {
   font-size: 0.875rem; }
 
 .content {
-  line-height: 1.2; }
+  line-height: 1.4; }
   .content p {
-    line-height: 1.4;
     color: #353535; }
 
 /* utilities class */
@@ -1748,9 +1752,15 @@ header.main nav ul {
   font-style: normal; }
 @font-face {
   font-family: "roboto";
+  src: url("../ft/robotoslab-light_0-webfont.eot");
+  src: url("../ft/robotoslab-light_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-light_0-webfont.woff") format("woff"), url("../ft/robotoslab-light_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-light_0-webfont.svg#roboto") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "roboto";
   src: url("../ft/robotoslab-regular_0-webfont.eot");
   src: url("../ft/robotoslab-regular_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-regular_0-webfont.woff") format("woff"), url("../ft/robotoslab-regular_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-regular_0-webfont.svg#roboto") format("svg");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: "asap";
@@ -1765,52 +1775,52 @@ header.main nav ul {
   font-weight: normal;
   font-style: normal; }
 .flex-0 {
-  -webkit-flex-basis: -0.625rem;
-  flex-basis: -0.625rem; }
+  -webkit-flex-basis: -1.25rem;
+  flex-basis: -1.25rem; }
 
 .flex-1 {
-  -webkit-flex-basis: 6.875rem;
-  flex-basis: 6.875rem; }
+  -webkit-flex-basis: 6.25rem;
+  flex-basis: 6.25rem; }
 
 .flex-2 {
-  -webkit-flex-basis: 14.375rem;
-  flex-basis: 14.375rem; }
+  -webkit-flex-basis: 13.75rem;
+  flex-basis: 13.75rem; }
 
 .flex-3 {
-  -webkit-flex-basis: 21.875rem;
-  flex-basis: 21.875rem; }
+  -webkit-flex-basis: 21.25rem;
+  flex-basis: 21.25rem; }
 
 .flex-4 {
-  -webkit-flex-basis: 29.375rem;
-  flex-basis: 29.375rem; }
+  -webkit-flex-basis: 28.75rem;
+  flex-basis: 28.75rem; }
 
 .flex-5 {
-  -webkit-flex-basis: 36.875rem;
-  flex-basis: 36.875rem; }
+  -webkit-flex-basis: 36.25rem;
+  flex-basis: 36.25rem; }
 
 .flex-6 {
-  -webkit-flex-basis: 44.375rem;
-  flex-basis: 44.375rem; }
+  -webkit-flex-basis: 43.75rem;
+  flex-basis: 43.75rem; }
 
 .flex-7 {
-  -webkit-flex-basis: 51.875rem;
-  flex-basis: 51.875rem; }
+  -webkit-flex-basis: 51.25rem;
+  flex-basis: 51.25rem; }
 
 .flex-8 {
-  -webkit-flex-basis: 59.375rem;
-  flex-basis: 59.375rem; }
+  -webkit-flex-basis: 58.75rem;
+  flex-basis: 58.75rem; }
 
 .flex-9 {
-  -webkit-flex-basis: 66.875rem;
-  flex-basis: 66.875rem; }
+  -webkit-flex-basis: 66.25rem;
+  flex-basis: 66.25rem; }
 
 .flex-10 {
-  -webkit-flex-basis: 74.375rem;
-  flex-basis: 74.375rem; }
+  -webkit-flex-basis: 73.75rem;
+  flex-basis: 73.75rem; }
 
 .flex-11 {
-  -webkit-flex-basis: 81.875rem;
-  flex-basis: 81.875rem; }
+  -webkit-flex-basis: 81.25rem;
+  flex-basis: 81.25rem; }
 
 /* GENERAL BODY */
 body {
@@ -1858,12 +1868,14 @@ main {
     min-width: 11.25rem; }
 
 .wrap > section, .wrap > .row {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
   margin-bottom: 2.5rem; }
   .wrap > section > header, .wrap > .row > header {
     width: 100%; }
 .wrap section {
-  margin-right: 0.625rem;
-  margin-bottom: 0.625rem; }
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem; }
 .wrap .container {
   padding: 0.625rem;
   background-color: white; }
@@ -1884,6 +1896,7 @@ aside.main > ul > li > a {
   margin-bottom: 0.3125rem;
   font-family: "roboto" serif;
   font-size: 1.125rem;
+  font-weight: bold;
   text-transform: lowercase; }
   aside.main > ul > li > a:hover {
     background-color: #ffcb4a;
