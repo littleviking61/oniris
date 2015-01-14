@@ -2,10 +2,11 @@
 	$width = get_sub_field('largeur_du_bloc');
 	$title = get_sub_field('titre');
 	$image = get_sub_field('image');
+	$specificClass = get_sub_field('specifique_bloc_class');
 	$imagePosition = get_sub_field('position');
 ?>
 
-<section class="container simple <?= $width > 0 ? 'flex-' . $width : 'full' ?>">
+<section class="container simple <?= $width > 0 ? 'flex-' . $width : 'full' ?> <?= $specificClass ?>">
 
 	<?php if (!empty($image)): ?>
 		<div class="thumbnail <?= $imagePosition ?>">
