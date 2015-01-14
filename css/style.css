@@ -1681,15 +1681,16 @@ a {
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  font-family: "roboto" serif; }
 
 h2 {
   color: #a6a6a6;
   font-size: 1.875rem;
-  font-family: "roboto_slabthin" serif; }
+  font-weight: lighter; }
 
 h4 {
-  font-family: "roboto_slabregular" serif;
+  font-family: "roboto" serif;
   color: #737373;
   font-size: 0.875rem; }
 
@@ -1740,27 +1741,27 @@ header.main nav ul {
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
  */
 @font-face {
-  font-family: "roboto_slabregular";
-  src: url("../ft/robotoslab-regular_0-webfont.eot");
-  src: url("../ft/robotoslab-regular_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-regular_0-webfont.woff") format("woff"), url("../ft/robotoslab-regular_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-regular_0-webfont.svg#roboto_slabregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: "roboto_slabthin";
+  font-family: "roboto";
   src: url("../ft/robotoslab-thin_0-webfont.eot");
-  src: url("../ft/robotoslab-thin_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-thin_0-webfont.woff") format("woff"), url("../ft/robotoslab-thin_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-thin_0-webfont.svg#roboto_slabthin") format("svg");
+  src: url("../ft/robotoslab-thin_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-thin_0-webfont.woff") format("woff"), url("../ft/robotoslab-thin_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-thin_0-webfont.svg#roboto") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: "roboto";
+  src: url("../ft/robotoslab-regular_0-webfont.eot");
+  src: url("../ft/robotoslab-regular_0-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/robotoslab-regular_0-webfont.woff") format("woff"), url("../ft/robotoslab-regular_0-webfont.ttf") format("truetype"), url("../ft/robotoslab-regular_0-webfont.svg#roboto") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: "asapbold";
+  font-family: "asap";
   src: url("../ft/asap-bold-webfont.eot");
-  src: url("../ft/asap-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-bold-webfont.woff") format("woff"), url("../ft/asap-bold-webfont.ttf") format("truetype"), url("../ft/asap-bold-webfont.svg#asapbold") format("svg");
+  src: url("../ft/asap-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-bold-webfont.woff") format("woff"), url("../ft/asap-bold-webfont.ttf") format("truetype"), url("../ft/asap-bold-webfont.svg#asap") format("svg");
   font-weight: bold;
   font-style: normal; }
 @font-face {
-  font-family: "asapregular";
+  font-family: "asap";
   src: url("../ft/asap-regular-webfont.eot");
-  src: url("../ft/asap-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-regular-webfont.woff") format("woff"), url("../ft/asap-regular-webfont.ttf") format("truetype"), url("../ft/asap-regular-webfont.svg#asapregular") format("svg");
+  src: url("../ft/asap-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-regular-webfont.woff") format("woff"), url("../ft/asap-regular-webfont.ttf") format("truetype"), url("../ft/asap-regular-webfont.svg#asap") format("svg");
   font-weight: normal;
   font-style: normal; }
 .flex-0 {
@@ -1814,14 +1815,14 @@ header.main nav ul {
 /* GENERAL BODY */
 body {
   background-color: #f2f2f2;
-  font-family: "asapregular", Helvetica, Arial, sans-serif;
+  font-family: "asap", Helvetica, Arial, sans-serif;
   font-size: 0.75rem; }
 
 /* HEADER */
 header.main {
   -webkit-align-items: flex-end;
   align-items: flex-end;
-  font-family: "roboto_slabregular" serif;
+  font-family: "roboto" serif;
   padding: 1.875rem;
   padding-bottom: 0; }
   header.main h1 {
@@ -1841,7 +1842,7 @@ header.main {
     text-transform: lowercase;
     padding-top: 0.3125rem;
     margin: 0 0.625rem;
-    order-bottom: solid 0.125rem transparent; }
+    border-bottom: solid 0.125rem transparent; }
     header.main nav ul a i:before {
       margin-right: 0.3125rem; }
   header.main nav ul .current-menu-item a:not([href="#"]), header.main nav ul a:hover:not([href="#"]), header.main nav ul a.active:not([href="#"]), header.main nav ul .current-menu-item a:not([href="#"]), .current-menu-item header.main nav ul a:not([href="#"]) {
@@ -1881,7 +1882,7 @@ aside.main > ul > li > a {
   background-color: white;
   padding: 0.20833rem 0.625rem;
   margin-bottom: 0.3125rem;
-  font-family: "roboto_slabregular" serif;
+  font-family: "roboto" serif;
   font-size: 1.125rem;
   text-transform: lowercase; }
   aside.main > ul > li > a:hover {

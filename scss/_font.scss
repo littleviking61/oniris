@@ -6,10 +6,11 @@
 @include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
  */
 
-@include font-face-bb('roboto_slabregular', '../ft/robotoslab-regular_0-webfont');
-@include font-face-bb('roboto_slabthin', '../ft/robotoslab-thin_0-webfont');
-@include font-face-bb('asapbold', '../ft/asap-bold-webfont', bold);
-@include font-face-bb('asapregular', '../ft/asap-regular-webfont');
+@include font-face-bb('roboto', '../ft/robotoslab-thin_0-webfont', 100);
+@include font-face-bb('roboto', '../ft/robotoslab-regular_0-webfont', normal);
+
+@include font-face-bb('asap', '../ft/asap-bold-webfont', bold);
+@include font-face-bb('asap', '../ft/asap-regular-webfont', normal);
 
 
 // icon

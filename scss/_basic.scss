@@ -36,12 +36,13 @@ a{
 
 h1, h2, h3, h4, h5, h6{
 	text-rendering: optimizeLegibility;
+	font-family: $title-font-family;
 }
 
 h2{
 	color: $lighter-grey;
 	font-size: $ft-size-big;
-	font-family: $title-thin-font-family;
+	font-weight: lighter;
 }
 
 h4{

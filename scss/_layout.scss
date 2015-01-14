@@ -37,7 +37,7 @@ header.main{
 				text-transform: lowercase;
 				padding-top: $gutter-small;
 				margin: 0 $gutter;
-				order-bottom: solid $two transparent;
+				border-bottom: solid $two transparent;
 				
 				i:before{
 					margin-right: $gutter-small;
