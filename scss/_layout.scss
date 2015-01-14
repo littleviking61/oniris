@@ -17,6 +17,7 @@ header.main{
 	font-family: $title-font-family;	
 	padding: $gutter-big;
 	padding-bottom: 0;
+	margin-bottom: $gutter-medium;
 
 	h1{
 		@include flex-shrink(0);

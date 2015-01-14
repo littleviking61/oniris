@@ -6,6 +6,7 @@ aside.main{
 	
 	ul{
 		@extend %flex-row;
+		margin-top: $gutter-small;
 	}
 
 	> ul > li {

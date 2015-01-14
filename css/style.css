@@ -1686,7 +1686,7 @@ a {
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
+  margin-top: 0;
   text-rendering: optimizeLegibility;
   font-family: "roboto" serif; }
 
@@ -1835,7 +1835,8 @@ header.main {
   align-items: flex-end;
   font-family: "roboto" serif;
   padding: 1.875rem;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  margin-bottom: 0.9375rem; }
   header.main h1 {
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
@@ -1886,6 +1887,8 @@ footer.main {
   display: none; }
 
 /* aside */
+aside.main ul {
+  margin-top: 0.3125rem; }
 aside.main > ul > li > a {
   -moz-transition: background-color 0.4s;
   -o-transition: background-color 0.4s;
