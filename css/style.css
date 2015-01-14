@@ -1686,6 +1686,7 @@ a {
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
   text-rendering: optimizeLegibility;
   font-family: "roboto" serif; }
 
@@ -1695,11 +1696,11 @@ h2 {
   font-weight: lighter; }
 
 h4 {
-  font-family: "roboto" serif;
   color: #737373;
   font-size: 0.875rem; }
 
 .content {
+  width: 100%;
   line-height: 1.4; }
   .content p {
     color: #353535; }
@@ -1919,6 +1920,14 @@ section.simple .thumbnail {
   margin: -0.625rem;
   margin-right: 1.25rem; }
   section.simple .thumbnail img {
-    position: absolute; }
+    position: absolute;
+    max-height: 100%;
+    min-width: 100%; }
+
+.infos-home hr {
+  width: 0.625rem;
+  border: none;
+  background-color: #737373;
+  height: 0.0625rem; }
 
 /*# sourceMappingURL=style.css.map */

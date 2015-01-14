@@ -39,6 +39,7 @@ a{
 /* paragraphe and title basic */
 
 h1, h2, h3, h4, h5, h6{
+	margin-bottom: 0;
 	text-rendering: optimizeLegibility;
 	font-family: $title-font-family;
 }
@@ -50,12 +51,12 @@ h2{
 }
 
 h4{
-	font-family: $title-font-family;
 	color: $light-grey;
 	font-size: $ft-size-medium;
 }
 
 .content{
+	width: 100%;
 	line-height: 1.4;
 	
 	p{

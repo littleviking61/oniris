@@ -1,1 +1,13 @@
 // page
+
+.infos-home{
+	// font-family: $title-font-family;
+	
+	hr{
+		width: $gutter;
+		border:none;
+		background-color: $light-grey;
+		height: $one;
+		// border: $one solid $lighter-grey;
+	}
+}
