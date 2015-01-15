@@ -1,4 +1,37 @@
 // element.scss
+// 
+/* button*/ 
+
+.button, button{
+	@extend %flex-center-center;
+	@include single-transition(all, .2s);
+
+	padding: $gutter-mini $gutter-small;
+	background-color: $yellow;
+	color: white;
+
+	&:hover{
+		color: white;
+		background-color: darken($yellow, 6%);
+
+		&.right{
+			padding-right: $gutter-medium;
+		}
+	}
+
+	&.right{
+		float: right;
+		margin-top: $gutter;
+		margin-right: -($gutter-medium);
+		margin-bottom: -($gutter-medium);
+	}
+
+	i:before{
+		display: block;
+		font-size: 1.6em;
+		margin-right: $gutter-small;
+	} 
+}
 
 /* aside */
 
@@ -54,7 +87,7 @@ section.simple{
 		position: relative;
 		overflow: hidden;
 		width: 50%;
-		margin: -$gutter;
+		margin: -$gutter-medium;
 		margin-right: $gutter-large;
 
 		img{

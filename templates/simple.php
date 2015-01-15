@@ -30,8 +30,11 @@
 
 		<?php the_sub_field('texte'); ?>
 
-		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ): ?>
-			<a class="button" href="<?= $linkButton ?>"><?= $textButton ?></a>
+		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
+			if(strrpos($textButton, "+")> -1) :
+				$textButton = '<i class="icon-more"></i> ' . substr($textButton, 1);
+			endif ?>
+			<a class="button right" href="<?= $linkButton ?>"><?= $textButton ?></a>
 		<?php endif ?>
 
 	</div>

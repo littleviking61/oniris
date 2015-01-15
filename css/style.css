@@ -1718,7 +1718,7 @@ header.main .unbreak, .wrap > section .unbreak, .wrap > .row .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, main, section.simple {
+header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, .button, button, main, section.simple {
   display: -webkit-flex;
   display: flex; }
 
@@ -1732,7 +1732,7 @@ header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .r
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-header.main nav ul {
+header.main nav ul, .button, button {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-items: center;
@@ -1879,12 +1879,36 @@ main {
   margin-right: 1.25rem;
   margin-bottom: 1.25rem; }
 .wrap .container {
-  padding: 0.625rem;
+  padding: 0.9375rem;
   background-color: white; }
 
 /* FOOTER */
 footer.main {
   display: none; }
+
+/* button*/
+.button, button {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 0.20833rem 0.3125rem;
+  background-color: #ffbc17;
+  color: white; }
+  .button:hover, button:hover {
+    color: white;
+    background-color: #f7b000; }
+    .button:hover.right, button:hover.right {
+      padding-right: 0.9375rem; }
+  .button.right, button.right {
+    float: right;
+    margin-top: 0.625rem;
+    margin-right: -0.9375rem;
+    margin-bottom: -0.9375rem; }
+  .button i:before, button i:before {
+    display: block;
+    font-size: 1.6em;
+    margin-right: 0.3125rem; }
 
 /* aside */
 aside.main ul {
@@ -1920,7 +1944,7 @@ section.simple .thumbnail {
   position: relative;
   overflow: hidden;
   width: 50%;
-  margin: -0.625rem;
+  margin: -0.9375rem;
   margin-right: 1.25rem; }
   section.simple .thumbnail img {
     position: absolute;

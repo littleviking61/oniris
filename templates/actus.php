@@ -10,6 +10,16 @@
 	<?php endif ?>
 
 	<div class="actualities">
-		<p>todo placer les articles en relations</p>
+		<?php
+			$args = array( 'category_name' => 'actu', 'orderby' => 'menu_order', 'posts_per_page' => 6 );
+			$lastposts = get_posts( $args ); 
+
+			foreach ( $lastposts as $post ) : 
+				setup_postdata( $post );
+				get_template_part('templates/actu');
+			endforeach;
+
+			wp_reset_postdata(); 
+		?>
 	</div>
 </section>
