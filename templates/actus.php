@@ -11,7 +11,7 @@
 
 	<div class="actualities">
 		<?php
-			$args = array( 'category_name' => 'actu', 'orderby' => 'menu_order', 'posts_per_page' => 6 );
+			$args = array( 'category_name' => 'actu', 'orderby' => 'date', 'posts_per_page' => 6 );
 			$lastposts = get_posts( $args ); 
 
 			foreach ( $lastposts as $post ) : 
