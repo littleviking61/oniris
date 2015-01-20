@@ -152,13 +152,10 @@
 			}
 		},
 		{
-			"contents": "ftp u54944036@nuagegraphik.fr\n\nscp -r u54944036@nuagegraphik.fr:client client\n\nmysqldump --no-tablespaces --host=db2102.1and1.fr --user=dbo299015701 -p db299015701 > backup-299015701.sql\n\n\nfind . -name \"*.zip\"\n// pour trouver des fichier\nfind . -name \"*.zip\" -exec rm -rf {} \\;\n// pour supprimer les fichers trouvé\n\ndf -h\npour lister les dossier et leur taille\n\ndu -sh *\n// pour lister les volumes et la place\n\nmv /var/* /var/www/\n\n<VirtualHost *:80>\n ServerName oniris.nuagegraphik.fr\n\n RewriteEngine on\n DocumentRoot /client/oniris\n\n <Directory \"client/oniris\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>",
 			"file": "/Users/nuagegraphik/Desktop/commandling-util",
-			"file_size": 795,
-			"file_write_time": 130658776440000000,
 			"settings":
 			{
-				"buffer_size": 780,
+				"buffer_size": 1914,
 				"line_ending": "Unix"
 			}
 		},
@@ -184,23 +181,6 @@
 			{
 				"buffer_size": 1899,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sftp-config.json",
-			"settings":
-			{
-				"buffer_size": 1520,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<VirtualHost *:80>\n ServerName localhost\n ServerSignature Off\n</VirtualHost>\n\n#nuagegraphik\n\n<VirtualHost *:80>\n ServerName nuagegraphik.fr\n Redirect / http://www.nuagegraphik.fr/\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName nuagegraphik.com\n Redirect / http://www.nuagegraphik.com/\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName www.nuagegraphik.com\n\n RewriteEngine on\n DocumentRoot /var/www/nuagegraphik-com\n\n <Directory \"/var/www/nuagegraphik-com\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName www.nuagegraphik.fr\n\n RewriteEngine on\n DocumentRoot /var/www/nuagegraphik-com\n\n <Directory \"/var/www/nuagegraphik-com\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName last.nuagegraphik.fr\n\n RewriteEngine on\n DocumentRoot /var/www/nuagegraphik\n\n <Directory \"/var/www/nuagegraphik\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n# client nuagegraphik\n\n<VirtualHost *:80>\n ServerName oniris.nuagegraphik.fr\n\n RewriteEngine on\n DocumentRoot /var/www/client/oniris\n\n <Directory \"/var/www/client/oniris\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName dyva.nuagegraphik.fr\n\n RewriteEngine on\n DocumentRoot /var/www/client/dyva\n\n <Directory \"/var/www/client/dyva\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n# laventurierviking\n\n<VirtualHost *:80>\n ServerName laventurierviking.fr\n Redirect / http://www.laventurierviking.fr/\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName www.laventurierviking.fr\n\n RewriteEngine on\n DocumentRoot /var/www/laventurierviking\n\n <Directory \"/var/www/laventurierviking\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName phototheque.laventurierviking.fr\n\n RewriteEngine on\n DocumentRoot /var/www/phototheque\n\n <Directory \"/var/www/phototheque\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>\n\n<VirtualHost *:80>\n ServerName dev.laventurierviking.fr\n\n RewriteEngine on\n DocumentRoot /var/www/laventurierviking\n\n <Directory \"/var/www/laventurierviking\">\n  Options FollowSymLinks\n  AllowOverride All\n    Require all granted\n </Directory>\n\n ErrorLog ${APACHE_LOG_DIR}/site-error.log\n CustomLog ${APACHE_LOG_DIR}/site-access.log combined\n ServerSignature Off\n</VirtualHost>",
-			"settings":
-			{
-				"buffer_size": 3415,
-				"line_ending": "Unix",
-				"name": "<VirtualHost *:80>"
 			}
 		},
 		{
@@ -296,6 +276,7 @@
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/test.php",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421405097/mapped/var/www/client/oniris/php.ini",
 		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log",
@@ -305,7 +286,6 @@
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421359563/mapped/client/oniris/wp-config.php",
 		"/Users/nuagegraphik/.ssh/id_online.pub",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421337984/mapped/client/oniris/wp-config.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_basic.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
@@ -455,7 +435,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -628,7 +608,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -748,7 +728,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -869,7 +849,7 @@
 						"translation.y": 1037.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -990,7 +970,7 @@
 						"translation.y": 1246.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1111,7 +1091,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1231,7 +1211,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1405,7 +1385,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1579,7 +1559,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1701,7 +1681,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1710,7 +1690,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 780,
+						"buffer_size": 1914,
 						"regions":
 						{
 						},
@@ -1820,7 +1800,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1941,7 +1921,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -2239,70 +2219,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "sftp-config.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								768,
-								768
-							]
-						],
-						"settings":
-						{
-							"auto_complete": null,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 194.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3415,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								111,
-								111
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<VirtualHost *:80>",
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -2312,7 +2229,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 15,
+					"buffer": 13,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -2484,11 +2401,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 14,
 					"file": "css/style.css.map",
 					"semi_transient": false,
 					"settings":
@@ -2656,7 +2573,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

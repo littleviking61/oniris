@@ -55,7 +55,7 @@ header.main{
 	}
 
 	.switch-lang{
-		margin-right: 80vw;
+		margin-right: 60vw;
 	}
 }
 
@@ -71,6 +71,8 @@ main{
 }
 
 .wrap{
+	@extend %flex-column-wrap;
+	
 	> section, > .row{
 		@extend %flex-column-wrap;
 		@include align-items(flex-start);

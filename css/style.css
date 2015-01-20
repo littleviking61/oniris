@@ -1709,16 +1709,16 @@ h4 {
 .hide {
   display: none; }
 
-header.main .go-right, .wrap > section .go-right, .wrap > .row .go-right {
+header.main .go-right, .wrap .go-right, .wrap > .row > header .go-right {
   margin-left: auto; }
-header.main .full, .wrap > section .full, .wrap > .row .full {
+header.main .full, .wrap .full, .wrap > .row > header .full {
   -webkit-flex: 1;
   flex: 1; }
-header.main .unbreak, .wrap > section .unbreak, .wrap > .row .unbreak {
+header.main .unbreak, .wrap .unbreak, .wrap > .row > header .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, .button, button, main, section.simple {
+header.main, .wrap, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, .button, button, main, section.simple {
   display: -webkit-flex;
   display: flex; }
 
@@ -1728,7 +1728,7 @@ aside.main ul {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header.main, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header {
+header.main, .wrap, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -1861,7 +1861,7 @@ header.main {
     border-bottom: solid 0.125rem #ffbc17;
     margin-bottom: 0.5rem; }
   header.main .switch-lang {
-    margin-right: 80vw; }
+    margin-right: 60vw; }
 
 /* MAIN */
 main {
@@ -1930,7 +1930,6 @@ aside.main > ul > li > a {
     background-color: #ffcb4a;
     color: white; }
 aside.main ul li ul {
-  display: none;
   margin-left: 0.625rem;
   margin-bottom: 0.3125rem;
   margin-top: 0.3125rem; }
