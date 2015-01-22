@@ -74,6 +74,7 @@ main{
 .wrap{
 	@extend %flex-column;
 	@include flex-wrap(wrap);
+	@include align-content(flex-start);
 
 	.full{
 		width: 100%;
@@ -81,7 +82,7 @@ main{
 	
 	> section, > .row{
 		@extend %flex-column-wrap;
-		@include align-content(flex-start);
+		@include align-items(flex-start);
 		margin-bottom: $gutter-hudge;
 
 		> header {
