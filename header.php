@@ -17,18 +17,20 @@
 
 	<header class="main" role="banner">
 		<!-- Starting the nav -->
-		<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-			<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
-			<span class="hide"><?php bloginfo('name'); ?></span></a>
-		</h1>
+		<div class="banner">
+			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
+				<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
+				<span class="hide"><?php bloginfo('name'); ?></span></a>
+			</h1>
+			<div class="switch-lang">
+				<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
+			</div>
+		</div>
 		<?php wp_nav_menu( array( 
 			'container' => 'nav',
 			'container_class' => 'main',
 			'theme_location' => 'primary' )); 
 		?>
-		<div class="switch-lang">
-			<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
-		</div>
 
 		<!-- End of Top-Bar -->
 	</header>
@@ -37,8 +39,11 @@
 
 		<aside class="main">
 			<?php wp_nav_menu( array( 
-				'container' => 'aside',
-				'container_class' => 'main',
-				'theme_location' => 'secondary' )); 
+				'container' => false,
+				'menu_class' => 'nav-section',
+				'theme_location' => 'secondary' ));
+			
+				get_template_part('nav-aside');
 			?>
+
 		</aside>

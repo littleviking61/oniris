@@ -10,7 +10,7 @@ body{
 
 /* HEADER */
 
-header.main{
+header[role="banner"]{
 	@extend %flex-column-wrap;
 	@include align-items(flex-end);
 
@@ -19,13 +19,17 @@ header.main{
 	padding-bottom: 0;
 	margin-bottom: $gutter-medium;
 
-	h1{
+	.banner{
 		@include flex-shrink(0);
 		@include flex(1 0 rem-calc(270));
-		margin: 0;
+		
+		h1{
+			margin: 0;
+		}
 	}
 
 	nav{
+		margin-bottom: $gutter-medium;
 
 		ul{
 			@extend %flex-center-center;
@@ -54,9 +58,6 @@ header.main{
 		}
 	}
 
-	.switch-lang{
-		margin-right: 60vw;
-	}
 }
 
 /* MAIN */
@@ -71,11 +72,16 @@ main{
 }
 
 .wrap{
-	@extend %flex-column-wrap;
+	@extend %flex-column;
+	@include flex-wrap(wrap);
+
+	.full{
+		width: 100%;
+	}
 	
 	> section, > .row{
 		@extend %flex-column-wrap;
-		@include align-items(flex-start);
+		@include align-content(flex-start);
 		margin-bottom: $gutter-hudge;
 
 		> header {

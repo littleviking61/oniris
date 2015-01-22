@@ -1709,16 +1709,16 @@ h4 {
 .hide {
   display: none; }
 
-header.main .go-right, .wrap .go-right, .wrap > .row > header .go-right {
+header[role="banner"] .go-right, .wrap > section .go-right, .wrap > .row .go-right {
   margin-left: auto; }
-header.main .full, .wrap .full, .wrap > .row > header .full {
+header[role="banner"] .full, .wrap > section .full, .wrap > .row .full {
   -webkit-flex: 1;
   flex: 1; }
-header.main .unbreak, .wrap .unbreak, .wrap > .row > header .unbreak {
+header[role="banner"] .unbreak, .wrap > section .unbreak, .wrap > .row .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-header.main, .wrap, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header.main nav ul, .button, button, main, section.simple {
+header[role="banner"], .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header, header[role="banner"] nav ul, .button, button, main, .wrap, section.simple {
   display: -webkit-flex;
   display: flex; }
 
@@ -1728,11 +1728,11 @@ aside.main ul {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header.main, .wrap, .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header {
+header[role="banner"], .wrap > section, .wrap > .row, .wrap > section > header, .wrap > .row > header {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-header.main nav ul, .button, button {
+header[role="banner"] nav ul, .button, button {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-items: center;
@@ -1830,38 +1830,39 @@ body {
   font-size: 0.75rem; }
 
 /* HEADER */
-header.main {
+header[role="banner"] {
   -webkit-align-items: flex-end;
   align-items: flex-end;
   font-family: "roboto" serif;
   padding: 1.875rem;
   padding-bottom: 0;
   margin-bottom: 0.9375rem; }
-  header.main h1 {
+  header[role="banner"] .banner {
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
     -webkit-flex: 1 0 16.875rem;
-    flex: 1 0 16.875rem;
-    margin: 0; }
-  header.main nav ul a {
-    display: -webkit-flex;
-    display: flex;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    font-size: 0.875rem;
-    text-transform: lowercase;
-    padding-top: 0.3125rem;
-    margin: 0 0.625rem;
-    border-bottom: solid 0.125rem transparent; }
-    header.main nav ul a i:before {
-      margin-right: 0.3125rem; }
-  header.main nav ul .current-menu-item a:not([href="#"]), header.main nav ul a:hover:not([href="#"]), header.main nav ul a.active:not([href="#"]), header.main nav ul .current-menu-item a:not([href="#"]), .current-menu-item header.main nav ul a:not([href="#"]) {
-    border-bottom: solid 0.125rem #ffbc17;
-    margin-bottom: 0.5rem; }
-  header.main .switch-lang {
-    margin-right: 60vw; }
+    flex: 1 0 16.875rem; }
+    header[role="banner"] .banner h1 {
+      margin: 0; }
+  header[role="banner"] nav {
+    margin-bottom: 0.9375rem; }
+    header[role="banner"] nav ul a {
+      display: -webkit-flex;
+      display: flex;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      font-size: 0.875rem;
+      text-transform: lowercase;
+      padding-top: 0.3125rem;
+      margin: 0 0.625rem;
+      border-bottom: solid 0.125rem transparent; }
+      header[role="banner"] nav ul a i:before {
+        margin-right: 0.3125rem; }
+    header[role="banner"] nav ul .current-menu-item a:not([href="#"]), header[role="banner"] nav ul a:hover:not([href="#"]), header[role="banner"] nav ul a.active:not([href="#"]), header[role="banner"] nav ul .current-menu-item a:not([href="#"]), .current-menu-item header[role="banner"] nav ul a:not([href="#"]) {
+      border-bottom: solid 0.125rem #ffbc17;
+      margin-bottom: 0.5rem; }
 
 /* MAIN */
 main {
@@ -1869,18 +1870,23 @@ main {
   main aside.main {
     min-width: 11.25rem; }
 
-.wrap > section, .wrap > .row {
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
-  margin-bottom: 2.5rem; }
-  .wrap > section > header, .wrap > .row > header {
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .wrap .full {
     width: 100%; }
-.wrap section {
-  margin-right: 1.25rem;
-  margin-bottom: 1.25rem; }
-.wrap .container {
-  padding: 0.9375rem;
-  background-color: white; }
+  .wrap > section, .wrap > .row {
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    margin-bottom: 2.5rem; }
+    .wrap > section > header, .wrap > .row > header {
+      width: 100%; }
+  .wrap section {
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem; }
+  .wrap .container {
+    padding: 0.9375rem;
+    background-color: white; }
 
 /* FOOTER */
 footer.main {

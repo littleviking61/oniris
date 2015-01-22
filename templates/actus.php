@@ -1,4 +1,7 @@
-<?php $width = get_sub_field('largeur_du_bloc'); ?>
+<?php 
+	$width = get_sub_field('largeur_du_bloc');
+	$auto = get_sub_field('auto'); 
+?>
 
 <section class="actus <?= $width > 0 ? 'flex-' . $width : 'full' ?>">
 	<?php $title = get_sub_field('titre'); ?>
@@ -11,7 +14,7 @@
 
 	<div class="actualities">
 		<?php
-			$args = array( 'category_name' => 'actu', 'orderby' => 'date', 'posts_per_page' => 6 );
+			$args = array( /*'category_name' => 'actu', */'orderby' => 'date', 'posts_per_page' => 6 );
 			$lastposts = get_posts( $args ); 
 
 			foreach ( $lastposts as $post ) : 
