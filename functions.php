@@ -249,8 +249,7 @@ function the_nav_section($pageId, $args = [], $result)
 									<?php 
 										$text = isset($result)
 											? get_field($result, $post->ID)
-											: $post->post_title
-										; ?>
+											: $post->post_title; ?>
 									<?= apply_filters('the_title', $text) ?>
 								</a>
 							</li>

@@ -1,0 +1,43 @@
+@include font-face-bb('icon-oniris', '../icons/icon-oniris');
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before, %icon {
+  font-family: "icon-oniris" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-info:before {
+  content: "a";
+}
+.icon-link:before {
+  content: "b";
+}
+.icon-maison:before {
+  content: "c";
+}
+.icon-more:before {
+  content: "d";
+}
+.icon-search:before {
+  content: "e";
+}
+.icon-contact:before {
+  content: "f";
+}
+.icon-bolt:before {
+  content: "g";
+}
+.icon-angle-double-right:before {
+  content: "h";
+}
+.icon-angle-right:before {
+  content: "i";
+}

@@ -20,16 +20,26 @@ $(document).ready(function(){
 				$self = $(this),
 				ul = $('ul.nav-section', $self),
 				subLis = $('>li', ul),
-				subLinks = $('>a', subLis),
+				subLinks = $('>a:first-of-type', subLis),
 				subLinkUls = $('>ul', subLis);
 
 			subLinks.click(function(e){
-				e.preventDefault();
-				subLinkUl = $(this).next('ul');
 
-				subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
-				subLinkUl.addClass('open').velocity("slideDown", { duration: 200 });
+				if(!mouseIconHover){
+					e.preventDefault();
+					subLinkUl = $(this).next('ul');
+
+					subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
+					subLinkUl.addClass('open').velocity("slideDown", { duration: 200 });
+				}
+			}).mousemove(function(e){
+				mouseIconHover = this.offsetWidth - (e.pageX - this.offsetLeft) <= 30;
+				$(this).toggleClass('icon-hover', mouseIconHover);
 			});
+
+			// $('i', subLinks).hover(function(){
+			// 	console.log('test');
+			// });
 
 			$self.mouseenter(function(){
 				mouseIn = true;

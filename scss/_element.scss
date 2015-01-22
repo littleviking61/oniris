@@ -60,9 +60,32 @@ aside.main{
 				font-weight: bold;
 				text-transform: lowercase;
 
+				overflow: hidden;
+				&.icon-hover:after{
+					color:$grey;
+				}
 				&:hover{
 					background-color: lighten($yellow, 10%);
 					color: white;
+
+					&:after{ 
+						max-width: $gutter-large;
+						margin-left: $gutter-mini;
+						padding-left: $gutter-small;
+						padding-right: $gutter-mini;
+					}
+				}
+
+				&:after{
+					@extend %icon;
+					@extend .icon-angle-right:before;
+
+					@include single-transition(all, .2s);
+					display: inline-block;
+					overflow: hidden;
+					max-width: 0;
+					vertical-align: middle;
+
 				}
 			}
 			

@@ -35,6 +35,7 @@ header[role="banner"]{
 
 		ul{
 			@extend %flex-center-center;
+			min-height: rem-calc(34);
 
 			a{
 				@include display-flex;
@@ -71,7 +72,7 @@ main{
 	aside.main{
 		padding-top: $gutter-medium;
 		padding-left: $gutter-big;
-		min-width: rem-calc(180);
+		min-width: rem-calc(200);
 	}
 }
 
