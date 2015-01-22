@@ -2,33 +2,64 @@ jQuery.noConflict(false);
 $ = jQuery;
 
 $(document).ready(function(){
-    //alert($(window).width());
-
-    // $('.masonry-block').masonry({
-    //   itemSelector: 'li'
-    // });
-    var section = $('dl.accordion dd');
-
-    if($( '> a' ,section).length <= 1) section.addClass('active').children('.sub-section').stop(true, false).slideDown(400);
-
-    $('dl.accordion dd > a').click(function(event) {
-        var accordion = $(this).parent().parent();
-        if($(this).parent().hasClass('active')) {
-            $('dd.active', accordion).removeClass('active').children('.sub-section').stop(true, false).slideUp(400);
-        }else{
-            $('dd.active', accordion).removeClass('active').children('.sub-section').stop(true, false).slideUp(400);
-            $(this).parent().addClass('active').children('.sub-section').stop(true, false).slideDown(400);
-        }
-        event.preventDefault();
-    });
-
-    $('header.main .mobile').click(function(event) {
-        $(this).add($(this).next('nav')).toggleClass('active');
-        event.preventDefault();
-    });
+		$('aside.main').nav();
 });
 
-function send_doc() {
-    $('#downloadLink').attr('href', $('#plaquetteLink').attr('data-link'));
-    $('#downloadDocs').foundation('reveal', 'open');
-}
+(function() {
+	$.fn.nav = function() {
+
+		var 
+			duration = 400,
+			easing = 'easeOutQuart',
+			mouseIn = false,
+			mouseTimeout = 'abcd';
+
+		return this.each(function() {
+			var
+				self = this,
+				$self = $(this),
+				ul = $('ul.nav-section', $self),
+				subLis = $('>li', ul),
+				subLinks = $('>a', subLis),
+				subLinkUls = $('>ul', subLis);
+
+			subLinks.click(function(e){
+				e.preventDefault();
+				subLinkUl = $(this).next('ul');
+
+				subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
+				subLinkUl.addClass('open').velocity("slideDown", { duration: 200 });
+			});
+
+			$self.mouseenter(function(){
+				mouseIn = true;
+			});
+
+			$self.mouseleave(function(){
+				mouseIn = false;
+				if(mouseTimeout == 'abcd') clearTimeout(mouseTimeout);
+				mouseTimeout = setTimeout(checkMouseLeave, 2000);
+			});
+
+			function checkMouseLeave() {
+				if(!mouseIn) {
+					subLis.not('.current').children('ul').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
+					subLis.filter('.current').children('ul:not(.open)').addClass('open').velocity("slideDown", { duration: 200 });
+				}
+			}
+
+			function init() {
+				current = $('> li.current', ul);
+				if (current.length > 0) {
+					$('> ul', current).addClass('open');
+				}else{
+					subLis.first().addClass('current').children('ul').addClass('open').velocity("slideDown", { duration: 200 });
+				}
+			}
+
+			init();
+
+		});
+	};
+})(jQuery);
+

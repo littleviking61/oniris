@@ -36,43 +36,66 @@
 /* aside */
 
 aside.main{
-	
-	ul{
-		@extend %flex-row;
-		margin-top: $gutter-small;
-	}
+	margin: 0;
 
-	> ul > li {
+	.nav-section{
+		margin: 0;
 
-		> a{
-			@include single-transition(background-color, .4s);
+		> li {
+			@extend %flex-row;
+			@include align-items(flex-start);
+			margin-top: $gutter-small;
 
-			display: inline-block;
-			background-color: white;//lighten($yellow, 10%);
+			> a{
+				@include single-transition(background-color, .4s);
 
-			padding: $gutter-mini $gutter;
-			margin-bottom: $gutter-small;
-			
-			font-family: $title-font-family;
-			font-size: $ft-size-larger;
-			font-weight: bold;
-			text-transform: lowercase;
+				display: inline-block;
+				background-color: white;//lighten($yellow, 10%);
 
-			&:hover{
-				background-color: lighten($yellow, 10%);
-				color: white;
+				padding: $gutter-mini $gutter;
+				margin-bottom: $gutter-small;
+				
+				font-family: $title-font-family;
+				font-size: $ft-size-larger;
+				font-weight: bold;
+				text-transform: lowercase;
+
+				&:hover{
+					background-color: lighten($yellow, 10%);
+					color: white;
+				}
 			}
-		}
-	}
+			
+			.sub-menu{
+				display: none;
+				margin: $gutter-small 0;
 
-	ul li ul{
-		//display: none;
-		margin-left: $gutter;
-		margin-bottom: $gutter-small;
-		margin-top: $gutter-small;
+				li{
+					margin-bottom: $gutter-mini;
+					
+					a{
+						padding-left: $gutter-small;
+						border-left: rem-calc(3) solid transparent;
+					}
+					
+					&.current a{
+						display: block;
+						border-left-color: $yellow;
+					}
+				}
+			}
 
-		li{
-			margin: $gutter-small 0;
+
+			&.current{
+				> a{
+					background: $yellow;
+					color: white;
+				}
+
+				> ul{
+					display: initial;
+				}
+			}
 		}
 	}
 }

@@ -38,12 +38,24 @@
 	<main role="document">
 
 		<aside class="main">
-			<?php wp_nav_menu( array( 
-				'container' => false,
-				'menu_class' => 'nav-section',
-				'theme_location' => 'secondary' ));
+			<?php 
+				wp_nav_menu( array( 
+					'container' => false,
+					'menu_class' => 'nav-section',
+					'theme_location' => 'secondary' )
+				);
 			
-				get_template_part('nav-aside');
+				$args = [
+					'meta_key' => 'name',
+					'orderby' => 'meta_value',
+					'order' => 'ASC'
+				];
+
+				the_nav_section(8, $args);
+
+				the_nav_section(1390, [], 'name');
+
+				the_nav_section(2191);
 			?>
 
 		</aside>

@@ -3,6 +3,8 @@
 /* GENERAL BODY */
 
 body{
+	@extend %flex-row;
+
 	background-color: $bg-color;
 	font-family: $body-font-family;
 	font-size: $ft-size-normal;
@@ -64,14 +66,18 @@ header[role="banner"]{
 
 main{
 	@extend %flex-column;
-	padding: $gutter-medium $gutter-big 0;
+	@include flex(1);
 
 	aside.main{
+		padding-top: $gutter-medium;
+		padding-left: $gutter-big;
 		min-width: rem-calc(180);
 	}
 }
 
 .wrap{
+	padding-top: $gutter-medium;
+	padding-right: $gutter-big;
 	@extend %flex-column;
 	@include flex-wrap(wrap);
 	@include align-content(flex-start);

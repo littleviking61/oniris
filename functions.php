@@ -242,6 +242,8 @@ function the_nav_section($pageId, $args = [], $result)
 			<a href="<?= get_permalink($pageId) ?>"><?= get_the_title($pageId) ?></a>
 			<ul class="sub-menu">
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
+
+						<?php if (get_field('visible', $post->ID) == 'true'): ?>
 							<li class="<?= $post->ID == $currentId ? 'current' : null ?>">
 								<a href="<?= get_permalink($post->ID) ?>">
 									<?php 
@@ -252,6 +254,7 @@ function the_nav_section($pageId, $args = [], $result)
 									<?= apply_filters('the_title', $text) ?>
 								</a>
 							</li>
+						<?php endif ?>
 					
 					<?php endforeach ?>
 			</ul>
