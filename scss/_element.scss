@@ -63,27 +63,30 @@ aside.main{
 				overflow: hidden;
 				&.icon-hover:after{
 					color:$grey;
+					@include transform(rotate(0deg));
 				}
 				&:hover{
 					background-color: lighten($yellow, 10%);
 					color: white;
 
 					&:after{ 
-						max-width: $gutter-large;
-						margin-left: $gutter-mini;
-						padding-left: $gutter-small;
-						padding-right: $gutter-mini;
+						max-width: rem-calc(25);
+						margin-left: $gutter-small;
+						margin-right: -$gutter-mini;
+						padding: $gutter-mini;
 					}
 				}
 
 				&:after{
 					@extend %icon;
 					@extend .icon-angle-right:before;
+					@include transform(rotate(90deg));
 
 					@include single-transition(all, .2s);
 					display: inline-block;
 					overflow: hidden;
 					max-width: 0;
+					height:rem-calc(25);
 					vertical-align: middle;
 
 				}
