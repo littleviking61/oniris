@@ -30,6 +30,10 @@ header[role="banner"]{
 		}
 	}
 
+	#logo-circle{
+		@include colors(&, "fill");
+	}
+
 	nav{
 		margin-bottom: $gutter-medium;
 
@@ -54,7 +58,8 @@ header[role="banner"]{
 
 			.current-menu-item a, a:hover, a.active{
 				&:not([href="#"]) {
-					border-bottom: solid $two	 $yellow;
+					border-bottom: solid $two;
+					// @include colors(&, "bd");
 					margin-bottom: rem-calc(8);
 				}
 			}

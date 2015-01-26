@@ -27,30 +27,42 @@
   @if $percentage == false { @return ($colNumber * $column-width) + (($colNumber - 1) * $column-gutter) ; }
 }
 
-@mixin colors($element: &, $mode: null) {
+@mixin colors($element: &, $mode: null, $force: false) {
   @if $mode == "bg"{
-    $bgColors: $bgColors, unquote(#{$element}) !global;
+    // $bgColors: $bgColors, unquote(#{$element}) !global;
+    @include renderColors($element, $force, background-color);
   } @else if $mode == "bd"{
-    $bdColors: $bdColors, unquote(#{$element}) !global;
+    // $bdColors: $bdColors, unquote(#{$element}) !global;
+    @include renderColors($element, $force, border-color);
+  } @else if $mode == "fill"{
+    // $bdColors: $bdColors, unquote(#{$element}) !global;
+    @include renderColors($element, $force, fill);
   } @else {
-    $colors: $colors, unquote(#{$element}) !global;
+    // $colors: $colors, unquote(#{$element}) !global;
+    @include renderColors($element, $force);
   }
 }
 
-@mixin renderColors($var: $colors, $attribut: color) {
-  @if length($var) > 0 {
+@mixin renderColors($element, $force, $attribut: color) {
+  // @if length($var) > 0 {
     // defaut color
-    #{$var} {
+    // #{$element} {
       #{$attribut}: $yellow;
-    }
+    // }
     // other color
     @each $categorie, $color in $categories {
-      .#{$categorie} {
-        &#{$var}, #{$var} {
-          #{$attribut}: $color;
+      @at-root .#{$categorie} {
+        @if $force{
+          &#{$element} {
+            #{$attribut}: $color;
+          }
+        } @else {
+          #{$element} {
+            #{$attribut}: $color;
+          }
         }
       }
     }
-  }
+  // }
 }
 

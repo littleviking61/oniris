@@ -19,6 +19,18 @@ nav ul, aside ul {
 a {
   text-decoration: none;
   color: #353535; }
+  a:hover, a.active, .current-menu-item a {
+    color: #ffbc17; }
+    .peinture a:hover, .peinture a.active, .peinture .current-menu-item a, .current-menu-item .peinture a {
+      color: #0252cf; }
+    .geometrie a:hover, .geometrie a.active, .geometrie .current-menu-item a, .current-menu-item .geometrie a {
+      color: #f23518; }
+    .photographie a:hover, .photographie a.active, .photographie .current-menu-item a, .current-menu-item .photographie a {
+      color: #42b04f; }
+    .multi a:hover, .multi a.active, .multi .current-menu-item a, .current-menu-item .multi a {
+      color: #ffbc17; }
+    .sculpture a:hover, .sculpture a.active, .sculpture .current-menu-item a, .current-menu-item .sculpture a {
+      color: #ffbc17; }
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
@@ -32,12 +44,34 @@ h2 {
   font-size: 1.875rem; }
 
 h3 {
+  color: #ffbc17;
   font-size: 1.875rem;
   margin-bottom: 0; }
+  .peinture h3 {
+    color: #0252cf; }
+  .geometrie h3 {
+    color: #f23518; }
+  .photographie h3 {
+    color: #42b04f; }
+  .multi h3 {
+    color: #ffbc17; }
+  .sculpture h3 {
+    color: #ffbc17; }
 
 h4 {
+  color: #ffbc17;
   font-size: 1rem;
   margin-bottom: 0.625rem; }
+  .peinture h4 {
+    color: #0252cf; }
+  .geometrie h4 {
+    color: #f23518; }
+  .photographie h4 {
+    color: #42b04f; }
+  .multi h4 {
+    color: #ffbc17; }
+  .sculpture h4 {
+    color: #ffbc17; }
 
 h5 {
   font-weight: 500;
@@ -45,9 +79,20 @@ h5 {
   margin-bottom: 0; }
 
 hr {
+  background-color: #ffbc17;
   width: 100%;
   border: none;
   height: 0.0625rem; }
+  .peinture hr {
+    background-color: #0252cf; }
+  .geometrie hr {
+    background-color: #f23518; }
+  .photographie hr {
+    background-color: #42b04f; }
+  .multi hr {
+    background-color: #ffbc17; }
+  .sculpture hr {
+    background-color: #ffbc17; }
 
 .content {
   width: 100%;
@@ -242,6 +287,18 @@ header[role="banner"] {
     flex: 1 0 16.875rem; }
     header[role="banner"] .banner h1 {
       margin: 0; }
+  header[role="banner"] #logo-circle {
+    fill: #ffbc17; }
+    .peinture header[role="banner"] #logo-circle {
+      fill: #0252cf; }
+    .geometrie header[role="banner"] #logo-circle {
+      fill: #f23518; }
+    .photographie header[role="banner"] #logo-circle {
+      fill: #42b04f; }
+    .multi header[role="banner"] #logo-circle {
+      fill: #ffbc17; }
+    .sculpture header[role="banner"] #logo-circle {
+      fill: #ffbc17; }
   header[role="banner"] nav {
     margin-bottom: 0.9375rem; }
     header[role="banner"] nav ul {
@@ -261,7 +318,7 @@ header[role="banner"] {
         header[role="banner"] nav ul a i:before {
           margin-right: 0.3125rem; }
       header[role="banner"] nav ul .current-menu-item a:not([href="#"]), header[role="banner"] nav ul a:hover:not([href="#"]), header[role="banner"] nav ul a.active:not([href="#"]), header[role="banner"] nav ul .current-menu-item a:not([href="#"]), .current-menu-item header[role="banner"] nav ul a:not([href="#"]) {
-        border-bottom: solid 0.125rem #ffbc17;
+        border-bottom: solid 0.125rem;
         margin-bottom: 0.5rem; }
 
 /* MAIN */
@@ -309,9 +366,29 @@ footer.main {
   padding: 0.20833rem 0.3125rem;
   background-color: #ffbc17;
   color: white; }
+  .peinture .button, .peinture button {
+    background-color: #0252cf; }
+  .geometrie .button, .geometrie button {
+    background-color: #f23518; }
+  .photographie .button, .photographie button {
+    background-color: #42b04f; }
+  .multi .button, .multi button {
+    background-color: #ffbc17; }
+  .sculpture .button, .sculpture button {
+    background-color: #ffbc17; }
   .button:hover, button:hover {
     color: white;
-    background-color: #f7b000; }
+    background-color: #ffbc17; }
+    .peinture .button:hover, .peinture button:hover {
+      background-color: #0252cf; }
+    .geometrie .button:hover, .geometrie button:hover {
+      background-color: #f23518; }
+    .photographie .button:hover, .photographie button:hover {
+      background-color: #42b04f; }
+    .multi .button:hover, .multi button:hover {
+      background-color: #ffbc17; }
+    .sculpture .button:hover, .sculpture button:hover {
+      background-color: #ffbc17; }
     .button:hover.right, button:hover.right {
       padding-right: 0.9375rem; }
   .button.right, button.right {
@@ -354,8 +431,18 @@ aside.main {
           -webkit-transform: rotate(0deg);
           transform: rotate(0deg); }
         aside.main .nav-section > li > a:hover {
-          background-color: #ffcb4a;
+          background-color: #ffbc17;
           color: white; }
+          .peinture aside.main .nav-section > li > a:hover {
+            background-color: #0252cf; }
+          .geometrie aside.main .nav-section > li > a:hover {
+            background-color: #f23518; }
+          .photographie aside.main .nav-section > li > a:hover {
+            background-color: #42b04f; }
+          .multi aside.main .nav-section > li > a:hover {
+            background-color: #ffbc17; }
+          .sculpture aside.main .nav-section > li > a:hover {
+            background-color: #ffbc17; }
           aside.main .nav-section > li > a:hover:after {
             max-width: 1.5625rem;
             margin-left: 0.3125rem;
@@ -385,10 +472,30 @@ aside.main {
             border-left: 0.1875rem solid transparent; }
           aside.main .nav-section > li .sub-menu li.current a {
             display: block;
-            border-left-color: #ffbc17; }
+            border-color: #ffbc17; }
+            .peinture aside.main .nav-section > li .sub-menu li.current a {
+              border-color: #0252cf; }
+            .geometrie aside.main .nav-section > li .sub-menu li.current a {
+              border-color: #f23518; }
+            .photographie aside.main .nav-section > li .sub-menu li.current a {
+              border-color: #42b04f; }
+            .multi aside.main .nav-section > li .sub-menu li.current a {
+              border-color: #ffbc17; }
+            .sculpture aside.main .nav-section > li .sub-menu li.current a {
+              border-color: #ffbc17; }
       aside.main .nav-section > li.current > a {
-        background: #ffbc17;
+        background-color: #ffbc17;
         color: white; }
+        .peinture aside.main .nav-section > li.current > a {
+          background-color: #0252cf; }
+        .geometrie aside.main .nav-section > li.current > a {
+          background-color: #f23518; }
+        .photographie aside.main .nav-section > li.current > a {
+          background-color: #42b04f; }
+        .multi aside.main .nav-section > li.current > a {
+          background-color: #ffbc17; }
+        .sculpture aside.main .nav-section > li.current > a {
+          background-color: #ffbc17; }
       aside.main .nav-section > li.current > ul {
         display: initial; }
 
@@ -411,7 +518,18 @@ section.simple .thumbnail {
   margin: -0.9375rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
-  border-bottom: 0.3125rem solid; }
+  border-bottom: 0.3125rem solid;
+  border-color: #ffbc17; }
+  .peinture.actu .thumbnail {
+    border-color: #0252cf; }
+  .geometrie.actu .thumbnail {
+    border-color: #f23518; }
+  .photographie.actu .thumbnail {
+    border-color: #42b04f; }
+  .multi.actu .thumbnail {
+    border-color: #ffbc17; }
+  .sculpture.actu .thumbnail {
+    border-color: #ffbc17; }
   .actu .thumbnail img {
     display: block;
     width: 100%;
@@ -424,59 +542,5 @@ section.simple .thumbnail {
   border: none;
   background-color: #737373;
   height: 0.0625rem; }
-
-a:hover, a.active, .current-menu-item a, h3, h4 {
-  color: #ffbc17; }
-
-.peinturea:hover, .peinture a.active, .peinture .current-menu-item a, .current-menu-item .peinture a, .peinture h3, .peinture h4, .peinture a:hover, .peinture a.active, .peinture .current-menu-item a, .current-menu-item .peinture a, .peinture h3, .peinture h4 {
-  color: #0252cf; }
-
-.geometriea:hover, .geometrie a.active, .geometrie .current-menu-item a, .current-menu-item .geometrie a, .geometrie h3, .geometrie h4, .geometrie a:hover, .geometrie a.active, .geometrie .current-menu-item a, .current-menu-item .geometrie a, .geometrie h3, .geometrie h4 {
-  color: #f23518; }
-
-.photographiea:hover, .photographie a.active, .photographie .current-menu-item a, .current-menu-item .photographie a, .photographie h3, .photographie h4, .photographie a:hover, .photographie a.active, .photographie .current-menu-item a, .current-menu-item .photographie a, .photographie h3, .photographie h4 {
-  color: #42b04f; }
-
-.multia:hover, .multi a.active, .multi .current-menu-item a, .current-menu-item .multi a, .multi h3, .multi h4, .multi a:hover, .multi a.active, .multi .current-menu-item a, .current-menu-item .multi a, .multi h3, .multi h4 {
-  color: #ffbc17; }
-
-.sculpturea:hover, .sculpture a.active, .sculpture .current-menu-item a, .current-menu-item .sculpture a, .sculpture h3, .sculpture h4, .sculpture a:hover, .sculpture a.active, .sculpture .current-menu-item a, .current-menu-item .sculpture a, .sculpture h3, .sculpture h4 {
-  color: #ffbc17; }
-
-hr {
-  background-color: #ffbc17; }
-
-.peinturehr, .peinture hr {
-  background-color: #0252cf; }
-
-.geometriehr, .geometrie hr {
-  background-color: #f23518; }
-
-.photographiehr, .photographie hr {
-  background-color: #42b04f; }
-
-.multihr, .multi hr {
-  background-color: #ffbc17; }
-
-.sculpturehr, .sculpture hr {
-  background-color: #ffbc17; }
-
-.actu .thumbnail {
-  border-color: #ffbc17; }
-
-.peinture.actu .thumbnail, .peinture .actu .thumbnail {
-  border-color: #0252cf; }
-
-.geometrie.actu .thumbnail, .geometrie .actu .thumbnail {
-  border-color: #f23518; }
-
-.photographie.actu .thumbnail, .photographie .actu .thumbnail {
-  border-color: #42b04f; }
-
-.multi.actu .thumbnail, .multi .actu .thumbnail {
-  border-color: #ffbc17; }
-
-.sculpture.actu .thumbnail, .sculpture .actu .thumbnail {
-  border-color: #ffbc17; }
 
 /*# sourceMappingURL=style.css.map */

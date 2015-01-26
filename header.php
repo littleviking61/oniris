@@ -19,7 +19,7 @@
 		<!-- Starting the nav -->
 		<div class="banner">
 			<h1><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">
-				<img class="logo" src="<?php bloginfo('template_url'); echo '/img/logo-oniris.svg'?>"/>
+				<?php include(locate_template('icon.php')) ?>
 				<span class="hide"><?php bloginfo('name'); ?></span></a>
 			</h1>
 			<div class="switch-lang">
