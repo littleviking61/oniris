@@ -86,11 +86,13 @@ main{
 	.full{
 		width: 100%;
 	}
+	> .row{
+		margin-bottom: $gutter-hudge;
+	}
 	
-	> section, > .row{
+	> section, .row{
 		@extend %flex-column-wrap;
 		@include align-items(flex-start);
-		margin-bottom: $gutter-hudge;
 
 		> header {
 			@extend %flex-column-wrap;

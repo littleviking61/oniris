@@ -146,3 +146,30 @@ section.simple{
 		}
 	}
 }
+
+/* actu bloc */
+
+.actu{
+
+	.thumbnail{
+		margin: -$gutter-medium;
+		margin-bottom: $gutter;
+		overflow: hidden;
+		border-bottom: $gutter-small solid;
+		@include colors(&, "bd");
+
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.highlight{
+	}
+
+	p{
+		margin-bottom: 0;
+	}
+
+}

@@ -1,0 +1,5 @@
+@include renderColors($colors);
+
+@include renderColors($bgColors, background-color);
+
+@include renderColors($bdColors, border-color);

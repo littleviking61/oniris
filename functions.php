@@ -90,56 +90,6 @@ if(!function_exists('reverie_entry_meta')) :
 		}
 endif;
 
-/**
-* fix broken image metadata so that thumbs can be regenerated
-*/
-function test(){
-		var_dump( wp_get_attachment_url( 13617 ) );
-		var_dump( get_attached_file( 13617 ) );
-}
-
-function fixImageMeta() {
-		global $wpdb;
- 
-		$sql = "
-				select ID from {$wpdb->posts}
-				where post_type = 'attachment'
-				and post_mime_type like 'image/%'
-		";
-		$images = $wpdb->get_col($sql);
-		foreach ($images as $id) {
-			 
-				$meta = wp_get_attachment_metadata($id);
-						
-				echo '<pre>';
-				var_dump(get_attached_file($id));
-				echo '</pre>';
-
-				if (!$meta["file"]) {
-						$file = wp_get_attachment_url($id);
-
-						if (!empty($file)) {
-								$info = getimagesize("$file");
-
-								if (!empty($info)) {
-										$meta = array (
-												'width' => $info[0],
-												'height' => $info[1],
-												'hwstring_small' => "height='{$info[1]}' width='{$info[0]}'",
-												'file' => str_replace('http://oniris.nuagegraphik.fr/wp-content/uploads/', '', $file),
-												'sizes' => array(),         // thumbnails etc.
-												'image_meta' => array(),    // EXIF data
-										);
-										echo '<pre>';
-										var_dump($meta);
-										echo '</pre>';
-									 // update_post_meta($id, '_wp_attachment_metadata', $meta);
-								}
-						}
-				}
-		}
-}
-
 function my_acf_result_query_artistes( $args, $field, $post )
 {
 		// eg from https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters

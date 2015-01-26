@@ -15,6 +15,18 @@ $blue: #0252cf;
 $green: #42b04f;
 $progress: #ffbc16;
 
+// categorie
+$categories: 
+	(peinture, $blue),
+	(geometrie, $red),
+	(photographie, $green),
+	(multi, $yellow),
+	(sculpture, $yellow);
+
+$colors: () !global;
+$bgColors: () !global;
+$bdColors: () !global;
+
 // element color
 $bg-color: $lightest-grey;
 

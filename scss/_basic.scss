@@ -28,7 +28,7 @@ a{
 	color: $grey;
 
 	&:hover, &.active{
-		color: $yellow;
+		@include colors(&);
 	}
 }
 
@@ -42,17 +42,37 @@ h1, h2, h3, h4, h5, h6{
 	margin-top: 0;
 	text-rendering: optimizeLegibility;
 	font-family: $title-font-family;
+	font-weight: lighter;
 }
 
 h2{
 	color: $lighter-grey;
 	font-size: $ft-size-big;
-	font-weight: lighter;
+}
+
+h3{
+	@include colors(&);
+	font-size: $ft-size-big;
+	margin-bottom: 0;
 }
 
 h4{
-	color: $light-grey;
-	font-size: $ft-size-medium;
+	@include colors(&);
+	font-size: $ft-size-large;
+	margin-bottom: $gutter;
+}
+
+h5{
+	font-weight: 500;
+	font-size: $ft-size-normal;
+	margin-bottom: 0;
+}
+
+hr{
+	@include colors(&, "bg");
+	width:100%;
+	border: none;
+	height: $one;
 }
 
 .content{
@@ -60,8 +80,12 @@ h4{
 	line-height: 1.4;
 	
 	p{
-		// line-height: 1.4;
 		color: $grey;
+	}
+
+	h4{
+		color: $light-grey;
+		font-size: $ft-size-medium;
 	}
 }
 

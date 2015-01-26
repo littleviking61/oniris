@@ -26,3 +26,31 @@
   @if $percentage == true { @return percentage(($colNumber / $totalColumns)); }
   @if $percentage == false { @return ($colNumber * $column-width) + (($colNumber - 1) * $column-gutter) ; }
 }
+
+@mixin colors($element: &, $mode: null) {
+  @if $mode == "bg"{
+    $bgColors: $bgColors, unquote(#{$element}) !global;
+  } @else if $mode == "bd"{
+    $bdColors: $bdColors, unquote(#{$element}) !global;
+  } @else {
+    $colors: $colors, unquote(#{$element}) !global;
+  }
+}
+
+@mixin renderColors($var: $colors, $attribut: color) {
+  @if length($var) > 0 {
+    // defaut color
+    #{$var} {
+      #{$attribut}: $yellow;
+    }
+    // other color
+    @each $categorie, $color in $categories {
+      .#{$categorie} {
+        &#{$var}, #{$var} {
+          #{$attribut}: $color;
+        }
+      }
+    }
+  }
+}
+

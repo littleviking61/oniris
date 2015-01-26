@@ -44,7 +44,7 @@ module.exports = function(grunt) {
             },
             options: {
                 compass: true,
-                quiet: true,
+                //quiet: true,
                 style: 'nested',
                 require: [ 'susy', 'font-awesome-sass']
             }
