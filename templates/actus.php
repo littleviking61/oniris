@@ -27,10 +27,30 @@
 			$enAvant = get_sub_field('en_avant');
 			foreach ( $enAvant as $post ) : 
 				setup_postdata( $post );
-				$post->class = 'highlight flex-4';
-				get_template_part('templates/actu');
+				$post->class = 'flex-4';
+				get_template_part('templates/actu-highlight');
 			endforeach;
-		
+
+			$premiereColonne = get_sub_field('premiere_colonne'); ?>
+			<section class="flex-2">
+				<?php foreach ( $premiereColonne as $post ) : 
+					setup_postdata( $post );
+					$post->class = 'full';
+					get_template_part('templates/actu');
+				endforeach; ?>
+			</section>
+
+			<?php	$deuxiemeColonne = get_sub_field('deuxième_colonne'); ?>
+			<section class="flex-2">
+				<?php foreach ( $deuxiemeColonne as $post ) : 
+					setup_postdata( $post );
+					$post->class = 'full';
+					get_template_part('templates/actu');
+				endforeach; ?>
+			</section>
+
+		<?php
+
 		} 
 		wp_reset_postdata();?>
 	</div>

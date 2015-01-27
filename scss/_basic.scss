@@ -12,6 +12,8 @@ html{
 body{
   min-height: 100%;
   width: 100%;
+
+  color: $grey;
 }
 
 nav, aside{
@@ -41,7 +43,7 @@ a{
 h1, h2, h3, h4, h5, h6{
 	margin-top: 0;
 	text-rendering: optimizeLegibility;
-	font-family: $title-font-family;
+	font-family: $title-font;
 	font-weight: lighter;
 }
 
@@ -89,13 +91,14 @@ hr{
 	}
 }
 
+p{
+	color: lighten($grey, 15%);
+}
+
 .content{
 	width: 100%;
 	line-height: 1.4;
 	
-	p{
-		color: $grey;
-	}
 
 	h4{
 		color: $light-grey;

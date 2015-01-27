@@ -55,7 +55,7 @@ aside.main{
 				padding: $gutter-mini $gutter;
 				margin-bottom: $gutter-small;
 				
-				font-family: $title-font-family;
+				font-family: $title-font;
 				font-size: $ft-size-larger;
 				font-weight: bold;
 				text-transform: lowercase;
@@ -88,7 +88,6 @@ aside.main{
 					max-width: 0;
 					height:rem-calc(25);
 					vertical-align: middle;
-
 				}
 			}
 			
@@ -152,10 +151,11 @@ section.simple{
 .actu{
 
 	.thumbnail{
+		display: none;
 		margin: -$gutter-medium;
 		margin-bottom: $gutter;
 		overflow: hidden;
-		border-bottom: $gutter-small solid;
+		border-bottom: $gutter-mini solid;
 		
 		@include colors(&, "bd", true);
 
@@ -166,7 +166,25 @@ section.simple{
 		}
 	}
 
+	h3{
+		font-size: $ft-size-larger;
+		margin-top: $gutter-mini;
+	}
+
 	&.highlight{
+		.thumbnail{
+			display: block;
+		}
+		h3{
+			font-size: $ft-size-big;
+			margin-top: 0;
+		}
+	}
+
+	&:first-child{
+		.thumbnail{
+			display: block;
+		}
 	}
 
 	p{

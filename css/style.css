@@ -9,7 +9,8 @@ html {
 
 body {
   min-height: 100%;
-  width: 100%; }
+  width: 100%;
+  color: #353535; }
 
 nav ul, aside ul {
   list-style: none;
@@ -36,7 +37,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   text-rendering: optimizeLegibility;
-  font-family: "roboto" serif;
+  font-family: "roboto", serif;
   font-weight: lighter; }
 
 h2 {
@@ -131,11 +132,12 @@ hr {
   .sculpture.container hr {
     background-color: #ffbc17; }
 
+p {
+  color: #5b5b5b; }
+
 .content {
   width: 100%;
   line-height: 1.4; }
-  .content p {
-    color: #353535; }
   .content h4 {
     color: #737373;
     font-size: 0.875rem; }
@@ -175,11 +177,6 @@ header[role="banner"] nav ul, .button, button {
   -webkit-justify-content: center;
   justify-content: center; }
 
-/* @include font-face-bb('GandhiSans', '../ft/GandhiSans-Regular-webfont');
-@include font-face-bb('GandhiSans', '../ft/GandhiSans-Italic-webfont', normal, italic);
-@include font-face-bb('GandhiSans', '../ft/GandhiSans-Bold-webfont',bold);
-@include font-face-bb('GandhiSans', '../ft/GandhiSans-BoldItalic-webfont', bold, italic);
- */
 @font-face {
   font-family: "roboto";
   src: url("../ft/robotoslab-thin_0-webfont.eot");
@@ -200,15 +197,15 @@ header[role="banner"] nav ul, .button, button {
   font-style: normal; }
 @font-face {
   font-family: "asap";
-  src: url("../ft/asap-bold-webfont.eot");
-  src: url("../ft/asap-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-bold-webfont.woff") format("woff"), url("../ft/asap-bold-webfont.ttf") format("truetype"), url("../ft/asap-bold-webfont.svg#asap") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: "asap";
   src: url("../ft/asap-regular-webfont.eot");
   src: url("../ft/asap-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-regular-webfont.woff") format("woff"), url("../ft/asap-regular-webfont.ttf") format("truetype"), url("../ft/asap-regular-webfont.svg#asap") format("svg");
   font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "asap";
+  src: url("../ft/asap-bold-webfont.eot");
+  src: url("../ft/asap-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../ft/asap-bold-webfont.woff") format("woff"), url("../ft/asap-bold-webfont.ttf") format("truetype"), url("../ft/asap-bold-webfont.svg#asap") format("svg");
+  font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: "icon-oniris";
@@ -313,7 +310,7 @@ body {
 header[role="banner"] {
   -webkit-align-items: flex-end;
   align-items: flex-end;
-  font-family: "roboto" serif;
+  font-family: "roboto", serif;
   padding: 1.875rem;
   padding-bottom: 0;
   margin-bottom: 0.9375rem; }
@@ -456,7 +453,7 @@ aside.main {
         background-color: white;
         padding: 0.20833rem 0.625rem;
         margin-bottom: 0.3125rem;
-        font-family: "roboto" serif;
+        font-family: "roboto", serif;
         font-size: 1.125rem;
         font-weight: bold;
         text-transform: lowercase;
@@ -552,10 +549,11 @@ section.simple .thumbnail {
 
 /* actu bloc */
 .actu .thumbnail {
+  display: none;
   margin: -0.9375rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
-  border-bottom: 0.3125rem solid;
+  border-bottom: 0.20833rem solid;
   border-color: #ffbc17; }
   .peinture.actu .thumbnail {
     border-color: #0252cf; }
@@ -571,6 +569,16 @@ section.simple .thumbnail {
     display: block;
     width: 100%;
     height: auto; }
+.actu h3 {
+  font-size: 1.125rem;
+  margin-top: 0.20833rem; }
+.actu.highlight .thumbnail {
+  display: block; }
+.actu.highlight h3 {
+  font-size: 1.875rem;
+  margin-top: 0; }
+.actu:first-child .thumbnail {
+  display: block; }
 .actu p {
   margin-bottom: 0; }
 

@@ -6,7 +6,7 @@ body{
 	@extend %flex-row;
 
 	background-color: $bg-color;
-	font-family: $body-font-family;
+	font-family: $body-font;
 	font-size: $ft-size-normal;
 }
 
@@ -16,7 +16,7 @@ header[role="banner"]{
 	@extend %flex-column-wrap;
 	@include align-items(flex-end);
 
-	font-family: $title-font-family;	
+	font-family: $title-font;	
 	padding: $gutter-big;
 	padding-bottom: 0;
 	margin-bottom: $gutter-medium;
