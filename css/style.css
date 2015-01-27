@@ -94,6 +94,43 @@ hr {
   .sculpture hr {
     background-color: #ffbc17; }
 
+.container h3 {
+  color: #ffbc17; }
+  .peinture.container h3 {
+    color: #0252cf; }
+  .geometrie.container h3 {
+    color: #f23518; }
+  .photographie.container h3 {
+    color: #42b04f; }
+  .multi.container h3 {
+    color: #ffbc17; }
+  .sculpture.container h3 {
+    color: #ffbc17; }
+.container h4 {
+  color: #ffbc17; }
+  .peinture.container h4 {
+    color: #0252cf; }
+  .geometrie.container h4 {
+    color: #f23518; }
+  .photographie.container h4 {
+    color: #42b04f; }
+  .multi.container h4 {
+    color: #ffbc17; }
+  .sculpture.container h4 {
+    color: #ffbc17; }
+.container hr {
+  background-color: #ffbc17; }
+  .peinture.container hr {
+    background-color: #0252cf; }
+  .geometrie.container hr {
+    background-color: #f23518; }
+  .photographie.container hr {
+    background-color: #42b04f; }
+  .multi.container hr {
+    background-color: #ffbc17; }
+  .sculpture.container hr {
+    background-color: #ffbc17; }
+
 .content {
   width: 100%;
   line-height: 1.4; }

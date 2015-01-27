@@ -75,6 +75,20 @@ hr{
 	height: $one;
 }
 
+.container, %basic-color{
+	h3{
+		@include colors(&, null, true);
+	}
+
+	h4{
+		@include colors(&, null, true);
+	}
+
+	hr{
+		@include colors(&, "bg", true);
+	}
+}
+
 .content{
 	width: 100%;
 	line-height: 1.4;
