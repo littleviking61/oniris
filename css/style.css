@@ -414,7 +414,9 @@ main {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-content: flex-start;
-  align-content: flex-start; }
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start; }
   .wrap .full {
     width: 100%; }
   .wrap > h2 {

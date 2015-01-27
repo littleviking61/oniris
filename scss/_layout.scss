@@ -87,6 +87,7 @@ main{
 	@extend %flex-column;
 	@include flex-wrap(wrap);
 	@include align-content(flex-start);
+	@include align-items(flex-start);
 
 	.full{
 		width: 100%;
