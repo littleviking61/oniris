@@ -1,5 +1,6 @@
 <?php 
 	$gallerieId = get_sub_field('gallerie_id')[0]['ngg_id'];
+	$galleryWp = get_sub_field('gallerie_img');
 ?>
 
 <section class="container gallery flex-6">
@@ -19,10 +20,19 @@
 		data-keyboard="true"
 		data-allowfullscreen="true">
 
-	<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); ?>
-	<?php foreach ($gallery as $image): ?>
-		<img src="<?= $image->imageURL ?>" data-caption="<?= $image->caption ?>">
-	<?php endforeach ?>
+	<?php if (!empty($gallerieId)): ?>
+		
+		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); ?>
+		<?php foreach ($gallery as $image): ?>
+			<img src="<?= $image->imageURL ?>" data-caption="<?= $image->caption ?>">
+		<?php endforeach ?>
+
+	<?php elseif(!empty($galleryWp)): ?>
+		<?php foreach ($galleryWp as $image): ?>
+			<img src="<?= $image['url'] ?>" data-caption="<?= $image['title'] ?>">
+		<?php endforeach ?>
+
+	<?php endif ?>
 		
 	</div>
 </section>

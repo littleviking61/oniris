@@ -178,6 +178,7 @@ add_filter( 'wp_nav_menu' , 'menu', 10, 2 );
 function category_id_class($classes) {
 	global $post;
 	// foreach((get_the_category($post->ID)) as $category)
+	$classes[] = get_field('page_type_acf');
 	$classes[] = get_field('category');
 	return $classes;
 }

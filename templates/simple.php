@@ -1,5 +1,6 @@
 <?php 
 	$title = get_sub_field('titre');
+	$subTitle = get_sub_field('sous-titre');
 
 	$width = get_sub_field('largeur_du_bloc');
 	$specificClass = get_sub_field('specifique_bloc_class');
@@ -23,9 +24,13 @@
 	<?php endif ?>
 
 	<div class="content">
-		
+
 		<?php if (!empty($title)): ?>
 			<h2 class="title"><?= $title ?></h2>
+		<?php endif ?>
+		
+		<?php if (!empty($subTitle)): ?>
+			<h3 class="sub-title"><?= $subTitle ?></h3>
 		<?php endif ?>
 
 		<?php the_sub_field('texte'); ?>
