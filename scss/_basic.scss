@@ -78,17 +78,8 @@ hr{
 }
 
 .container, %basic-color{
-	h3{
-		@include colors(&, null, true);
-	}
-
-	h4{
-		@include colors(&, null, true);
-	}
-
-	hr{
-		@include colors(&, "bg", true);
-	}
+	@include colors((h3,h4), null, ".container");
+	@include colors(hr, "bg", ".container");
 }
 
 p{

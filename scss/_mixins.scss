@@ -27,42 +27,45 @@
   @if $percentage == false { @return ($colNumber * $column-width) + (($colNumber - 1) * $column-gutter) ; }
 }
 
-@mixin colors($element: &, $mode: null, $force: false) {
+@mixin colors($element: &, $mode: null, $force: false, $space : " ") {
   @if $mode == "bg"{
     // $bgColors: $bgColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, background-color);
+    @include renderColors($element, $force, $space, background-color);
   } @else if $mode == "bd"{
     // $bdColors: $bdColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, border-color);
+    @include renderColors($element, $force, $space, border-color);
   } @else if $mode == "fill"{
     // $bdColors: $bdColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, fill);
+    @include renderColors($element, $force, $space, fill);
   } @else {
     // $colors: $colors, unquote(#{$element}) !global;
-    @include renderColors($element, $force);
+    @include renderColors($element, $force, $space);
   }
 }
 
-@mixin renderColors($element, $force, $attribut: color) {
-  // @if length($var) > 0 {
-    // defaut color
-    // #{$element} {
+@mixin renderColors($elements, $force, $space, $attribut: color) {
+  // #{$attribut}: $yellow;
+
+  @each $element in $elements {
+    @at-root #{$elements} {
       #{$attribut}: $yellow;
-    // }
-    // other color
+    }
+
     @each $categorie, $color in $categories {
-      @at-root .#{$categorie} {
-        @if $force{
-          &#{$element} {
-            #{$attribut}: $color;
-          }
-        } @else {
-          #{$element} {
-            #{$attribut}: $color;
-          }
+      @if $force == true{
+        @at-root .#{$categorie}#{$element} {
+          #{$attribut}: $color;
+        }
+      } @else if $force == false {
+        @at-root .#{$categorie} #{$element} {
+          #{$attribut}: $color;
+        }
+      } @else {
+        @at-root #{$force}.#{$categorie}#{$space}#{$element} {
+          #{$attribut}: $color;
         }
       }
     }
-  // }
+  }
 }
 

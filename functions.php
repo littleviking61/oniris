@@ -206,7 +206,7 @@ function the_nav_section($pageId, $args = [], $result)
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
 						<?php if (get_field('visible', $post->ID) == 'true'): ?>
-							<li class="<?= $post->ID == $currentId ? 'current' : null ?> <?= get_field('category', $post->ID) ?>">
+							<li class="<?= $post->ID == $currentId ? 'current' : null ?> <?= ''//get_field('category', $post->ID) ?>">
 								<a href="<?= get_permalink($post->ID) ?>">
 									<?php 
 										$text = isset($result)
