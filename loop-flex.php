@@ -1,5 +1,15 @@
 <?php 
 
+/* page resume */
+$type = get_field('page_type_acf');
+if($type){
+  // check if template exist and call it
+  $template = locate_template( 'templates/intro-'.$type.'.php' );
+  if(file_exists($template)) {
+    include($template);
+  }
+}
+
 if( have_rows('contenu') ):
 
     while ( have_rows('contenu') ) : the_row();

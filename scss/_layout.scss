@@ -91,6 +91,12 @@ main{
 	.full{
 		width: 100%;
 	}
+
+	> h2{
+		width: 100%;
+		margin-bottom: $gutter-small;
+	}
+
 	> .row{
 		margin-bottom: $gutter-hudge;
 	}

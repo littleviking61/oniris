@@ -33,6 +33,23 @@
 	} 
 }
 
+/* thumbnail */
+
+%thumbnail, .thumbnail{
+	margin: -$gutter-medium;
+	margin-bottom: $gutter;
+	overflow: hidden;
+	border-bottom: $gutter-mini solid;
+	
+	@include colors(&, "bd");
+
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
 /* aside */
 
 aside.main{
@@ -147,24 +164,13 @@ section.simple{
 	}
 }
 
+	
 /* actu bloc */
 
 .actu{
 
 	.thumbnail{
 		display: none;
-		margin: -$gutter-medium;
-		margin-bottom: $gutter;
-		overflow: hidden;
-		border-bottom: $gutter-mini solid;
-		
-		@include colors(".thumbnail", "bd", ".actu");
-
-		img{
-			display: block;
-			width: 100%;
-			height: auto;
-		}
 	}
 
 	h3{
@@ -192,4 +198,14 @@ section.simple{
 		margin-bottom: 0;
 	}
 
+}
+
+.intro{
+	.content{
+		font-family: $title-font;
+		text-align: center;
+		p{
+			@include colors(&);
+		}
+	}
 }

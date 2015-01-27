@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h2{
+	@include colors(&);
+}
+
+h2{
 	color: $lighter-grey;
 	font-size: $ft-size-big;
 }
@@ -80,6 +84,7 @@ hr{
 .container, %basic-color{
 	@include colors((h3,h4), null, ".container");
 	@include colors(hr, "bg", ".container");
+	@include colors(".thumbnail", "bd", ".container");
 }
 
 p{
@@ -90,7 +95,12 @@ p{
 	width: 100%;
 	line-height: 1.4;
 	
-
+	hr{
+		width: $gutter;
+		border:none;
+		height: $one;
+	}
+	
 	h4{
 		color: $light-grey;
 		font-size: $ft-size-medium;
