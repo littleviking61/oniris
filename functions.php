@@ -173,6 +173,18 @@ function replace( $a ){
 }
 add_filter( 'wp_nav_menu' , 'menu', 10, 2 );
 
+
+// add category nicenames in body class
+function category_id_class($classes) {
+	global $post;
+	// foreach((get_the_category($post->ID)) as $category)
+	$classes[] = get_field('category');
+	return $classes;
+}
+
+add_filter('body_class', 'category_id_class');
+
+
 function the_nav_section($pageId, $args = [], $result)
 {
 	$argsDefault = array(
@@ -194,7 +206,7 @@ function the_nav_section($pageId, $args = [], $result)
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
 						<?php if (get_field('visible', $post->ID) == 'true'): ?>
-							<li class="<?= $post->ID == $currentId ? 'current' : null ?>">
+							<li class="<?= $post->ID == $currentId ? 'current' : null ?> <?= get_field('category', $post->ID) ?>">
 								<a href="<?= get_permalink($post->ID) ?>">
 									<?php 
 										$text = isset($result)
