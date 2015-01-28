@@ -28,18 +28,9 @@ section.simple{
 
 	.thumbnail{ display: none; }
 
-	h3{
-		font-size: $ft-size-larger;
-		margin-top: $gutter-mini;
-	}
-
 	&.highlight{
 		.thumbnail{
 			display: block;
-		}
-		h3{
-			font-size: $ft-size-big;
-			margin-top: 0;
 		}
 	}
 

@@ -26,11 +26,11 @@
 	<div class="content">
 
 		<?php if (!empty($title)): ?>
-			<h2 class="title"><?= $title ?></h2>
+			<h3 class="title"><?= $title ?></h3>
 		<?php endif ?>
 		
 		<?php if (!empty($subTitle)): ?>
-			<h3 class="sub-title"><?= $subTitle ?></h3>
+			<h4 class="sub-title"><?= $subTitle ?></h4>
 		<?php endif ?>
 
 		<?php the_sub_field('texte'); ?>

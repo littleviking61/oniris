@@ -46,26 +46,23 @@ h1, h2, h3, h4, h5, h6{
 	text-rendering: optimizeLegibility;
 	font-family: $title-font;
 	font-weight: lighter;
+	margin-bottom: 0;
 }
 
 h2{
 	@include colors(&);
-}
-
-h2{
 	color: $lighter-grey;
 	font-size: $ft-size-big;
 }
 
 h3{
 	@include colors(&);
-	font-size: $ft-size-big;
-	margin-bottom: 0;
+	font-size: $ft-size-largest;
 }
 
 h4{
 	@include colors(&);
-	font-size: $ft-size-large;
+	font-size: $ft-size-larger;
 	margin-bottom: $gutter;
 }
 
@@ -73,7 +70,6 @@ h5{
 	color: $grey;
 	font-weight: 500;
 	font-size: $ft-size-normal;
-	margin-bottom: 0;
 }
 
 hr{
@@ -90,7 +86,7 @@ hr{
 
 %basic-color{
 	color: initial;
-	@include colors((h3,h4), null, ".container");
+	@include colors((h2,h3,h4), null, ".container");
 	@include colors(hr, "bg", ".container");
 	@include colors(".thumbnail", "bd", ".container");
 }
@@ -114,7 +110,11 @@ p{
 		font-size: $ft-size-medium;
 	}
 
-	*:last-child{
+	> *:first-child{
+		margin-top: 0;
+	}
+
+	> *:last-child{
 		margin-bottom: 0;
 	}
 }

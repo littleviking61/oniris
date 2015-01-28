@@ -10,8 +10,8 @@
 		<img src="<?php the_field('image') ?>" alt="">
 	</div>
 	<h5><?= get_field('intitule') ?></h5>
-	<h3><?= get_field('titre') ?></h3>
-	<h4><?= get_field('sous_titre') ?></h4>
+	<h2><?= get_field('titre') ?></h2>
+	<h3><?= get_field('sous_titre') ?></h3>
 	<hr>
 	<div class="content">
 		<p><?= get_field('resume') ?></p>
