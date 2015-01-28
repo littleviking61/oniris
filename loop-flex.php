@@ -10,8 +10,7 @@ if($type){
   }
 }
 
-if( have_rows('contenu') ):
-
+if( have_rows('contenu') ) :
     while ( have_rows('contenu') ) : the_row();
 
         if( get_row_layout() == 'ligne' ):
@@ -77,7 +76,13 @@ if( have_rows('contenu') ):
     if(isset($closeAtEnd) && $closeAtEnd) {
     	echo '</div>';
     	unset($closeAtEnd);
-    }
+    };
+
+else :
+  
+  global $more;    // Declare global $more (before the loop).
+  $more = 1;
+  the_content();  
 
 endif;
 

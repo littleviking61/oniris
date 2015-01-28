@@ -1,4 +1,35 @@
 <?php 
+// do all the cleaning and enqueue here
+/*
+Author: Zhen Huang
+URL: http://themefortress.com/
+
+This place is much cleaner. Put your theme specific codes here,
+anything else you may wan to use plugins to keep things tidy.
+
+*/
+
+/*
+1. clean.php
+	- head cleanup
+	- post and images related cleaning
+*/
+require_once('clean.php'); // do all the cleaning and enqueue here
+
+if(!function_exists('init_css_sass')) :
+		function init_css_sass(){
+				/*
+				2. enqueue-sass.php or enqueue-css.php
+						- enqueueing scripts & styles for Sass OR CSS
+						- please use either Sass OR CSS, having two enabled will ruin your weekend
+				*/
+				require_once('enqueue-sass.php'); // do all the cleaning and enqueue if you Sass to customize Reverie
+				//require_once('enqueue-css.php'); // to use CSS for customization, uncomment this line and comment the above Sass line
+		}
+endif;
+
+init_css_sass();
+
 /*===================================
 =            Navigation             =
 ===================================*/
@@ -59,7 +90,7 @@ class reverie_walker extends Walker_Nav_Menu {
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
-    // Additionnal Class cleanup, as found in Roots_Nav_Walker - Roots Theme lib/nav.php
+    // Additionnal Class cleanup, as found in Roots_Nav_Walker - Roots Theme nav.php
     // see http://roots.io/ and https://github.com/roots/roots
     $slug = sanitize_title($item->title);
     $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', '', $classes);
@@ -131,3 +162,5 @@ class reverie_walker extends Walker_Nav_Menu {
 		}
   	}
 }
+
+?>

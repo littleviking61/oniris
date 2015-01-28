@@ -644,11 +644,13 @@ section.simple .thumbnail {
   overflow: hidden;
   width: 50%;
   margin: -0.9375rem;
-  margin-right: 1.25rem; }
+  margin-right: 1.25rem;
+  border: none; }
   section.simple .thumbnail img {
     position: absolute;
     max-height: 100%;
-    min-width: 100%; }
+    min-width: 100%;
+    width: auto; }
 
 /* actu bloc */
 .actu .thumbnail {
