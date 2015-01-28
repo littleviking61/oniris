@@ -44,6 +44,7 @@
 	@include colors(&, "bd");
 
 	img{
+		@include single-transition(all, .4s, ease-out);
 		display: block;
 		width: 100%;
 		height: auto;
@@ -52,10 +53,22 @@
 
 /* list bloc */
 
-.post-it{
-	height: grid-calc(2.5);
+.post-it, %post-it{
 	@extend %flex-row;
 	@extend %section-gutter;
+	@include single-transition(all, .5s);
+	// @include box-shadow(0 0 $gutter transparent);
+
+	&.artiste{
+		height: grid-calc(2.5);
+	}
+
+	&:hover{
+		.thumbnail img{
+			transform: scale(1.05)
+		}
+		@include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
+	}
 
 	h3{
 		font-size: $ft-size-larger;

@@ -5,15 +5,15 @@
 	$categorie = get_field('category', $linkID);
 ?>
 
-<section class="actu highlight container <?= $class ?> <?= $categorie ?>">
+<a href="<?= get_permalink($linkID) ?>" class="actu highlight container <?= $class ?> <?= $categorie ?>">
 	<div class="thumbnail">
 		<img src="<?php the_field('image') ?>" alt="">
 	</div>
 	<h5><?= get_field('intitule') ?></h5>
-	<a href="<?= get_permalink($linkID) ?>">
-		<h3><?= get_field('titre') ?></h3>
-		<h4><?= get_field('sous_titre') ?></h4>
-	</a>
+	<h3><?= get_field('titre') ?></h3>
+	<h4><?= get_field('sous_titre') ?></h4>
 	<hr>
-	<p><?= get_field('resume') ?></p>
-</section>
+	<div class="content">
+		<p><?= get_field('resume') ?></p>
+	</div>
+</a>

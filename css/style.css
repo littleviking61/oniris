@@ -22,27 +22,27 @@ a {
   color: #353535; }
   a:hover, a.active, .current-menu-item a {
     color: #ffbc17; }
-  .peinture a:hover {
+  .cat-peinture a:hover {
     color: #0252cf; }
-  .geometrie a:hover {
+  .cat-geometrie a:hover {
     color: #f23518; }
-  .photographie a:hover {
+  .cat-photographie a:hover {
     color: #42b04f; }
-  .multi a:hover {
+  .cat-multi a:hover {
     color: #ffbc17; }
-  .sculpture a:hover {
+  .cat-sculpture a:hover {
     color: #ffbc17; }
   a:hover, a.active, .current-menu-item a {
     color: #ffbc17; }
-  .peinture a.active, .peinture .current-menu-item a, .current-menu-item .peinture a {
+  .cat-peinture a.active, .cat-peinture .current-menu-item a, .current-menu-item .cat-peinture a {
     color: #0252cf; }
-  .geometrie a.active, .geometrie .current-menu-item a, .current-menu-item .geometrie a {
+  .cat-geometrie a.active, .cat-geometrie .current-menu-item a, .current-menu-item .cat-geometrie a {
     color: #f23518; }
-  .photographie a.active, .photographie .current-menu-item a, .current-menu-item .photographie a {
+  .cat-photographie a.active, .cat-photographie .current-menu-item a, .current-menu-item .cat-photographie a {
     color: #42b04f; }
-  .multi a.active, .multi .current-menu-item a, .current-menu-item .multi a {
+  .cat-multi a.active, .cat-multi .current-menu-item a, .current-menu-item .cat-multi a {
     color: #ffbc17; }
-  .sculpture a.active, .sculpture .current-menu-item a, .current-menu-item .sculpture a {
+  .cat-sculpture a.active, .cat-sculpture .current-menu-item a, .current-menu-item .cat-sculpture a {
     color: #ffbc17; }
 
 /* paragraphe and title basic */
@@ -54,15 +54,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   color: #ffbc17; }
-.peinture h2 {
+.cat-peinture h2 {
   color: #0252cf; }
-.geometrie h2 {
+.cat-geometrie h2 {
   color: #f23518; }
-.photographie h2 {
+.cat-photographie h2 {
   color: #42b04f; }
-.multi h2 {
+.cat-multi h2 {
   color: #ffbc17; }
-.sculpture h2 {
+.cat-sculpture h2 {
   color: #ffbc17; }
 
 h2 {
@@ -74,15 +74,15 @@ h3 {
   margin-bottom: 0; }
   h3 {
     color: #ffbc17; }
-  .peinture h3 {
+  .cat-peinture h3 {
     color: #0252cf; }
-  .geometrie h3 {
+  .cat-geometrie h3 {
     color: #f23518; }
-  .photographie h3 {
+  .cat-photographie h3 {
     color: #42b04f; }
-  .multi h3 {
+  .cat-multi h3 {
     color: #ffbc17; }
-  .sculpture h3 {
+  .cat-sculpture h3 {
     color: #ffbc17; }
 
 h4 {
@@ -90,18 +90,19 @@ h4 {
   margin-bottom: 0.625rem; }
   h4 {
     color: #ffbc17; }
-  .peinture h4 {
+  .cat-peinture h4 {
     color: #0252cf; }
-  .geometrie h4 {
+  .cat-geometrie h4 {
     color: #f23518; }
-  .photographie h4 {
+  .cat-photographie h4 {
     color: #42b04f; }
-  .multi h4 {
+  .cat-multi h4 {
     color: #ffbc17; }
-  .sculpture h4 {
+  .cat-sculpture h4 {
     color: #ffbc17; }
 
 h5 {
+  color: #353535;
   font-weight: 500;
   font-size: 0.75rem;
   margin-bottom: 0; }
@@ -112,65 +113,70 @@ hr {
   height: 0.0625rem; }
   hr {
     background-color: #ffbc17; }
-  .peinture hr {
+  .cat-peinture hr {
     background-color: #0252cf; }
-  .geometrie hr {
+  .cat-geometrie hr {
     background-color: #f23518; }
-  .photographie hr {
+  .cat-photographie hr {
     background-color: #42b04f; }
-  .multi hr {
+  .cat-multi hr {
     background-color: #ffbc17; }
-  .sculpture hr {
+  .cat-sculpture hr {
     background-color: #ffbc17; }
 
-h3, h4 {
-  color: #ffbc17; }
-.container.peinture h3 {
-  color: #0252cf; }
-.container.geometrie h3 {
-  color: #f23518; }
-.container.photographie h3 {
-  color: #42b04f; }
-.container.multi h3 {
-  color: #ffbc17; }
-.container.sculpture h3 {
-  color: #ffbc17; }
-h3, h4 {
-  color: #ffbc17; }
-.container.peinture h4 {
-  color: #0252cf; }
-.container.geometrie h4 {
-  color: #f23518; }
-.container.photographie h4 {
-  color: #42b04f; }
-.container.multi h4 {
-  color: #ffbc17; }
-.container.sculpture h4 {
-  color: #ffbc17; }
-hr {
-  background-color: #ffbc17; }
-.container.peinture hr {
-  background-color: #0252cf; }
-.container.geometrie hr {
-  background-color: #f23518; }
-.container.photographie hr {
-  background-color: #42b04f; }
-.container.multi hr {
-  background-color: #ffbc17; }
-.container.sculpture hr {
-  background-color: #ffbc17; }
-.thumbnail {
-  border-color: #ffbc17; }
-.container.peinture .thumbnail {
-  border-color: #0252cf; }
-.container.geometrie .thumbnail {
-  border-color: #f23518; }
-.container.photographie .thumbnail {
-  border-color: #42b04f; }
-.container.multi .thumbnail {
-  border-color: #ffbc17; }
-.container.sculpture .thumbnail {
-  border-color: #ffbc17; }
+.container {
+  display: block; }
+
+.container {
+  color: initial; }
+  h3, h4 {
+    color: #ffbc17; }
+  .container.cat-peinture h3 {
+    color: #0252cf; }
+  .container.cat-geometrie h3 {
+    color: #f23518; }
+  .container.cat-photographie h3 {
+    color: #42b04f; }
+  .container.cat-multi h3 {
+    color: #ffbc17; }
+  .container.cat-sculpture h3 {
+    color: #ffbc17; }
+  h3, h4 {
+    color: #ffbc17; }
+  .container.cat-peinture h4 {
+    color: #0252cf; }
+  .container.cat-geometrie h4 {
+    color: #f23518; }
+  .container.cat-photographie h4 {
+    color: #42b04f; }
+  .container.cat-multi h4 {
+    color: #ffbc17; }
+  .container.cat-sculpture h4 {
+    color: #ffbc17; }
+  hr {
+    background-color: #ffbc17; }
+  .container.cat-peinture hr {
+    background-color: #0252cf; }
+  .container.cat-geometrie hr {
+    background-color: #f23518; }
+  .container.cat-photographie hr {
+    background-color: #42b04f; }
+  .container.cat-multi hr {
+    background-color: #ffbc17; }
+  .container.cat-sculpture hr {
+    background-color: #ffbc17; }
+  .thumbnail {
+    border-color: #ffbc17; }
+  .container.cat-peinture .thumbnail {
+    border-color: #0252cf; }
+  .container.cat-geometrie .thumbnail {
+    border-color: #f23518; }
+  .container.cat-photographie .thumbnail {
+    border-color: #42b04f; }
+  .container.cat-multi .thumbnail {
+    border-color: #ffbc17; }
+  .container.cat-sculpture .thumbnail {
+    border-color: #ffbc17; }
 
 p {
   color: #5b5b5b; }
@@ -338,15 +344,15 @@ header[role="banner"] {
       margin: 0; }
   header[role="banner"] #logo-circle {
     fill: #ffbc17; }
-  .peinture header[role="banner"] #logo-circle {
+  .cat-peinture header[role="banner"] #logo-circle {
     fill: #0252cf; }
-  .geometrie header[role="banner"] #logo-circle {
+  .cat-geometrie header[role="banner"] #logo-circle {
     fill: #f23518; }
-  .photographie header[role="banner"] #logo-circle {
+  .cat-photographie header[role="banner"] #logo-circle {
     fill: #42b04f; }
-  .multi header[role="banner"] #logo-circle {
+  .cat-multi header[role="banner"] #logo-circle {
     fill: #ffbc17; }
-  .sculpture header[role="banner"] #logo-circle {
+  .cat-sculpture header[role="banner"] #logo-circle {
     fill: #ffbc17; }
   header[role="banner"] nav {
     margin-bottom: 0.9375rem; }
@@ -400,7 +406,7 @@ main {
     align-items: flex-start; }
     .wrap > section > header, .wrap .row > header {
       width: 100%; }
-  .wrap section, .wrap .post-it {
+  .wrap section, .wrap .post-it, .wrap .actu {
     margin-right: 1.25rem;
     margin-bottom: 1.25rem; }
   .wrap .container {
@@ -425,7 +431,7 @@ main, .wrap, header[role="banner"], .wrap > section, .wrap .row, .wrap > section
   display: -webkit-flex;
   display: flex; }
 
-body, .post-it, aside.main .nav-section > li {
+body, .post-it, .actu, aside.main .nav-section > li {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -453,53 +459,53 @@ header[role="banner"] nav ul, .button, button {
   color: white; }
   .button, button {
     background-color: #ffbc17; }
-  .peinture .button {
+  .cat-peinture .button {
     background-color: #0252cf; }
-  .geometrie .button {
+  .cat-geometrie .button {
     background-color: #f23518; }
-  .photographie .button {
+  .cat-photographie .button {
     background-color: #42b04f; }
-  .multi .button {
+  .cat-multi .button {
     background-color: #ffbc17; }
-  .sculpture .button {
+  .cat-sculpture .button {
     background-color: #ffbc17; }
   .button, button {
     background-color: #ffbc17; }
-  .peinture button {
+  .cat-peinture button {
     background-color: #0252cf; }
-  .geometrie button {
+  .cat-geometrie button {
     background-color: #f23518; }
-  .photographie button {
+  .cat-photographie button {
     background-color: #42b04f; }
-  .multi button {
+  .cat-multi button {
     background-color: #ffbc17; }
-  .sculpture button {
+  .cat-sculpture button {
     background-color: #ffbc17; }
   .button:hover, button:hover {
     color: white; }
     .button:hover, button:hover {
       background-color: #ffbc17; }
-    .peinture .button:hover {
+    .cat-peinture .button:hover {
       background-color: #0252cf; }
-    .geometrie .button:hover {
+    .cat-geometrie .button:hover {
       background-color: #f23518; }
-    .photographie .button:hover {
+    .cat-photographie .button:hover {
       background-color: #42b04f; }
-    .multi .button:hover {
+    .cat-multi .button:hover {
       background-color: #ffbc17; }
-    .sculpture .button:hover {
+    .cat-sculpture .button:hover {
       background-color: #ffbc17; }
     .button:hover, button:hover {
       background-color: #ffbc17; }
-    .peinture button:hover {
+    .cat-peinture button:hover {
       background-color: #0252cf; }
-    .geometrie button:hover {
+    .cat-geometrie button:hover {
       background-color: #f23518; }
-    .photographie button:hover {
+    .cat-photographie button:hover {
       background-color: #42b04f; }
-    .multi button:hover {
+    .cat-multi button:hover {
       background-color: #ffbc17; }
-    .sculpture button:hover {
+    .cat-sculpture button:hover {
       background-color: #ffbc17; }
     .button:hover.right, button:hover.right {
       padding-right: 0.9375rem; }
@@ -523,31 +529,46 @@ header[role="banner"] nav ul, .button, button {
     border-color: #ffbc17; }
   .thumbnail {
     border-color: #ffbc17; }
-  .peinture .thumbnail {
+  .cat-peinture .thumbnail {
     border-color: #0252cf; }
-  .geometrie .thumbnail {
+  .cat-geometrie .thumbnail {
     border-color: #f23518; }
-  .photographie .thumbnail {
+  .cat-photographie .thumbnail {
     border-color: #42b04f; }
-  .multi .thumbnail {
+  .cat-multi .thumbnail {
     border-color: #ffbc17; }
-  .sculpture .thumbnail {
+  .cat-sculpture .thumbnail {
     border-color: #ffbc17; }
   .thumbnail img {
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
     display: block;
     width: 100%;
     height: auto; }
 
 /* list bloc */
-.post-it {
-  height: 17.5rem; }
-  .post-it h3 {
+.post-it, .actu {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+  .post-it.artiste, .artiste.actu {
+    height: 17.5rem; }
+  .post-it:hover, .actu:hover {
+    -moz-box-shadow: 0.3125rem 0.3125rem 0.3125rem #d8d8d8;
+    -webkit-box-shadow: 0.3125rem 0.3125rem 0.3125rem #d8d8d8;
+    box-shadow: 0.3125rem 0.3125rem 0.3125rem #d8d8d8; }
+    .post-it:hover .thumbnail img, .actu:hover .thumbnail img {
+      transform: scale(1.05); }
+  .post-it h3, .actu h3 {
     font-size: 1.125rem; }
-  .post-it .detail {
+  .post-it .detail, .actu .detail {
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
     overflow: hidden; }
-    .post-it .detail .content hr {
+    .post-it .detail .content hr, .actu .detail .content hr {
       display: none; }
 
 /* aside */
@@ -582,15 +603,15 @@ aside.main {
           color: white; }
           aside.main .nav-section > li > a:hover {
             background-color: #ffbc17; }
-          .peinture aside.main .nav-section > li > a:hover {
+          .cat-peinture aside.main .nav-section > li > a:hover {
             background-color: #0252cf; }
-          .geometrie aside.main .nav-section > li > a:hover {
+          .cat-geometrie aside.main .nav-section > li > a:hover {
             background-color: #f23518; }
-          .photographie aside.main .nav-section > li > a:hover {
+          .cat-photographie aside.main .nav-section > li > a:hover {
             background-color: #42b04f; }
-          .multi aside.main .nav-section > li > a:hover {
+          .cat-multi aside.main .nav-section > li > a:hover {
             background-color: #ffbc17; }
-          .sculpture aside.main .nav-section > li > a:hover {
+          .cat-sculpture aside.main .nav-section > li > a:hover {
             background-color: #ffbc17; }
           aside.main .nav-section > li > a:hover:after {
             max-width: 1.5625rem;
@@ -623,29 +644,29 @@ aside.main {
             display: block; }
             aside.main .nav-section > li .sub-menu li.current a {
               border-color: #ffbc17; }
-            .peinture aside.main .nav-section > li .sub-menu li.current a {
+            .cat-peinture aside.main .nav-section > li .sub-menu li.current a {
               border-color: #0252cf; }
-            .geometrie aside.main .nav-section > li .sub-menu li.current a {
+            .cat-geometrie aside.main .nav-section > li .sub-menu li.current a {
               border-color: #f23518; }
-            .photographie aside.main .nav-section > li .sub-menu li.current a {
+            .cat-photographie aside.main .nav-section > li .sub-menu li.current a {
               border-color: #42b04f; }
-            .multi aside.main .nav-section > li .sub-menu li.current a {
+            .cat-multi aside.main .nav-section > li .sub-menu li.current a {
               border-color: #ffbc17; }
-            .sculpture aside.main .nav-section > li .sub-menu li.current a {
+            .cat-sculpture aside.main .nav-section > li .sub-menu li.current a {
               border-color: #ffbc17; }
       aside.main .nav-section > li.current > a {
         color: white; }
         aside.main .nav-section > li.current > a {
           background-color: #ffbc17; }
-        .peinture aside.main .nav-section > li.current > a {
+        .cat-peinture aside.main .nav-section > li.current > a {
           background-color: #0252cf; }
-        .geometrie aside.main .nav-section > li.current > a {
+        .cat-geometrie aside.main .nav-section > li.current > a {
           background-color: #f23518; }
-        .photographie aside.main .nav-section > li.current > a {
+        .cat-photographie aside.main .nav-section > li.current > a {
           background-color: #42b04f; }
-        .multi aside.main .nav-section > li.current > a {
+        .cat-multi aside.main .nav-section > li.current > a {
           background-color: #ffbc17; }
-        .sculpture aside.main .nav-section > li.current > a {
+        .cat-sculpture aside.main .nav-section > li.current > a {
           background-color: #ffbc17; }
       aside.main .nav-section > li.current > ul {
         display: initial; }
@@ -679,8 +700,6 @@ section.simple .thumbnail {
   margin-top: 0; }
 .actu:first-child .thumbnail {
   display: block; }
-.actu p {
-  margin-bottom: 0; }
 
 /* intro bloc */
 .intro .content {
@@ -688,15 +707,15 @@ section.simple .thumbnail {
   text-align: center; }
   .intro .content p {
     color: #ffbc17; }
-  .peinture .intro .content p {
+  .cat-peinture .intro .content p {
     color: #0252cf; }
-  .geometrie .intro .content p {
+  .cat-geometrie .intro .content p {
     color: #f23518; }
-  .photographie .intro .content p {
+  .cat-photographie .intro .content p {
     color: #42b04f; }
-  .multi .intro .content p {
+  .cat-multi .intro .content p {
     color: #ffbc17; }
-  .sculpture .intro .content p {
+  .cat-sculpture .intro .content p {
     color: #ffbc17; }
 
 /*# sourceMappingURL=style.css.map */

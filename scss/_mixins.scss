@@ -53,15 +53,15 @@
 
     @each $categorie, $color in $categories {
       @if $force == true{
-        @at-root .#{$categorie}#{$element} {
+        @at-root .cat-#{$categorie}#{$element} {
           #{$attribut}: $color;
         }
       } @else if $force == false {
-        @at-root .#{$categorie} #{$element} {
+        @at-root .cat-#{$categorie} #{$element} {
           #{$attribut}: $color;
         }
       } @else {
-        @at-root #{$force}.#{$categorie}#{$space}#{$element} {
+        @at-root #{$force}.cat-#{$categorie}#{$space}#{$element} {
           #{$attribut}: $color;
         }
       }

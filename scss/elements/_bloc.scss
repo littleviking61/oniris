@@ -24,10 +24,9 @@ section.simple{
 /* actu bloc */
 
 .actu{
+	@extend %post-it;
 
-	.thumbnail{
-		display: none;
-	}
+	.thumbnail{ display: none; }
 
 	h3{
 		font-size: $ft-size-larger;
@@ -48,10 +47,6 @@ section.simple{
 		.thumbnail{
 			display: block;
 		}
-	}
-
-	p{
-		margin-bottom: 0;
 	}
 }
 

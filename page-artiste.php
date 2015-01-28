@@ -11,7 +11,7 @@
 
 	foreach ( $listArtistes as $post ) : setup_postdata( $post ); ?>
 
-			<a href="<?php the_permalink() ?>" class="container flex-2 post-it <?php the_field('category') ?>">
+			<a href="<?php the_permalink() ?>" class="container flex-2 post-it artiste <?php the_field('category') ?>">
 				<div class="thumbnail">
 					<img src="<?php the_field('thumbnail') ?>" alt="">
 				</div>
