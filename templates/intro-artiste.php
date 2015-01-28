@@ -1,7 +1,3 @@
-<?php 
-
-?>
-
 <h2><?= get_field('prenom') . ' ' . get_field('nom') ?></h2>
 
 <section class="container flex-2 intro">

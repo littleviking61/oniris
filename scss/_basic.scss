@@ -105,49 +105,14 @@ p{
 		color: $light-grey;
 		font-size: $ft-size-medium;
 	}
+
+	*:last-child{
+		margin-bottom: 0;
+	}
 }
 
 /* utilities class */
 
 .hide{
 	display: none;
-}
-
-// flex template
-
-%flex-general{
-	.go-right{
-		margin-left: auto;
-	}
-
-	.full{
-		@include flex(1);
-	}
-
-	.unbreak{
-		@include flex-shrink(0);
-	}
-}
-
-%flex-column{
-	@include display-flex;
-}
-
-%flex-row{
-	@include display-flex;
-	@include flex-direction(column);
-}
-
-%flex-column-wrap{
-	@extend %flex-column;
-	@include flex-wrap(wrap);
-
-	@extend %flex-general;
-}
-
-%flex-center-center{
-	@extend %flex-column;
-	@include flex-wrap(wrap);
-	@include align-items(center);
-	@include justify-content(center);
 }

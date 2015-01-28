@@ -1,0 +1,92 @@
+/* aside */
+
+aside.main{
+	margin: 0;
+
+	.nav-section{
+		margin: 0;
+
+		> li {
+			@extend %flex-row;
+			@include align-items(flex-start);
+			margin-top: $gutter-small;
+
+			> a{
+				@include single-transition(background-color, .4s);
+
+				display: inline-block;
+				background-color: white;
+
+				padding: $gutter-mini $gutter;
+				margin-bottom: $gutter-small;
+				
+				font-family: $title-font;
+				font-size: $ft-size-larger;
+				font-weight: bold;
+				text-transform: lowercase;
+
+				overflow: hidden;
+				&.icon-hover:after{
+					// color:$grey;
+					@include transform(rotate(0deg));
+				}
+				&:hover{
+					@include colors(&, "bg");
+					color: white;
+
+					&:after{ 
+						max-width: rem-calc(25);
+						margin-left: $gutter-small;
+						margin-right: -$gutter-mini;
+						padding: $gutter-mini;
+					}
+				}
+
+				&:after{
+					@extend %icon;
+					@extend .icon-angle-right:before;
+					@include transform(rotate(90deg));
+
+					@include single-transition(all, .2s);
+					display: inline-block;
+					overflow: hidden;
+					max-width: 0;
+					height:rem-calc(25);
+					vertical-align: middle;
+				}
+			}
+			
+			.sub-menu{
+				display: none;
+				margin: $gutter-small 0;
+
+				li{
+					margin-bottom: $gutter-mini;
+					
+					a{
+						padding-left: $gutter-small;
+						border-left: rem-calc(3) solid transparent;
+					}
+					// @include colors("a:hover", null, ".sub-menu li", "");
+
+					&.current a{
+						display: block;
+						@include colors(&, "bd");
+					}
+				}
+			}
+
+
+			&.current{
+				> a{
+					@include colors(&, "bg");
+					color: white;
+				}
+
+				> ul{
+					display: initial;
+				}
+			}
+		}
+	}
+}

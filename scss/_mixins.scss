@@ -22,7 +22,7 @@
   }
 }
 
-@function grid-calc($colNumber, $totalColumns, $percentage : false) {
+@function grid-calc($colNumber, $totalColumns: 0, $percentage : false) {
   @if $percentage == true { @return percentage(($colNumber / $totalColumns)); }
   @if $percentage == false { @return ($colNumber * $column-width) + (($colNumber - 1) * $column-gutter) ; }
 }

@@ -79,10 +79,17 @@ if( have_rows('contenu') ) :
     };
 
 else :
-  
-  global $more;    // Declare global $more (before the loop).
-  $more = 1;
-  the_content();  
+
+  if(is_home()) {
+    $post->class = 'flex-3';
+    get_template_part('templates/actu-highlight');
+  }elseif(is_page('artistes')) {
+    get_template_part('page', 'artiste');
+
+  }else{
+    the_content();   
+  }
+
 
 endif;
 

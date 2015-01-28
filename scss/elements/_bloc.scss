@@ -1,0 +1,68 @@
+/* simple bloc */
+
+section.simple{
+	@extend %flex-column;
+
+	.thumbnail{
+		@include flex-shrink(0);
+		position: relative;
+		overflow: hidden;
+		width: 50%;
+		margin: -$gutter-medium;
+		margin-right: $gutter-large;
+		border: none;
+
+		img{
+			position: absolute;
+			max-height: 100%;
+			min-width: 100%;
+			width: auto;
+		}
+	}
+}
+
+/* actu bloc */
+
+.actu{
+
+	.thumbnail{
+		display: none;
+	}
+
+	h3{
+		font-size: $ft-size-larger;
+		margin-top: $gutter-mini;
+	}
+
+	&.highlight{
+		.thumbnail{
+			display: block;
+		}
+		h3{
+			font-size: $ft-size-big;
+			margin-top: 0;
+		}
+	}
+
+	&:first-child{
+		.thumbnail{
+			display: block;
+		}
+	}
+
+	p{
+		margin-bottom: 0;
+	}
+}
+
+/* intro bloc */
+
+.intro{
+	.content{
+		font-family: $title-font;
+		text-align: center;
+		p{
+			@include colors(&);
+		}
+	}
+}
