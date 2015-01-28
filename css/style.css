@@ -401,10 +401,10 @@ main {
     margin-bottom: 0.3125rem; }
   .wrap > .row {
     margin-bottom: 2.5rem; }
-  .wrap > section, .wrap .row {
+  .wrap > section {
     -webkit-align-items: flex-start;
     align-items: flex-start; }
-    .wrap > section > header, .wrap .row > header {
+    .wrap > section > header {
       width: 100%; }
   .wrap section, .wrap .post-it, .wrap .actu {
     margin-right: 1.25rem;
@@ -413,21 +413,39 @@ main {
     padding: 0.9375rem;
     background-color: white; }
 
+.row {
+  -webkit-align-items: flex-start;
+  align-items: flex-start; }
+  .row > header {
+    width: 100%; }
+  .row.stretch {
+    -webkit-align-items: stretch;
+    align-items: stretch; }
+  .row.end {
+    -webkit-align-items: flex-end;
+    align-items: flex-end; }
+  .row.start {
+    -webkit-align-items: flex-start;
+    align-items: flex-start; }
+  .row.mid {
+    -webkit-align-items: center;
+    align-items: center; }
+
 /* FOOTER */
 footer.main {
   display: none; }
 
 /* flex LAYOUT */
-header[role="banner"] .go-right, .wrap > section .go-right, .wrap .row .go-right {
+header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right {
   margin-left: auto; }
-header[role="banner"] .full, .wrap > section .full, .wrap .row .full {
+header[role="banner"] .full, .wrap > section .full, .row .full {
   -webkit-flex: 1;
   flex: 1; }
-header[role="banner"] .unbreak, .wrap > section .unbreak, .wrap .row .unbreak {
+header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, header[role="banner"], .wrap > section, .wrap .row, .wrap > section > header, .wrap .row > header, header[role="banner"] nav ul, .button, button, section.simple {
+main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, header[role="banner"] nav ul, .button, button, section.simple {
   display: -webkit-flex;
   display: flex; }
 
@@ -437,7 +455,7 @@ body, .post-it, .actu, aside.main .nav-section > li {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header[role="banner"], .wrap > section, .wrap .row, .wrap > section > header, .wrap .row > header {
+header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 

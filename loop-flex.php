@@ -33,7 +33,7 @@ if( have_rows('contenu') ) :
         	};
 
       		// then open a row 
-      		echo '<div class= "row">';
+      		echo '<div class= "row '.get_sub_field('alignement').'">';
       		
       		if (!empty($title)): ?>
         		<header>

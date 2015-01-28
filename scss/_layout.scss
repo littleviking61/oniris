@@ -102,7 +102,7 @@ main{
 		margin-bottom: $gutter-hudge;
 	}
 	
-	> section, .row{
+	> section{
 		@extend %flex-column-wrap;
 		@include align-items(flex-start);
 
@@ -121,6 +121,21 @@ main{
 		padding: $gutter-medium;
 		background-color: white;
 	}
+}
+
+.row{
+	@extend %flex-column-wrap;
+	@include align-items(flex-start);
+
+	> header {
+		@extend %flex-column-wrap;
+		width: 100%;
+	}
+
+	&.stretch{ @include align-items(stretch); }
+	&.end{ @include align-items(flex-end); }
+	&.start{ @include align-items(flex-start); }
+	&.mid{ @include align-items(center); }
 }
 
 /* FOOTER */
