@@ -2,6 +2,18 @@ jQuery.noConflict(false);
 $ = jQuery;
 
 $(document).ready(function(){
+
+		var $isotop = $('.isotop');
+		
+		$isotop.imagesLoaded( function() {
+			$isotop.isotope({
+			  // options
+			  itemSelector: '.container',
+			  layoutMode: 'masonry'
+			}).velocity("fadeIn", { duration: 400 });
+
+		});
+
 		$('aside.main').nav();
 });
 

@@ -85,9 +85,15 @@ main{
 	padding-top: $gutter-medium;
 	padding-right: $gutter-big;
 	@extend %flex-column;
+	@include flex(1);
 	@include flex-wrap(wrap);
 	@include align-content(flex-start);
 	@include align-items(flex-start);
+
+	&.isotop{
+		display: block;
+		opacity: 0;
+	}
 
 	.full{
 		width: 100%;

@@ -287,51 +287,63 @@ p {
 
 .flex-0 {
   -webkit-flex-basis: -1.25rem;
-  flex-basis: -1.25rem; }
+  flex-basis: -1.25rem;
+  width: -1.25rem; }
 
 .flex-1 {
   -webkit-flex-basis: 6.25rem;
-  flex-basis: 6.25rem; }
+  flex-basis: 6.25rem;
+  width: 6.25rem; }
 
 .flex-2 {
   -webkit-flex-basis: 13.75rem;
-  flex-basis: 13.75rem; }
+  flex-basis: 13.75rem;
+  width: 13.75rem; }
 
 .flex-3 {
   -webkit-flex-basis: 21.25rem;
-  flex-basis: 21.25rem; }
+  flex-basis: 21.25rem;
+  width: 21.25rem; }
 
 .flex-4 {
   -webkit-flex-basis: 28.75rem;
-  flex-basis: 28.75rem; }
+  flex-basis: 28.75rem;
+  width: 28.75rem; }
 
 .flex-5 {
   -webkit-flex-basis: 36.25rem;
-  flex-basis: 36.25rem; }
+  flex-basis: 36.25rem;
+  width: 36.25rem; }
 
 .flex-6 {
   -webkit-flex-basis: 43.75rem;
-  flex-basis: 43.75rem; }
+  flex-basis: 43.75rem;
+  width: 43.75rem; }
 
 .flex-7 {
   -webkit-flex-basis: 51.25rem;
-  flex-basis: 51.25rem; }
+  flex-basis: 51.25rem;
+  width: 51.25rem; }
 
 .flex-8 {
   -webkit-flex-basis: 58.75rem;
-  flex-basis: 58.75rem; }
+  flex-basis: 58.75rem;
+  width: 58.75rem; }
 
 .flex-9 {
   -webkit-flex-basis: 66.25rem;
-  flex-basis: 66.25rem; }
+  flex-basis: 66.25rem;
+  width: 66.25rem; }
 
 .flex-10 {
   -webkit-flex-basis: 73.75rem;
-  flex-basis: 73.75rem; }
+  flex-basis: 73.75rem;
+  width: 73.75rem; }
 
 .flex-11 {
   -webkit-flex-basis: 81.25rem;
-  flex-basis: 81.25rem; }
+  flex-basis: 81.25rem;
+  width: 81.25rem; }
 
 /* GENERAL BODY */
 body {
@@ -400,12 +412,17 @@ main {
 .wrap {
   padding-top: 0.9375rem;
   padding-right: 1.875rem;
+  -webkit-flex: 1;
+  flex: 1;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-content: flex-start;
   align-content: flex-start;
   -webkit-align-items: flex-start;
   align-items: flex-start; }
+  .wrap.isotop {
+    display: block;
+    opacity: 0; }
   .wrap .full {
     width: 100%; }
   .wrap > h2 {
