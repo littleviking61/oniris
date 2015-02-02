@@ -108,15 +108,15 @@ Body class
  **********************/
 
 // add category nicenames in body class
-function category_id_class($classes) {
+function add_body_class($classes) {
 	global $post;
 	// foreach((get_the_category($post->ID)) as $category)
 	$classes[] = 'page-'.$post->post_name;
 	$classes[] = 'type-'.get_field('page_type_acf');
-	$classes[] = 'cat-'.get_field('category');
+	$classes[] = get_field('category');
 	return $classes;
 }
-add_filter('body_class', 'category_id_class');
+add_filter('body_class', 'add_body_class');
 
 /**********************
 Navigation

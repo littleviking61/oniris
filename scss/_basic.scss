@@ -29,7 +29,7 @@ a{
 	text-decoration: none;
 	color: $grey;
 
-	&:hover, &.active{
+	&:hover:not(.button), &.active{
 		@include colors(&);
 	}
 
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6{
 
 h2{
 	@include colors(&);
-	color: $lighter-grey;
+	// color: $lighter-grey;
 	font-size: $ft-size-big;
 }
 
@@ -106,7 +106,7 @@ p{
 	}
 	
 	h4{
-		color: $light-grey;
+		@include colors(&);
 		font-size: $ft-size-medium;
 	}
 

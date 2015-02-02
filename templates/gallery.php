@@ -16,7 +16,6 @@
 		data-arrows="false"
 		data-click="true"
 		data-swipe="true"
-		data-hash="true"
 		data-keyboard="true"
 		data-allowfullscreen="true">
 

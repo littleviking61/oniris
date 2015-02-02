@@ -2,9 +2,10 @@
 
 /* page resume */
 $type = get_field('page_type_acf');
+
 if($type){
   // check if template exist and call it
-  $template = locate_template( 'templates/intro-'.$type.'.php' );
+  $template = locate_template( 'elements/intro-'.$type.'.php' );
   if(file_exists($template)) {
     include($template);
   }
@@ -15,7 +16,6 @@ if( have_rows('contenu') ) :
 
         if( get_row_layout() == 'ligne' ):
 
-        	$title = get_sub_field('titre');
         	$width = get_sub_field('largeur_du_titre');
 
       		// ferme la ligne suivante si infini ou nouvelle ligne avant la fin
@@ -34,12 +34,6 @@ if( have_rows('contenu') ) :
 
       		// then open a row 
       		echo '<div class= "row '.get_sub_field('alignement').'">';
-      		
-      		if (!empty($title)): ?>
-        		<header>
-        			<h2 class="title<?= $width > 0 ? ' flex-' . $width : ' full' ?>"><?= $title ?></h2>
-        		</header>
-      		<?php endif;
         
         elseif( get_row_layout() == 'titre_de_section' ):
 					
@@ -64,7 +58,6 @@ if( have_rows('contenu') ) :
 
         endif;
 
-
         // to close div.row
         if(isset($closeAfter) && $closeAfter == 0){
 	        	echo '</div>';
@@ -80,16 +73,7 @@ if( have_rows('contenu') ) :
 
 else :
 
-  if(is_home()) {
-    $post->class = 'flex-3';
-    get_template_part('templates/actu-highlight');
-  }elseif(is_page('artistes')) {
-    get_template_part('page', 'artiste');
-
-  }else{
-    the_content();   
-  }
-
+  the_content();   
 
 endif;
 

@@ -1,6 +1,6 @@
 /* simple bloc */
 
-section.simple{
+.simple{
 	@extend %flex-column;
 
 	.thumbnail{
@@ -19,6 +19,21 @@ section.simple{
 			width: auto;
 		}
 	}
+
+	.title{
+		margin-bottom: $gutter-small;
+	}
+
+	h5{
+		@include colors(&);
+	}
+
+	h4{
+		border-bottom: $one solid;
+		@include colors(&, "bd");
+		padding-bottom: $gutter-small;
+	}
+
 }
 
 /* actu bloc */

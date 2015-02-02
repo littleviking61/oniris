@@ -100,7 +100,11 @@ main{
 	}
 
 	> h2{
-		color: $lighter-grey;
+
+		&.title{
+			color: $lighter-grey;
+		}
+		
 		width: 100%;
 		margin-bottom: $gutter-small;
 	}

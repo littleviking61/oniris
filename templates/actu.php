@@ -5,14 +5,22 @@
 	$categorie = get_field('category', $linkID);
 ?>
 
-<a href="<?= get_permalink($linkID) ?>" class="actu container <?= $class ?> <?= $categorie ?>">
-	<div class="thumbnail">
-		<img src="<?php the_field('image') ?>" alt="">
-	</div>
-	<h5><?= get_field('intitule') ?></h5>
+<?php if( get_field('titre') ): ?>
+	<a href="<?= get_permalink($linkID) ?>" class="actu container <?= $class ?> <?= $categorie ?>">
+		<?php if( get_field('image') ): ?>
+			<div class="thumbnail">
+				<img src="<?= get_field('image') ?>" alt="">
+			</div>
+		<?php endif ?>
+		<?php if( get_field('intitule') ): ?>
+			<h5><?= get_field('intitule') ?></h5>
+		<?php endif ?>
 		<h3><?= get_field('titre') ?></h3>
-	<hr>
-	<div class="content">
-		<p><?= get_field('sous_titre') ?></p>
-	</div>
-</a>
+		<?php if( get_field('sous_titre') ): ?>
+			<hr>
+			<div class="content">
+				<p><?= get_field('sous_titre') ?></p>
+			</div>
+		<?php endif ?>
+	</a>
+<?php endif ?>

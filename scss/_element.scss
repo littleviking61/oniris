@@ -65,7 +65,7 @@
 
 	&:hover{
 		.thumbnail img{
-			transform: scale(1.05)
+			transform: scale(1.02)
 		}
 		@include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
 	}
@@ -81,6 +81,10 @@
 		.content hr{
 			display: none;
 		}
+	}
+
+	hr:last-child{
+		display: none;
 	}
 }
 

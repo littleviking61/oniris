@@ -36,8 +36,11 @@
 		<?php the_sub_field('texte'); ?>
 
 		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
-			if(strrpos($textButton, "+")> -1) :
+			$plusPosition = strrpos($textButton, "+");
+			if($plusPosition == 0) :
 				$textButton = '<i class="icon-more"></i> ' . substr($textButton, 1);
+			elseif($plusPosition == strlen($textButton) - 1) :
+				$textButton =  substr($textButton, 0, -1) . '<i class="icon-more"></i>';
 			endif ?>
 			<a class="button right" href="<?= $linkButton ?>"><?= $textButton ?></a>
 		<?php endif ?>
