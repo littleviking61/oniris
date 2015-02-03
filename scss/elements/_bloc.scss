@@ -25,13 +25,35 @@
 	}
 
 	h5{
-		@include colors(&);
+		@include colors(&) { 
+			color: $light-grey; 
+		} ;
+		font-size: $ft-size-medium;
 	}
 
 	h4{
 		border-bottom: $one solid;
 		@include colors(&, "bd");
 		padding-bottom: $gutter-small;
+	}
+
+	ul{
+		list-style: none;
+		padding-left: $gutter-small;
+
+		li:before {
+	    content: "•";
+	    margin-right: $gutter-small;
+	    @include colors(&) {
+	    	color: $grey; 
+	    };
+		}
+
+		b, strong{
+			@include colors(&) {
+	    	color: $grey; 
+	    };
+		}
 	}
 
 }

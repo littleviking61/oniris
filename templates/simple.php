@@ -38,9 +38,9 @@
 		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
 			$plusPosition = strrpos($textButton, "+");
 			if($plusPosition == 0) :
-				$textButton = '<i class="icon-more"></i> ' . substr($textButton, 1);
+				$textButton = '<i class="icon-more"></i><span>' . substr($textButton, 1) . '</span>';
 			elseif($plusPosition == strlen($textButton) - 1) :
-				$textButton =  substr($textButton, 0, -1) . '<i class="icon-more"></i>';
+				$textButton =  '<span>' . substr($textButton, 0, -1) . '</span><i class="icon-more"></i>';
 			endif ?>
 			<a class="button right" href="<?= $linkButton ?>"><?= $textButton ?></a>
 		<?php endif ?>

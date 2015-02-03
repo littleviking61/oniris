@@ -6,7 +6,7 @@
 	@extend %flex-center-center;
 	@include single-transition(all, .2s);
 
-	padding: $gutter-mini $gutter-small;
+	padding: $gutter-mini $gutter-small $gutter-mini $gutter;
 	@include colors(&, "bg");
 	color: white;
 
@@ -15,7 +15,8 @@
 		@include colors(&, "bg");
 
 		&.right{
-			padding-right: $gutter-medium;
+			padding-right: $gutter;
+			// padding-left: $gutter;
 		}
 	}
 
@@ -29,8 +30,14 @@
 	i:before{
 		display: block;
 		font-size: 1.6em;
+	}
+
+	i:first-child{
 		margin-right: $gutter-small;
-	} 
+	}
+	i:last-child{
+		margin-left: $gutter-small;
+	}
 }
 
 /* thumbnail */
@@ -58,6 +65,12 @@
 	@extend %section-gutter;
 	@include single-transition(all, .5s);
 	// @include box-shadow(0 0 $gutter transparent);
+	border: $one dotted transparent;
+
+	.thumbnail{
+		margin: -($gutter-medium + $one);
+		margin-bottom: $gutter;
+	}
 
 	&.artiste{
 		height: grid-calc(2.5);
@@ -67,7 +80,8 @@
 		.thumbnail img{
 			transform: scale(1.02)
 		}
-		@include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
+		@include colors(&, "bd", true);
+		// @include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
 	}
 
 	h3{

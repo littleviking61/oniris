@@ -1,9 +1,10 @@
 <?php 
 	$gallerieId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
+	$width = get_sub_field('largeur_du_bloc');
 ?>
 
-<section class="container gallery flex-6">
+<section class="container gallery <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
 	<div class="fotorama"
 		data-nav="thumbs"
 		data-autoplay="true"

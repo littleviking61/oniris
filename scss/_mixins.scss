@@ -31,16 +31,16 @@
 @mixin colors($element: &, $mode: null, $force: false, $space : " ") {
   @if $mode == "bg"{
     // $bgColors: $bgColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, $space, background-color);
+    @include renderColors($element, $force, $space, background-color) { @content };
   } @else if $mode == "bd"{
     // $bdColors: $bdColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, $space, border-color);
+    @include renderColors($element, $force, $space, border-color) { @content };
   } @else if $mode == "fill"{
     // $bdColors: $bdColors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, $space, fill);
+    @include renderColors($element, $force, $space, fill) { @content };
   } @else {
     // $colors: $colors, unquote(#{$element}) !global;
-    @include renderColors($element, $force, $space);
+    @include renderColors($element, $force, $space) { @content };
   }
 }
 
@@ -50,6 +50,7 @@
   @each $element in $elements {
     @at-root #{$elements} {
       #{$attribut}: $yellow;
+      @content;
     }
 
     @each $categorie, $color in $categories {
