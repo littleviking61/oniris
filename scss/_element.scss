@@ -73,14 +73,22 @@
 	}
 
 	&.artiste{
-		height: grid-calc(2.5);
+		//height: grid-calc(2.5);
 	}
 
 	&:hover{
+		@include colors(&, "bg", true);
+
 		.thumbnail img{
 			transform: scale(1.02)
 		}
-		@include colors(&, "bd", true);
+
+		h2, h3, h4, h5, p{
+			color: white;
+		}
+		hr{
+			background-color:white;
+		}
 		// @include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
 	}
 
@@ -89,7 +97,7 @@
 	}
 
 	.detail{
-		@include flex-shrink(0);
+		// @include flex-shrink(0);
 		overflow: hidden;
 
 		.content hr{

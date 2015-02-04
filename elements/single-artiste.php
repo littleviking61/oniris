@@ -1,9 +1,11 @@
 <?php if (!empty(get_field('nom'))): ?>
-	
+	<?php 
+		$thumbnail = get_field('thumbnail');
+	?>
 	<a href="<?php the_permalink() ?>" class="container flex-2 post-it artiste <?php the_field('category') ?>">
-		<?php if( get_field('thumbnail') ): ?>
+		<?php if( has_post_thumbnail() ): ?>
 			<div class="thumbnail">
-				<img src="<?= get_field('thumbnail') ?>" alt="">
+				<?php the_post_thumbnail('small') ?>
 			</div>
 		<?php endif ?>
 		<div class="detail">

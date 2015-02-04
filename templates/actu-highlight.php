@@ -7,9 +7,9 @@
 
 <?php if( get_field('titre') ): ?>
 	<a href="<?= get_permalink($linkID) ?>" class="actu highlight container <?= $flex ?> <?= $categorie ?>">
-		<?php if( get_field('image') ): ?>
+		<?php if( has_post_thumbnail() ): ?>
 			<div class="thumbnail">
-				<img src="<?= get_field('image') ?>" alt="">
+				<?php the_post_thumbnail('medium') ?>
 			</div>
 		<?php endif ?>
 		<?php if( get_field('intitule') ): ?>

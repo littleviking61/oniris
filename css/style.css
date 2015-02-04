@@ -621,39 +621,39 @@ header[role="banner"] nav ul, .button, button {
   .post-it .thumbnail, .actu .thumbnail {
     margin: -1rem;
     margin-bottom: 0.625rem; }
-  .post-it.artiste, .artiste.actu {
-    height: 17.5rem; }
+  .post-it:hover, .actu:hover {
+    background-color: #ffbc17; }
+  .cat-peinture.post-it:hover {
+    background-color: #0252cf; }
+  .cat-geometrie.post-it:hover {
+    background-color: #f23518; }
+  .cat-photographie.post-it:hover {
+    background-color: #42b04f; }
+  .cat-multi.post-it:hover {
+    background-color: #ffbc17; }
+  .cat-sculpture.post-it:hover {
+    background-color: #ffbc17; }
+  .post-it:hover, .actu:hover {
+    background-color: #ffbc17; }
+  .cat-peinture.actu:hover {
+    background-color: #0252cf; }
+  .cat-geometrie.actu:hover {
+    background-color: #f23518; }
+  .cat-photographie.actu:hover {
+    background-color: #42b04f; }
+  .cat-multi.actu:hover {
+    background-color: #ffbc17; }
+  .cat-sculpture.actu:hover {
+    background-color: #ffbc17; }
   .post-it:hover .thumbnail img, .actu:hover .thumbnail img {
     transform: scale(1.02); }
-  .post-it:hover, .actu:hover {
-    border-color: #ffbc17; }
-  .cat-peinture.post-it:hover {
-    border-color: #0252cf; }
-  .cat-geometrie.post-it:hover {
-    border-color: #f23518; }
-  .cat-photographie.post-it:hover {
-    border-color: #42b04f; }
-  .cat-multi.post-it:hover {
-    border-color: #ffbc17; }
-  .cat-sculpture.post-it:hover {
-    border-color: #ffbc17; }
-  .post-it:hover, .actu:hover {
-    border-color: #ffbc17; }
-  .cat-peinture.actu:hover {
-    border-color: #0252cf; }
-  .cat-geometrie.actu:hover {
-    border-color: #f23518; }
-  .cat-photographie.actu:hover {
-    border-color: #42b04f; }
-  .cat-multi.actu:hover {
-    border-color: #ffbc17; }
-  .cat-sculpture.actu:hover {
-    border-color: #ffbc17; }
+  .post-it:hover h2, .post-it:hover h3, .post-it:hover h4, .post-it:hover h5, .post-it:hover p, .actu:hover h2, .actu:hover h3, .actu:hover h4, .actu:hover h5, .actu:hover p {
+    color: white; }
+  .post-it:hover hr, .actu:hover hr {
+    background-color: white; }
   .post-it h3, .actu h3 {
     font-size: 1.125rem; }
   .post-it .detail, .actu .detail {
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
     overflow: hidden; }
     .post-it .detail .content hr, .actu .detail .content hr {
       display: none; }

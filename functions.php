@@ -10,6 +10,7 @@ function startup_theme_support() {
 		load_theme_textdomain('reverie', get_template_directory() . '/lang');
 
 		add_theme_support('post-thumbnails');
+		// add_image_size( 'small', '240', '240', false );
 
 		add_theme_support('menus');
 		register_nav_menus(array(
