@@ -1,5 +1,22 @@
 // shame
+.fotorama{
+	width: 100%;
+}
 
 .fotorama__thumb-border{
 	@include colors(&, "bd");
+}
+
+body > .fotorama-special{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	margin: 40px;
+	width: 60vw;
+
+	&.fotorama--fullscreen{
+		opacity: 1;
+	}
+	
 }

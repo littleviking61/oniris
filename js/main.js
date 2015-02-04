@@ -16,15 +16,16 @@ $(document).ready(function(){
 
 		$('aside.main').nav();
 
-    // 1. Initialize fotorama manually.
-    var $fotoramaDiv = $('.fotorama-special').fotorama();
-    // 2. Get the API object.
+    var $fotoramaDiv = $('.fotorama-special').clone().appendTo('body').fotorama();
     var fotorama = $fotoramaDiv.data('fotorama');
 
-    // fotorama.requestFullScreen();
-		// $('.fotorama-special').fotorama().requestFullScreen()
-    // 3. Inspect it in console.
-    // console.log(fotorama);
+    $('a.thickbox', '.fotorama-special').click( function(e){
+    	e.preventDefault();
+
+ 	  	fotorama
+    		.show($(this).index())
+ 	  		.requestFullScreen();
+    });
 
 });
 

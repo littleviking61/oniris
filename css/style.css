@@ -878,6 +878,9 @@ aside.main {
   .cat-sculpture .intro .content p {
     color: #ffbc17; }
 
+.fotorama {
+  width: 100%; }
+
 .fotorama__thumb-border {
   border-color: #ffbc17; }
 .cat-peinture .fotorama__thumb-border {
@@ -890,5 +893,15 @@ aside.main {
   border-color: #ffbc17; }
 .cat-sculpture .fotorama__thumb-border {
   border-color: #ffbc17; }
+
+body > .fotorama-special {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  margin: 40px;
+  width: 60vw; }
+  body > .fotorama-special.fotorama--fullscreen {
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

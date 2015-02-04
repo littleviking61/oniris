@@ -18,8 +18,8 @@
 			data-width="100%"
 			data-maxwidth="100%"
 			data-ratio="3/2"
-			data-thumbwidth="80px"
-			data-thumbheight="80px" thumbmargin="10px"
+			data-thumbwidth="100px"
+			data-thumbheight="100px" thumbmargin="10px"
 			data-arrows="false"
 			data-click="true"
 			data-swipe="true"
@@ -33,9 +33,9 @@
 
 	<?php if (!empty($gallerieId)): ?>
 		
-		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); ?>
-		<?php foreach ($gallery as $image): ?>
-			<a href="<?= $image->imageURL ?>" title="<?= $image->description ?>" <?= $image->thumbcode ?> >
+		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); $i = 0; ?>
+		<?php foreach ($gallery as $image): $i++; ?>
+			<a href="<?= $image->imageURL ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery).' - '.$image->caption ?>" <?= $image->thumbcode ?> >
 				<?php if ( !$image->hidden ) { ?>
 				<img title="<?= $image->description ?>" alt="<?= $image->alttext ?>" src="<?= $image->thumbnailURL ?>" <?= $image->size ?> />
 				<?php } ?>
