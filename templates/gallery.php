@@ -26,7 +26,9 @@
 			data-keyboard="true"
 			data-allowfullscreen="true">
 	<?php else: ?>
-		<div>
+		<div class="fotorama-special"
+			data-nav="thumbs"
+			data-allowfullscreen="true">
 	<?php endif ?>
 
 	<?php if (!empty($gallerieId)): ?>
