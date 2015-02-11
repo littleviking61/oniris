@@ -44,6 +44,7 @@
 				<img title="<?= $image->description ?>" alt="<?= $image->alttext ?>" src="<?= $image->thumbnailURL ?>" <?= $image->size ?> />
 				<?php } ?>
 			</a>
+		<?php if($i >= 9) break; ?>
 		<?php endforeach ?>
 
 	<?php elseif(!empty($galleryWp)): ?>
