@@ -4,10 +4,14 @@
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
 ?>
-<section class="container gallery <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
+<section class="container gallery <?= $galleryType ?> <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
 
 	<?php if( get_sub_field('titre') ): ?>
-		<h4><?= get_sub_field('titre') ?></h4>
+		<?php if ($galleryType == 'slideshowNg'): ?>
+			<h5><?= get_sub_field('titre') ?></h5>
+		<?php else: ?>
+			<h4><?= get_sub_field('titre') ?></h4>
+		<?php endif ?>
 	<?php endif ?>
 
 	<?php if ($galleryType == 'slideshowNg'): ?>
@@ -15,11 +19,12 @@
 			data-nav="thumbs"
 			data-autoplay="true"
 			data-loop="true"
+			data-fit="cover"
 			data-width="100%"
 			data-maxwidth="100%"
 			data-ratio="3/2"
 			data-thumbwidth="100px"
-			data-thumbheight="100px" thumbmargin="10px"
+			data-thumbheight="65px" data-thumbmargin="10"
 			data-arrows="false"
 			data-click="true"
 			data-swipe="true"
@@ -34,8 +39,8 @@
 	<?php if (!empty($gallerieId)): ?>
 		
 		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); $i = 0; ?>
-		<?php foreach ($gallery as $image): $i++; ?>
-			<a href="<?= $image->imageURL ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery).' - '.$image->caption ?>" <?= $image->thumbcode ?> >
+		<?php foreach ($gallery as $image): $i++; $caption = $image->caption; $caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
+			<a href="<?= $image->imageURL ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> >
 				<?php if ( !$image->hidden ) { ?>
 				<img title="<?= $image->description ?>" alt="<?= $image->alttext ?>" src="<?= $image->thumbnailURL ?>" <?= $image->size ?> />
 				<?php } ?>

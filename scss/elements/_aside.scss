@@ -65,7 +65,7 @@ aside.main{
 					
 					a{
 						padding-left: $gutter-small;
-						border-left: rem-calc(3) solid transparent;
+						border-left: $border-width solid transparent;
 					}
 					// @include colors("a:hover", null, ".sub-menu li", "");
 

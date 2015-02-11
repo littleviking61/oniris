@@ -46,7 +46,7 @@
 	margin: -$gutter-medium;
 	margin-bottom: $gutter;
 	overflow: hidden;
-	border-bottom: $gutter-mini solid;
+	border-bottom: $border-width solid;
 	
 	@include colors(&, "bd");
 
@@ -112,3 +112,4 @@
 
 @import "elements/aside";
 @import "elements/bloc";
+@import "elements/fotorama";

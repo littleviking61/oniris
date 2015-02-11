@@ -16,16 +16,16 @@ $(document).ready(function(){
 
 		$('aside.main').nav();
 
-    var $fotoramaDiv = $('.fotorama-special').clone().appendTo('body').fotorama();
-    var fotorama = $fotoramaDiv.data('fotorama');
+    // var $fotoramaDiv = $('.fotorama-special').clone().appendTo('body').fotorama();
+    // var fotorama = $fotoramaDiv.data('fotorama');
 
-    $('a.thickbox', '.fotorama-special').click( function(e){
-    	e.preventDefault();
+    // $('a.thickbox', '.fotorama-special').click( function(e){
+    // 	e.preventDefault();
 
- 	  	fotorama
-    		.show($(this).index())
- 	  		.requestFullScreen();
-    });
+ 	  // 	fotorama
+    // 		.show($(this).index())
+ 	  // 		.requestFullScreen();
+    // });
 
 });
 

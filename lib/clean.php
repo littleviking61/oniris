@@ -118,6 +118,7 @@ function reverie_scripts_and_styles() {
 
     // adding Foundation scripts file in the footer
     wp_register_script( 'imageload-js', get_template_directory_uri() . '/js/vendor/imagesloaded.pkgd.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'fotorama-js', get_template_directory_uri() . '/js/vendor/fotorama.js', array( 'jquery' ), '', true );
     wp_register_script( 'velocity-js', get_template_directory_uri() . '/js/vendor/velocity.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'velocity-ui-js', get_template_directory_uri() . '/js/vendor/velocity.ui.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'isotop-js', get_template_directory_uri() . '/js/vendor/isotope.pkgd.min.js', array( 'jquery' ), '', true );
@@ -140,6 +141,7 @@ function reverie_scripts_and_styles() {
 
     wp_enqueue_script( 'html5shiv' );
     wp_enqueue_script( 'imageload-js' );
+    wp_enqueue_script( 'fotorama-js' );
     wp_enqueue_script( 'velocity-js' );
     wp_enqueue_script( 'velocity-ui-js' );
     wp_enqueue_script( 'isotop-js' );

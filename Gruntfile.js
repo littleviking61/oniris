@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['scss/**/*.{scss,sass}'],
-                tasks: ['sass:dist'],
+                tasks: ['sass:dist', 'rsync'],
             },
 
             js : {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             },
 
             other: {
-                files: ['**/*.php', 'css/*.css', '!css/style.css'],
+                files: ['**/*.php', 'css/*.css'],
                 options: {
                     livereload: true,
                     livereloadOnError: false,
@@ -48,7 +48,25 @@ module.exports = function(grunt) {
                 style: 'nested',
                 require: [ 'susy', 'font-awesome-sass']
             }
-        }
+        },
+
+        rsync: {
+            options: {
+                // args: ["-q"],
+                //exclude: [".git*","assets/less","node_modules"],
+                recursive: true
+            },
+            dist: {
+                options: {
+                    // src: ["./assets/css/dw-timeline-pro-flat.min.css", "./assets/css/dw-timeline-pro-flat.min.css.map"],
+                    // dest: "/var/www/html/laventurierviking/wp-content/themes/dw-timeline-pro/assets/css/",
+
+                    src: "./css",
+                    dest: "/var/www/html/client/oniris/wp-content/themes/oniris-v2",
+                    host: "root@online",
+                }
+            }
+        },
 
     });
 

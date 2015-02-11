@@ -128,10 +128,11 @@ main{
 		margin-bottom: $column-gutter;
 	}
 
-	.container{
-		padding: $gutter-medium;
-		background-color: white;
-	}
+}
+
+.container{
+	padding: $gutter-medium;
+	background-color: white;
 }
 
 .row{

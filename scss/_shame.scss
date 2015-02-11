@@ -1,11 +1,3 @@
-// shame
-.fotorama{
-	width: 100%;
-}
-
-.fotorama__thumb-border{
-	@include colors(&, "bd");
-}
 
 body > .fotorama-special{
 	position: absolute;
