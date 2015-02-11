@@ -26,7 +26,33 @@ $(document).ready(function(){
     // 		.show($(this).index())
  	  // 		.requestFullScreen();
     // });
+    // 
+    // jQuery.ajax({
+    // 	type: 'POST',
+    // 	url: '/wp-admin/admin-ajax.php',
+    // 	data: {
+    // 		action: 'get_gallery', // the PHP function to run
+    // 		gallery_id : 5
+    // 	},
+    // 	success: function(data, textStatus) {
+    // 		console.log(data);
+    // 	}
+    // });
 
+    $('a[href^="/wp-admin/admin-ajax.php"]').magnificPopup({
+		  type: 'ajax',
+		  callbacks: {
+	  		ajaxContentAdded: function() {
+			    // Ajax content is loaded and appended to DOM
+			    $modal = this.content;
+			    console.log(this);
+
+			  	$('.fotorama-ajax', $modal).fotorama({
+			  		height: this.container.height() - 140
+			  	}); 
+		 		}
+		  }
+		});
 });
 
 (function() {

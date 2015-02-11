@@ -84,6 +84,8 @@
 	.content{
 		font-family: $title-font;
 		text-align: center;
+		padding: $gutter-large 0 $gutter-medium;
+		
 		p{
 			@include colors(&);
 		}

@@ -163,4 +163,23 @@ function the_nav_section($pageId, $args = [], $result)
 
 	<?php wp_reset_postdata();
 }
+
+/* ajax call funtion */
+
+function bimLa_gallery($id) {
+	$gallerieId = !empty($_GET['gallery_id']) ? (int) $_GET['gallery_id'] : (int) $_POST['gallery_id'];
+	$index = !empty($_GET['index']) ? (int) $_GET['index'] : (int) $_POST['index'];
+
+	$template = locate_template( 'single-gallery.php' );
+  if(file_exists($template)) {
+    include($template);
+  }
+
+  // get_template_part( 'single', 'gallery' );
+
+	die();
+}
+// creating Ajax call for WordPress
+add_action( 'wp_ajax_nopriv_get_gallery', 'bimLa_gallery' );
+add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
 ?>

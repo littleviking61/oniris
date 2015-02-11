@@ -13,7 +13,6 @@
 			<h4><?= get_sub_field('titre') ?></h4>
 		<?php endif ?>
 	<?php endif ?>
-
 	<?php if ($galleryType == 'slideshowNg'): ?>
 		<div class="fotorama"
 			data-nav="thumbs"
@@ -40,7 +39,7 @@
 		
 		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); $i = 0; ?>
 		<?php foreach ($gallery as $image): $i++; $caption = $image->caption; $caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
-			<a href="<?= $image->imageURL ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> >
+			<a href="/wp-admin/admin-ajax.php?action=get_gallery&gallery_id=<?= $gallerieId ?>&index=<?= $i-1 ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> class="load-it" >
 				<?php if ( !$image->hidden ) { ?>
 				<img title="<?= $image->description ?>" alt="<?= $image->alttext ?>" src="<?= $image->thumbnailURL ?>" <?= $image->size ?> />
 				<?php } ?>

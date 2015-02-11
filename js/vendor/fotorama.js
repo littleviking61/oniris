@@ -2239,7 +2239,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
       navFrameKey = NAV_THUMB_FRAME_KEY;
 
       setStyle($style, $.Fotorama.jst.style({w: o_thumbSide, h: o_thumbSide2, b: opts.thumbborderwidth, m: opts.thumbmargin, s: stamp, q: !COMPAT}));
-      console.log(opts.thumbborderwidth);
 
       $nav
           .addClass(navThumbsClass)
@@ -3206,7 +3205,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
         height = measures.h = Math.round(minMaxLimit(height, numberFromWhatever(measures.minheight, windowHeight), numberFromWhatever(measures.maxheight, windowHeight)));
         $stage
             .stop()
-            .animate({width: width, height: height+(opts.captions ? 30 : 0)}, time, function () {
+            .animate({width: width, height: height+(opts.captions && !that.fullScreen ? 30 : 0)}, time, function () {
               $wrap.removeClass(wrapOnlyActiveClass);
             });
 
