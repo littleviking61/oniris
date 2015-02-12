@@ -21,7 +21,7 @@ nav ul, aside ul {
 a {
   text-decoration: none;
   color: #353535; }
-  a:hover:not(.button), a.active, .current-menu-item a {
+  a:hover:not(.button) {
     color: #ffbc17; }
   .cat-peinture a:hover:not(.button) {
     color: #0252cf; }
@@ -33,7 +33,7 @@ a {
     color: #ffbc17; }
   .cat-sculpture a:hover:not(.button) {
     color: #ffbc17; }
-  a:hover:not(.button), a.active, .current-menu-item a {
+  a.active, .current-menu-item a {
     color: #ffbc17; }
   .cat-peinture a.active, .cat-peinture .current-menu-item a, .current-menu-item .cat-peinture a {
     color: #0252cf; }
@@ -57,7 +57,8 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   font-size: 1.875rem; }
   h2 {
-    color: #ffbc17; }
+    color: #ffbc17;
+    color: #a6a6a6; }
   .cat-peinture h2 {
     color: #0252cf; }
   .cat-geometrie h2 {
@@ -127,8 +128,6 @@ hr {
 
 .container {
   color: initial; }
-  h2, h3, h4 {
-    color: #ffbc17; }
   .container.cat-peinture h2 {
     color: #0252cf; }
   .container.cat-geometrie h2 {
@@ -138,8 +137,6 @@ hr {
   .container.cat-multi h2 {
     color: #ffbc17; }
   .container.cat-sculpture h2 {
-    color: #ffbc17; }
-  h2, h3, h4 {
     color: #ffbc17; }
   .container.cat-peinture h3 {
     color: #0252cf; }
@@ -151,8 +148,6 @@ hr {
     color: #ffbc17; }
   .container.cat-sculpture h3 {
     color: #ffbc17; }
-  h2, h3, h4 {
-    color: #ffbc17; }
   .container.cat-peinture h4 {
     color: #0252cf; }
   .container.cat-geometrie h4 {
@@ -163,8 +158,6 @@ hr {
     color: #ffbc17; }
   .container.cat-sculpture h4 {
     color: #ffbc17; }
-  hr {
-    background-color: #ffbc17; }
   .container.cat-peinture hr {
     background-color: #0252cf; }
   .container.cat-geometrie hr {
@@ -175,8 +168,6 @@ hr {
     background-color: #ffbc17; }
   .container.cat-sculpture hr {
     background-color: #ffbc17; }
-  .thumbnail {
-    border-color: #ffbc17; }
   .container.cat-peinture .thumbnail {
     border-color: #0252cf; }
   .container.cat-geometrie .thumbnail {
@@ -441,8 +432,6 @@ main {
     margin-bottom: 0.3125rem; }
     .wrap > h2.title {
       color: #a6a6a6; }
-  .wrap > .row {
-    margin-bottom: 2.5rem; }
   .wrap > section {
     -webkit-align-items: flex-start;
     align-items: flex-start; }
@@ -518,7 +507,7 @@ header[role="banner"] nav ul, .button, button {
   transition: all 0.2s;
   padding: 0.20833rem 0.3125rem 0.20833rem 0.625rem;
   color: white; }
-  .button, button {
+  .button {
     background-color: #ffbc17; }
   .cat-peinture .button {
     background-color: #0252cf; }
@@ -530,7 +519,7 @@ header[role="banner"] nav ul, .button, button {
     background-color: #ffbc17; }
   .cat-sculpture .button {
     background-color: #ffbc17; }
-  .button, button {
+  button {
     background-color: #ffbc17; }
   .cat-peinture button {
     background-color: #0252cf; }
@@ -544,7 +533,7 @@ header[role="banner"] nav ul, .button, button {
     background-color: #ffbc17; }
   .button:hover, button:hover {
     color: white; }
-    .button:hover, button:hover {
+    .button:hover {
       background-color: #ffbc17; }
     .cat-peinture .button:hover {
       background-color: #0252cf; }
@@ -556,7 +545,7 @@ header[role="banner"] nav ul, .button, button {
       background-color: #ffbc17; }
     .cat-sculpture .button:hover {
       background-color: #ffbc17; }
-    .button:hover, button:hover {
+    button:hover {
       background-color: #ffbc17; }
     .cat-peinture button:hover {
       background-color: #0252cf; }
@@ -591,8 +580,6 @@ header[role="banner"] nav ul, .button, button {
   border-bottom: 0.1875rem solid; }
   .thumbnail {
     border-color: #ffbc17; }
-  .thumbnail {
-    border-color: #ffbc17; }
   .cat-peinture .thumbnail {
     border-color: #0252cf; }
   .cat-geometrie .thumbnail {
@@ -622,7 +609,7 @@ header[role="banner"] nav ul, .button, button {
   .post-it .thumbnail, .actu .thumbnail {
     margin: -1rem;
     margin-bottom: 0.625rem; }
-  .post-it:hover, .actu:hover {
+  .post-it:hover {
     background-color: #ffbc17; }
   .cat-peinture.post-it:hover {
     background-color: #0252cf; }
@@ -634,7 +621,7 @@ header[role="banner"] nav ul, .button, button {
     background-color: #ffbc17; }
   .cat-sculpture.post-it:hover {
     background-color: #ffbc17; }
-  .post-it:hover, .actu:hover {
+  .actu:hover {
     background-color: #ffbc17; }
   .cat-peinture.actu:hover {
     background-color: #0252cf; }
@@ -827,7 +814,7 @@ aside.main {
       color: #ffbc17; }
     .cat-sculpture .simple ul li:before {
       color: #ffbc17; }
-  .simple ul b, .simple ul strong {
+  .simple ul b {
     color: #ffbc17;
     color: #353535; }
   .cat-peinture .simple ul b {
@@ -840,7 +827,7 @@ aside.main {
     color: #ffbc17; }
   .cat-sculpture .simple ul b {
     color: #ffbc17; }
-  .simple ul b, .simple ul strong {
+  .simple ul strong {
     color: #ffbc17;
     color: #353535; }
   .cat-peinture .simple ul strong {

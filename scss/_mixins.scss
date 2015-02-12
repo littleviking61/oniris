@@ -48,9 +48,12 @@
   // #{$attribut}: $yellow;
 
   @each $element in $elements {
-    @at-root #{$elements} {
-      #{$attribut}: $yellow;
-      @content;
+
+    @if $force == true or $force == false{
+      @at-root #{$element} {
+        #{$attribut}: $yellow;
+        @content;
+      }
     }
 
     @each $categorie, $color in $categories {
