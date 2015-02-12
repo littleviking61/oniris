@@ -3,6 +3,7 @@
 	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
+	$flex = $width > 0 ? 'flex-' . $width : 'flex-7';
 	
 	global $nggdb; 
 	$gallery = 
@@ -24,7 +25,7 @@
 	$gid = uniqid('gallery_');
 	?>
 
-	<section class="container gallery <?= $galleryType ?> <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
+	<section class="container gallery <?= $galleryType ?> <?= $flex ?>">
 		
 		<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
 
