@@ -167,10 +167,11 @@ function the_nav_section($pageId, $args = [], $result)
 /* ajax call funtion */
 
 function bimLa_gallery($id) {
-	$gallerieId = !empty($_GET['gallery_id']) ? (int) $_GET['gallery_id'] : (int) $_POST['gallery_id'];
-	$index = !empty($_GET['index']) ? (int) $_GET['index'] : (int) $_POST['index'];
+	$galleryId =  (int) $_GET['galleryId'] ?: (int) $_POST['galleryId'];
+	$gallery = $_GET['gallery'] ?: $_POST['gallery'];
+	$index = (int) $_GET['index'] ?: (int) $_POST['index'];
 
-	$template = locate_template( 'single-gallery.php' );
+	$template = locate_template( 'ajax-gallery.php' );
   if(file_exists($template)) {
     include($template);
   }

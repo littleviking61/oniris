@@ -1,58 +1,110 @@
 <?php 
 	$galleryType = get_sub_field('type');
-	$gallerieId = get_sub_field('gallerie_id')[0]['ngg_id'];
+	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
-?>
-<section class="container gallery <?= $galleryType ?> <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
+	
+	global $nggdb; 
+	$gallery = 
+		($galleryType == 'slideshowNg' || $galleryType == 'galleryNg') 
+		? $nggdb->get_gallery($galleryId, 'sortorder', 'ASC', true, 0, 0)
+		: $galleryWp;
+	$i = 0;
 
-	<?php if( get_sub_field('titre') ): ?>
-		<?php if ($galleryType == 'slideshowNg'): ?>
-			<h5><?= get_sub_field('titre') ?></h5>
-		<?php else: ?>
-			<h4><?= get_sub_field('titre') ?></h4>
+	/*
+	slideshowNg : Slideshow NG
+	slideshowWP : Slideshow WP
+	galleryNg : Gallery NG
+	galleryWP : Gallery WP
+	 */
+	// var_dump($galleryWp);
+	
+	if (!empty($gallery)):
+
+	$gid = uniqid('gallery_');
+	?>
+
+	<section class="container gallery <?= $galleryType ?> <?= $width > 0 ? 'flex-' . $width : 'flex-6' ?>">
+		
+		<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
+
+			<?php if( get_sub_field('titre') ): ?>
+				<h5><?= get_sub_field('titre') ?></h5>
+			<?php endif ?>
+			<div class="fotorama"
+				data-nav="thumbs"
+				data-autoplay="true"
+				data-loop="true"
+				data-fit="cover"
+				data-width="100%"
+				data-maxwidth="100%"
+				data-ratio="3/2"
+				data-thumbwidth="100px"
+				data-thumbheight="65px" data-thumbmargin="10"
+				data-arrows="false"
+				data-click="true"
+				data-swipe="true"
+				data-keyboard="true"
+				data-allowfullscreen="true">
+
+				<?php foreach ($gallery as $image):
+
+					$i++; 
+
+					$caption = $image->caption ?: $image['caption'];
+					$imageURL = $image->imageURL ?: $image['url'];
+					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];
+					$description = $image->description ?: $image['title'];
+					$altText = $image->alttext ?: $image['title'];
+					$hidden = $image->hidden ?: false;
+
+					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
+
+					<a href="<?= $imageURL ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" class="load-it" >
+						<?php if ( !$hidden ) { ?>
+							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
+						<?php } ?>
+					</a>
+				<?php endforeach ?>
+
+			</div>
+
+		<?php elseif ($galleryType == 'galleryNg' || $galleryType == 'galleryWP'): ?>
+
+			<?php if( get_sub_field('titre') ): ?>
+				<h4><?= get_sub_field('titre') ?></h4>
+			<?php endif ?>
+			
+			<div class="selection">
+				<?php foreach ($gallery as $image): 
+					$i++; 
+
+					$caption = $image->caption ?: $image['caption'];
+					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];
+					$description = $image->description ?: $image['title'];
+					$altText = $image->alttext ?: $image['alt'];
+					$hidden = $image->hidden ?: false;
+					
+					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
+
+					<a href="#show-gallery" data-gallery-id="<?= $galleryId ?>" data-gallery-img="<?= $gid ?>" data-index="<?= $i-1 ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> class="load-it" >
+						<?php if ( !$hidden ) { ?>
+							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
+						<?php } ?>
+					</a>
+					<?php if($i >= 9) break; ?>
+				<?php endforeach ?>
+
+			</div>
+
 		<?php endif ?>
-	<?php endif ?>
-	<?php if ($galleryType == 'slideshowNg'): ?>
-		<div class="fotorama"
-			data-nav="thumbs"
-			data-autoplay="true"
-			data-loop="true"
-			data-fit="cover"
-			data-width="100%"
-			data-maxwidth="100%"
-			data-ratio="3/2"
-			data-thumbwidth="100px"
-			data-thumbheight="65px" data-thumbmargin="10"
-			data-arrows="false"
-			data-click="true"
-			data-swipe="true"
-			data-keyboard="true"
-			data-allowfullscreen="true">
-	<?php else: ?>
-		<div class="fotorama-special"
-			data-nav="thumbs"
-			data-allowfullscreen="true">
-	<?php endif ?>
+			
+	</section>
 
-	<?php if (!empty($gallerieId)): ?>
-		
-		<?php global $nggdb; $gallery = $nggdb->get_gallery($gallerieId, 'sortorder', 'ASC', true, 0, 0); $i = 0; ?>
-		<?php foreach ($gallery as $image): $i++; $caption = $image->caption; $caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
-			<a href="/wp-admin/admin-ajax.php?action=get_gallery&gallery_id=<?= $gallerieId ?>&index=<?= $i-1 ?>" title="<?= $image->description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> class="load-it" >
-				<?php if ( !$image->hidden ) { ?>
-				<img title="<?= $image->description ?>" alt="<?= $image->alttext ?>" src="<?= $image->thumbnailURL ?>" <?= $image->size ?> />
-				<?php } ?>
-			</a>
-		<?php if($i >= 9) break; ?>
-		<?php endforeach ?>
+	<?php if( empty($galleryId) ) : ?>
+		<script type="text/javascript">
+			var <?= $gid ?> = <?= json_encode( $gallery) ?>;
+		</script>
+	<?php endif; ?>
 
-	<?php elseif(!empty($galleryWp)): ?>
-		<?php foreach ($galleryWp as $image): ?>
-			<img src="<?= $image['url'] ?>" data-caption="<?= $image['title'] ?>">
-		<?php endforeach ?>
-
-	<?php endif ?>
-		
-	</div>
-</section>
+<?php endif ?>
