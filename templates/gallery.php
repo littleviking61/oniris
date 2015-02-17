@@ -81,14 +81,20 @@
 					$i++; 
 
 					$caption = $image->caption ?: $image['caption'];
-					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];
+					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['thumbnail'];
 					$description = $image->description ?: $image['title'];
 					$altText = $image->alttext ?: $image['alt'];
 					$hidden = $image->hidden ?: false;
 					
 					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
 
-					<a href="#show-gallery" data-gallery-id="<?= $galleryId ?>" data-gallery-img="<?= $gid ?>" data-index="<?= $i-1 ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" <?= $image->thumbcode ?> class="load-it" >
+					<a 	href="#show-gallery" 
+							data-gallery-id="<?= $galleryId ?>" 
+							data-gallery-img="<?= $gid ?>" 
+							data-index="<?= $i-1 ?>" 
+							title="<?= $description ?>" 
+							data-caption="<?= $i.'/'.count($gallery) . $caption ?>" 
+							class="" >
 						<?php if ( !$hidden ) { ?>
 							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
 						<?php } ?>

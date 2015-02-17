@@ -1,6 +1,6 @@
 <?php 
 	$width = get_sub_field('largeur_du_bloc');
-	$flex = $width > 0 ? 'flex-' . $width : 'flex-4';
+	$flex = $width > 0 ? 'flex-' . $width : 'flex-5';
 	$videos = get_sub_field('videos');
 ?>
 

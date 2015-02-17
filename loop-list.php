@@ -1,4 +1,5 @@
 <h2><?= get_field('titre_alternatif') ?: get_the_title() ?></h2>
+
 <?php 
 	$list = get_field('liste');
 	if($list == 'actu') {
