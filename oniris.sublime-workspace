@@ -4,16 +4,56 @@
 		"selected_items":
 		[
 			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"gutter",
-				"gutter-mini"
+				"padd",
+				"padding-left"
 			],
 			[
 				"pad",
 				"padding-bottom"
+			],
+			[
+				"vi",
+				"videos"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"ca",
+				"caption"
+			],
+			[
+				"parse",
+				"parseInt〔function〕"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"gutter",
+				"gutter-medium"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ba",
+				"background-color"
 			],
 			[
 				"di",
@@ -54,14 +94,6 @@
 			[
 				"over",
 				"overflow"
-			],
-			[
-				"max",
-				"max-width"
-			],
-			[
-				"var",
-				"var_dump〔function〕"
 			],
 			[
 				"add",
@@ -139,114 +171,40 @@
 			"file": "scss/_variables.scss",
 			"settings":
 			{
-				"buffer_size": 1154,
+				"buffer_size": 1183,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scss/_basic.scss",
-			"settings":
-			{
-				"buffer_size": 1501,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "scss/elements/_bloc.scss",
-			"settings":
-			{
-				"buffer_size": 1128,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scss/_element.scss",
-			"settings":
-			{
-				"buffer_size": 1750,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "elements/intro-artistes.php",
-			"settings":
-			{
-				"buffer_size": 313,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 2445,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "header.php",
 			"settings":
 			{
-				"buffer_size": 1672,
+				"buffer_size": 1670,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "loop-flex.php",
+			"file": "scss/_basic.scss",
 			"settings":
 			{
-				"buffer_size": 1956,
-				"line_ending": "Unix"
+				"buffer_size": 1504,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "icon.php",
+			"file": "scss/_mixins.scss",
 			"settings":
 			{
-				"buffer_size": 15035,
-				"line_ending": "Unix"
+				"buffer_size": 2635,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "templates/gallery.php",
 			"settings":
 			{
-				"buffer_size": 1808,
+				"buffer_size": 3373,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 1307,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/style.css",
-			"settings":
-			{
-				"buffer_size": 26597,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/style.css.map",
-			"settings":
-			{
-				"buffer_size": 16500,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n\nSublimeCodeIntel:\n----------------\n\n  SublimeCodeIntel v2.1.7 Release Notes\n  =====================================\n  \n  A full-featured code intelligence and smart autocomplete engine for Sublime Text.\n  (Code intelligence plugin ported from Open Komodo Editor to Sublime Text)\n  \n  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! HELP WANTED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n  !!    Maintaining this project is hard, I do it in my spare time, but I'm     !!\n  !!    basically all alone. If anyone is interested in contributing, please    !!\n  !!    contact me. I really need much more help maintaining SublimeCodeIntel   !!\n  !!                                                                            !!\n  !!                      Follow me on twitter @germbravo                       !!\n  !!          You can find us at #sublimecodeintel on irc.freenode.net          !!\n  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n  \n  ** Restart Sublime Text after reading this **\n  \n  In case of trouble, please read the Troubleshooting section in the README.\n  \n  If you like SublimeCodeIntel, please make a donation: http://sublimecodeintel.github.io/SublimeCodeIntel/donate.html\n  \n  \n  For more information:\n  ---------------------\n  Please take the time to read the documentation:\n  \n  * Online - http://sublimecodeintel.github.io/SublimeCodeIntel/\n  \n  \n  CHANGES/FIXES\n  -------------\n  v2.1.7 (2015-01-26):\n  \n  + Fixed triggering issues with autocompletion and stop chars.\n  \n  + ST2 improvements. Still might show \"slow plugin\"\n    (just ignore, project_file_name is being emulated from ST3, which is \"slow\")\n  \n  + Cleanups\n  \nPackage Control Messages\n========================",
-			"settings":
-			{
-				"buffer_size": 1706,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"scratch": true
 			}
 		}
 	],
@@ -256,6 +214,14 @@
 		"height": 400.0,
 		"selected_items":
 		[
+			[
+				"brow",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"rem",
+				"SFTP: Browse Remote…"
+			],
 			[
 				"remo",
 				"SFTP: Browse Remote…"
@@ -283,10 +249,6 @@
 			[
 				"pci",
 				"Package Control: Install Package"
-			],
-			[
-				"brow",
-				"SFTP: Browse Remote…"
 			],
 			[
 				"pcr",
@@ -326,63 +288,82 @@
 	"expanded_folders":
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ajax-gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/videos-list.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/fotorama.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.modal.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_fotorama.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/fotorama.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/imagesloaded.pkgd.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_fotorama-base.scss",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670560/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v4.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu-highlight.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/robotoslab-thin_0-webfont.svg",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-bold-demo.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_aside.scss",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670124/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v5.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css.map",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icon.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/content.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-artistes.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_font.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/fotorama.css.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/enqueue-sass.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_shame.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/simple.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423580500/mapped/var/www/html/client/oniris/wp-content/plugins/mqtranslate/mqtranslate_javascript.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/archive.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/enqueue-sass.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_shame.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/simple.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_mixins.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/footer.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_font.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
 		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu-highlight.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/UPDATE",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actus.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/mongolia/recherche/mailing",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/style.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-artistes.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-salon.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artistes.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/simple-actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/simple-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_basic.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/icons/link.svg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/search-home.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-list.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/content.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/fetch.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/view.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/isotope.pkgd.min.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/icons/search.svg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_page.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_aside.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/searchform.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artistes.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/artiste-thumbnail.php",
@@ -394,11 +375,9 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-V92.jpg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/oniris.sublime-project",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/img/logo-oniris.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icon.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_icons.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_colors.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_variables.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sidebar.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icons/icon-oniris.svg",
@@ -440,24 +419,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/MIT-LICENSE.txt",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/49662db1b212bbe000523c61643b7bdc2b6fa139/font-awesome.scssc",
 		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/a3ab731bd02709f8a419a95ae779830a683c8013/ink-flex.scssc",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/node_modules/grunt-contrib-uglify/node_modules/.bin/uglifyjs",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/3865a44254a2d48899ca0e550c7a83f1e41a8357/_user-interface.scssc",
-		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/ink.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/0e4d40d8ceabe5cdd26c3fca70f556c2f0840aa5/_images.scssc",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/1c204ce00370c84ea53d0bc43d091d594bfaee45/_flex-utils.scssc",
-		"/Users/nuagegraphik/Desktop/debook",
-		"/Users/nuagegraphik/Desktop/allfrienddebook",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/themes/_alerts.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/modules/_flex-grid.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/contrib/_compass.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/contrib/_font-awesome.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink/functions/_js-bridge.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/ink.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/ink.css.map",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-V4.rar",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_hover.scss"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/a3ab731bd02709f8a419a95ae779830a683c8013/ink-flex.scssc"
 	],
 	"find":
 	{
@@ -478,6 +440,81 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"basic-color",
+			"h2",
+			"@include colors",
+			"get_field",
+			"sous_titre",
+			"p",
+			"(int) ",
+			"gallery",
+			"(int)",
+			"greger",
+			"&$input",
+			"(int) ",
+			"gallerieImg",
+			"gallerieId",
+			"	 ",
+			"$(this)",
+			"this",
+			"cursor",
+			"settings",
+			"console.log",
+			"src",
+			"mfp.st.ajax.settings",
+			"console",
+			"consol",
+			"$image->hidden",
+			"$image->thumbnailURL",
+			"allText",
+			"$image->alttext",
+			"$image->description",
+			"$image->imageURL",
+			"$caption = $image->caption;",
+			"\n					",
+			"$image->caption",
+			"console.log",
+			"get_gallery",
+			"  ",
+			"30",
+			"decal",
+			"100",
+			"measures.h",
+			"stage",
+			"fotorama__stage",
+			"updateFotoramaState",
+			"fullscreenenter",
+			"fullscreen",
+			".fotorama__wrap",
+			".fotorama__arr:focus:after,.fotorama__fullscreen-icon:focus:after,.fotorama__html,.fotorama__img,.fotorama__nav__frame:focus .fotorama__dot:after,.fotorama__nav__frame:focus .fotorama__thumb:after,.fotorama__stage__frame,.fotorama__stage__shaft,.fotorama__video iframe{\n",
+			"100%",
+			"fotorama--fullscreen",
+			"/* fotorama */\n.fotorama__arr:focus:after,.fotorama__fullscreen-icon:focus:after,.fotorama__html,.fotorama__img,.fotorama__nav__frame:focus .fotorama__dot:after,.fotorama__nav__frame:focus .fotorama__thumb:after,.fotorama__stage__frame,.fotorama__stage__shaft,.fotorama__video iframe{\n	position:absolute;\n	width:100%;\n	height:100%;\n	top:0;\n	right:0;\n	left:0;\n	bottom:0\n}\n.fotorama--fullscreen,.fotorama__img{\n	max-width:99999px!important;\n	max-height:99999px!important;\n	min-width:0!important;\n	min-height:0!important;\n	border-radius:0!important;\n	box-shadow:none!important;\n	padding:0!important\n}\n.fotorama__wrap .fotorama__grab{\n	cursor:move;\n	cursor:-webkit-grab;\n	cursor:-o-grab;\n	cursor:-ms-grab;\n	cursor:grab\n}\n.fotorama__grabbing *{\n	cursor:move;\n	cursor:-webkit-grabbing;\n	cursor:-o-grabbing;\n	cursor:-ms-grabbing;\n	cursor:grabbing\n}\n.fotorama__spinner{\n	position:absolute!important;\n	top:50%!important;\n	left:50%!important\n}\n.fotorama__wrap--css3 .fotorama__arr,.fotorama__wrap--css3 .fotorama__fullscreen-icon,.fotorama__wrap--css3 .fotorama__nav__shaft,.fotorama__wrap--css3 .fotorama__stage__shaft,.fotorama__wrap--css3 .fotorama__thumb-border,.fotorama__wrap--css3 .fotorama__video-close,.fotorama__wrap--css3 .fotorama__video-play{\n	-webkit-transform:translate3d(0,0,0);\n	transform:translate3d(0,0,0)\n}\n.fotorama__caption,.fotorama__nav:after,.fotorama__nav:before,.fotorama__stage:after,.fotorama__stage:before,.fotorama__wrap--css3 .fotorama__html,.fotorama__wrap--css3 .fotorama__nav,.fotorama__wrap--css3 .fotorama__spinner,.fotorama__wrap--css3 .fotorama__stage,.fotorama__wrap--css3 .fotorama__stage .fotorama__img,.fotorama__wrap--css3 .fotorama__stage__frame{\n	-webkit-transform:translateZ(0);\n	transform:translateZ(0)\n}\n.fotorama__arr:focus,.fotorama__fullscreen-icon:focus,.fotorama__nav__frame{\n	outline:0\n}\n.fotorama__arr:focus:after,.fotorama__fullscreen-icon:focus:after,.fotorama__nav__frame:focus .fotorama__dot:after,.fotorama__nav__frame:focus .fotorama__thumb:after{\n	content:'';\n	border-radius:inherit;\n	background-color:rgba(0,175,234,.5)\n}\n.fotorama__wrap--video .fotorama__stage,.fotorama__wrap--video .fotorama__stage__frame--video,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img,.fotorama__wrap--video .fotorama__stage__shaft{\n	-webkit-transform:none!important;\n	transform:none!important\n}\n.fotorama__wrap--css3 .fotorama__nav__shaft,.fotorama__wrap--css3 .fotorama__stage__shaft,.fotorama__wrap--css3 .fotorama__thumb-border{\n	transition-property:-webkit-transform,width;\n	transition-property:transform,width;\n	transition-timing-function:cubic-bezier(0.1,0,.25,1);\n	transition-duration:0ms\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__no-select,.fotorama__video-close,.fotorama__video-play,.fotorama__wrap{\n	-webkit-user-select:none;\n	-moz-user-select:none;\n	-ms-user-select:none;\n	user-select:none\n}\n.fotorama__select{\n	-webkit-user-select:text;\n	-moz-user-select:text;\n	-ms-user-select:text;\n	user-select:text\n}\n.fotorama__nav,.fotorama__nav__frame{\n	margin:auto;\n	padding:0\n}\n.fotorama__caption__wrap,.fotorama__nav__frame,.fotorama__nav__shaft{\n	-moz-box-orient:vertical;\n	display:inline-block;\n	vertical-align:middle;\n	*display:inline;\n	*zoom:1\n}\n.fotorama__nav__frame,.fotorama__thumb-border{\n	box-sizing:content-box\n}\n.fotorama__caption__wrap{\n	box-sizing:border-box\n}\n.fotorama--hidden,.fotorama__load{\n	position:absolute;\n	left:-99999px;\n	top:-99999px;\n	z-index:-1\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__nav,.fotorama__nav__frame,.fotorama__nav__shaft,.fotorama__stage__frame,.fotorama__stage__shaft,.fotorama__video-close,.fotorama__video-play{\n	-webkit-tap-highlight-color:transparent\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n	background:url(../img/fotorama.png) no-repeat\n}\n@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:2dppx){\n	.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n		background:url(../img/fotorama@2x.png) 0 0/96px 160px no-repeat\n	}\n\n}\n.fotorama__thumb{\n	background-color:#7f7f7f;\n	background-color:rgba(127,127,127,.2)\n}\n@media print{\n	.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__thumb-border,.fotorama__video-close,.fotorama__video-play{\n		background:none!important\n	}\n\n}\n.fotorama{\n	min-width:1px;\n	overflow:hidden\n}\n.fotorama:not(.fotorama--unobtrusive)>*:not(:first-child){\n	display:none\n}\n.fullscreen{\n	width:100%!important;\n	height:100%!important;\n	max-width:100%!important;\n	max-height:100%!important;\n	margin:0!important;\n	padding:0!important;\n	overflow:hidden!important;\n	background:#000\n}\n.fotorama--fullscreen{\n	position:absolute!important;\n	top:0!important;\n	left:0!important;\n	right:0!important;\n	bottom:0!important;\n	float:none!important;\n	z-index:2147483647!important;\n	background:#000;\n	width:100%!important;\n	height:100%!important;\n	margin:0!important\n}\n.fotorama--fullscreen .fotorama__nav,.fotorama--fullscreen .fotorama__stage{\n	background:#000\n}\n.fotorama__wrap{\n	-webkit-text-size-adjust:100%;\n	position:relative;\n	direction:ltr;\n	z-index:0\n}\n.fotorama__wrap--rtl .fotorama__stage__frame{\n	direction:rtl\n}\n.fotorama__nav,.fotorama__stage{\n	overflow:hidden;\n	position:relative;\n	max-width:100%\n}\n.fotorama__wrap--pan-y{\n	-ms-touch-action:pan-y\n}\n.fotorama__wrap .fotorama__pointer{\n	cursor:pointer\n}\n.fotorama__wrap--slide .fotorama__stage__frame{\n	opacity:1!important\n}\n.fotorama__stage__frame{\n	overflow:hidden\n}\n.fotorama__stage__frame.fotorama__active{\n	z-index:8\n}\n.fotorama__wrap--fade .fotorama__stage__frame{\n	display:none\n}\n.fotorama__wrap--fade .fotorama__fade-front,.fotorama__wrap--fade .fotorama__fade-rear,.fotorama__wrap--fade .fotorama__stage__frame.fotorama__active{\n	display:block;\n	left:0;\n	top:0\n}\n.fotorama__wrap--fade .fotorama__fade-front{\n	z-index:8\n}\n.fotorama__wrap--fade .fotorama__fade-rear{\n	z-index:7\n}\n.fotorama__wrap--fade .fotorama__fade-rear.fotorama__active{\n	z-index:9\n}\n.fotorama__wrap--fade .fotorama__stage .fotorama__shadow{\n	display:none\n}\n.fotorama__img{\n	-ms-filter:\"alpha(Opacity=0)\";\n	filter:alpha(opacity=0);\n	opacity:0;\n	border:none!important\n}\n.fotorama__error .fotorama__img,.fotorama__loaded .fotorama__img{\n	-ms-filter:\"alpha(Opacity=100)\";\n	filter:alpha(opacity=100);\n	opacity:1\n}\n.fotorama--fullscreen .fotorama__loaded--full .fotorama__img,.fotorama__img--full{\n	display:none\n}\n.fotorama--fullscreen .fotorama__loaded--full .fotorama__img--full{\n	display:block\n}\n.fotorama__wrap--only-active .fotorama__nav,.fotorama__wrap--only-active .fotorama__stage{\n	max-width:99999px!important\n}\n.fotorama__wrap--only-active .fotorama__stage__frame{\n	visibility:hidden\n}\n.fotorama__wrap--only-active .fotorama__stage__frame.fotorama__active{\n	visibility:visible\n}\n.fotorama__nav{\n	font-size:0;\n	line-height:0;\n	text-align:center;\n	display:none;\n	white-space:nowrap;\n	z-index:5\n}\n.fotorama__nav__shaft{\n	position:relative;\n	left:0;\n	top:0;\n	text-align:left\n}\n.fotorama__nav__frame{\n	position:relative;\n	cursor:pointer\n}\n.fotorama__nav--dots{\n	display:block\n}\n.fotorama__nav--dots .fotorama__nav__frame{\n	width:18px;\n	height:30px\n}\n.fotorama__nav--dots .fotorama__nav__frame--thumb,.fotorama__nav--dots .fotorama__thumb-border{\n	display:none\n}\n.fotorama__nav--thumbs{\n	display:block\n}\n.fotorama__nav--thumbs .fotorama__nav__frame{\n	padding-left:0!important\n}\n.fotorama__nav--thumbs .fotorama__nav__frame:last-child{\n	padding-right:0!important\n}\n.fotorama__nav--thumbs .fotorama__nav__frame--dot{\n	display:none\n}\n.fotorama__dot{\n	display:block;\n	width:4px;\n	height:4px;\n	position:relative;\n	top:12px;\n	left:6px;\n	border-radius:6px;\n	border:1px solid #7f7f7f\n}\n.fotorama__nav__frame:focus .fotorama__dot:after{\n	padding:1px;\n	top:-1px;\n	left:-1px\n}\n.fotorama__nav__frame.fotorama__active .fotorama__dot{\n	width:0;\n	height:0;\n	border-width:3px\n}\n.fotorama__nav__frame.fotorama__active .fotorama__dot:after{\n	padding:3px;\n	top:-3px;\n	left:-3px\n}\n.fotorama__thumb{\n	overflow:hidden;\n	position:relative;\n	width:100%;\n	height:100%\n}\n.fotorama__nav__frame:focus .fotorama__thumb{\n	z-index:2\n}\n.fotorama__thumb-border{\n	position:absolute;\n	z-index:9;\n	top:0;\n	left:0;\n	border-style:solid;\n	border-color:#00afea;\n	background-image:linear-gradient(to bottom right,rgba(255,255,255,.25),rgba(64,64,64,.1))\n}\n.fotorama__caption{\n	position:absolute;\n	z-index:12;\n	bottom:0;\n	left:0;\n	right:0;\n	font-family:'Helvetica Neue',Arial,sans-serif;\n	font-size:14px;\n	line-height:1.5;\n	color:#000\n}\n.fotorama__caption a{\n	text-decoration:none;\n	color:#000;\n	border-bottom:1px solid;\n	border-color:rgba(0,0,0,.5)\n}\n.fotorama__caption a:hover{\n	color:#333;\n	border-color:rgba(51,51,51,.5)\n}\n.fotorama__wrap--rtl .fotorama__caption{\n	left:auto;\n	right:0\n}\n.fotorama__wrap--no-captions .fotorama__caption,.fotorama__wrap--video .fotorama__caption{\n	display:none\n}\n.fotorama__caption__wrap{\n	background-color:#fff;\n	background-color:rgba(255,255,255,.9);\n	padding:5px 10px\n}\n@-webkit-keyframes spinner{\n	0%{\n		-webkit-transform:rotate(0);\n		transform:rotate(0)\n	}\n	100%{\n		-webkit-transform:rotate(360deg);\n		transform:rotate(360deg)\n	}\n\n}\n@keyframes spinner{\n	0%{\n		-webkit-transform:rotate(0);\n		transform:rotate(0)\n	}\n	100%{\n		-webkit-transform:rotate(360deg);\n		transform:rotate(360deg)\n	}\n\n}\n.fotorama__wrap--css3 .fotorama__spinner{\n	-webkit-animation:spinner 24s infinite linear;\n	animation:spinner 24s infinite linear\n}\n.fotorama__wrap--css3 .fotorama__html,.fotorama__wrap--css3 .fotorama__stage .fotorama__img{\n	transition-property:opacity;\n	transition-timing-function:linear;\n	transition-duration:.3s\n}\n.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img{\n	-ms-filter:\"alpha(Opacity=0)\";\n	filter:alpha(opacity=0);\n	opacity:0\n}\n.fotorama__select{\n	cursor:auto\n}\n.fotorama__video{\n	top:32px;\n	right:0;\n	bottom:0;\n	left:0;\n	position:absolute;\n	z-index:10\n}\n@-moz-document url-prefix(){\n	.fotorama__active{\n		box-shadow:0 0 0 transparent\n	}\n\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n	position:absolute;\n	z-index:11;\n	cursor:pointer\n}\n.fotorama__arr{\n	position:absolute;\n	width:32px;\n	height:32px;\n	top:50%;\n	margin-top:-16px\n}\n.fotorama__arr--prev{\n	left:2px;\n	background-position:0 0\n}\n.fotorama__arr--next{\n	right:2px;\n	background-position:-32px 0\n}\n.fotorama__arr--disabled{\n	pointer-events:none;\n	cursor:default;\n	*display:none;\n	opacity:.1\n}\n.fotorama__fullscreen-icon{\n	width:32px;\n	height:32px;\n	top:2px;\n	right:2px;\n	background-position:0 -32px;\n	z-index:20\n}\n.fotorama__arr:focus,.fotorama__fullscreen-icon:focus{\n	border-radius:50%\n}\n.fotorama--fullscreen .fotorama__fullscreen-icon{\n	background-position:-32px -32px\n}\n.fotorama__video-play{\n	width:96px;\n	height:96px;\n	left:50%;\n	top:50%;\n	margin-left:-48px;\n	margin-top:-48px;\n	background-position:0 -64px;\n	opacity:0\n}\n.fotorama__wrap--css2 .fotorama__video-play,.fotorama__wrap--video .fotorama__stage .fotorama__video-play{\n	display:none\n}\n.fotorama__error .fotorama__video-play,.fotorama__loaded .fotorama__video-play,.fotorama__nav__frame .fotorama__video-play{\n	opacity:1;\n	display:block\n}\n.fotorama__nav__frame .fotorama__video-play{\n	width:32px;\n	height:32px;\n	margin-left:-16px;\n	margin-top:-16px;\n	background-position:-64px -32px\n}\n.fotorama__video-close{\n	width:32px;\n	height:32px;\n	top:0;\n	right:0;\n	background-position:-64px 0;\n	z-index:20;\n	opacity:0\n}\n.fotorama__wrap--css2 .fotorama__video-close{\n	display:none\n}\n.fotorama__wrap--css3 .fotorama__video-close{\n	-webkit-transform:translate3d(32px,-32px,0);\n	transform:translate3d(32px,-32px,0)\n}\n.fotorama__wrap--video .fotorama__video-close{\n	display:block;\n	opacity:1\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__video-close{\n	-webkit-transform:translate3d(0,0,0);\n	transform:translate3d(0,0,0)\n}\n.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon{\n	opacity:0\n}\n.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus{\n	opacity:1\n}\n.fotorama__wrap--video .fotorama__arr,.fotorama__wrap--video .fotorama__fullscreen-icon{\n	opacity:0!important\n}\n.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon{\n	display:none\n}\n.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus{\n	display:block\n}\n.fotorama__wrap--css2.fotorama__wrap--video .fotorama__arr,.fotorama__wrap--css2.fotorama__wrap--video .fotorama__fullscreen-icon{\n	display:none!important\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus){\n	-webkit-transform:translate3d(32px,-32px,0);\n	transform:translate3d(32px,-32px,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus){\n	-webkit-transform:translate3d(-48px,0,0);\n	transform:translate3d(-48px,0,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus){\n	-webkit-transform:translate3d(48px,0,0);\n	transform:translate3d(48px,0,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__fullscreen-icon{\n	-webkit-transform:translate3d(32px,-32px,0)!important;\n	transform:translate3d(32px,-32px,0)!important\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--prev{\n	-webkit-transform:translate3d(-48px,0,0)!important;\n	transform:translate3d(-48px,0,0)!important\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--next{\n	-webkit-transform:translate3d(48px,0,0)!important;\n	transform:translate3d(48px,0,0)!important\n}\n.fotorama__wrap--css3 .fotorama__arr:not(:focus),.fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus),.fotorama__wrap--css3 .fotorama__video-close:not(:focus),.fotorama__wrap--css3 .fotorama__video-play:not(:focus){\n	transition-property:-webkit-transform,opacity;\n	transition-property:transform,opacity;\n	transition-duration:.3s\n}\n.fotorama__nav:after,.fotorama__nav:before,.fotorama__stage:after,.fotorama__stage:before{\n	content:\"\";\n	display:block;\n	position:absolute;\n	text-decoration:none;\n	top:0;\n	bottom:0;\n	width:10px;\n	height:auto;\n	z-index:10;\n	pointer-events:none;\n	background-repeat:no-repeat;\n	background-size:1px 100%,5px 100%\n}\n.fotorama__nav:before,.fotorama__stage:before{\n	background-image:linear-gradient(transparent,rgba(0,0,0,.2) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.4),transparent);\n	background-position:0 0,0 0;\n	left:-10px\n}\n.fotorama__nav.fotorama__shadows--left:before,.fotorama__stage.fotorama__shadows--left:before{\n	left:0\n}\n.fotorama__nav:after,.fotorama__stage:after{\n	background-image:linear-gradient(transparent,rgba(0,0,0,.2) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.4),transparent);\n	background-position:100% 0,100% 0;\n	right:-10px\n}\n.fotorama__nav.fotorama__shadows--right:after,.fotorama__stage.fotorama__shadows--right:after{\n	right:0\n}\n.fotorama--fullscreen .fotorama__nav:after,.fotorama--fullscreen .fotorama__nav:before,.fotorama--fullscreen .fotorama__stage:after,.fotorama--fullscreen .fotorama__stage:before,.fotorama__wrap--fade .fotorama__stage:after,.fotorama__wrap--fade .fotorama__stage:before,.fotorama__wrap--no-shadows .fotorama__nav:after,.fotorama__wrap--no-shadows .fotorama__nav:before,.fotorama__wrap--no-shadows .fotorama__stage:after,.fotorama__wrap--no-shadows .fotorama__stage:before{\n	display:none\n}\n",
+			";",
+			"}",
+			";",
+			"}",
+			"{",
+			"field",
+			"rem-calc(3)",
+			"$tree",
+			"rem-calc(3)",
+			"MARGIN",
+			"setStyle",
+			"thumbborderwidth",
+			"thumb",
+			"10px",
+			"caption",
+			"captions",
+			"'-'",
+			"caption",
+			" measures.nw",
+			"o_nav",
+			"navwidth",
+			"console.lo",
+			"background:url(",
+			" <?=",
+			"{",
 			"h5",
 			"h4",
 			"switchEditors",
@@ -530,82 +567,7 @@
 			"h3",
 			"h2",
 			"4525",
-			"orig_image_id",
-			"=>",
-			"=\"\">",
-			" data",
-			"colors(",
-			"$title-font-family",
-			"$body-font-family",
-			"initial",
-			"h4",
-			"h3",
-			"h4",
-			"premiereColonne",
-			";",
-			"include",
-			"$yellow",
-			"\"\"",
-			"\");\n",
-			"$yellow",
-			"color: ",
-			"color",
-			"), ",
-			", ",
-			",",
-			"add",
-			" ()",
-			"\"\"",
-			"()",
-			",",
-			": ",
-			"	font-weight: lighter;",
-			"php the",
-			"h3",
-			"h4",
-			"25px",
-			"margin",
-			"oniris",
-			"\";\n",
-			"subLink",
-			"setNodeClass",
-			"el.",
-			"el",
-			"idCurrent",
-			"get_the_ID()",
-			"the_child_pages_menu",
-			"<?php ",
-			"li",
-			"482346592",
-			"504019494",
-			"451779489",
-			"402678417",
-			"402678417.",
-			"401879931",
-			"401875162",
-			"401873594",
-			"504019494",
-			"laventurierviking",
-			"nuagegraphik",
-			"client/last",
-			"dyva",
-			">",
-			"$gutter",
-			"aside",
-			"$title-thin-font-family",
-			"regular_0",
-			"$light-grey",
-			"-$gutter",
-			"10",
-			"flex",
-			"$light-grey",
-			"title",
-			" ?>\n<?php ",
-			"$gutter-extra-large",
-			"blocsRestant",
-			"test",
-			"flexible_content_field_name",
-			"monkey_patch_hook"
+			"orig_image_id"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -627,7 +589,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -636,15 +598,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1154,
+						"buffer_size": 1183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								121
+								412,
+								412
 							]
 						],
 						"settings":
@@ -658,120 +620,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "scss/_basic.scss",
+					"file": "header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1501,
+						"buffer_size": 1670,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "scss/elements/_bloc.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1128,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								609,
-								609
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "scss/_element.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								931,
-								931
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "elements/intro-artistes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 313,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								217,
-								142
+								1559,
+								1574
 							]
 						],
 						"settings":
@@ -780,104 +646,71 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 465.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scss/_basic.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								995,
+								942
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1222.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "js/main.js",
+					"buffer": 3,
+					"file": "scss/_mixins.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2445,
+						"buffer_size": 2635,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								639,
-								319
+								2197,
+								2191
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
 							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1672,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								271
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "loop-flex.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1956,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -885,110 +718,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "icon.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "templates/gallery.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1808,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								372,
-								374
-							],
-							[
-								406,
-								408
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": true,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "Gruntfile.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								380,
-								380
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -998,386 +728,38 @@
 			"sheets":
 			[
 				{
-					"buffer": 11,
-					"file": "css/style.css",
+					"buffer": 4,
+					"file": "templates/gallery.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 26597,
+						"buffer_size": 3373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2851,
-								2860
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_database_dir": "~/.codeintel",
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Node.js",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_exclude_scopes_from_complete_triggers":
-							[
-								"comment"
-							],
-							"codeintel_language_settings":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_exclude_dir":
-									[
-										"/build/",
-										"/min/"
-									],
-									"codeintel_scan_extra_dir":
-									[
-									],
-									"codeintel_scan_files_in_project": false,
-									"codeintel_selected_catalogs":
-									[
-										"jQuery"
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 15,
-									"codeintel_scan_exclude_dir":
-									[
-										"/Applications/MAMP/bin/php/php5.5.3/"
-									],
-									"codeintel_scan_extra_dir":
-									[
-									],
-									"codeintel_scan_files_in_project": true,
-									"php": "/Applications/MAMP/bin/php/php5.5.3/bin/php"
-								},
-								"Python3":
-								{
-									"codeintel_scan_extra_dir":
-									[
-										"/Applications/Sublime Text.app/Contents/MacOS",
-										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/arch",
-										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/libs"
-									],
-									"codeintel_scan_files_in_project": true,
-									"codeintel_selected_catalogs":
-									[
-									],
-									"python3": "/usr/local/bin/python3.3"
-								}
-							},
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							[
-							],
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"codeintel_word_completions": "buffer",
-							"history_list_is_closing": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sublime_auto_complete": true,
-							"synced": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "css/style.css.map",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
+								0,
 								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": true,
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_database_dir": "~/.codeintel",
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Node.js",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_exclude_scopes_from_complete_triggers":
-							[
-								"comment"
-							],
-							"codeintel_language_settings":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_exclude_dir":
-									[
-										"/build/",
-										"/min/"
-									],
-									"codeintel_scan_extra_dir":
-									[
-									],
-									"codeintel_scan_files_in_project": false,
-									"codeintel_selected_catalogs":
-									[
-										"jQuery"
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 15,
-									"codeintel_scan_exclude_dir":
-									[
-										"/Applications/MAMP/bin/php/php5.5.3/"
-									],
-									"codeintel_scan_extra_dir":
-									[
-									],
-									"codeintel_scan_files_in_project": true,
-									"php": "/Applications/MAMP/bin/php/php5.5.3/bin/php"
-								},
-								"Python3":
-								{
-									"codeintel_scan_extra_dir":
-									[
-										"/Applications/Sublime Text.app/Contents/MacOS",
-										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/arch",
-										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/libs"
-									],
-									"codeintel_scan_files_in_project": true,
-									"codeintel_selected_catalogs":
-									[
-									],
-									"python3": "/usr/local/bin/python3.3"
-								}
-							},
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							[
-							],
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"codeintel_word_completions": "buffer",
+							"auto_complete": false,
+							"history_list_is_closing": true,
 							"incomplete_sync": null,
 							"remote_loading": false,
-							"sublime_auto_complete": true,
+							"sftp_duplicate_views": 0,
 							"synced": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 2.0,
+						"translation.y": 6.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1657,
-								1657
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1416,7 +798,7 @@
 		"rows":
 		[
 			0.0,
-			0.934469200524,
+			0.763269405985,
 			1.0
 		]
 	},
@@ -1445,6 +827,62 @@
 		"selected_items":
 		[
 			[
+				"mix",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"func",
+				"oniris/functions.php"
+			],
+			[
+				"layo",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"loop",
+				"oniris/loop-flex.php"
+			],
+			[
+				"fun",
+				"oniris/functions.php"
+			],
+			[
+				"ma",
+				"oniris/js/main.js"
+			],
+			[
+				"gall",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"mai",
+				"oniris/js/main.js"
+			],
+			[
+				"aside",
+				"oniris/scss/elements/_aside.scss"
+			],
+			[
+				"galler",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"foto",
+				"oniris/js/vendor/fotorama.js"
+			],
+			[
+				"fot",
+				"oniris/js/vendor/fotorama.js"
+			],
+			[
+				"sha",
+				"oniris/scss/_shame.scss"
+			],
+			[
+				"g",
+				"oniris/Gruntfile.js"
+			],
+			[
 				"lop",
 				"oniris/loop-flex.php"
 			],
@@ -1457,16 +895,8 @@
 				"oniris/index.php"
 			],
 			[
-				"galler",
-				"oniris/templates/gallery.php"
-			],
-			[
 				"sham",
 				"oniris/scss/_shame.scss"
-			],
-			[
-				"mai",
-				"oniris/js/main.js"
 			],
 			[
 				"galle",
@@ -1477,20 +907,12 @@
 				"oniris/scss/_element.scss"
 			],
 			[
-				"func",
-				"oniris/functions.php"
-			],
-			[
 				"fu",
 				"oniris/ft/asap-regular-demo.html"
 			],
 			[
 				"actu",
 				"oniris/templates/actu-highlight.php"
-			],
-			[
-				"gall",
-				"oniris/templates/gallery.php"
 			],
 			[
 				"single",
@@ -1507,10 +929,6 @@
 			[
 				"basi",
 				"oniris/scss/_basic.scss"
-			],
-			[
-				"mix",
-				"oniris/scss/_mixins.scss"
 			],
 			[
 				"loppf",
@@ -1593,10 +1011,6 @@
 				"oniris/loop-flex.php"
 			],
 			[
-				"fun",
-				"oniris/functions.php"
-			],
-			[
 				"layou",
 				"oniris/scss/_layout.scss"
 			],
@@ -1611,10 +1025,6 @@
 			[
 				"in",
 				"oniris/index.php"
-			],
-			[
-				"loop",
-				"oniris/loop-flex.php"
 			],
 			[
 				"mixin",
@@ -1755,7 +1165,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 281.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

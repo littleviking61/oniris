@@ -10,7 +10,7 @@
 	$imagePosition = get_sub_field('position');
 	
 	$hasButton = get_sub_field('has_bouton');
-	$linkButton = get_sub_field('lien_du_bouton');
+	$linkButton = get_sub_field('lien_btn');
 	$textButton = get_sub_field('texte_du_bouton');
 	// $buttonPosition = get_sub_field('emplacement_du_bouton');
 ?>
