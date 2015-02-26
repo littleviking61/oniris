@@ -164,6 +164,15 @@ function the_nav_section($pageId, $args = [], $result)
 	<?php wp_reset_postdata();
 }
 
+function get_template_file($template, $default = null) {
+	$template = locate_template($template . '.php');
+  if(file_exists($template)) {
+    require($template);
+  }elseif( !is_null($default) ){
+    require($default . '.php');
+  }
+}
+
 /* ajax call funtion */
 
 function bimLa_gallery($id) {

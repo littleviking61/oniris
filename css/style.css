@@ -422,9 +422,8 @@ main {
   align-content: flex-start;
   -webkit-align-items: flex-start;
   align-items: flex-start; }
-  .wrap.isotop {
-    display: block;
-    opacity: 0; }
+  .wrap > header:first-child {
+    width: 100%; }
   .wrap .full {
     width: 100%; }
   .wrap > h2 {
@@ -468,18 +467,24 @@ footer.main {
   display: none; }
 
 /* flex LAYOUT */
-header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .videos .videos-list .go-right {
+header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .videos .videos-list .go-right, .list-page .go-right {
   margin-left: auto; }
-header[role="banner"] .full, .wrap > section .full, .row .full, .videos .videos-list .full {
+header[role="banner"] .full, .wrap > section .full, .row .full, .videos .videos-list .full, .list-page .full {
   -webkit-flex: 1;
   flex: 1; }
-header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .videos .videos-list .unbreak {
+header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .videos .videos-list .unbreak, .list-page .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list, header[role="banner"] nav ul, .button, button, .simple {
+main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list, .list-page, header[role="banner"] nav ul, .button, button, .simple {
   display: -webkit-flex;
   display: flex; }
+
+.wrap > header:first-child {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center; }
 
 body, .post-it, .actu, aside.main .nav-section > li {
   display: -webkit-flex;
@@ -487,7 +492,7 @@ body, .post-it, .actu, aside.main .nav-section > li {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list {
+header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list, .list-page {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -572,6 +577,9 @@ header[role="banner"] nav ul, .button, button {
   .button i:last-child, button i:last-child {
     margin-left: 0.3125rem; }
 
+header > .filter-tools {
+  margin-left: 1.25rem; }
+
 /* thumbnail */
 .thumbnail {
   margin: -0.9375rem;
@@ -609,36 +617,34 @@ header[role="banner"] nav ul, .button, button {
   .post-it .thumbnail, .actu .thumbnail {
     margin: -1rem;
     margin-bottom: 0.625rem; }
+  .post-it.artiste .thumbnail, .artiste.actu .thumbnail {
+    max-height: 8.4375rem; }
   .post-it:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .cat-peinture.post-it:hover {
-    background-color: #0252cf; }
+    border-color: #0252cf; }
   .cat-geometrie.post-it:hover {
-    background-color: #f23518; }
+    border-color: #f23518; }
   .cat-photographie.post-it:hover {
-    background-color: #42b04f; }
+    border-color: #42b04f; }
   .cat-multi.post-it:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .cat-sculpture.post-it:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .actu:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .cat-peinture.actu:hover {
-    background-color: #0252cf; }
+    border-color: #0252cf; }
   .cat-geometrie.actu:hover {
-    background-color: #f23518; }
+    border-color: #f23518; }
   .cat-photographie.actu:hover {
-    background-color: #42b04f; }
+    border-color: #42b04f; }
   .cat-multi.actu:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .cat-sculpture.actu:hover {
-    background-color: #ffbc17; }
+    border-color: #ffbc17; }
   .post-it:hover .thumbnail img, .actu:hover .thumbnail img {
     transform: scale(1.02); }
-  .post-it:hover h2, .post-it:hover h3, .post-it:hover h4, .post-it:hover h5, .post-it:hover p, .actu:hover h2, .actu:hover h3, .actu:hover h4, .actu:hover h5, .actu:hover p {
-    color: white; }
-  .post-it:hover hr, .actu:hover hr {
-    background-color: white; }
   .post-it h3, .actu h3 {
     font-size: 1.125rem; }
   .post-it .detail, .actu .detail {
@@ -1632,6 +1638,17 @@ button::-moz-focus-inner {
   opacity: 1;
   color: white;
   filter: alpha(opacity=100); }
+
+.isotop-links a.cat-peinture {
+  color: #0252cf; }
+.isotop-links a.cat-geometrie {
+  color: #f23518; }
+.isotop-links a.cat-photographie {
+  color: #42b04f; }
+.isotop-links a.cat-multi {
+  color: #ffbc17; }
+.isotop-links a.cat-sculpture {
+  color: #ffbc17; }
 
 body > .fotorama-special {
   position: absolute;

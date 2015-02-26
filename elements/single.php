@@ -1,7 +1,6 @@
 <?php if (!empty(get_field('name'))): ?>
-	
 	<a href="<?php the_permalink() ?>" class="container flex-2 post-it artiste <?php the_field('category') ?>">
-		<?php if( get_field('thumbnail') ): ?>
+		test<?php if( get_field('thumbnail') ): ?>
 			<div class="thumbnail">
 				<img src="<?= get_field('thumbnail') ?>" alt="">
 			</div>

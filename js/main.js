@@ -6,38 +6,20 @@ $(document).ready(function(){
 		var $isotop = $('.isotop');
 		
 		$isotop.imagesLoaded( function() {
-			$isotop.isotope({
+			$listArticle = $isotop.isotope({
 				// options
 				itemSelector: '.container',
-				layoutMode: 'masonry'
-			}).velocity("fadeIn", { duration: 400 });
+				layoutMode: 'fitRows'
+			});
 
+			$('.isotop-links a').click(function(e) {
+				e.preventDefault();
+				var filterValue = $(this).attr('data-filter');
+  			$listArticle.isotope({ filter: filterValue });
+			});
 		});
 
 		$('aside.main').nav();
-
-		// var $fotoramaDiv = $('.fotorama-special').clone().appendTo('body').fotorama();
-		// var fotorama = $fotoramaDiv.data('fotorama');
-
-		// $('a.thickbox', '.fotorama-special').click( function(e){
-		// 	e.preventDefault();
-
-		// 	fotorama
-		// 		.show($(this).index())
-		// 		.requestFullScreen();
-		// });
-		// 
-		// jQuery.ajax({
-		// 	type: 'POST',
-		// 	url: '/wp-admin/admin-ajax.php',
-		// 	data: {
-		// 		action: 'get_gallery', // the PHP function to run
-		// 		gallery_id : 5
-		// 	},
-		// 	success: function(data, textStatus) {
-		// 		console.log(data);
-		// 	}
-		// });
 
 		$('a[href="#show-gallery"]').magnificPopup({
 			type: 'ajax',

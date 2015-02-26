@@ -1,0 +1,7 @@
+.isotop-links a{
+	@include colors("", null, &);
+}
+
+.list-page{
+	@extend %flex-column-wrap;
+}

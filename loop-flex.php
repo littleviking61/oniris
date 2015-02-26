@@ -4,11 +4,7 @@
 $type = get_field('page_type_acf');
 
 if($type){
-  // check if template exist and call it
-  $template = locate_template( 'elements/intro-'.$type.'.php' );
-  if(file_exists($template)) {
-    include($template);
-  }
+  get_template_file('elements/intro-'.$type);
 }
 
 if( have_rows('contenu') ) :
@@ -47,10 +43,8 @@ if( have_rows('contenu') ) :
       	else:
 
         	// check if template exist and call it
-        	$template = locate_template( 'templates/'.get_row_layout().'.php' );
-        	if(file_exists($template)) {
-        		include($template);
-        	}
+        	get_template_file( 'templates/'.get_row_layout() );
+
         	// todo systeme de log des erreurs...
         	
         	// to save bloc display

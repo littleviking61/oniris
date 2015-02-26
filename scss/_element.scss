@@ -40,6 +40,14 @@
 	}
 }
 
+.filter-tools{
+	@at-root {
+		header > &{
+			margin-left: $gutter-large;
+		}
+	}
+}
+
 /* thumbnail */
 
 %thumbnail, .thumbnail{
@@ -73,23 +81,18 @@
 	}
 
 	&.artiste{
+		.thumbnail{
+			max-height: rem-calc(135);
+		}
 		//height: grid-calc(2.5);
 	}
 
 	&:hover{
-		@include colors(&, "bg", true);
+		@include colors(&, "bd", true);
 
 		.thumbnail img{
 			transform: scale(1.02)
 		}
-
-		h2, h3, h4, h5, p{
-			color: white;
-		}
-		hr{
-			background-color:white;
-		}
-		// @include box-shadow($gutter-small $gutter-small $gutter-small darken($lightest-grey, 10%));
 	}
 
 	h3{
@@ -114,5 +117,6 @@
 @import "elements/bloc";
 @import "elements/fotorama";
 @import "elements/modal";
+@import "elements/list";
 
 

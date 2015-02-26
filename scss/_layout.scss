@@ -89,12 +89,11 @@ main{
 	@include flex-wrap(wrap);
 	@include align-content(flex-start);
 	@include align-items(flex-start);
-
-	&.isotop{
-		display: block;
-		opacity: 0;
+	
+	>header:first-child{
+		width: 100%;
+		@extend %flex-column-center;
 	}
-
 	.full{
 		width: 100%;
 	}
@@ -176,6 +175,11 @@ footer.main{
 
 %flex-column{
 	@include display-flex;
+}
+
+%flex-column-center{
+	@include display-flex;
+	@include align-items(center);
 }
 
 %flex-row{

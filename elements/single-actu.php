@@ -1,5 +1,5 @@
 <?php 
-	$flex = $post->class; 
+	$flex = 'flex-3'; 
 	$id = $post->ID;
 	$linkID =  get_field('lien')[0];
 	$categorie = get_field('category', $linkID);
@@ -7,9 +7,9 @@
 
 <?php if( get_field('titre') ): ?>
 	<a href="<?= get_permalink($linkID) ?>" class="actu highlight container <?= $flex ?> <?= $categorie ?>">
-		<?php if( get_field('image') ): ?>
+		<?php if( has_post_thumbnail() ): ?>
 			<div class="thumbnail">
-				<img src="<?= get_field('image') ?>" alt="">
+				<?php the_post_thumbnail('small') ?>
 			</div>
 		<?php endif ?>
 		<?php if( get_field('intitule') ): ?>
