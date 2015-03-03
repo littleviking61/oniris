@@ -4,7 +4,6 @@
 	$linkID =  get_field('lien')[0];
 	$categorie = get_field('category', $linkID);
 ?>
-
 <?php if( get_field('titre') ): ?>
 	<a href="<?= get_permalink($linkID) ?>" class="actu highlight container <?= $flex ?> <?= $categorie ?>">
 		<?php if( has_post_thumbnail() ): ?>
