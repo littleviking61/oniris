@@ -1,5 +1,5 @@
 <div class="relationship">
-
+	<h5>Actualitées de l'artiste</h5>
 	<?php 
 
 	$artisteID = get_the_id();
@@ -47,13 +47,17 @@
 
 	// The Loop
 	?>
-	<?php if( $the_query->have_posts() ): ?>
+	<?php if( $the_query->have_posts() ): $i = 0; ?>
 		<ul>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
 			<li>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				<a href="<?php the_permalink(); ?>">
+					<div class="short">
+						<?php the_field('courte_biographie') ?>
+					</div>
+				</a>
 			</li>
-			<?php //break; ?>
+			<?php if($i >= 3) break; ?>
 		<?php endwhile; ?>
 		</ul>
 	<?php endif; ?>

@@ -110,3 +110,47 @@
 		}	
 	}
 }
+
+/* relationship */
+
+.relationship{
+	width: 100%;
+	margin-top: $gutter-large;
+	text-align: center;
+
+	h5{
+		text-transform: uppercase;
+	}
+	
+	ul{
+		list-style: none;
+		padding-left: 0;
+	}
+
+	li{
+		margin: $gutter 0;
+		&:hover{
+			&, p{
+				@include colors(&);
+			}
+		}
+
+		&:before{
+			content: "";
+			display: block;
+			width: $gutter-large;
+			height: $one;
+			@include colors(&, "bg") {
+				background-color: $lighter-grey;
+			};
+			margin: 0 auto;
+		}
+	}
+
+}
+
+.short{
+	b, strong{
+		// @include colors(&);
+	}
+}

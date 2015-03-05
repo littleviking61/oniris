@@ -884,6 +884,62 @@ aside.main {
       max-width: 100%;
       height: auto; }
 
+/* relationship */
+.relationship {
+  width: 100%;
+  margin-top: 1.25rem;
+  text-align: center; }
+  .relationship h5 {
+    text-transform: uppercase; }
+  .relationship ul {
+    list-style: none;
+    padding-left: 0; }
+  .relationship li {
+    margin: 0.625rem 0; }
+    .relationship li:hover {
+      color: #ffbc17; }
+    .cat-peinture .relationship li:hover {
+      color: #0252cf; }
+    .cat-geometrie .relationship li:hover {
+      color: #f23518; }
+    .cat-photographie .relationship li:hover {
+      color: #42b04f; }
+    .cat-multi .relationship li:hover {
+      color: #ffbc17; }
+    .cat-sculpture .relationship li:hover {
+      color: #ffbc17; }
+    .relationship li:hover p {
+      color: #ffbc17; }
+    .cat-peinture .relationship li:hover p {
+      color: #0252cf; }
+    .cat-geometrie .relationship li:hover p {
+      color: #f23518; }
+    .cat-photographie .relationship li:hover p {
+      color: #42b04f; }
+    .cat-multi .relationship li:hover p {
+      color: #ffbc17; }
+    .cat-sculpture .relationship li:hover p {
+      color: #ffbc17; }
+    .relationship li:before {
+      content: "";
+      display: block;
+      width: 1.25rem;
+      height: 0.0625rem;
+      margin: 0 auto; }
+      .relationship li:before {
+        background-color: #ffbc17;
+        background-color: #a6a6a6; }
+      .cat-peinture .relationship li:before {
+        background-color: #0252cf; }
+      .cat-geometrie .relationship li:before {
+        background-color: #f23518; }
+      .cat-photographie .relationship li:before {
+        background-color: #42b04f; }
+      .cat-multi .relationship li:before {
+        background-color: #ffbc17; }
+      .cat-sculpture .relationship li:before {
+        background-color: #ffbc17; }
+
 /* fotorama */
 /* fotorama */
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe {
