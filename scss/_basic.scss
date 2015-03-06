@@ -99,6 +99,7 @@ p{
 .content{
 	width: 100%;
 	line-height: 1.4;
+	position: relative;
 	
 	hr{
 		width: $gutter;
@@ -117,6 +118,10 @@ p{
 
 	> *:last-child{
 		margin-bottom: 0;
+	}
+
+	.more ~ p{
+		display: none;
 	}
 }
 

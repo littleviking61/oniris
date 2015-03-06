@@ -15,7 +15,7 @@
 	// $buttonPosition = get_sub_field('emplacement_du_bouton');
 ?>
 
-<section class="container simple <?= $width > 0 ? 'flex-' . $width : 'full' ?> <?= $specificClass ?>">
+<section class="container simple <?= $width > 0 ? 'flex-' . $width : 'full' ?> full <?= $specificClass ?>">
 
 	<?php if ($hasImage && !empty($image)): ?>
 		<div class="thumbnail <?= $imagePosition ?>">
@@ -32,8 +32,10 @@
 		<?php if (!empty($subTitle)): ?>
 			<h4 class="sub-title"><?= $subTitle ?></h4>
 		<?php endif ?>
-
-		<?php the_sub_field('texte'); ?>
+	
+		<?php $text = apply_filters( 'the_content', get_sub_field('texte') ); ?>
+		<?php $text = str_replace('<p><!--more--></p>', '<a class="button right more" href="#more"><span>Lire </span><i class="icon-more"></i></a>', $text); ?>
+		<?= $text ?>
 
 		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
 			$plusPosition = strrpos($textButton, "+");

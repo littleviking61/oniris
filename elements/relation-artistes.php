@@ -1,5 +1,3 @@
-<div class="relationship">
-	<h5>Actualitées de l'artiste</h5>
 	<?php 
 
 	$artisteID = get_the_id();
@@ -45,22 +43,23 @@
 	// get results
 	$the_query = new WP_Query( $args );
 
-	// The Loop
-	?>
+	// The Loop ?>
 	<?php if( $the_query->have_posts() ): $i = 0; ?>
-		<ul>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
-			<li>
-				<a href="<?php the_permalink(); ?>">
-					<div class="short">
-						<?php the_field('courte_biographie') ?>
-					</div>
-				</a>
-			</li>
-			<?php if($i >= 3) break; ?>
-		<?php endwhile; ?>
-		</ul>
+		<div class="relationship">
+			<h5>Actualitées de l'artiste</h5>
+			<ul>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
+				<li>
+					<a href="<?php the_permalink(); ?>">
+						<div class="short">
+							<?php the_field('courte_biographie') ?>
+						</div>
+					</a>
+				</li>
+				<?php if($i >= 3) break; ?>
+			<?php endwhile; ?>
+			</ul>
+		</div>
 	<?php endif; ?>
 
 	<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
-</div>

@@ -21,6 +21,16 @@ $(document).ready(function(){
 
 		$('aside.main').nav();
 
+		$(".content .more").click(function(){
+			$p = $(this).nextAll();
+			if($(this).hasClass('view')) {
+				$p.velocity("slideUp", { duration: 200, stagger:20 });
+			}else{
+				$p.velocity("slideDown", { duration: 200, stagger:20 });
+			}
+			$(this).toggleClass('view');
+		});
+
 		$('a[href="#show-gallery"]').magnificPopup({
 			type: 'ajax',
 			ajax: {

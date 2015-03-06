@@ -21,10 +21,11 @@
 	}
 
 	&.right{
-		float: right;
-		margin-top: $gutter;
 		margin-right: -($gutter-medium);
 		margin-bottom: -($gutter-medium);
+		position: absolute;
+		bottom: 0;
+		right: 0;
 	}
 
 	i:before{
@@ -91,7 +92,7 @@
 		@include colors(&, "bd", true);
 
 		.thumbnail img{
-			transform: scale(1.02)
+			// transform: scale(1.02)
 		}
 	}
 

@@ -94,8 +94,15 @@ main{
 		width: 100%;
 		@extend %flex-column-center;
 	}
+	
 	.full{
 		width: 100%;
+	}
+
+	.full-force{
+		width: 100%;
+		@include single-transition(all, .4s);
+		@include flex-basis(initial);
 	}
 
 	> h2{
@@ -109,6 +116,7 @@ main{
 	}
 
 	> .row{
+		width: 100%;
 		// margin-bottom: $gutter-hudge;
 	}
 	
