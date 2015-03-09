@@ -27,7 +27,14 @@
 	h5{
 		@include colors(&) { 
 			color: $light-grey; 
-		} ;
+		};
+
+		a{
+			@include colors(&) { 
+				color: $light-grey; 
+			};
+		}
+
 		font-size: $ft-size-medium;
 	}
 

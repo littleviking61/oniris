@@ -192,4 +192,10 @@ function bimLa_gallery($id) {
 // creating Ajax call for WordPress
 add_action( 'wp_ajax_nopriv_get_gallery', 'bimLa_gallery' );
 add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
+
+// to fix space probleme with NG space image...
+add_filter('ngg_get_image_url', 'ngg_replace_plus_with_percenttwenty', 10, 3);
+function ngg_replace_plus_with_percenttwenty($url, $image, $size) {
+    return str_replace('+', '%20', $url);
+}
 ?>

@@ -10,7 +10,7 @@ if($type){
 if( have_rows('contenu') ) :
     while ( have_rows('contenu') ) : the_row();
 
-        if( get_row_layout() == 'ligne' ):
+        if( get_row_layout() == 'ligne'):
 
         	$width = get_sub_field('largeur_du_titre');
 
@@ -31,6 +31,27 @@ if( have_rows('contenu') ) :
       		// then open a row 
       		echo '<div class= "row '.get_sub_field('alignement').'">';
         
+        elseif( get_row_layout() == 'col' ) :
+
+          $width = get_sub_field('largeur_de_la_colonne');
+          $flexClass = $width > 0 ? 'flex-' . $width : 'full';
+          // ferme la ligne suivante si infini ou nouvelle ligne avant la fin
+          if( (isset($closeColAtEnd) && $closeColAtEnd) || isset($closeColAfter) ) {
+            echo '</div>';
+            unset($closeColAtEnd);
+          }
+
+          if(get_sub_field('nombre_de_bloc') > 0) {
+            // save number of bloc in this row
+            $closeColAfter = get_sub_field('nombre_de_bloc');
+          }else{
+            // if number is infini
+            $closeColAtEnd = true;
+          };
+
+          // then open a row 
+          echo '<div class= "col ' . $flexClass . ' ' . get_sub_field('alignement').'">';
+
         elseif( get_row_layout() == 'titre_de_section' ):
 					
 					$title = get_sub_field('titre'); 
@@ -48,7 +69,8 @@ if( have_rows('contenu') ) :
         	// todo systeme de log des erreurs...
         	
         	// to save bloc display
-        	if(isset($closeAfter)) $closeAfter--;
+          if(isset($closeAfter)) $closeAfter--;
+        	if(isset($closeColAfter)) $closeColAfter--;
 
         endif;
 
@@ -56,6 +78,11 @@ if( have_rows('contenu') ) :
         if(isset($closeAfter) && $closeAfter == 0){
 	        	echo '</div>';
 	        	unset($closeAfter);
+        }
+
+        if(isset($closeColAfter) && $closeColAfter == 0){
+            echo '</div>';
+            unset($closeColAfter);
         }
 
     endwhile;

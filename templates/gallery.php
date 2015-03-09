@@ -58,7 +58,6 @@
 					$description = $image->description ?: $image['title'];
 					$altText = $image->alttext ?: $image['title'];
 					$hidden = $image->hidden ?: false;
-
 					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
 
 					<a href="<?= $imageURL ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" class="load-it" >

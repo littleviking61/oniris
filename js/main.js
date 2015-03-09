@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$listArticle = $isotop.isotope({
 				// options
 				itemSelector: '.container',
-				layoutMode: 'fitRows'
+				layoutMode: 'masonry'
 			});
 
 			$('.isotop-links a').click(function(e) {

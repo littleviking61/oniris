@@ -135,6 +135,15 @@ main{
 		margin-bottom: $column-gutter;
 	}
 
+	> .col{
+		@extend %section-gutter;
+
+		> [class*="flex-"]  {
+			@include flex-basis(initial);
+			width: 100%;
+		}
+	}
+
 }
 
 .container{

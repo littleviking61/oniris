@@ -112,6 +112,13 @@ p{
 		font-size: $ft-size-medium;
 	}
 
+	a{
+		font-weight: bold;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
 	> *:first-child{
 		margin-top: 0;
 	}
@@ -122,6 +129,10 @@ p{
 
 	.more ~ p{
 		display: none;
+	}
+
+	&.has-button{
+		padding-bottom: $gutter-large;
 	}
 }
 

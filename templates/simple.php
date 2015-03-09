@@ -3,7 +3,8 @@
 	$subTitle = get_sub_field('sous-titre');
 
 	$width = get_sub_field('largeur_du_bloc');
-	$specificClass = get_sub_field('specifique_bloc_class');
+	$flexClass = $width > 0 ? 'flex-' . $width : 'full';
+	$specificClass = $flexClass . ' ' . get_sub_field('specifique_bloc_class');
 
 	$hasImage = get_sub_field('has_image');
 	$image = get_sub_field('image');
@@ -12,10 +13,11 @@
 	$hasButton = get_sub_field('has_bouton');
 	$linkButton = get_sub_field('lien_btn');
 	$textButton = get_sub_field('texte_du_bouton');
+
 	// $buttonPosition = get_sub_field('emplacement_du_bouton');
 ?>
 
-<section class="container simple <?= $width > 0 ? 'flex-' . $width : 'full' ?> full <?= $specificClass ?>">
+<section class="container simple <?= $specificClass ?>">
 
 	<?php if ($hasImage && !empty($image)): ?>
 		<div class="thumbnail <?= $imagePosition ?>">
@@ -23,7 +25,7 @@
 		</div>
 	<?php endif ?>
 
-	<div class="content">
+	<div class="content<?= $hasButton ? " has-button" : "";?>">
 
 		<?php if (!empty($title)): ?>
 			<h3 class="title"><?= $title ?></h3>
@@ -35,6 +37,7 @@
 	
 		<?php $text = apply_filters( 'the_content', get_sub_field('texte') ); ?>
 		<?php $text = str_replace('<p><!--more--></p>', '<a class="button right more" href="#more"><span>Lire </span><i class="icon-more"></i></a>', $text); ?>
+		<?php $text = str_replace('<!--more--></p>', '</p><a class="button right more" href="#more"><span>Lire </span><i class="icon-more"></i></a>', $text); ?>
 		<?= $text ?>
 
 		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
