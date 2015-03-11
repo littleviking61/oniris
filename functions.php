@@ -198,4 +198,5 @@ add_filter('ngg_get_image_url', 'ngg_replace_plus_with_percenttwenty', 10, 3);
 function ngg_replace_plus_with_percenttwenty($url, $image, $size) {
     return str_replace('+', '%20', $url);
 }
+
 ?>

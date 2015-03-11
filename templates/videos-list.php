@@ -6,10 +6,10 @@
 
 <section class="container videos <?= $flex ?>">
 	<?php if( get_sub_field('titre') ): ?>
-		<h4><?= get_sub_field('titre') ?></h4>
+		<h4><?= do_shortcode(get_sub_field('titre')) ?></h4>
 	<?php endif ?>
 	<?php if( get_sub_field('sous_titre') ): ?>
-		<h4 class="sub-title"><?= get_sub_field('sous_titre') ?></h4>
+		<h4 class="sub-title"><?= do_shortcode(get_sub_field('sous_titre')) ?></h4>
 	<?php endif ?>
 	
 	<ul class="videos-list">

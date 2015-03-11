@@ -5,7 +5,7 @@
 ?>
 
 <section class="actus <?= $width > 0 ? 'flex-' . $width : 'full' ?>">
-	<?php $title = get_sub_field('titre'); ?>
+	<?php $title = do_shortcode(get_sub_field('titre')); ?>
 
 	<?php if (!empty($title)): ?>
 		<header>
@@ -13,51 +13,52 @@
 		</header>
 	<?php endif ?>
 
-	<div class="actualities full row">
+	<?php if ($auto) {
+		$args = array( /*'category_name' => 'actu', */'orderby' => 'date', 'posts_per_page' => 6 );
+		$lastposts = get_posts( $args ); 
+		var_dump($lastposts);
 
-		<?php if ($auto) {
-			$args = array( /*'category_name' => 'actu', */'orderby' => 'date', 'posts_per_page' => 6 );
-			$lastposts = get_posts( $args ); 
-			var_dump($lastposts);
+		foreach ( $lastposts as $post ) : 
+			setup_postdata( $post );
+			get_template_part('templates/actu');
+		endforeach;
+	
+	}else{
 
-			foreach ( $lastposts as $post ) : 
-				setup_postdata( $post );
-				get_template_part('templates/actu');
-			endforeach;
-		
-		}else{
+		$enAvant = get_sub_field('en_avant');
+		foreach ( $enAvant as $post ) : 
+			setup_postdata( $post );
+			$post->class = 'flex-6';
+			get_template_part('templates/actu-highlight');
+			wp_reset_postdata();
+		endforeach;
 
-			$enAvant = get_sub_field('en_avant');
-			foreach ( $enAvant as $post ) : 
-				setup_postdata( $post );
-				$post->class = 'flex-4';
-				get_template_part('templates/actu-highlight');
-				wp_reset_postdata();
-			endforeach;
-
-			$premiereColonne = get_sub_field('premiere_colonne'); ?>
-			<section class="flex-2">
+		$premiereColonne = get_sub_field('premiere_colonne'); ?>
+		<section class="flex-2">
+			<ul>
 				<?php foreach ( $premiereColonne as $post ) :
 					setup_postdata( $post );
 					$post->class = 'full';
 					get_template_part('templates/actu');
 					wp_reset_postdata();
 				endforeach; ?>
-			</section>
+			</ul>
+		</section>
 
-			<?php	$deuxiemeColonne = get_sub_field('deuxième_colonne'); ?>
-			<section class="flex-2">
+		<?php	$deuxiemeColonne = get_sub_field('deuxième_colonne'); ?>
+		<section class="flex-2">
+			<ul>
 				<?php foreach ( $deuxiemeColonne as $post ) : 
 					setup_postdata( $post );
 					$post->class = 'full';
 					get_template_part('templates/actu');
 					wp_reset_postdata();
 				endforeach; ?>
-			</section>
+			</ul>
+		</section>
 
-		<?php
+	<?php
 
-		} 
-		wp_reset_postdata();?>
-	</div>
+	} 
+	wp_reset_postdata();?>
 </section>

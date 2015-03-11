@@ -7,6 +7,6 @@
 		</div>
 	<?php endif ?>
 	<div class="content">
-		<?php the_field('courte_biographie') ?>
+		<?php do_shortcode(the_field('courte_biographie')) ?>
 	</p>
 </section>

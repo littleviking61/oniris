@@ -41,6 +41,24 @@
 	}
 }
 
+form{
+	input, textarea{
+		margin-top: $gutter-small;
+		width: 100%;
+		padding: rem-calc(6) rem-calc(8);
+		border: none;
+		background: $lightest-grey; 
+	}
+
+	input[type="submit"] {
+		width: auto;
+
+		&:hover{
+			background: $lighter-grey;
+		}
+	}
+}
+
 .filter-tools{
 	@at-root {
 		header > &{

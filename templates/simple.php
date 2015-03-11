@@ -1,6 +1,6 @@
 <?php 
-	$title = get_sub_field('titre');
-	$subTitle = get_sub_field('sous-titre');
+	$title = do_shortcode(get_sub_field('titre'));
+	$subTitle = do_shortcode(get_sub_field('sous-titre'));
 
 	$width = get_sub_field('largeur_du_bloc');
 	$flexClass = $width > 0 ? 'flex-' . $width : 'full';

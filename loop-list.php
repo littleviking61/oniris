@@ -1,5 +1,5 @@
 <header>
-	<h2><?= get_field('titre_alternatif') ?: get_the_title() ?></h2>
+	<h2><?= do_shortcode(get_field('titre_alternatif')) ?: get_the_title() ?></h2>
 	<div class="filter-tools">
 		<div class="isotop-links">
 		    <a href="#cat" data-filter="*">show all</a>

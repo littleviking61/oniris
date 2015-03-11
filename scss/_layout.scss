@@ -81,6 +81,11 @@ main{
 	}
 }
 
+%section-gutter{
+	margin-right: $column-gutter;
+	margin-bottom: $column-gutter;
+}
+
 .wrap{
 	padding-top: $gutter-medium;
 	padding-right: $gutter-big;
@@ -130,9 +135,8 @@ main{
 		}
 	}
 
-	section, %section-gutter{
-		margin-right: $column-gutter;
-		margin-bottom: $column-gutter;
+	section{
+		@extend %section-gutter;
 	}
 
 	> .col{
@@ -140,7 +144,7 @@ main{
 
 		> [class*="flex-"]  {
 			@include flex-basis(initial);
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 

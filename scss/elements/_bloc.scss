@@ -44,6 +44,13 @@
 		padding-bottom: $gutter-small;
 	}
 
+	h3{
+		@include colors(&){
+			color: $lighter-grey;
+		};
+
+	}
+
 	ul{
 		list-style: none;
 		padding-left: $gutter-small;
@@ -66,24 +73,61 @@
 }
 
 /* actu bloc */
-
-.actu{
-	@extend %post-it;
-
-	.thumbnail{ display: none; }
-
-	&.highlight{
-		.thumbnail{
-			display: block;
+.actus{
+	section[class^="flex-"]{
+		margin-bottom: 0;
+		&:hover .thumbnail{
+			max-height:0;
 		}
 	}
+	ul{
+		padding-left: 0;
+		list-style: none;
+		margin: 0;
 
-	&:first-child{
-		.thumbnail{
-			display: block;
+		li{
+			padding-bottom: $gutter-medium;
 		}
 	}
 }
+
+.actu{
+
+	a, &.highlight{
+		@extend %post-it;	
+		margin-bottom: 0;
+		margin-right: 0;
+	}
+	
+
+	.thumbnail{ 
+		overflow: hidden;
+		max-height:0;
+		@include single-transition(max-height, .24s);
+	}
+
+
+	&:first-child .thumbnail{
+		max-height:$small-actu-height;
+	}
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+	
+	&:hover:not(.highlight) .thumbnail{
+		max-height:$small-actu-height !important;
+	}
+
+	&.highlight{
+		margin-right: $gutter-medium;
+		.thumbnail{
+			max-height:none;
+		}
+	}
+}
+
+
 
 /* intro bloc */
 
@@ -116,6 +160,53 @@
 			}
 		}	
 	}
+}
+
+.links{
+
+	h3, h4{
+		color: $lighter-grey;
+	}
+
+	ul{ 
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		@extend %flex-column-wrap;
+	}
+
+	li{
+		width: 100%;
+		margin-bottom: $gutter;
+		background-color: white;
+
+		a{
+			display: block;
+			width: 100%;
+			padding: $gutter;
+
+			&:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+
+		h4{
+			margin-top: $gutter-small;
+		}
+
+		border: dotted thin transparent;
+
+		&:hover{
+			border-color: $light-grey;
+		}
+
+		img{
+			float: left;
+			margin-right: $gutter;
+		}
+	}	
 }
 
 /* relationship */

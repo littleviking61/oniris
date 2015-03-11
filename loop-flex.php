@@ -7,6 +7,11 @@ if($type){
   get_template_file('elements/intro-'.$type);
 }
 
+if(get_field('titre_alternatif') && !empty(get_field('titre_alternatif')) ) : ?>
+  <h2><?= do_shortcode(get_field('titre_alternatif')) ?></h2>
+<?php endif;
+
+
 if( have_rows('contenu') ) :
     while ( have_rows('contenu') ) : the_row();
 
@@ -54,7 +59,7 @@ if( have_rows('contenu') ) :
 
         elseif( get_row_layout() == 'titre_de_section' ):
 					
-					$title = get_sub_field('titre'); 
+					$title = do_shortcode(get_sub_field('titre')); 
         	$width = get_sub_field('largeur_du_titre');
 
         	if (!empty($title)): ?>

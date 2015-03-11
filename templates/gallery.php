@@ -30,7 +30,7 @@
 		<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
 
 			<?php if( get_sub_field('titre') ): ?>
-				<h5><?= get_sub_field('titre') ?></h5>
+				<h5><?= do_shortcode(get_sub_field('titre')) ?></h5>
 			<?php endif ?>
 			<div class="fotorama"
 				data-nav="thumbs"
@@ -98,7 +98,7 @@
 							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
 						<?php } ?>
 					</a>
-					<?php if($i >= 9) break; ?>
+					<?php if($i >= 8) break; ?>
 				<?php endforeach ?>
 
 			</div>
