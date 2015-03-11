@@ -108,7 +108,9 @@ p{
 	}
 	
 	h4{
-		@include colors(&);
+		@include colors(&) {
+			color: $light-grey;
+		};
 		font-size: $ft-size-medium;
 	}
 

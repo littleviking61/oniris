@@ -193,7 +193,8 @@ p {
   .content h4 {
     font-size: 0.875rem; }
     .content h4 {
-      color: #ffbc17; }
+      color: #ffbc17;
+      color: #737373; }
     .cat-peinture .content h4 {
       color: #0252cf; }
     .cat-geometrie .content h4 {
@@ -789,6 +790,11 @@ aside.main {
         display: initial; }
 
 /* simple bloc */
+.simple.has-image {
+  -webkit-flex-wrap: initial;
+  flex-wrap: initial;
+  -webkit-align-items: initial;
+  align-items: initial; }
 .simple .thumbnail {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
@@ -837,7 +843,8 @@ aside.main {
   border-bottom: 0.0625rem solid;
   padding-bottom: 0.3125rem; }
   .simple h4 {
-    border-color: #ffbc17; }
+    border-color: #ffbc17;
+    border-color: #737373; }
   .cat-peinture .simple h4 {
     border-color: #0252cf; }
   .cat-geometrie .simple h4 {
@@ -1827,5 +1834,9 @@ body > .fotorama-special {
   width: 60vw; }
   body > .fotorama-special.fotorama--fullscreen {
     opacity: 1; }
+
+.fa-pull-right {
+  float: right;
+  margin-top: 4px; }
 
 /*# sourceMappingURL=style.css.map */

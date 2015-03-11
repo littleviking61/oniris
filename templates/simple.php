@@ -2,13 +2,14 @@
 	$title = do_shortcode(get_sub_field('titre'));
 	$subTitle = do_shortcode(get_sub_field('sous-titre'));
 
-	$width = get_sub_field('largeur_du_bloc');
-	$flexClass = $width > 0 ? 'flex-' . $width : 'full';
-	$specificClass = $flexClass . ' ' . get_sub_field('specifique_bloc_class');
-
 	$hasImage = get_sub_field('has_image');
 	$image = get_sub_field('image');
 	$imagePosition = get_sub_field('position');
+
+	$width = get_sub_field('largeur_du_bloc');
+	$flexClass = $width > 0 ? 'flex-' . $width : 'full';
+	$specificClass = $flexClass . ' ' . get_sub_field('specifique_bloc_class') . ($hasImage ? ' has-image' : '');
+
 	
 	$hasButton = get_sub_field('has_bouton');
 	$linkButton = get_sub_field('lien_btn');
