@@ -52,7 +52,10 @@
 				<li>
 					<a href="<?php the_permalink(); ?>">
 						<div class="short">
-							<?php the_field('courte_biographie') ?>
+							<p>
+								<i><?php the_field('nom') ?></i>
+							</p>
+							<?php the_field('intitule') ?>
 						</div>
 					</a>
 				</li>

@@ -151,6 +151,19 @@
 
 	&.expo{
 		display: block;
+		
+		.detail{
+			@extend %flex-column;
+			margin-top: $gutter-large;
+			
+			.thumbnail{
+				border: none;
+				@include flex-shrink(0);
+				// width: 45%;
+				margin:	0;
+				margin-right: $gutter;
+			}
+		}
 
 		.intitule{
 			&,p {

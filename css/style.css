@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
   margin-bottom: 0; }
 
-h2 {
+h2, h2 a {
   font-size: 1.875rem; }
   h2 {
     color: #ffbc17;
@@ -69,8 +69,21 @@ h2 {
     color: #ffbc17; }
   .cat-sculpture h2 {
     color: #ffbc17; }
+  h2 a {
+    color: #ffbc17;
+    color: #a6a6a6; }
+  .cat-peinture h2 a {
+    color: #0252cf; }
+  .cat-geometrie h2 a {
+    color: #f23518; }
+  .cat-photographie h2 a {
+    color: #42b04f; }
+  .cat-multi h2 a {
+    color: #ffbc17; }
+  .cat-sculpture h2 a {
+    color: #ffbc17; }
 
-h3 {
+h3, h3 a {
   font-size: 1.375rem; }
   h3 {
     color: #ffbc17; }
@@ -84,8 +97,20 @@ h3 {
     color: #ffbc17; }
   .cat-sculpture h3 {
     color: #ffbc17; }
+  h3 a {
+    color: #ffbc17; }
+  .cat-peinture h3 a {
+    color: #0252cf; }
+  .cat-geometrie h3 a {
+    color: #f23518; }
+  .cat-photographie h3 a {
+    color: #42b04f; }
+  .cat-multi h3 a {
+    color: #ffbc17; }
+  .cat-sculpture h3 a {
+    color: #ffbc17; }
 
-h4 {
+h4, h4 a {
   font-size: 1.125rem;
   margin-bottom: 0.625rem; }
   h4 {
@@ -99,6 +124,18 @@ h4 {
   .cat-multi h4 {
     color: #ffbc17; }
   .cat-sculpture h4 {
+    color: #ffbc17; }
+  h4 a {
+    color: #ffbc17; }
+  .cat-peinture h4 a {
+    color: #0252cf; }
+  .cat-geometrie h4 a {
+    color: #f23518; }
+  .cat-photographie h4 a {
+    color: #42b04f; }
+  .cat-multi h4 a {
+    color: #ffbc17; }
+  .cat-sculpture h4 a {
     color: #ffbc17; }
 
 h5 {
@@ -122,6 +159,52 @@ hr {
     background-color: #ffbc17; }
   .cat-sculpture hr {
     background-color: #ffbc17; }
+
+blockquote {
+  font-family: "roboto", serif;
+  font-style: italic;
+  margin: 0;
+  padding: 0 0 0 1.875rem;
+  line-height: 1.45; }
+  blockquote {
+    color: #ffbc17;
+    color: #353535; }
+  .cat-peinture blockquote {
+    color: #0252cf; }
+  .cat-geometrie blockquote {
+    color: #f23518; }
+  .cat-photographie blockquote {
+    color: #42b04f; }
+  .cat-multi blockquote {
+    color: #ffbc17; }
+  .cat-sculpture blockquote {
+    color: #ffbc17; }
+  blockquote p {
+    color: #ffbc17;
+    color: #353535; }
+  .cat-peinture blockquote p {
+    color: #0252cf; }
+  .cat-geometrie blockquote p {
+    color: #f23518; }
+  .cat-photographie blockquote p {
+    color: #42b04f; }
+  .cat-multi blockquote p {
+    color: #ffbc17; }
+  .cat-sculpture blockquote p {
+    color: #ffbc17; }
+  blockquote:before {
+    font-family: Georgia, serif;
+    display: block;
+    content: "\201C";
+    font-size: 60px;
+    position: absolute;
+    left: -0.3125rem;
+    top: 1.25rem; }
+  blockquote cite {
+    display: block;
+    margin-top: -0.625rem; }
+    blockquote cite:before {
+      content: "\2014 \2009"; }
 
 .container {
   display: block; }
@@ -501,7 +584,7 @@ header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .videos
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list, .links ul, .list-page, header[role="banner"] nav ul, .button, button, .simple {
+main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .videos .videos-list, .links ul, .list-page, header[role="banner"] nav ul, .button, button, .simple, .intro.expo .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -966,6 +1049,14 @@ aside.main {
     color: #ffbc17; }
 .intro.expo {
   display: block; }
+  .intro.expo .detail {
+    margin-top: 1.25rem; }
+    .intro.expo .detail .thumbnail {
+      border: none;
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+      margin: 0;
+      margin-right: 0.625rem; }
   .intro.expo .intitule, .intro.expo .intitule p {
     font-weight: bold; }
     .intro.expo .intitule {

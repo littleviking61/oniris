@@ -49,19 +49,19 @@ h1, h2, h3, h4, h5, h6{
 	margin-bottom: 0;
 }
 
-h2{
+h2, h2 a{
 	@include colors(&) {
 		color: $lighter-grey;
 	};
 	font-size: $ft-size-big;
 }
 
-h3{
+h3, h3 a{
 	@include colors(&);
 	font-size: $ft-size-largest;
 }
 
-h4{
+h4, h4 a{
 	@include colors(&);
 	font-size: $ft-size-larger;
 	margin-bottom: $gutter;
@@ -78,6 +78,38 @@ hr{
 	width:100%;
 	border: none;
 	height: $one;
+}
+
+blockquote {
+	font-family: $title-font;
+	font-style: italic;
+	margin: 0;
+	padding: 0 0 0 $gutter-big;
+	line-height: 1.45;
+
+	&, p{
+		@include colors(&) {
+			color: $grey;
+		}
+	}
+
+	&:before {
+		font-family: Georgia, serif;
+		display: block;
+		content: "\201C";
+		font-size: 60px;
+		position: absolute;
+		left: -($gutter-small);
+		top: $gutter-large;
+	}
+
+	cite {
+		display: block;
+		margin-top: -($gutter);
+		&:before {
+			content: "\2014 \2009";
+		}
+	}
 }
 
 .container{
