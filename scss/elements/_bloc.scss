@@ -148,6 +148,26 @@
 			@include colors(&);
 		}
 	}
+
+	&.expo{
+		display: block;
+
+		.intitule{
+			&,p {
+				font-weight: bold;
+				@include colors(&) {
+					color: $light-grey;
+				}
+			}
+		}
+
+		.artistes{
+			list-style: none;
+			padding-left: 0;
+			font-family: $title-font;
+			font-size: $ft-size-medium;
+		}
+	}
 }
 
 .videos{

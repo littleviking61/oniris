@@ -4,4 +4,8 @@
 
 .list-page{
 	@extend %flex-column-wrap;
+
+	.actu{
+		margin-bottom: $gutter-medium;
+	}
 }

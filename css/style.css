@@ -964,6 +964,41 @@ aside.main {
     color: #ffbc17; }
   .cat-sculpture .intro .content p {
     color: #ffbc17; }
+.intro.expo {
+  display: block; }
+  .intro.expo .intitule, .intro.expo .intitule p {
+    font-weight: bold; }
+    .intro.expo .intitule {
+      color: #ffbc17;
+      color: #737373; }
+    .cat-peinture .intro.expo .intitule {
+      color: #0252cf; }
+    .cat-geometrie .intro.expo .intitule {
+      color: #f23518; }
+    .cat-photographie .intro.expo .intitule {
+      color: #42b04f; }
+    .cat-multi .intro.expo .intitule {
+      color: #ffbc17; }
+    .cat-sculpture .intro.expo .intitule {
+      color: #ffbc17; }
+    .intro.expo .intitule p {
+      color: #ffbc17;
+      color: #737373; }
+    .cat-peinture .intro.expo .intitule p {
+      color: #0252cf; }
+    .cat-geometrie .intro.expo .intitule p {
+      color: #f23518; }
+    .cat-photographie .intro.expo .intitule p {
+      color: #42b04f; }
+    .cat-multi .intro.expo .intitule p {
+      color: #ffbc17; }
+    .cat-sculpture .intro.expo .intitule p {
+      color: #ffbc17; }
+  .intro.expo .artistes {
+    list-style: none;
+    padding-left: 0;
+    font-family: "roboto", serif;
+    font-size: 0.875rem; }
 
 .videos .videos-list {
   list-style: none;
@@ -1825,6 +1860,9 @@ button::-moz-focus-inner {
 .isotop-links a.cat-sculpture {
   color: #ffbc17; }
 
+.list-page .actu {
+  margin-bottom: 0.9375rem; }
+
 body > .fotorama-special {
   position: absolute;
   top: 0;
@@ -1838,5 +1876,8 @@ body > .fotorama-special {
 .fa-pull-right {
   float: right;
   margin-top: 4px; }
+
+.uncolor {
+  color: #353535 !important; }
 
 /*# sourceMappingURL=style.css.map */
