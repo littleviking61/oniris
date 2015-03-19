@@ -1,3 +1,5 @@
+<?php $list = get_field('liste'); ?>
+
 <header>
 	<h2><?= do_shortcode(get_field('titre_alternatif')) ?: get_the_title() ?></h2>
 </header>
@@ -12,14 +14,20 @@
 		<a href="#cat" class="button cat-multi check" data-filter=".cat-multi">multi</a>
 		<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture">sculpture</a>
 	</div>
-	<div class="isotop-links" data-filter-group="place">
-			<a href="#place" class="button in check" data-filter='[data-place="in"]' data-place="in">in</a>
-			<a href="#place" class="button out check" data-filter='[data-place="out"]' data-place="out">out</a>
-	</div>
+	<?php if ($list !== 'artiste'): ?>
+		<div class="isotop-links" data-filter-group="place">
+				<a href="#place" class="button check" data-filter='[data-place="in"]' data-place="in">in</a>
+				<a href="#place" class="button check" data-filter='[data-place="out"]' data-place="out">out</a>
+		</div>	
+		<div class="isotop-links" data-filter-group="type">
+				<a href="#place" class="button check" data-filter='[data-type="group"]' data-type="group">group</a>
+				<a href="#place" class="button check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
+		</div>	
+	<?php endif ?>
+	<input type="text" id="quicksearch" placeholder="Search" />
 </div>
 <div class="list-page <?= get_field('isotop') ? 'isotop' : null ?> full">
 	<?php 
-		$list = get_field('liste');
 		if($list == 'actu') {
 			$args = array(
 				'posts_per_page' => -1

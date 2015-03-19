@@ -13,7 +13,7 @@ $(document).ready(function(){
 			});
 
 			// store filter for each group
-			var filters = {};
+			var filters = {}, filterValue = [], qsRegex;
 
 			$('.isotop-links a').click(function(e) {
 				e.preventDefault();
@@ -48,11 +48,26 @@ $(document).ready(function(){
 					$('.isotop-links [href="#all"]').removeClass('check');
 				}
 
-				console.log(filterValue.join(','));
+				// console.log(filterValue.join(','));
 			  // set filter for Isotope
 			  $isotop.isotope({ filter: ':not('+filterValue.join(',')+')' });
 			});
+		
+		  // use value of search field to filter
+		  var $quicksearch = $('#quicksearch').keyup( debounce( function() {
+		  	qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+		  	if(qsRegex == '/(?:)/gi') $isotop.isotope({ filter: ':not('+filterValue.join(',')+')' });
+		  	else{
+			  	$isotop.isotope({
+			  		filter: function() {
+				      return qsRegex ? $(this).not(filterValue.join(',')).text().match( qsRegex ) : true;
+				    }
+			  	});		  		
+		  	}
+		  }, 200 ) );
 		});
+
+  
 
 		$('aside.main').nav();
 
@@ -94,6 +109,21 @@ $(document).ready(function(){
 			}
 		});
 });
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    if ( timeout ) {
+      clearTimeout( timeout );
+    }
+    function delayed() {
+      fn();
+      timeout = null;
+    }
+    timeout = setTimeout( delayed, threshold || 100 );
+  };
+}
 
 (function() {
 	$.fn.nav = function() {

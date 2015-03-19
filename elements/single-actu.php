@@ -22,7 +22,7 @@
 			class="actu highlight container <?= $flex ?> <?= $categorie ?>"
 			data-start="<?= $startDate ?>"
 			data-end="<?= $endDate ?>"
-			data-type="<?= $relations ?>"
+			data-type="<?= $relations > 1 ? 'group' : 'alone' ?>"
 			data-place="<?= $place || is_null($place) ? 'in' :  'out' ?>">
 
 		<?php if( has_post_thumbnail() ): ?>
