@@ -2,13 +2,17 @@
 
 /* button*/ 
 
-.button, button{
+.button, button, %button{
 	@extend %flex-center-center;
 	@include single-transition(all, .2s);
 
 	padding: $gutter-mini $gutter-small $gutter-mini $gutter;
-	@include colors(&, "bg");
-	color: white;
+	@include colors(&, "bg"){
+		color: white;
+	};
+	@include colors(&, "bg", true) {
+		color: white;
+	};
 
 	&:hover{
 		color: white;
@@ -60,10 +64,22 @@ form{
 }
 
 .filter-tools{
-	@at-root {
-		header > &{
-			margin-left: $gutter-large;
+	@extend %flex-column-wrap;
+	width: 100%;
+	margin-bottom: $gutter-large;
+
+	.isotop-links{
+		margin-right: $gutter-large;
+		@extend %flex-column-wrap;
+		
+		a{
+			margin-right: $gutter-small;
+			@include colors("", "bg", &);
+			&:not(.check) {
+				background-color: $light-grey;
+			}
 		}
+
 	}
 }
 
@@ -90,8 +106,6 @@ form{
 .post-it, %post-it{
 	@extend %flex-row;
 	@extend %section-gutter;
-	@include single-transition(all, .5s);
-	// @include box-shadow(0 0 $gutter transparent);
 	border: $one dotted transparent;
 
 	.thumbnail{

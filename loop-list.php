@@ -1,16 +1,22 @@
 <header>
 	<h2><?= do_shortcode(get_field('titre_alternatif')) ?: get_the_title() ?></h2>
-	<div class="filter-tools">
-		<div class="isotop-links">
-		    <a href="#cat" data-filter="*">show all</a>
-  			<a href="#cat" class="cat-geometrie" data-filter=".cat-geometrie">geometrie</a>
-  			<a href="#cat" class="cat-peinture" data-filter=".cat-peinture">peinture</a>
-  			<a href="#cat" class="cat-photographie" data-filter=".cat-photographie">photographie</a>
-  			<a href="#cat" class="cat-multi" data-filter=".cat-multi">multi</a>
-  			<a href="#cat" class="cat-sculpture" data-filter=".cat-sculpture">sculpture</a>
-		</div>
-	</div>
 </header>
+<div class="filter-tools">
+	<div class="isotop-links" data-filter-group="all">
+    <a href="#all" class="button check" data-filter="*">show all</a>
+  </div>
+  <div class="isotop-links" data-filter-group="cat">
+		<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie">geometrie</a>
+		<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture">peinture</a>
+		<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie">photographie</a>
+		<a href="#cat" class="button cat-multi check" data-filter=".cat-multi">multi</a>
+		<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture">sculpture</a>
+	</div>
+	<div class="isotop-links" data-filter-group="place">
+			<a href="#place" class="button in check" data-filter='[data-place="in"]' data-place="in">in</a>
+			<a href="#place" class="button out check" data-filter='[data-place="out"]' data-place="out">out</a>
+	</div>
+</div>
 <div class="list-page <?= get_field('isotop') ? 'isotop' : null ?> full">
 	<?php 
 		$list = get_field('liste');

@@ -12,10 +12,45 @@ $(document).ready(function(){
 				layoutMode: 'masonry'
 			});
 
+			// store filter for each group
+			var filters = {};
+
 			$('.isotop-links a').click(function(e) {
 				e.preventDefault();
-				var filterValue = $(this).attr('data-filter');
-  			$listArticle.isotope({ filter: filterValue });
+			  var $this = $(this);
+			  $this.toggleClass('check');
+			  // get group key
+			  var $buttonGroup = $this.parents('.isotop-links');
+			  var filterGroup = $buttonGroup.attr('data-filter-group');
+			  // set filter for group
+			  if(filters[ filterGroup ] !== undefined){
+			 		if($.inArray($this.attr('data-filter'),filters[ filterGroup ]) !== -1) {
+			 			if(filters[ filterGroup ].length === 1) delete filters[ filterGroup ];
+		 				else filters[ filterGroup ].splice($.inArray($this.attr('data-filter'),filters[ filterGroup ]), 1);
+		 			}else filters[ filterGroup ].push($this.attr('data-filter'));
+			  }else filters[ filterGroup ] = [$this.attr('data-filter')];
+
+			  // combine filters
+				filterValue = [];
+			  if(filterGroup === 'all') {
+					filters = {};
+					$('.isotop-links a').toggleClass('check', true);
+			  } else{
+				  for ( var prop in filters ) {
+				    filterValue.push(filters[ prop ]);
+				  }
+					$(':not('+filterValue.join(',')+')','.isotop-links').toggleClass('check', true);
+				}
+
+				if(filterValue.length === 0) {
+					$('.isotop-links [href="#all"]').addClass('check');
+				}else{
+					$('.isotop-links [href="#all"]').removeClass('check');
+				}
+
+				console.log(filterValue.join(','));
+			  // set filter for Isotope
+			  $isotop.isotope({ filter: ':not('+filterValue.join(',')+')' });
 			});
 		});
 

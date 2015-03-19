@@ -1,17 +1,36 @@
 <?php 
 	$flex = 'flex-3'; 
-	$id = $post->ID;
 	$linkID =  get_field('lien')[0];
-	$categorie = get_field('category', $linkID);
+	$specific = get_field('specific_details');
+	if($specific === true) {
+		$categorie = get_field('category');
+		$place = get_field('a_la_galerie');
+	}else{
+		$categorie = get_field('category', $linkID);
+		$relations = get_field('relation_artistes', $linkID);
+		$relations = is_array($relations) ? count($relations) : '';
+		$startDate = get_field('date_de_debut', $linkID);
+		$endDate = get_field('date_de_fin', $linkID);
+		$place = get_field('a_la_galerie', $linkID);
+	}
+
+	if(is_null($startDate)) $startDate = get_the_date('Ymd');
 ?>
 
 <?php if( get_field('titre') ): ?>
-	<a href="<?= get_permalink($linkID) ?>" class="actu highlight container <?= $flex ?> <?= $categorie ?>">
+	<a 	href="<?= get_permalink($linkID) ?>" 
+			class="actu highlight container <?= $flex ?> <?= $categorie ?>"
+			data-start="<?= $startDate ?>"
+			data-end="<?= $endDate ?>"
+			data-type="<?= $relations ?>"
+			data-place="<?= $place || is_null($place) ? 'in' :  'out' ?>">
+
 		<?php if( has_post_thumbnail() ): ?>
 			<div class="thumbnail">
 				<?php the_post_thumbnail('small') ?>
 			</div>
 		<?php endif ?>
+
 		<?php if( get_field('intitule') ): ?>
 			<h5><?= get_field('intitule') ?></h5>
 		<?php endif ?>
