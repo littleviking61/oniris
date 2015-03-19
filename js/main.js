@@ -42,11 +42,9 @@ $(document).ready(function(){
 					$(':not('+filterValue.join(',')+')','.isotop-links').toggleClass('check', true);
 				}
 
-				if(filterValue.length === 0) {
-					$('.isotop-links [href="#all"]').addClass('check');
-				}else{
-					$('.isotop-links [href="#all"]').removeClass('check');
-				}
+				// refresh all button state
+				if(filterValue.length === 0) $('.isotop-links [href="#all"]').addClass('check');
+				else $('.isotop-links [href="#all"]').removeClass('check');
 
 				// console.log(filterValue.join(','));
 			  // set filter for Isotope

@@ -23,6 +23,11 @@
 				<a href="#place" class="button check" data-filter='[data-type="group"]' data-type="group">group</a>
 				<a href="#place" class="button check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
 		</div>	
+		<div class="isotop-links" data-filter-group="date">
+				<a href="#date" class="button check" data-filter='[data-date="upcoming"]' data-date="upcoming">upcoming</a>
+				<a href="#date" class="button check" data-filter='[data-date="now"]' data-date="now">now</a>
+				<a href="#date" class="button check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
+		</div>
 	<?php endif ?>
 	<input type="text" id="quicksearch" placeholder="Search" />
 </div>

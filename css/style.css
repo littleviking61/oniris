@@ -618,6 +618,9 @@ header[role="banner"] nav ul, .button, button {
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   padding: 0.20833rem 0.3125rem 0.20833rem 0.625rem; }
   .button {
     background-color: #ffbc17;
