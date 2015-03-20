@@ -168,8 +168,10 @@ function get_template_file($template, $default = null) {
 	$template = locate_template($template . '.php');
   if(file_exists($template)) {
     require($template);
+  	return true;
   }elseif( !is_null($default) ){
     require($default . '.php');
+  	return true;
   }
 }
 

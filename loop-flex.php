@@ -4,7 +4,8 @@
 $type = get_field('page_type_acf');
 
 if($type){
-  get_template_file('elements/intro-'.$type);
+  $hasIntro = get_template_file('elements/intro-'.$type);
+  if($hasIntro) $closeAfter = 1;
 }
 
 if(get_field('titre_alternatif') && !empty(get_field('titre_alternatif')) ) : ?>

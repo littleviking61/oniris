@@ -4,6 +4,7 @@
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
 	$flex = $width > 0 ? 'flex-' . $width : 'flex-7';
+	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
 	
 	global $nggdb; 
 	$gallery = 
@@ -98,7 +99,7 @@
 							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
 						<?php } ?>
 					</a>
-					<?php if($i >= 8) break; ?>
+					<?php if($i >= $limitImage) break; ?>
 				<?php endforeach ?>
 
 			</div>

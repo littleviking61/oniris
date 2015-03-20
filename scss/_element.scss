@@ -21,7 +21,7 @@
 		@include colors(&, "bg");
 
 		&.right{
-			padding-right: $gutter;
+			padding-right: $gutter-large;
 			// padding-left: $gutter;
 		}
 	}
