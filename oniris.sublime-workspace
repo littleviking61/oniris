@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"gutter",
+				"gutter-large"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fi",
+				"filters"
+			],
+			[
+				"start",
+				"startDate"
+			],
+			[
+				"categ",
+				"$categorie〔variable〕"
+			],
+			[
 				"the_post",
 				"the_post_thumbnail"
 			],
@@ -14,10 +34,6 @@
 			[
 				"flex-co",
 				"flex-column"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"guter",
@@ -34,10 +50,6 @@
 			[
 				"ligh",
 				"light-grey"
-			],
-			[
-				"gutter",
-				"gutter-small"
 			],
 			[
 				"inline",
@@ -232,26 +244,20 @@
 			}
 		},
 		{
-			"file": "scss/_shame.scss",
+			"contents": "Searching 114 files for \"artistes\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php:\n   25   **********************/\n   26  \n   27: function my_acf_result_query_artistes( $args, $field, $post )\n   28  {\n   29  		$args['post_type'] = 'page';\n   ..\n   32  		return $args;\n   33  }\n   34: add_filter('acf/fields/relationship/query/name=relation_artistes', 'my_acf_result_query_artistes', 10, 3);\n   35  \n   36  function my_acf_result_query_salons( $args, $field, $post )\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artiste.php:\n    8  		'posts_per_page' => -1\n    9  	);\n   10: 	$listArtistes = get_posts( $args ); \n   11  \n   12: 	foreach ( $listArtistes as $post ) : setup_postdata( $post ); ?>\n   13  \n   14  			<a href=\"<?php the_permalink() ?>\" class=\"container flex-2 post-it artiste <?php the_field('category') ?>\">\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css:\n 1129      .cat-sculpture .intro.expo .intitule p {\n 1130        color: #ffbc17; }\n 1131:   .intro.expo .artistes {\n 1132      list-style: none;\n 1133      padding-left: 0;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-expositions.php:\n    1  <?php \n    2: 	$artistes = get_field('relation_artistes');\n    3  	$dateformatstring = \"d F\";\n    4  ?>\n    .\n    8  	<section class=\"flex-3 intro expo\">\n    9  \n   10: 		<?php if (count($artistes) > 1): ?>\n   11  			<hr>\n   12  			<?php if (get_field('intitule')): ?>\n   ..\n   24  				<h4 class=\"uncolor\"><?= do_shortcode(get_field('sous_titre')) ?></h4>\n   25  			<?php endif ?>\n   26: 			<ul class=\"artistes\">\n   27: 				<?php foreach ($artistes as $artiste): ?>\n   28  					<?php if (get_field('nom', $artiste)): ?>\n   29  						<li class=\"artiste\">\n   ..\n   36  		<?php else: ?>\n   37  \n   38: 			<?php foreach ($artistes as $artiste): ?>\n   39  				<h3><a href=\"<?= get_permalink($artiste) ?>\"><?= get_field('prenom', $artiste) ?> <?= get_field('nom', $artiste) ?></a></h3>\n   40  				\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-foires.php:\n    1  <?php \n    2: 	$artistes = get_field('relation_artistes');\n    3  	$dateformatstring = \"d F\";\n    4  ?>\n    .\n    8  	<section class=\"flex-3 intro expo\">\n    9  \n   10: 		<?php if (count($artistes) > 1): ?>\n   11  			<hr>\n   12  			<?php if (get_field('intitule')): ?>\n   ..\n   24  				<h4 class=\"uncolor\"><?= do_shortcode(get_field('sous_titre')) ?></h4>\n   25  			<?php endif ?>\n   26: 			<ul class=\"artistes\">\n   27: 				<?php foreach ($artistes as $artiste): ?>\n   28  					<?php if (get_field('nom', $artiste)): ?>\n   29  						<li class=\"artiste\">\n   ..\n   36  		<?php else: ?>\n   37  \n   38: 			<?php foreach ($artistes as $artiste): ?>\n   39  				<h3><a href=\"<?= get_permalink($artiste) ?>\"><?= get_field('prenom', $artiste) ?> <?= get_field('nom', $artiste) ?></a></h3>\n   40  				\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/relation-artistes.php:\n   15  			'relation' => 'AND',\n   16  			[\n   17: 				'key' => 'relation_artistes',\n   18  				'value' => '\"'.$artisteID.'\"',\n   19  				// 'type' => 'NUMERIC',\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-actu.php:\n   10  	}else{\n   11  		$categorie = get_field('category', $linkID);\n   12: 		$relations = get_field('relation_artistes', $linkID);\n   13  		$relations = is_array($relations) ? count($relations) : '';\n   14  		$startDate = get_field('date_de_debut', $linkID);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss:\n  175  		}\n  176  \n  177: 		.artistes{\n  178  			list-style: none;\n  179  			padding-left: 0;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-1440x900.indd:\n    <binary>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/Dossier ONIRIS-2014-1440x900/ONIRIS-2014-1440x900.indd:\n    <binary>\n\n422 matches across 10 files\n\n\nSearching 114 files for \".artistes\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css:\n 1129      .cat-sculpture .intro.expo .intitule p {\n 1130        color: #ffbc17; }\n 1131:   .intro.expo .artistes {\n 1132      list-style: none;\n 1133      padding-left: 0;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss:\n  175  		}\n  176  \n  177: 		.artistes{\n  178  			list-style: none;\n  179  			padding-left: 0;\n\n2 matches across 2 files\n",
 			"settings":
 			{
-				"buffer_size": 246,
-				"line_ending": "Unix"
+				"buffer_size": 4518,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
 			"file": "scss/elements/_bloc.scss",
 			"settings":
 			{
-				"buffer_size": 3666,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/actu.php",
-			"settings":
-			{
-				"buffer_size": 1264,
+				"buffer_size": 3696,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,31 +265,71 @@
 			"file": "elements/intro-expositions.php",
 			"settings":
 			{
-				"buffer_size": 1578,
+				"buffer_size": 1886,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "scss/_mixins.scss",
+			"file": "elements/intro-foires.php",
 			"settings":
 			{
-				"buffer_size": 2635,
+				"buffer_size": 1886,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "elements/relation-artistes.php",
+			"settings":
+			{
+				"buffer_size": 1880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sftp-config.json",
+			"settings":
+			{
+				"buffer_size": 1531,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "templates/actus.php",
+			"file": "loop-flex.php",
 			"settings":
 			{
-				"buffer_size": 1550,
+				"buffer_size": 2933,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "elements/single-artiste.php",
+			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 488,
+				"buffer_size": 5531,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "loop-list.php",
+			"settings":
+			{
+				"buffer_size": 2686,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "elements/intro-artistes.php",
+			"settings":
+			{
+				"buffer_size": 472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 5348,
 				"line_ending": "Unix"
 			}
 		}
@@ -368,55 +414,60 @@
 	"expanded_folders":
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/normalize.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/archive.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-actu.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-expositions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-foires.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-artiste.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/simple.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_list.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-artiste.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actus.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu-highlight.php",
+		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_shame.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-bold-demo.html",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/custom.modernizr.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/robotoslab-thin_0-webfont.svg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-V112.jpg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/relation-artistes.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-foires.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_shame.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/simple.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_list.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu-highlight.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/map.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-artistes.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-expositions.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actus.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/videos-list.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/links_section.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_variables.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/logo-oniris.ai",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_colors.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_basic.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/Dossier ONIRIS-2014-1440x900/Document fonts/SourceSansPro-Regular.otf",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_mixins.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1425392411/mapped/var/www/html/client/oniris/wp-config.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-actu.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/404.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/fotorama.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_fotorama.scss",
@@ -428,10 +479,8 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.modal.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/imagesloaded.pkgd.min.js",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670560/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v4.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-bold-demo.html",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_aside.scss",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670124/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v5.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css.map",
@@ -441,9 +490,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/fotorama.css.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/enqueue-sass.php",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423580500/mapped/var/www/html/client/oniris/wp-content/plugins/mqtranslate/mqtranslate_javascript.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/archive.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/footer.php",
-		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/UPDATE",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/mongolia/recherche/mailing",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/style.scss",
@@ -500,8 +547,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/template-simple.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/content/simple.php",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421160488/mapped/client/oniris/wp-content/plugins/acf-qtranslate/acf-qtranslate.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/home.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/id_ngk"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/home.php"
 	],
 	"find":
 	{
@@ -523,6 +569,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".artistes",
+			"artistes",
+			"h4",
+			"get_field('')",
+			".more",
+			"get_template_file",
+			"		<?=",
+			"		",
+			"paymentDate",
+			"type",
+			"alone",
+			"</a>",
+			"<a href=\"",
+			"<a href=\"#place\"",
+			"in",
+			"active",
+			".isotop-links",
+			"class=\"",
+			"filter-tools",
+			"cat",
+			"ID",
+			"id",
+			"list-page",
 			"p",
 			"li>",
 			"li",
@@ -627,30 +696,7 @@
 			"/* fotorama */\n.fotorama__arr:focus:after,.fotorama__fullscreen-icon:focus:after,.fotorama__html,.fotorama__img,.fotorama__nav__frame:focus .fotorama__dot:after,.fotorama__nav__frame:focus .fotorama__thumb:after,.fotorama__stage__frame,.fotorama__stage__shaft,.fotorama__video iframe{\n	position:absolute;\n	width:100%;\n	height:100%;\n	top:0;\n	right:0;\n	left:0;\n	bottom:0\n}\n.fotorama--fullscreen,.fotorama__img{\n	max-width:99999px!important;\n	max-height:99999px!important;\n	min-width:0!important;\n	min-height:0!important;\n	border-radius:0!important;\n	box-shadow:none!important;\n	padding:0!important\n}\n.fotorama__wrap .fotorama__grab{\n	cursor:move;\n	cursor:-webkit-grab;\n	cursor:-o-grab;\n	cursor:-ms-grab;\n	cursor:grab\n}\n.fotorama__grabbing *{\n	cursor:move;\n	cursor:-webkit-grabbing;\n	cursor:-o-grabbing;\n	cursor:-ms-grabbing;\n	cursor:grabbing\n}\n.fotorama__spinner{\n	position:absolute!important;\n	top:50%!important;\n	left:50%!important\n}\n.fotorama__wrap--css3 .fotorama__arr,.fotorama__wrap--css3 .fotorama__fullscreen-icon,.fotorama__wrap--css3 .fotorama__nav__shaft,.fotorama__wrap--css3 .fotorama__stage__shaft,.fotorama__wrap--css3 .fotorama__thumb-border,.fotorama__wrap--css3 .fotorama__video-close,.fotorama__wrap--css3 .fotorama__video-play{\n	-webkit-transform:translate3d(0,0,0);\n	transform:translate3d(0,0,0)\n}\n.fotorama__caption,.fotorama__nav:after,.fotorama__nav:before,.fotorama__stage:after,.fotorama__stage:before,.fotorama__wrap--css3 .fotorama__html,.fotorama__wrap--css3 .fotorama__nav,.fotorama__wrap--css3 .fotorama__spinner,.fotorama__wrap--css3 .fotorama__stage,.fotorama__wrap--css3 .fotorama__stage .fotorama__img,.fotorama__wrap--css3 .fotorama__stage__frame{\n	-webkit-transform:translateZ(0);\n	transform:translateZ(0)\n}\n.fotorama__arr:focus,.fotorama__fullscreen-icon:focus,.fotorama__nav__frame{\n	outline:0\n}\n.fotorama__arr:focus:after,.fotorama__fullscreen-icon:focus:after,.fotorama__nav__frame:focus .fotorama__dot:after,.fotorama__nav__frame:focus .fotorama__thumb:after{\n	content:'';\n	border-radius:inherit;\n	background-color:rgba(0,175,234,.5)\n}\n.fotorama__wrap--video .fotorama__stage,.fotorama__wrap--video .fotorama__stage__frame--video,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img,.fotorama__wrap--video .fotorama__stage__shaft{\n	-webkit-transform:none!important;\n	transform:none!important\n}\n.fotorama__wrap--css3 .fotorama__nav__shaft,.fotorama__wrap--css3 .fotorama__stage__shaft,.fotorama__wrap--css3 .fotorama__thumb-border{\n	transition-property:-webkit-transform,width;\n	transition-property:transform,width;\n	transition-timing-function:cubic-bezier(0.1,0,.25,1);\n	transition-duration:0ms\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__no-select,.fotorama__video-close,.fotorama__video-play,.fotorama__wrap{\n	-webkit-user-select:none;\n	-moz-user-select:none;\n	-ms-user-select:none;\n	user-select:none\n}\n.fotorama__select{\n	-webkit-user-select:text;\n	-moz-user-select:text;\n	-ms-user-select:text;\n	user-select:text\n}\n.fotorama__nav,.fotorama__nav__frame{\n	margin:auto;\n	padding:0\n}\n.fotorama__caption__wrap,.fotorama__nav__frame,.fotorama__nav__shaft{\n	-moz-box-orient:vertical;\n	display:inline-block;\n	vertical-align:middle;\n	*display:inline;\n	*zoom:1\n}\n.fotorama__nav__frame,.fotorama__thumb-border{\n	box-sizing:content-box\n}\n.fotorama__caption__wrap{\n	box-sizing:border-box\n}\n.fotorama--hidden,.fotorama__load{\n	position:absolute;\n	left:-99999px;\n	top:-99999px;\n	z-index:-1\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__nav,.fotorama__nav__frame,.fotorama__nav__shaft,.fotorama__stage__frame,.fotorama__stage__shaft,.fotorama__video-close,.fotorama__video-play{\n	-webkit-tap-highlight-color:transparent\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n	background:url(../img/fotorama.png) no-repeat\n}\n@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:2dppx){\n	.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n		background:url(../img/fotorama@2x.png) 0 0/96px 160px no-repeat\n	}\n\n}\n.fotorama__thumb{\n	background-color:#7f7f7f;\n	background-color:rgba(127,127,127,.2)\n}\n@media print{\n	.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__thumb-border,.fotorama__video-close,.fotorama__video-play{\n		background:none!important\n	}\n\n}\n.fotorama{\n	min-width:1px;\n	overflow:hidden\n}\n.fotorama:not(.fotorama--unobtrusive)>*:not(:first-child){\n	display:none\n}\n.fullscreen{\n	width:100%!important;\n	height:100%!important;\n	max-width:100%!important;\n	max-height:100%!important;\n	margin:0!important;\n	padding:0!important;\n	overflow:hidden!important;\n	background:#000\n}\n.fotorama--fullscreen{\n	position:absolute!important;\n	top:0!important;\n	left:0!important;\n	right:0!important;\n	bottom:0!important;\n	float:none!important;\n	z-index:2147483647!important;\n	background:#000;\n	width:100%!important;\n	height:100%!important;\n	margin:0!important\n}\n.fotorama--fullscreen .fotorama__nav,.fotorama--fullscreen .fotorama__stage{\n	background:#000\n}\n.fotorama__wrap{\n	-webkit-text-size-adjust:100%;\n	position:relative;\n	direction:ltr;\n	z-index:0\n}\n.fotorama__wrap--rtl .fotorama__stage__frame{\n	direction:rtl\n}\n.fotorama__nav,.fotorama__stage{\n	overflow:hidden;\n	position:relative;\n	max-width:100%\n}\n.fotorama__wrap--pan-y{\n	-ms-touch-action:pan-y\n}\n.fotorama__wrap .fotorama__pointer{\n	cursor:pointer\n}\n.fotorama__wrap--slide .fotorama__stage__frame{\n	opacity:1!important\n}\n.fotorama__stage__frame{\n	overflow:hidden\n}\n.fotorama__stage__frame.fotorama__active{\n	z-index:8\n}\n.fotorama__wrap--fade .fotorama__stage__frame{\n	display:none\n}\n.fotorama__wrap--fade .fotorama__fade-front,.fotorama__wrap--fade .fotorama__fade-rear,.fotorama__wrap--fade .fotorama__stage__frame.fotorama__active{\n	display:block;\n	left:0;\n	top:0\n}\n.fotorama__wrap--fade .fotorama__fade-front{\n	z-index:8\n}\n.fotorama__wrap--fade .fotorama__fade-rear{\n	z-index:7\n}\n.fotorama__wrap--fade .fotorama__fade-rear.fotorama__active{\n	z-index:9\n}\n.fotorama__wrap--fade .fotorama__stage .fotorama__shadow{\n	display:none\n}\n.fotorama__img{\n	-ms-filter:\"alpha(Opacity=0)\";\n	filter:alpha(opacity=0);\n	opacity:0;\n	border:none!important\n}\n.fotorama__error .fotorama__img,.fotorama__loaded .fotorama__img{\n	-ms-filter:\"alpha(Opacity=100)\";\n	filter:alpha(opacity=100);\n	opacity:1\n}\n.fotorama--fullscreen .fotorama__loaded--full .fotorama__img,.fotorama__img--full{\n	display:none\n}\n.fotorama--fullscreen .fotorama__loaded--full .fotorama__img--full{\n	display:block\n}\n.fotorama__wrap--only-active .fotorama__nav,.fotorama__wrap--only-active .fotorama__stage{\n	max-width:99999px!important\n}\n.fotorama__wrap--only-active .fotorama__stage__frame{\n	visibility:hidden\n}\n.fotorama__wrap--only-active .fotorama__stage__frame.fotorama__active{\n	visibility:visible\n}\n.fotorama__nav{\n	font-size:0;\n	line-height:0;\n	text-align:center;\n	display:none;\n	white-space:nowrap;\n	z-index:5\n}\n.fotorama__nav__shaft{\n	position:relative;\n	left:0;\n	top:0;\n	text-align:left\n}\n.fotorama__nav__frame{\n	position:relative;\n	cursor:pointer\n}\n.fotorama__nav--dots{\n	display:block\n}\n.fotorama__nav--dots .fotorama__nav__frame{\n	width:18px;\n	height:30px\n}\n.fotorama__nav--dots .fotorama__nav__frame--thumb,.fotorama__nav--dots .fotorama__thumb-border{\n	display:none\n}\n.fotorama__nav--thumbs{\n	display:block\n}\n.fotorama__nav--thumbs .fotorama__nav__frame{\n	padding-left:0!important\n}\n.fotorama__nav--thumbs .fotorama__nav__frame:last-child{\n	padding-right:0!important\n}\n.fotorama__nav--thumbs .fotorama__nav__frame--dot{\n	display:none\n}\n.fotorama__dot{\n	display:block;\n	width:4px;\n	height:4px;\n	position:relative;\n	top:12px;\n	left:6px;\n	border-radius:6px;\n	border:1px solid #7f7f7f\n}\n.fotorama__nav__frame:focus .fotorama__dot:after{\n	padding:1px;\n	top:-1px;\n	left:-1px\n}\n.fotorama__nav__frame.fotorama__active .fotorama__dot{\n	width:0;\n	height:0;\n	border-width:3px\n}\n.fotorama__nav__frame.fotorama__active .fotorama__dot:after{\n	padding:3px;\n	top:-3px;\n	left:-3px\n}\n.fotorama__thumb{\n	overflow:hidden;\n	position:relative;\n	width:100%;\n	height:100%\n}\n.fotorama__nav__frame:focus .fotorama__thumb{\n	z-index:2\n}\n.fotorama__thumb-border{\n	position:absolute;\n	z-index:9;\n	top:0;\n	left:0;\n	border-style:solid;\n	border-color:#00afea;\n	background-image:linear-gradient(to bottom right,rgba(255,255,255,.25),rgba(64,64,64,.1))\n}\n.fotorama__caption{\n	position:absolute;\n	z-index:12;\n	bottom:0;\n	left:0;\n	right:0;\n	font-family:'Helvetica Neue',Arial,sans-serif;\n	font-size:14px;\n	line-height:1.5;\n	color:#000\n}\n.fotorama__caption a{\n	text-decoration:none;\n	color:#000;\n	border-bottom:1px solid;\n	border-color:rgba(0,0,0,.5)\n}\n.fotorama__caption a:hover{\n	color:#333;\n	border-color:rgba(51,51,51,.5)\n}\n.fotorama__wrap--rtl .fotorama__caption{\n	left:auto;\n	right:0\n}\n.fotorama__wrap--no-captions .fotorama__caption,.fotorama__wrap--video .fotorama__caption{\n	display:none\n}\n.fotorama__caption__wrap{\n	background-color:#fff;\n	background-color:rgba(255,255,255,.9);\n	padding:5px 10px\n}\n@-webkit-keyframes spinner{\n	0%{\n		-webkit-transform:rotate(0);\n		transform:rotate(0)\n	}\n	100%{\n		-webkit-transform:rotate(360deg);\n		transform:rotate(360deg)\n	}\n\n}\n@keyframes spinner{\n	0%{\n		-webkit-transform:rotate(0);\n		transform:rotate(0)\n	}\n	100%{\n		-webkit-transform:rotate(360deg);\n		transform:rotate(360deg)\n	}\n\n}\n.fotorama__wrap--css3 .fotorama__spinner{\n	-webkit-animation:spinner 24s infinite linear;\n	animation:spinner 24s infinite linear\n}\n.fotorama__wrap--css3 .fotorama__html,.fotorama__wrap--css3 .fotorama__stage .fotorama__img{\n	transition-property:opacity;\n	transition-timing-function:linear;\n	transition-duration:.3s\n}\n.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__html,.fotorama__wrap--video .fotorama__stage__frame--video .fotorama__img{\n	-ms-filter:\"alpha(Opacity=0)\";\n	filter:alpha(opacity=0);\n	opacity:0\n}\n.fotorama__select{\n	cursor:auto\n}\n.fotorama__video{\n	top:32px;\n	right:0;\n	bottom:0;\n	left:0;\n	position:absolute;\n	z-index:10\n}\n@-moz-document url-prefix(){\n	.fotorama__active{\n		box-shadow:0 0 0 transparent\n	}\n\n}\n.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play{\n	position:absolute;\n	z-index:11;\n	cursor:pointer\n}\n.fotorama__arr{\n	position:absolute;\n	width:32px;\n	height:32px;\n	top:50%;\n	margin-top:-16px\n}\n.fotorama__arr--prev{\n	left:2px;\n	background-position:0 0\n}\n.fotorama__arr--next{\n	right:2px;\n	background-position:-32px 0\n}\n.fotorama__arr--disabled{\n	pointer-events:none;\n	cursor:default;\n	*display:none;\n	opacity:.1\n}\n.fotorama__fullscreen-icon{\n	width:32px;\n	height:32px;\n	top:2px;\n	right:2px;\n	background-position:0 -32px;\n	z-index:20\n}\n.fotorama__arr:focus,.fotorama__fullscreen-icon:focus{\n	border-radius:50%\n}\n.fotorama--fullscreen .fotorama__fullscreen-icon{\n	background-position:-32px -32px\n}\n.fotorama__video-play{\n	width:96px;\n	height:96px;\n	left:50%;\n	top:50%;\n	margin-left:-48px;\n	margin-top:-48px;\n	background-position:0 -64px;\n	opacity:0\n}\n.fotorama__wrap--css2 .fotorama__video-play,.fotorama__wrap--video .fotorama__stage .fotorama__video-play{\n	display:none\n}\n.fotorama__error .fotorama__video-play,.fotorama__loaded .fotorama__video-play,.fotorama__nav__frame .fotorama__video-play{\n	opacity:1;\n	display:block\n}\n.fotorama__nav__frame .fotorama__video-play{\n	width:32px;\n	height:32px;\n	margin-left:-16px;\n	margin-top:-16px;\n	background-position:-64px -32px\n}\n.fotorama__video-close{\n	width:32px;\n	height:32px;\n	top:0;\n	right:0;\n	background-position:-64px 0;\n	z-index:20;\n	opacity:0\n}\n.fotorama__wrap--css2 .fotorama__video-close{\n	display:none\n}\n.fotorama__wrap--css3 .fotorama__video-close{\n	-webkit-transform:translate3d(32px,-32px,0);\n	transform:translate3d(32px,-32px,0)\n}\n.fotorama__wrap--video .fotorama__video-close{\n	display:block;\n	opacity:1\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__video-close{\n	-webkit-transform:translate3d(0,0,0);\n	transform:translate3d(0,0,0)\n}\n.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon{\n	opacity:0\n}\n.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus{\n	opacity:1\n}\n.fotorama__wrap--video .fotorama__arr,.fotorama__wrap--video .fotorama__fullscreen-icon{\n	opacity:0!important\n}\n.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr,.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon{\n	display:none\n}\n.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,.fotorama__wrap--css2.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus{\n	display:block\n}\n.fotorama__wrap--css2.fotorama__wrap--video .fotorama__arr,.fotorama__wrap--css2.fotorama__wrap--video .fotorama__fullscreen-icon{\n	display:none!important\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus){\n	-webkit-transform:translate3d(32px,-32px,0);\n	transform:translate3d(32px,-32px,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus){\n	-webkit-transform:translate3d(-48px,0,0);\n	transform:translate3d(-48px,0,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--next:not(:focus){\n	-webkit-transform:translate3d(48px,0,0);\n	transform:translate3d(48px,0,0)\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__fullscreen-icon{\n	-webkit-transform:translate3d(32px,-32px,0)!important;\n	transform:translate3d(32px,-32px,0)!important\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--prev{\n	-webkit-transform:translate3d(-48px,0,0)!important;\n	transform:translate3d(-48px,0,0)!important\n}\n.fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--next{\n	-webkit-transform:translate3d(48px,0,0)!important;\n	transform:translate3d(48px,0,0)!important\n}\n.fotorama__wrap--css3 .fotorama__arr:not(:focus),.fotorama__wrap--css3 .fotorama__fullscreen-icon:not(:focus),.fotorama__wrap--css3 .fotorama__video-close:not(:focus),.fotorama__wrap--css3 .fotorama__video-play:not(:focus){\n	transition-property:-webkit-transform,opacity;\n	transition-property:transform,opacity;\n	transition-duration:.3s\n}\n.fotorama__nav:after,.fotorama__nav:before,.fotorama__stage:after,.fotorama__stage:before{\n	content:\"\";\n	display:block;\n	position:absolute;\n	text-decoration:none;\n	top:0;\n	bottom:0;\n	width:10px;\n	height:auto;\n	z-index:10;\n	pointer-events:none;\n	background-repeat:no-repeat;\n	background-size:1px 100%,5px 100%\n}\n.fotorama__nav:before,.fotorama__stage:before{\n	background-image:linear-gradient(transparent,rgba(0,0,0,.2) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.4),transparent);\n	background-position:0 0,0 0;\n	left:-10px\n}\n.fotorama__nav.fotorama__shadows--left:before,.fotorama__stage.fotorama__shadows--left:before{\n	left:0\n}\n.fotorama__nav:after,.fotorama__stage:after{\n	background-image:linear-gradient(transparent,rgba(0,0,0,.2) 25%,rgba(0,0,0,.3) 75%,transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.4),transparent);\n	background-position:100% 0,100% 0;\n	right:-10px\n}\n.fotorama__nav.fotorama__shadows--right:after,.fotorama__stage.fotorama__shadows--right:after{\n	right:0\n}\n.fotorama--fullscreen .fotorama__nav:after,.fotorama--fullscreen .fotorama__nav:before,.fotorama--fullscreen .fotorama__stage:after,.fotorama--fullscreen .fotorama__stage:before,.fotorama__wrap--fade .fotorama__stage:after,.fotorama__wrap--fade .fotorama__stage:before,.fotorama__wrap--no-shadows .fotorama__nav:after,.fotorama__wrap--no-shadows .fotorama__nav:before,.fotorama__wrap--no-shadows .fotorama__stage:after,.fotorama__wrap--no-shadows .fotorama__stage:before{\n	display:none\n}\n",
 			";",
 			"}",
-			";",
-			"}",
-			"{",
-			"field",
-			"rem-calc(3)",
-			"$tree",
-			"rem-calc(3)",
-			"MARGIN",
-			"setStyle",
-			"thumbborderwidth",
-			"thumb",
-			"10px",
-			"caption",
-			"captions",
-			"'-'",
-			"caption",
-			" measures.nw",
-			"o_nav",
-			"navwidth",
-			"console.lo",
-			"background:url(",
-			" <?=",
-			"{",
-			"h5"
+			";"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -672,7 +718,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -700,10 +746,10 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 258.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -719,8 +765,8 @@
 						"selection":
 						[
 							[
-								575,
-								575
+								157,
+								157
 							]
 						],
 						"settings":
@@ -732,7 +778,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 785.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -740,11 +786,277 @@
 				},
 				{
 					"buffer": 2,
-					"file": "scss/_shame.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 246,
+						"buffer_size": 4518,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										195,
+										203
+									],
+									[
+										376,
+										384
+									],
+									[
+										408,
+										416
+									],
+									[
+										645,
+										653
+									],
+									[
+										708,
+										716
+									],
+									[
+										1073,
+										1081
+									],
+									[
+										1265,
+										1273
+									],
+									[
+										1296,
+										1304
+									],
+									[
+										1437,
+										1445
+									],
+									[
+										1651,
+										1659
+									],
+									[
+										1689,
+										1697
+									],
+									[
+										1867,
+										1875
+									],
+									[
+										2160,
+										2168
+									],
+									[
+										2191,
+										2199
+									],
+									[
+										2332,
+										2340
+									],
+									[
+										2546,
+										2554
+									],
+									[
+										2584,
+										2592
+									],
+									[
+										2762,
+										2770
+									],
+									[
+										3110,
+										3118
+									],
+									[
+										3404,
+										3412
+									],
+									[
+										3677,
+										3685
+									],
+									[
+										4234,
+										4243
+									],
+									[
+										4426,
+										4435
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								4345,
+								4345
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scss/elements/_bloc.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2409,
+								2409
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 2903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "elements/intro-expositions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								79
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "elements/intro-foires.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "elements/relation-artistes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1455,
+								1455
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 517.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sftp-config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1531,
 						"regions":
 						{
 						},
@@ -760,165 +1072,32 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "scss/elements/_bloc.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2112,
-								2112
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2514.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "templates/actu.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								677,
-								714
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "elements/intro-expositions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1578,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1578
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "scss/_mixins.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2635,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2203,
-								2219
-							],
-							[
-								2228,
-								2244
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 481.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "templates/actus.php",
+					"buffer": 8,
+					"file": "loop-flex.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1550,
+						"buffer_size": 2933,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1540,
-								1540
+								164,
+								164
 							]
 						],
 						"settings":
@@ -928,7 +1107,8 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -938,20 +1118,86 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "elements/single-artiste.php",
+					"buffer": 9,
+					"file": "functions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 488,
+						"buffer_size": 5531,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								416,
-								415
+								4195,
+								4202
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2193.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "loop-list.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1337,
+								1337
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "elements/intro-artistes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								61
 							]
 						],
 						"settings":
@@ -968,6 +1214,39 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1081,
+								1081
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 158.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1028,6 +1307,42 @@
 		"selected_items":
 		[
 			[
+				"hea",
+				"oniris/header.php"
+			],
+			[
+				"func",
+				"oniris/functions.php"
+			],
+			[
+				"fun",
+				"oniris/functions.php"
+			],
+			[
+				"mixin",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"singleact",
+				"oniris/elements/single-actu.php"
+			],
+			[
+				"layo",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"m",
+				"oniris/js/main.js"
+			],
+			[
+				"loo",
+				"oniris/loop-list.php"
+			],
+			[
+				"flex",
+				"oniris/loop-flex.php"
+			],
+			[
 				"mixi",
 				"oniris/scss/_mixins.scss"
 			],
@@ -1044,10 +1359,6 @@
 				"oniris/templates/actus.php"
 			],
 			[
-				"layo",
-				"oniris/scss/_layout.scss"
-			],
-			[
 				"functi",
 				"oniris/functions.php"
 			],
@@ -1058,10 +1369,6 @@
 			[
 				"vari",
 				"oniris/scss/_variables.scss"
-			],
-			[
-				"flex",
-				"oniris/loop-flex.php"
 			],
 			[
 				"sim",
@@ -1088,16 +1395,8 @@
 				"oniris/scss/_mixins.scss"
 			],
 			[
-				"func",
-				"oniris/functions.php"
-			],
-			[
 				"funti",
 				"oniris/functions.php"
-			],
-			[
-				"loo",
-				"oniris/loop-flex.php"
 			],
 			[
 				"vai",
@@ -1114,10 +1413,6 @@
 			[
 				"fot",
 				"oniris/css/fotorama.css"
-			],
-			[
-				"fun",
-				"oniris/functions.php"
 			],
 			[
 				"video",
@@ -1280,10 +1575,6 @@
 				"oniris/index.php"
 			],
 			[
-				"mixin",
-				"oniris/scss/_mixins.scss"
-			],
-			[
 				"bas",
 				"oniris/scss/_basic.scss"
 			],
@@ -1306,10 +1597,6 @@
 			[
 				"font",
 				"oniris/scss/_font.scss"
-			],
-			[
-				"hea",
-				"oniris/header.php"
 			],
 			[
 				"fle",

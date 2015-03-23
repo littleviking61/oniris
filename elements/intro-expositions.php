@@ -1,6 +1,6 @@
 <?php 
 	$artistes = get_field('relation_artistes');
-
+	$dateformatstring = "d F";
 ?>
 
 <div class="row"><h2 class="flex-3"><?= get_field('nom') ?></h2></div>
@@ -11,6 +11,12 @@
 			<hr>
 			<?php if (get_field('intitule')): ?>
 				<h4 class="intitule"><?php do_shortcode(the_field('intitule')) ?></h4>
+				<hr>
+			<?php else: ?>
+				<h4>
+					du <?= date_i18n($dateformatstring, strtotime(get_field('date_de_debut'))) ?><br>
+					au <?= date_i18n($dateformatstring, strtotime(get_field('date_de_fin'))) ?>
+				</h4>
 				<hr>
 			<?php endif ?>
 

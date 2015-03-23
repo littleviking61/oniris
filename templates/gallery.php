@@ -99,7 +99,7 @@
 							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
 						<?php } ?>
 					</a>
-					<?php if($i >= $limitImage) break; ?>
+					<?php if($i >= $limitImage && $limitImage !== -1) break; ?>
 				<?php endforeach ?>
 
 			</div>

@@ -179,6 +179,8 @@
 			padding-left: 0;
 			font-family: $title-font;
 			font-size: $ft-size-medium;
+
+			@include column-count(2);
 		}
 	}
 }

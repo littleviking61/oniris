@@ -3,6 +3,7 @@
 	$artisteID = get_the_id();
 	$longevitee = get_field('longevitee') ?: 0;
 	$period = $longevitee > 0 ? [date('Ymd', strtotime("-{$longevitee} month")), date('Ymd')] : null;
+	$dateformatstring = "d F";
 	// args  
 	$args = [
 		'numberposts' => -1,
@@ -55,7 +56,14 @@
 							<p>
 								<i><?php the_field('nom') ?></i>
 							</p>
-							<?php the_field('intitule') ?>
+							<?php if (get_field('intitule')): ?>
+								<p class="intitule"><?php do_shortcode(the_field('intitule')) ?></p>
+							<?php else: ?>
+								<p>
+									du <?= date_i18n($dateformatstring, strtotime(get_field('date_de_debut'))) ?><br>
+									au <?= date_i18n($dateformatstring, strtotime(get_field('date_de_fin'))) ?>
+								</p>
+							<?php endif ?>
 						</div>
 					</a>
 				</li>
