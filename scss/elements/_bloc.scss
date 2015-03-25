@@ -149,7 +149,7 @@
 		}
 	}
 
-	&.expo{
+	.expo &{
 		display: block;
 		
 		.detail{
@@ -174,15 +174,23 @@
 			}
 		}
 
-		.artistes{
-			list-style: none;
-			padding-left: 0;
-			font-family: $title-font;
-			font-size: $ft-size-medium;
-
-			@include column-count(2);
-		}
 	}
+	
+}
+
+.foire, .expo{
+	.artistes{
+		float: left;
+	}
+}
+
+ul.artistes{
+	list-style: none;
+	padding-left: 0;
+	font-family: $title-font;
+	font-size: $ft-size-medium;
+
+	@include column-count(2);
 }
 
 .videos{

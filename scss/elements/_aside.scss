@@ -58,14 +58,17 @@ aside.main{
 			
 			.sub-menu{
 				display: none;
+				width: 100%;
 				margin: $gutter-small 0;
 
 				li{
 					margin-bottom: $gutter-mini;
 					
 					a{
+						display: block;
 						padding-left: $gutter-small;
 						border-left: $border-width solid transparent;
+						@include ellipsis();
 					}
 					// @include colors("a:hover", null, ".sub-menu li", "");
 

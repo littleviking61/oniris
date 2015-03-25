@@ -4,8 +4,8 @@
 ?>
 
 <div class="row"><h2 class="flex-3"><?= get_field('nom') ?></h2></div>
-<div class="row start">
-	<section class="flex-3 intro expo">
+<div class="row start expo">
+	<section class="flex-2 grow intro">
 
 		<?php if (count($artistes) > 1): ?>
 			<hr>
@@ -40,7 +40,7 @@
 				
 				<hr>
 				<?php if (get_field('intitule')): ?>
-					<h4 class="intitule"><?php do_shortcode(the_field('intitule')) ?></h4>
+					<h4 class="intitule"><?= do_shortcode(get_field('intitule')) ?></h4>
 					<hr>
 				<?php endif ?>
 

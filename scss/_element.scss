@@ -103,6 +103,16 @@ form{
 	}
 }
 
+.cover{
+	@include align-self(stretch);
+	margin-right: $gutter-large;
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
 /* list bloc */
 
 .post-it, %post-it{

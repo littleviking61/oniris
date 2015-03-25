@@ -1,5 +1,6 @@
 <?php
 require_once('lib/reverie.php');
+require_once('lib/bbcode.php');
 
 /**********************
 Add theme supports
@@ -145,11 +146,11 @@ function the_nav_section($pageId, $args = [], $result)
 
 						<?php if (get_field('visible', $post->ID) == 'true'): ?>
 							<li class="<?= $post->ID == $currentId ? 'current' : null ?> <?= ''//get_field('category', $post->ID) ?>">
-								<a href="<?= get_permalink($post->ID) ?>">
-									<?php 
-										$text = isset($result)
-											? get_field($result, $post->ID)
-											: $post->post_title; ?>
+								<?php 
+									$text = isset($result)
+										? get_field($result, $post->ID)
+										: $post->post_title; ?>
+								<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
 									<?= apply_filters('the_title', $text) ?>
 								</a>
 							</li>

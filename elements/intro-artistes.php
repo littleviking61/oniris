@@ -1,5 +1,5 @@
 <h2><?= get_field('prenom') . ' ' . get_field('nom') ?></h2>
-<div class="row start">
+<div class="row start artiste">
 	<section class="flex-2 intro">
 		<div class="container">
 			<?php if( has_post_thumbnail() ): ?>

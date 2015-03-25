@@ -98,10 +98,8 @@ if( have_rows('contenu') ) :
     	unset($closeAtEnd);
     };
 
-else :
-
-  the_content();   
-
-endif;
-
-?>
+else : ?>
+  <div class="row">
+    <?php the_content(); ?>
+  </div>   
+<?php endif ?>
