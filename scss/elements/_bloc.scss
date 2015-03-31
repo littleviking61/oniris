@@ -150,12 +150,6 @@
 	}
 
 	.expositions &{
-		@extend %flex-row;
-
-		.relations{
-			margin-top: auto;
-		}
-
 		.detail{
 			@extend %flex-column;
 			margin-top: $gutter-large;
@@ -166,15 +160,6 @@
 				// width: 45%;
 				margin:	0;
 				margin-right: $gutter;
-			}
-		}
-
-		.intitule{
-			&,p {
-				font-weight: bold;
-				@include colors(&) {
-					color: $light-grey;
-				}
 			}
 		}
 	}
@@ -191,15 +176,6 @@
 	.artistes{
 		float: left;
 	}
-}
-
-ul.artistes{
-	list-style: none;
-	padding-left: 0;
-	font-family: $title-font;
-	font-size: $ft-size-medium;
-
-	@include column-count(2);
 }
 
 .video{
@@ -275,10 +251,9 @@ ul.artistes{
 }
 
 /* relationship */
-
-.relationship{
+.relationship, %relationship{
 	width: 100%;
-	margin-top: $gutter-large;
+	margin-top: $gutter-hudge;
 	text-align: center;
 
 	h5{
@@ -288,6 +263,26 @@ ul.artistes{
 	ul{
 		list-style: none;
 		padding-left: 0;
+
+		&.artistes{
+			list-style: none;
+			padding-left: 0;
+			font-family: $title-font;
+			font-size: $ft-size-medium;
+
+			@include column-count(2);
+		}
+
+		&:after{
+			content: "";
+			display: block;
+			width: $gutter-large;
+			height: $one;
+			@include colors(&, "bg") {
+				background-color: $lighter-grey;
+			};
+			margin: 0 auto;
+		}
 	}
 
 	li{
@@ -310,6 +305,28 @@ ul.artistes{
 		}
 	}
 
+}
+
+.relations{
+	@extend %relationship;
+
+	ul:before, ul:after{
+		content: "";
+		display: block;
+		width: $gutter-large;
+		height: $one;
+		@include colors(&, "bg") {
+			background-color: $lighter-grey;
+		};
+		margin: 0 auto;
+	}
+
+	li{
+		margin: $gutter-small 0; 
+		&:before{
+			display: none;
+		}
+	}
 }
 
 .short{

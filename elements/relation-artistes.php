@@ -1,6 +1,12 @@
 	<?php 
+	if (!is_null(get_field('relation_artistes')[0])) {
+		$artisteID = get_field('relation_artistes')[0];
+		$hideId = get_the_id();
+	}else{
+		$artisteID = get_the_id();
+		$hideId = null;
+	}
 
-	$artisteID = get_the_id();
 	$longevitee = get_field('longevitee') ?: 0;
 	$period = $longevitee > 0 ? [date('Ymd', strtotime("-{$longevitee} month")), date('Ymd')] : null;
 	$dateformatstring = "d F";
@@ -47,9 +53,10 @@
 	// The Loop ?>
 	<?php if( $the_query->have_posts() ): $i = 0; ?>
 		<div class="relationship">
-			<h5>Actualitées de l'artiste</h5>
+			<h5><?= __('Actualitées de l\'artiste') ?></h5>
 			<ul>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
+				<?php if ($hideId === get_the_id()) continue; ?>
 				<li>
 					<a href="<?php the_permalink(); ?>">
 						<div class="short">
@@ -57,7 +64,7 @@
 								<i><?php the_field('nom') ?></i>
 							</p>
 							<?php if (get_field('intitule')): ?>
-								<p class="intitule"><?php do_shortcode(the_field('intitule')) ?></p>
+								<p><?php do_shortcode(the_field('intitule')) ?></p>
 							<?php else: ?>
 								<p>
 									du <?= date_i18n("d F", strtotime(get_field('date_de_debut'))) ?><br>
