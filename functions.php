@@ -140,7 +140,12 @@ function the_nav_section($pageId, $args = [], $result)
 
 	<ul class="nav-section">
 		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current' : null ?>">
-			<a href="<?= get_permalink($pageId) ?>"><?= get_the_title($pageId) ?></a>
+			<a href="<?= get_permalink($pageId) ?>">
+				<?php if(get_field('icon-menu', $pageId)) : ?>
+					<i class="<?= get_field('icon-menu', $pageId) ?>"></i>
+				<?php endif ?>
+				<span><?= get_the_title($pageId) ?></span>
+			</a>
 			<ul class="sub-menu">
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 

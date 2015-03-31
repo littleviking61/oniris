@@ -29,12 +29,12 @@
 				'relation' => 'OR',
 				[
 					'key' => 'page_type_acf',
-					'value' => 'expositions',
+					'value' => 'foires',
 					'compare' => '='
 				],
 				[
 					'key' => 'page_type_acf',
-					'value' => 'foires',
+					'value' => 'expositions',
 					'compare' => '='
 				]
 			]
@@ -60,8 +60,8 @@
 								<p class="intitule"><?php do_shortcode(the_field('intitule')) ?></p>
 							<?php else: ?>
 								<p>
-									du <?= date_i18n($dateformatstring, strtotime(get_field('date_de_debut'))) ?><br>
-									au <?= date_i18n($dateformatstring, strtotime(get_field('date_de_fin'))) ?>
+									du <?= date_i18n("d F", strtotime(get_field('date_de_debut'))) ?><br>
+									au <?= date_i18n("d F Y", strtotime(get_field('date_de_fin'))) ?>
 								</p>
 							<?php endif ?>
 						</div>

@@ -149,9 +149,13 @@
 		}
 	}
 
-	.expo &{
-		display: block;
-		
+	.expositions &{
+		@extend %flex-row;
+
+		.relations{
+			margin-top: auto;
+		}
+
 		.detail{
 			@extend %flex-column;
 			margin-top: $gutter-large;
@@ -173,7 +177,12 @@
 				}
 			}
 		}
+	}
 
+	.foires &{
+		.thumbnail{
+
+		}
 	}
 	
 }
@@ -191,6 +200,12 @@ ul.artistes{
 	font-size: $ft-size-medium;
 
 	@include column-count(2);
+}
+
+.video{
+	iframe{
+		max-width: 100%;
+	}
 }
 
 .videos{

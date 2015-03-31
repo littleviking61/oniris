@@ -170,6 +170,10 @@ p{
 	}
 }
 
+.colored{
+	@include colors(&);
+}
+
 /* utilities class */
 
 .hide{

@@ -1,24 +1,26 @@
 <?php get_header(); ?>
 	
-	<div class="wrap">
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				
-				<?php if ( !empty(get_field('liste')) ) : ?>
-					
-					<?php get_template_part( 'loop', 'list' ); ?>
 
-				<?php else : ?>
+				<div class="wrap<?= ' '.get_field('page_type_acf') ?>">
+					<?php if ( !empty(get_field('liste')) ) : ?>
+						
+						<?php get_template_part( 'loop', 'list' ); ?>
 
-					<?php get_template_part( 'loop', 'flex' ); ?>
+					<?php else : ?>
 
-				<?php endif; ?>
+						<?php get_template_part( 'loop', 'flex' ); ?>
+
+					<?php endif; ?>
+				</div>
 
 			<?php endwhile; ?>
 			
 		<?php else : ?>
+			<div class="wrap">
 				<?php get_template_part( 'content', 'none' ); ?>
+			</div>
 		<?php endif; ?>
-	</div>
 
 <?php get_footer(); ?>

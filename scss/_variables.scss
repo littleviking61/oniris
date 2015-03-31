@@ -12,6 +12,8 @@ $grey: #353535;
 $yellow: #ffbc17;
 $red: #f23518;
 $blue: #0252cf;
+$violet: #8b008b;
+$turquoise:	#00bfff;
 $green: #42b04f;
 $progress: #ffbc16;
 
@@ -20,8 +22,8 @@ $categories:
 	(peinture, $blue),
 	(geometrie, $red),
 	(photographie, $green),
-	(multi, $yellow),
-	(sculpture, $yellow);
+	(multi, $violet),
+	(sculpture, $turquoise);
 
 $colors: () !global;
 $bgColors: () !global;

@@ -12,47 +12,51 @@ aside.main{
 			margin-top: $gutter-small;
 
 			> a{
-				@include single-transition(background-color, .4s);
-
-				display: inline-block;
-				background-color: white;
-
-				padding: $gutter-mini $gutter;
-				margin-bottom: $gutter-small;
-				
-				font-family: $title-font;
+				@include display-flex;
 				font-size: $ft-size-larger;
-				font-weight: bold;
-				text-transform: lowercase;
-
 				overflow: hidden;
-				&.icon-hover:after{
-					// color:$grey;
-					@include transform(rotate(0deg));
-				}
-				&:hover{
-					@include colors(&, "bg");
-					color: white;
+				width: 100%;
 
-					&:after{ 
-						max-width: rem-calc(25);
-						margin-left: $gutter-small;
-						margin-right: -$gutter-mini;
-						padding: $gutter-mini;
+				&:hover i{
+					max-width: 34px;
+					padding-left: 9px;
+					padding-right: 9px;
+					color: $grey;
+				}
+
+				span{
+					@include single-transition(background-color, .4s);
+
+					display: inline-block;
+					background-color: white;
+					padding: $gutter-mini $gutter;
+					margin-bottom: $gutter-small;
+					font-family: $title-font;
+					font-weight: bold;
+					text-transform: lowercase;
+					height: 34px;
+					color: $grey;
+
+					&:hover{
+						@include colors(&, "bg");
+						color: white;
 					}
 				}
 
-				&:after{
-					@extend %icon;
-					@extend .icon-angle-right:before;
-					@include transform(rotate(90deg));
-
-					@include single-transition(all, .2s);
-					display: inline-block;
-					overflow: hidden;
+				i{
+					@include single-transition(all, .2s, .2s);
+					@include order(2);
+					height: 34px;
 					max-width: 0;
-					height:rem-calc(25);
-					vertical-align: middle;
+					padding: 9px 0;
+					margin-left: $gutter-small;
+					overflow: hidden;
+					background-color: white;
+
+					&:hover{
+						@include colors(&, "bg");
+						color: white;
+					}
 				}
 			}
 			
@@ -81,7 +85,7 @@ aside.main{
 
 
 			&.current{
-				> a{
+				> a span{
 					@include colors(&, "bg");
 					color: white;
 				}

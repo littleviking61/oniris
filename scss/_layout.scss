@@ -1,4 +1,6 @@
 // layout.scss
+@include flex-grid();
+@include flex-grid(max);
 
 /* GENERAL BODY */
 
