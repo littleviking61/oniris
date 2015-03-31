@@ -1,5 +1,6 @@
-	<?php 
-	if (!is_null(get_field('relation_artistes')[0])) {
+	<?php
+
+	if (!empty(get_field('relation_artistes')[0])) {
 		$artisteID = get_field('relation_artistes')[0];
 		$hideId = get_the_id();
 	}else{

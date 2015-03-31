@@ -21,24 +21,23 @@
 			<?php endif ?>
 
 			<div class="detail">
-				<div class="thumbnail">
-					<?php if (has_post_thumbnail()): ?>
+				<?php if (has_post_thumbnail()): ?>
+					<div class="thumbnail">
 						<?php the_post_thumbnail('thumbnail'); ?>
-					<?php else : ?>
+					</div>
+				<?php elseif(has_post_thumbnail($artiste)) : ?>
+					<div class="thumbnail">
 						<?= get_the_post_thumbnail($artiste, 'thumbnail') ?>
-					<?php endif ?>
-				</div>
-				<?php if (get_field('courte_biographie')): ?>
-					<h5><?= do_shortcode(get_field('courte_biographie')) ?></h5>
+					</div>
+				<?php endif ?>
+
+				<?php if (get_field('sous_titre')): ?>
+					<h5><?= do_shortcode(get_field('sous_titre')) ?></h5>
 				<?php endif ?>
 			</div>
 
 			<div class="relations">
-				
-				<?php if (get_field('sous_titre')): ?>
-					<h5 class="uncolor"><?= do_shortcode(get_field('sous_titre')) ?></h5>
-				<?php endif ?>
-				
+				<h5><?= __('Artistes présents') ?></h5>
 				<ul class="artistes" style="width: 100%">
 					<?php foreach ($artistes as $artiste): ?>
 						<?php if (get_field('nom', $artiste)): ?>
@@ -54,7 +53,6 @@
 
 			<?php foreach ($artistes as $artiste): ?>
 				<h3><a href="<?= get_permalink($artiste) ?>"><?= get_field('prenom', $artiste) ?> <?= get_field('nom', $artiste) ?></a></h3>
-				
 				<hr>
 				<?php if (get_field('intitule')): ?>
 					<h4><?= do_shortcode(get_field('intitule')) ?></h4>
@@ -68,15 +66,18 @@
 				<?php endif ?>
 
 				<div class="detail">
-					<div class="thumbnail">
 					<?php if (has_post_thumbnail()): ?>
-						<?php the_post_thumbnail('thumbnail'); ?>
-					<?php else : ?>
-						<?= get_the_post_thumbnail($artiste, 'thumbnail') ?>
+						<div class="thumbnail">
+							<?php the_post_thumbnail('thumbnail'); ?>
+						</div>
+					<?php elseif(has_post_thumbnail($artiste)) : ?>
+						<div class="thumbnail">
+							<?= get_the_post_thumbnail($artiste, 'thumbnail') ?>
+						</div>
 					<?php endif ?>
-					</div>
-					<?php if (get_field('courte_biographie')): ?>
-						<h5><?= do_shortcode(get_field('courte_biographie')) ?></h5>
+					
+					<?php if (get_field('sous_titre')): ?>
+						<h5><?= do_shortcode(get_field('sous_titre')) ?></h5>
 					<?php endif ?>
 				</div>
 

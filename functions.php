@@ -1,6 +1,7 @@
 <?php
 require_once('lib/reverie.php');
 require_once('lib/bbcode.php');
+require_once('lib/favicon.php');
 
 /**********************
 Add theme supports
