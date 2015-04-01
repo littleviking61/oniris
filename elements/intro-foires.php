@@ -10,7 +10,7 @@
 		</div>
 	<?php endif ?>
 
-	<section class="intro max-3 flex-2">
+	<section class="intro flex-3">
 		<h2 class=""><?= get_field('nom') ?></h2>
 		<h3 class=""><?= get_field('lieu') ?></h3>
 		<hr>
@@ -30,3 +30,4 @@
 			<?= do_shortcode(get_field('infos_pratiques')) ?>
 		<?php endif ?>
 	</section>
+</div>

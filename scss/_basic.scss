@@ -32,7 +32,9 @@ a{
 	&:hover:not(.button), &.active{
 		@include colors(&);
 	}
-
+	&:focus{
+		outline: none;
+	}
 }
 
 .current-menu-item a{

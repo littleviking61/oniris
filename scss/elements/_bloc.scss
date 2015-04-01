@@ -185,19 +185,19 @@
 }
 
 .videos{
-	.videos-list{
+	ul{
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
 		@extend %flex-column-wrap;
 
 		li{
-			width: 50%;
-			padding: 0 $gutter $gutter 0;
+			margin-bottom: $gutter-medium;
+			// padding: 0 $gutter $gutter 0;
 
 			iframe{
-				max-width: 100%;
-				height: auto;
+				width: 100%;
+				// height: auto;
 			}
 		}	
 	}

@@ -15,7 +15,7 @@
 }
 
 @mixin flex-grid( $class: flex, $total-columns: 12, $prefix: ".", $percentage:false){
-  @for $i from 0 through $total-columns - 1 {
+  @for $i from 1 through $total-columns {
     #{$prefix}#{$class}-#{$i}{
       @if $class == max{
         max-width: ( grid-calc($i, $total-columns, $percentage) );
@@ -23,6 +23,14 @@
         @include flex-basis( grid-calc($i, $total-columns, $percentage) );
         width: ( grid-calc($i, $total-columns, $percentage) );
       }
+    }
+  }
+}
+
+@mixin block-grid( $class: ".block-grid", $total-columns: 6, $percentage:true){
+  @for $i from 1 through $total-columns {
+    #{$class}-#{$i} li{
+      width: #{100/$i}#{"%"};
     }
   }
 }

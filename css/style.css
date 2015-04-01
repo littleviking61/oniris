@@ -45,6 +45,8 @@ a {
     color: #8b008b; }
   .cat-sculpture a.active, .cat-sculpture .current-menu-item a, .current-menu-item .cat-sculpture a {
     color: #00bfff; }
+  a:focus {
+    outline: none; }
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
@@ -405,11 +407,6 @@ p {
 .icon-salon:before {
   content: "m"; }
 
-.flex-0 {
-  -webkit-flex-basis: -1.25rem;
-  flex-basis: -1.25rem;
-  width: -1.25rem; }
-
 .flex-1 {
   -webkit-flex-basis: 6.25rem;
   flex-basis: 6.25rem;
@@ -465,8 +462,10 @@ p {
   flex-basis: 81.25rem;
   width: 81.25rem; }
 
-.max-0 {
-  max-width: -1.25rem; }
+.flex-12 {
+  -webkit-flex-basis: 88.75rem;
+  flex-basis: 88.75rem;
+  width: 88.75rem; }
 
 .max-1 {
   max-width: 6.25rem; }
@@ -500,6 +499,27 @@ p {
 
 .max-11 {
   max-width: 81.25rem; }
+
+.max-12 {
+  max-width: 88.75rem; }
+
+.block-grid-1 li {
+  width: 100%; }
+
+.block-grid-2 li {
+  width: 50%; }
+
+.block-grid-3 li {
+  width: 33.33333%; }
+
+.block-grid-4 li {
+  width: 25%; }
+
+.block-grid-5 li {
+  width: 20%; }
+
+.block-grid-6 li {
+  width: 16.66667%; }
 
 /* GENERAL BODY */
 body {
@@ -564,7 +584,7 @@ main {
     padding-top: 0.9375rem;
     padding-left: 1.875rem;
     padding-right: 1.25rem;
-    width: 12.5rem; }
+    width: 13.4375rem; }
 
 .wrap section, .wrap > .col, .post-it, .actu a, .actu.highlight {
   margin-right: 1.25rem;
@@ -637,16 +657,16 @@ footer.main {
   display: none; }
 
 /* flex LAYOUT */
-header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .filter-tools .go-right, .videos .videos-list .go-right, .links ul .go-right, .list-page .go-right {
+header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .filter-tools .go-right, .videos ul .go-right, .links ul .go-right, .list-page .go-right {
   margin-left: auto; }
-header[role="banner"] .full, .wrap > section .full, .row .full, .filter-tools .full, .videos .videos-list .full, .links ul .full, .list-page .full, header[role="banner"] .grow, .wrap > section .grow, .row .grow, .filter-tools .grow, .videos .videos-list .grow, .links ul .grow, .list-page .grow {
+header[role="banner"] .full, .wrap > section .full, .row .full, .filter-tools .full, .videos ul .full, .links ul .full, .list-page .full, header[role="banner"] .grow, .wrap > section .grow, .row .grow, .filter-tools .grow, .videos ul .grow, .links ul .grow, .list-page .grow {
   -webkit-flex-grow: 1;
   flex-grow: 1; }
-header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .filter-tools .unbreak, .videos .videos-list .unbreak, .links ul .unbreak, .list-page .unbreak {
+header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .filter-tools .unbreak, .videos ul .unbreak, .links ul .unbreak, .list-page .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos .videos-list, .links ul, .list-page, header[role="banner"] nav ul, .button, button, .simple, .expositions .intro .detail {
+main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .list-page, header[role="banner"] nav ul, .button, button, .simple, .expositions .intro .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -662,7 +682,7 @@ body, .post-it, .actu a, .actu.highlight, aside.main .nav-section > li {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos .videos-list, .links ul, .list-page {
+header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .list-page {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -1198,16 +1218,14 @@ aside.main {
 .video iframe {
   max-width: 100%; }
 
-.videos .videos-list {
+.videos ul {
   list-style: none;
   padding-left: 0;
   margin: 0; }
-  .videos .videos-list li {
-    width: 50%;
-    padding: 0 0.625rem 0.625rem 0; }
-    .videos .videos-list li iframe {
-      max-width: 100%;
-      height: auto; }
+  .videos ul li {
+    margin-bottom: 0.9375rem; }
+    .videos ul li iframe {
+      width: 100%; }
 
 .links h3, .links h4 {
   color: #a6a6a6; }

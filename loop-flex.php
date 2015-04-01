@@ -5,7 +5,7 @@ $type = get_field('page_type_acf');
 
 if($type){
 	$hasIntro = get_template_file('elements/intro-'.$type);
-	if($hasIntro) $closeAfter = 1;
+	if($hasIntro && $type !== 'foires') $closeAfter = 1;
 }
 
 if(get_field('titre_alternatif') && !empty(get_field('titre_alternatif')) ) : ?>

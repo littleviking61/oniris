@@ -142,25 +142,20 @@ function debounce( fn, threshold ) {
 				subLinkUls = $('>ul', subLis);
 
 			subLinks.click(function(e){
-
-				if(!mouseIconHover){
+				$this = $(this);
+				console.log($('i:hover', $this).length);
+				if($('span:hover', $this).length > 0) {
 					e.preventDefault();
 					if (!$(this).next().hasClass('open')) {
 						subLinkUl = $(this).next('ul');
 
 						subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
 						subLinkUl.addClass('open').velocity("slideDown", { duration: 200 });
+					}else{
+						subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
 					}
-				}
-
-			}).mousemove(function(e){
-				mouseIconHover = this.offsetWidth - (e.pageX - this.offsetLeft) <= 30;
-				$(this).toggleClass('icon-hover', mouseIconHover);
+				}else return true;
 			});
-
-			// $('i', subLinks).hover(function(){
-			// 	console.log('test');
-			// });
 
 			$self.mouseenter(function(){
 				mouseIn = true;

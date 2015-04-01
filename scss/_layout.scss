@@ -1,6 +1,8 @@
 // layout.scss
 @include flex-grid();
 @include flex-grid(max);
+@include block-grid();
+
 
 /* GENERAL BODY */
 
@@ -80,7 +82,7 @@ main{
 		padding-top: $gutter-medium;
 		padding-left: $gutter-big;
 		padding-right: $gutter-large;
-		width: rem-calc(200);
+		width: rem-calc(215);
 	}
 }
 
