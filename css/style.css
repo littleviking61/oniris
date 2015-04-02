@@ -33,17 +33,17 @@ a {
     color: #8b008b; }
   .cat-sculpture a:hover:not(.button) {
     color: #00bfff; }
-  a.active, .current-menu-item a {
+  a.active, .current-menu-item > a {
     color: #ffbc17; }
-  .cat-peinture a.active, .cat-peinture .current-menu-item a, .current-menu-item .cat-peinture a {
+  .cat-peinture a.active, .cat-peinture .current-menu-item > a {
     color: #0252cf; }
-  .cat-geometrie a.active, .cat-geometrie .current-menu-item a, .current-menu-item .cat-geometrie a {
+  .cat-geometrie a.active, .cat-geometrie .current-menu-item > a {
     color: #f23518; }
-  .cat-photographie a.active, .cat-photographie .current-menu-item a, .current-menu-item .cat-photographie a {
+  .cat-photographie a.active, .cat-photographie .current-menu-item > a {
     color: #42b04f; }
-  .cat-multi a.active, .cat-multi .current-menu-item a, .current-menu-item .cat-multi a {
+  .cat-multi a.active, .cat-multi .current-menu-item > a {
     color: #8b008b; }
-  .cat-sculpture a.active, .cat-sculpture .current-menu-item a, .current-menu-item .cat-sculpture a {
+  .cat-sculpture a.active, .cat-sculpture .current-menu-item > a {
     color: #00bfff; }
   a:focus {
     outline: none; }
@@ -572,7 +572,7 @@ header[role="banner"] {
         border-bottom: solid 0.125rem transparent; }
         header[role="banner"] nav ul a i:before {
           margin-right: 0.3125rem; }
-      header[role="banner"] nav ul .current-menu-item a:not([href="#"]), header[role="banner"] nav ul a:hover:not([href="#"]), header[role="banner"] nav ul a.active:not([href="#"]), header[role="banner"] nav ul .current-menu-item a:not([href="#"]), .current-menu-item header[role="banner"] nav ul a:not([href="#"]) {
+      header[role="banner"] nav ul .current-menu-item a:not([href="#"]), header[role="banner"] nav ul a:hover:not([href="#"]), header[role="banner"] nav ul a.active:not([href="#"]), header[role="banner"] nav ul .current-menu-item > a:not([href="#"]) {
         border-bottom: solid 0.125rem;
         margin-bottom: 0.5rem; }
 
@@ -997,35 +997,35 @@ aside.main {
             -ms-text-overflow: ellipsis;
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis; }
-          aside.main .nav-section > li .sub-menu li.current a {
+          aside.main .nav-section > li .sub-menu li.current-menu-item a {
             display: block; }
-            aside.main .nav-section > li .sub-menu li.current a {
+            aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #ffbc17; }
-            .cat-peinture aside.main .nav-section > li .sub-menu li.current a {
+            .cat-peinture aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #0252cf; }
-            .cat-geometrie aside.main .nav-section > li .sub-menu li.current a {
+            .cat-geometrie aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #f23518; }
-            .cat-photographie aside.main .nav-section > li .sub-menu li.current a {
+            .cat-photographie aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #42b04f; }
-            .cat-multi aside.main .nav-section > li .sub-menu li.current a {
+            .cat-multi aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #8b008b; }
-            .cat-sculpture aside.main .nav-section > li .sub-menu li.current a {
+            .cat-sculpture aside.main .nav-section > li .sub-menu li.current-menu-item a {
               border-color: #00bfff; }
-      aside.main .nav-section > li.current > a span {
+      aside.main .nav-section > li.current-menu-item > a span {
         color: white; }
-        aside.main .nav-section > li.current > a span {
+        aside.main .nav-section > li.current-menu-item > a span {
           background-color: #ffbc17; }
-        .cat-peinture aside.main .nav-section > li.current > a span {
+        .cat-peinture aside.main .nav-section > li.current-menu-item > a span {
           background-color: #0252cf; }
-        .cat-geometrie aside.main .nav-section > li.current > a span {
+        .cat-geometrie aside.main .nav-section > li.current-menu-item > a span {
           background-color: #f23518; }
-        .cat-photographie aside.main .nav-section > li.current > a span {
+        .cat-photographie aside.main .nav-section > li.current-menu-item > a span {
           background-color: #42b04f; }
-        .cat-multi aside.main .nav-section > li.current > a span {
+        .cat-multi aside.main .nav-section > li.current-menu-item > a span {
           background-color: #8b008b; }
-        .cat-sculpture aside.main .nav-section > li.current > a span {
+        .cat-sculpture aside.main .nav-section > li.current-menu-item > a span {
           background-color: #00bfff; }
-      aside.main .nav-section > li.current > ul {
+      aside.main .nav-section > li.current-menu-item > ul {
         display: initial; }
 
 /* simple bloc */

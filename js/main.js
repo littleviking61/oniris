@@ -169,17 +169,17 @@ function debounce( fn, threshold ) {
 
 			function checkMouseLeave() {
 				if(!mouseIn) {
-					subLis.not('.current').children('ul').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
-					subLis.filter('.current').children('ul:not(.open)').addClass('open').velocity("slideDown", { duration: 200 });
+					subLis.not('.current-menu-item').children('ul').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
+					subLis.filter('.current-menu-item').children('ul:not(.open)').addClass('open').velocity("slideDown", { duration: 200 });
 				}
 			}
 
 			function init() {
-				current = $('> li.current', ul);
+				current = $('> li.current-menu-item', ul);
 				if (current.length > 0) {
 					$('> ul', current).addClass('open');
 				}else{
-					subLis.first().addClass('current').children('ul').addClass('open').velocity("slideDown", { duration: 200 });
+					// subLis.first().addClass('current').children('ul').addClass('open').velocity("slideDown", { duration: 200 });
 				}
 			}
 

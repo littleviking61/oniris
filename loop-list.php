@@ -1,37 +1,44 @@
-<?php $list = get_field('liste'); ?>
+<?php 
+	$list = get_field('liste'); 
+	$isotop = get_field('isotop');
+?>
 
 <header>
 	<h2><?= do_shortcode(get_field('titre_alternatif')) ?: get_the_title() ?></h2>
 </header>
-<div class="filter-tools">
-	<div class="isotop-links" data-filter-group="all">
-    <a href="#all" class="button check" data-filter="*">show all</a>
-  </div>
-  <div class="isotop-links" data-filter-group="cat">
-		<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie">geometrie</a>
-		<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture">peinture</a>
-		<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie">photographie</a>
-		<a href="#cat" class="button cat-multi check" data-filter=".cat-multi">multi</a>
-		<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture">sculpture</a>
-	</div>
-	<?php if ($list !== 'artiste'): ?>
-		<div class="isotop-links" data-filter-group="place">
-				<a href="#place" class="button check" data-filter='[data-place="in"]' data-place="in">in</a>
-				<a href="#place" class="button check" data-filter='[data-place="out"]' data-place="out">out</a>
-		</div>	
-		<div class="isotop-links" data-filter-group="type">
-				<a href="#place" class="button check" data-filter='[data-type="group"]' data-type="group">group</a>
-				<a href="#place" class="button check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
-		</div>	
-		<div class="isotop-links" data-filter-group="date">
-				<a href="#date" class="button check" data-filter='[data-date="upcoming"]' data-date="upcoming">upcoming</a>
-				<a href="#date" class="button check" data-filter='[data-date="now"]' data-date="now">now</a>
-				<a href="#date" class="button check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
+
+<?php if ( $isotop ): ?>
+	<div class="filter-tools">
+		<div class="isotop-links" data-filter-group="all">
+	    <a href="#all" class="button check" data-filter="*">show all</a>
+	  </div>
+	  <div class="isotop-links" data-filter-group="cat">
+			<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie">geometrie</a>
+			<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture">peinture</a>
+			<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie">photographie</a>
+			<a href="#cat" class="button cat-multi check" data-filter=".cat-multi">multi</a>
+			<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture">sculpture</a>
 		</div>
-	<?php endif ?>
-	<input type="text" id="quicksearch" placeholder="Search" />
-</div>
-<div class="list-page <?= get_field('isotop') ? 'isotop' : null ?> full">
+		<?php if ($list !== 'artiste'): ?>
+			<div class="isotop-links" data-filter-group="place">
+					<a href="#place" class="button check" data-filter='[data-place="in"]' data-place="in">in</a>
+					<a href="#place" class="button check" data-filter='[data-place="out"]' data-place="out">out</a>
+			</div>	
+			<div class="isotop-links" data-filter-group="type">
+					<a href="#place" class="button check" data-filter='[data-type="group"]' data-type="group">group</a>
+					<a href="#place" class="button check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
+			</div>	
+			<div class="isotop-links" data-filter-group="date">
+					<a href="#date" class="button check" data-filter='[data-date="upcoming"]' data-date="upcoming">upcoming</a>
+					<a href="#date" class="button check" data-filter='[data-date="now"]' data-date="now">now</a>
+					<a href="#date" class="button check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
+			</div>
+		<?php endif ?>
+		<input type="text" id="quicksearch" placeholder="Search" />
+	</div>
+<?php endif ?>
+
+<div class="list-page full<?php if($isotop) echo ' isotop' ?>">
 	<?php 
 		if($list == 'actu') {
 			$args = array(
@@ -43,7 +50,7 @@
 				'post_type'      => 'page',
 				'meta_key'       => get_field('meta_key'),
 				'orderby'        => get_field('type_de_meta'),
-				// 'order'          => 'ASC'
+				'order'          => 'ASC',
 				'posts_per_page' => -1
 			);
 		}
@@ -54,12 +61,7 @@
 		foreach ( $listPosts as $post ) :	 
 			setup_postdata( $post );
 			$post->class = 'flex-4';
-
-	  	if(file_exists(locate_template($template.'.php'))) {
-				get_template_part( $template );
-			}else{
-				get_template_part( 'elements/single' );
-			}
+			get_template_file($template, 'elements/single' );
 		
 		endforeach; wp_reset_postdata();
 	?>

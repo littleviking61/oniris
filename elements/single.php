@@ -1,6 +1,7 @@
-<?php if (!empty(get_field('name'))): ?>
-	<a href="<?php the_permalink() ?>" class="container flex-2 post-it artiste <?php the_field('category') ?>">
-		test<?php if( get_field('thumbnail') ): ?>
+<?php if (!empty(get_field('nom'))): ?>
+
+	<a href="<?php the_permalink() ?>" class="container flex-2 post-it <?php the_field('category') ?>">
+		<?php if( get_field('thumbnail') ): ?>
 			<div class="thumbnail">
 				<img src="<?= get_field('thumbnail') ?>" alt="">
 			</div>
@@ -10,7 +11,7 @@
 			<?php if( get_field('courte_biographie') ): ?>
 				<hr>
 				<div class="content">
-					<?php the_field('courte_biographie') ?>
+					<p><?= do_shortcode(get_field('courte_biographie')) ?></p>
 				</div>
 			<?php endif ?>
 		</div>

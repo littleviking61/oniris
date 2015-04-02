@@ -8,7 +8,7 @@
 			<h3><?= get_field('prenom') . ' ' . get_field('nom') ?></h3>
 			<hr>
 			<div class="content">
-				<?php the_field('courte_biographie') ?>
+				<p><?= do_shortcode(get_field('courte_biographie')) ?></p>
 			</div>
 		</div>
 	</a>

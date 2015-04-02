@@ -16,7 +16,7 @@
 		<hr>
 
 		<?php if (get_field('intitule')): ?>
-			<h4 class="intitule"><?php do_shortcode(the_field('intitule')) ?></h4>
+			<h4 class="intitule"><?= do_shortcode(get_field('intitule')) ?></h4>
 			<hr>
 		<?php else: ?>
 			<h4>

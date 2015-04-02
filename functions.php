@@ -67,44 +67,126 @@ function menu( $nav ){
 }
 		
 function replace( $a ){
-		$start = $a[ 1 ];
-		$classes = $a[ 2 ];
-		$rest = $a[ 3 ];
-		$text = $a[ 4 ];
-		$before = true;
-		
-		$class_array = explode( ' ', $classes );
-		$icon_class = array();
-		foreach( $class_array as $key => $val ){
-				if( 'icon' == substr( $val, 0, 4 ) ){
-						if( 'icon' == $val ){
-								unset( $class_array[ $key ] );
-						} elseif( 'icon-after' == $val ){
-								$before = false;
-								unset( $class_array[ $key ] );
-						} else {
-								$icon_class[] = $val;
-								unset( $class_array[ $key ] );
-						}
-				}
+	$start = $a[ 1 ];
+	$classes = $a[ 2 ];
+	$rest = $a[ 3 ];
+	$text = $a[ 4 ];
+	$before = true;
+
+	$class_array = explode( ' ', $classes );
+	$icon_class = array();
+	foreach( $class_array as $key => $val ){
+		if( 'icon' == substr( $val, 0, 4 ) ){
+			if( 'icon' == $val ){
+				unset( $class_array[ $key ] );
+			} elseif( 'icon-after' == $val ){
+				$before = false;
+				unset( $class_array[ $key ] );
+			} else {
+				$icon_class[] = $val;
+				unset( $class_array[ $key ] );
+			}
 		}
-		
-		if( !empty( $icon_class ) ){
-				$icon_class[] = 'icon';
+	}
+
+	if( !empty( $icon_class ) ){
+		$icon_class[] = 'icon';
 				//$settings = get_option( 'n9m-font-awesome-4-menus', $this->defaults );
-				if( $before ){
-						$newtext = '<i class="'.implode( ' ', $icon_class ).'"></i><span>'.$text.'</span>';
-				} else {
-						$newtext = '<span>'.$text.'</span><i class="'.implode( ' ', $icon_class ).'"></i>';
-				}
+		if( $before ){
+			$newtext = '<i class="'.implode( ' ', $icon_class ).'"></i><span>'.$text.'</span>';
 		} else {
-				$newtext = $text;
+			$newtext = '<span>'.$text.'</span><i class="'.implode( ' ', $icon_class ).'"></i>';
 		}
-		
-		$item = $start.implode( ' ', $class_array ).$rest.$newtext.'</a>';
-		return $item;
+	} else {
+		$newtext = $text;
+	}
+
+	$item = $start.implode( ' ', $class_array ).$rest.$newtext.'</a>';
+
+	return $item;
 }
 add_filter( 'wp_nav_menu' , 'menu', 10, 2 );
+
+add_action( 'walker_nav_menu_start_el', 'empty_nav_links_to_span', 10, 4 );
+function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {
+	$ancre = parse_url($item->url)["fragment"];
+
+	if ( !is_null($ancre) ) {
+		if($ancre === 'actuellement') {
+			$date = date('Ymd');
+			$args = [
+				'posts_per_page' => 1,
+				'post_type' => 'page',
+				'meta_query' => [
+					'relation' => 'AND',
+					[
+						'key' => 'a_la_galerie',
+						'value' => '1',
+						'compare' => '='
+					],
+					[
+						'key' => 'date_de_debut',
+						'value' => $date,
+		        'compare' => '<=',
+		        'type' => 'DATE'
+					],
+					[
+						'key' => 'date_de_fin',
+						'value' => $date,
+		        'compare' => '>=',
+		        'type' => 'DATE'
+					],
+					[
+						'key' => 'page_type_acf',
+						'value' => 'expositions',
+						'compare' => '='
+					]
+				]
+			];
+			$the_query = new WP_Query( $args );
+
+			if( $the_query->have_posts() ): while ( $the_query->have_posts() ) :  $the_query->the_post();
+					$lurl = get_permalink();
+			endwhile; endif;
+
+			if(!isset($lurl)) $item_output = '';
+			else $item_output = preg_replace( '/<a.*="?(.*)">/', "<a href='$lurl'>", $item_output );
+
+			wp_reset_query();
+
+		}elseif($ancre === 'discover') {
+			$args = [
+				'posts_per_page' => 1,
+				'orderby' => 'rand',
+				'post_type' => 'page',
+				'meta_query' => [
+					'relation' => 'AND',
+					[
+						'key' => 'visible',
+						'value' => 'true',
+						'compare' => '='
+					],
+					[
+						'key' => 'page_type_acf',
+						'value' => 'artistes',
+						'compare' => '='
+					]
+				]
+			];
+			$the_query = new WP_Query( $args );
+
+			if( $the_query->have_posts() ): while ( $the_query->have_posts() ) :  $the_query->the_post();
+					$lurl = get_permalink();
+			endwhile; endif;
+			
+			if(!isset($lurl)) $item_output = '';
+			else $item_output = preg_replace( '/<a.*="?(.*)">/', "<a href='$lurl'>", $item_output );
+
+			wp_reset_query();
+		}
+	}
+	return $item_output;
+}
 
 /**********************
 Body class
@@ -140,7 +222,7 @@ function the_nav_section($pageId, $args = [], $result)
 	?>
 
 	<ul class="nav-section">
-		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current' : null ?>">
+		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current-menu-item' : null ?>">
 			<a href="<?= get_permalink($pageId) ?>">
 				<?php if(get_field('icon-menu', $pageId)) : ?>
 					<i class="<?= get_field('icon-menu', $pageId) ?>"></i>
@@ -151,7 +233,7 @@ function the_nav_section($pageId, $args = [], $result)
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
 						<?php if (get_field('visible', $post->ID) == 'true'): ?>
-							<li class="<?= $post->ID == $currentId ? 'current' : null ?> <?= ''//get_field('category', $post->ID) ?>">
+							<li class="<?= $post->ID == $currentId ? 'current-menu-item' : null ?><?= ''//get_field('category', $post->ID) ?>">
 								<?php 
 									$text = isset($result)
 										? get_field($result, $post->ID)

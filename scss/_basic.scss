@@ -37,7 +37,7 @@ a{
 	}
 }
 
-.current-menu-item a{
+.current-menu-item > a{
 	@extend a.active;
 }
 

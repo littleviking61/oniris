@@ -65,7 +65,7 @@
 								<i><?php the_field('nom') ?></i>
 							</p>
 							<?php if (get_field('intitule')): ?>
-								<p><?php do_shortcode(the_field('intitule')) ?></p>
+								<p><?= do_shortcode(get_field('intitule')) ?></p>
 							<?php else: ?>
 								<p>
 									du <?= date_i18n("d F", strtotime(get_field('date_de_debut'))) ?><br>

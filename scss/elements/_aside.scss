@@ -76,7 +76,7 @@ aside.main{
 					}
 					// @include colors("a:hover", null, ".sub-menu li", "");
 
-					&.current a{
+					&.current-menu-item a{
 						display: block;
 						@include colors(&, "bd");
 					}
@@ -84,7 +84,7 @@ aside.main{
 			}
 
 
-			&.current{
+			&.current-menu-item{
 				> a span{
 					@include colors(&, "bg");
 					color: white;

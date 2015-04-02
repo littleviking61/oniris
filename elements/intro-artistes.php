@@ -8,7 +8,7 @@
 				</div>
 			<?php endif ?>
 			<div class="content">
-				<?php do_shortcode(the_field('courte_biographie')) ?>
+				<?= do_shortcode(get_field('courte_biographie')) ?>
 			</div>
 		</div>
 	  <?php get_template_file('elements/relation-'.get_field('page_type_acf')); ?>
