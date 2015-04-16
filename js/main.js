@@ -65,8 +65,6 @@ $(document).ready(function(){
 		  }, 200 ) );
 		});
 
-  
-
 		$('aside.main').nav();
 
 		$(".content .more").click(function(){
@@ -106,6 +104,16 @@ $(document).ready(function(){
 				}
 			}
 		});
+
+		$('[data-show]').click(function(e){
+			e.preventDefault();
+			cible = $($(this).data('show'));
+			if($(this).data('show') === '#aside'){
+				$('body').toggleClass('aside-open');
+			}
+			if(cible.length > 0) cible.toggleClass('open');
+		});
+
 });
 
 // debounce so filtering doesn't happen every millisecond

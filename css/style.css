@@ -320,6 +320,9 @@ p {
 .hide {
   display: none; }
 
+[data-show] {
+  cursor: pointer; }
+
 @font-face {
   font-family: "roboto";
   src: url("../ft/robotoslab-thin_0-webfont.eot");
@@ -556,25 +559,26 @@ header[role="banner"] {
     fill: #00bfff; }
   header[role="banner"] nav {
     margin-bottom: 0.9375rem; }
-    header[role="banner"] nav ul {
-      min-height: 2.125rem; }
-      header[role="banner"] nav ul a {
-        display: -webkit-flex;
-        display: flex;
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-        font-size: 0.875rem;
-        text-transform: lowercase;
-        padding-top: 0.3125rem;
-        margin: 0 0.625rem;
-        border-bottom: solid 0.125rem transparent; }
-        header[role="banner"] nav ul a i:before {
-          margin-right: 0.3125rem; }
-      header[role="banner"] nav ul .current-menu-item a, header[role="banner"] nav ul a:hover, header[role="banner"] nav ul a.active, header[role="banner"] nav ul .current-menu-item:not(.no-current) > a {
-        border-bottom: solid 0.125rem;
-        margin-bottom: 0.5rem; }
+
+header[role="banner"] nav ul, aside.main .quick-nav ul {
+  min-height: 2.125rem; }
+  header[role="banner"] nav ul a, aside.main .quick-nav ul a {
+    display: -webkit-flex;
+    display: flex;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+    padding-top: 0.3125rem;
+    margin: 0 0.625rem;
+    border-bottom: solid 0.125rem transparent; }
+    header[role="banner"] nav ul a i:before, aside.main .quick-nav ul a i:before {
+      margin-right: 0.3125rem; }
+  header[role="banner"] nav ul .current-menu-item a, aside.main .quick-nav ul .current-menu-item a, header[role="banner"] nav ul a:hover, aside.main .quick-nav ul a:hover, header[role="banner"] nav ul a.active, aside.main .quick-nav ul a.active, header[role="banner"] nav ul .current-menu-item:not(.no-current) > a, aside.main .quick-nav ul .current-menu-item:not(.no-current) > a {
+    border-bottom: solid 0.125rem;
+    margin-bottom: 0.5rem; }
 
 /* MAIN */
 main {
@@ -584,11 +588,14 @@ main {
     padding-top: 0.9375rem;
     padding-left: 1.875rem;
     padding-right: 1.25rem;
-    width: 13.4375rem; }
+    width: 13.4375rem;
+    z-index: 1; }
 
 .wrap section, .wrap > .col, .post-it, .actu a, .actu.highlight {
-  margin-right: 1.25rem;
   margin-bottom: 1.25rem; }
+  @media only screen and (min-width: 48rem) {
+    .wrap section, .wrap > .col, .post-it, .actu a, .actu.highlight {
+      margin-right: 1.25rem; } }
 
 .wrap {
   padding-top: 0.9375rem;
@@ -666,7 +673,7 @@ header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .filter
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .list-page, header[role="banner"] nav ul, .button, button, .simple, .expositions .intro .detail {
+main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .list-page, header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, .simple, .expositions .intro .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -686,7 +693,7 @@ header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > h
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-header[role="banner"] nav ul, .button, button {
+header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-items: center;
@@ -909,9 +916,11 @@ form input[type="submit"] {
 /* aside */
 aside.main {
   margin: 0; }
-  @media only screen and (max-width: 48rem) {
-    aside.main {
-      margin-left: -11.5625rem; } }
+  aside.main .quick-nav ul {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    align-items: flex-start; }
   aside.main .nav-section {
     margin: 0; }
     aside.main .nav-section > li {
@@ -1159,7 +1168,9 @@ aside.main {
 /* actu bloc */
 @media only screen and (max-width: 48rem) {
   .actus {
-    display: block; } }
+    display: block !important; }
+    .actus > * {
+      width: 100%; } }
 .actus section[class^="flex-"] {
   margin-bottom: 0; }
   .actus section[class^="flex-"]:hover .thumbnail {
@@ -2206,5 +2217,59 @@ body > .fotorama-special {
 
 .uncolor {
   color: #353535 !important; }
+
+.show-for-medium {
+  display: none; }
+
+@media only screen and (max-width: 48rem) {
+  .show-for-medium {
+    display: initial; }
+
+  header[role="banner"], .wrap {
+    -moz-transition: -moz-transform 0.4s;
+    -o-transition: -o-transform 0.4s;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s; }
+
+  .aside-open header[role="banner"], .aside-open .wrap {
+    transform: translate(11.5625rem); }
+
+  aside.main {
+    -moz-transition: margin-left 0.4s;
+    -o-transition: margin-left 0.4s;
+    -webkit-transition: margin-left 0.4s;
+    transition: margin-left 0.4s;
+    position: fixed;
+    background-color: #f2f2f2;
+    height: 100%;
+    top: 0;
+    margin-left: -11.5625rem;
+    margin-top: 1.25rem; }
+    aside.main.open {
+      margin-left: 0; }
+    .admin-bar aside.main {
+      margin-top: 3.75rem; }
+
+  .wrap {
+    margin-left: 1.875rem; }
+
+  header[role="banner"] {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center; }
+    header[role="banner"] .banner {
+      -webkit-flex-basis: initial;
+      flex-basis: initial;
+      margin-bottom: -0.9375rem; }
+      header[role="banner"] .banner .switch-lang {
+        display: none; }
+
+  [class*="flex-"] {
+    flex-basis: initial;
+    width: 100%; }
+
+  [class*="block-grid-"] li {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

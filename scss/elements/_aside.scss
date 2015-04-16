@@ -3,8 +3,12 @@
 aside.main{
 	margin: 0;
 
-	@media #{$medium-down} {
-		margin-left: -($aside-width - $gutter-big);
+	.quick-nav{
+		@extend %nav-menu;
+		ul{
+			@include flex-direction(column);
+  		@include align-items(flex-start);
+		}
 	}
 
 	.nav-section{

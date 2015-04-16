@@ -74,3 +74,4 @@ $break-medium: rem-calc(768);
 $break-large: rem-calc(1200);
 
 $medium-down: "#{$screen} and (max-width: #{$break-medium})";
+$medium-up: "#{$screen} and (min-width: #{$break-medium})";

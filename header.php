@@ -26,18 +26,22 @@
 				<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
 			</div>
 		</div>
+
 		<?php wp_nav_menu( array( 
 			'container' => 'nav',
 			'container_class' => 'main',
 			'theme_location' => 'primary' )); 
 		?>
 
+		<span class="show-for-medium" data-show="#aside"><?= __('Navigation rapide') ?></span>
+
 		<!-- End of Top-Bar -->
 	</header>
 
 	<main role="document">
 
-		<aside class="main">
+		<aside class="main" id="aside">
+
 			<?php 
 				wp_nav_menu( array( 
 					'container' => false,

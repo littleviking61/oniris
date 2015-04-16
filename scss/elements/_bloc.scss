@@ -83,7 +83,11 @@
 .actus{
 
 	@media #{$medium-down} {
-		display: block;
+		display: block !important;
+
+		> *{
+			width: 100%;
+		}
 	}
 
 	section[class^="flex-"]{

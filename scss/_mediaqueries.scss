@@ -1,10 +1,69 @@
 // media querie
 // 
 
-@media #{$medium-down}{
-	// aside.main{
-	// 	margin-left: -($aside-width - $gutter-big) ;
-	// }
+.show-for-medium{
+	display: none;
+}
 
-	// .actus
+@media #{$medium-down}{
+	
+	.show-for-medium{
+		display: initial;
+	}
+
+	header[role="banner"], .wrap{
+		@include single-transition(transform, .4s);
+	}
+
+	.aside-open{
+		header[role="banner"], .wrap{
+			transform: translate($aside-width - $gutter-big);
+		}
+	}
+
+	aside.main{
+		@include single-transition(margin-left, .4s);
+		position: fixed;
+		background-color: $lightest-grey;
+		height: 100%;
+		top: 0;
+		margin-left: -($aside-width - $gutter-big);
+		margin-top: $gutter-large;
+		
+		&.open{
+			margin-left: 0;
+		}
+
+		.admin-bar &{
+			margin-top: rem-calc(60);
+		}
+	}
+
+	.wrap{
+		margin-left: $gutter-big;
+	}
+
+	header[role="banner"]{
+		@include flex-direction(column);
+		@include align-items(center);
+
+		.banner{
+			@include flex-basis(initial);
+			margin-bottom: -($gutter-medium);
+			
+			.switch-lang{
+				display: none;
+				// text-align: center;
+			}
+		}
+	}
+
+	[class*="flex-"]{
+		flex-basis: initial;
+		width: 100%;
+	}
+
+	[class*="block-grid-"] li{
+		width: 100%;
+	}
 }
