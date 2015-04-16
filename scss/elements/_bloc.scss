@@ -81,12 +81,18 @@
 
 /* actu bloc */
 .actus{
+
+	@media #{$medium-down} {
+		display: block;
+	}
+
 	section[class^="flex-"]{
 		margin-bottom: 0;
 		&:hover .thumbnail{
 			max-height:0;
 		}
 	}
+
 	ul{
 		padding-left: 0;
 		list-style: none;
@@ -128,6 +134,7 @@
 
 	&.highlight{
 		margin-right: $gutter-medium;
+		margin-bottom: $gutter-medium;
 		.thumbnail{
 			max-height:none;
 		}

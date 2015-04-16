@@ -62,4 +62,15 @@ $border-width: rem-calc(3);
 $column-width: rem-calc(100);
 $column-gutter: $gutter-large;
 
+$aside-width: rem-calc(215);
+
 $small-actu-height: rem-calc(140);
+
+// media querie
+// 
+$screen: "only screen";
+$break-small: rem-calc(320);
+$break-medium: rem-calc(768);
+$break-large: rem-calc(1200);
+
+$medium-down: "#{$screen} and (max-width: #{$break-medium})";

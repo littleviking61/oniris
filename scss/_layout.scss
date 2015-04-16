@@ -61,11 +61,8 @@ header[role="banner"]{
 			}
 
 			.current-menu-item a, a:hover, a.active{
-				&:not([href="#"]) {
-					border-bottom: solid $two;
-					// @include colors(&, "bd");
-					margin-bottom: rem-calc(8);
-				}
+				border-bottom: solid $two;
+				margin-bottom: rem-calc(8);
 			}
 		}
 	}
@@ -82,7 +79,7 @@ main{
 		padding-top: $gutter-medium;
 		padding-left: $gutter-big;
 		padding-right: $gutter-large;
-		width: rem-calc(215);
+		width: $aside-width;
 	}
 }
 

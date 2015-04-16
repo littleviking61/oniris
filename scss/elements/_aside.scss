@@ -3,6 +3,10 @@
 aside.main{
 	margin: 0;
 
+	@media #{$medium-down} {
+		margin-left: -($aside-width - $gutter-big);
+	}
+
 	.nav-section{
 		margin: 0;
 
@@ -76,7 +80,7 @@ aside.main{
 					}
 					// @include colors("a:hover", null, ".sub-menu li", "");
 
-					&.current-menu-item a{
+					&.current-menu-item:not(.no-current) a{
 						display: block;
 						@include colors(&, "bd");
 					}
@@ -84,7 +88,7 @@ aside.main{
 			}
 
 
-			&.current-menu-item{
+			&.current-menu-item:not(.no-current){
 				> a span{
 					@include colors(&, "bg");
 					color: white;

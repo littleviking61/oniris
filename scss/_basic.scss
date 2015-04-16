@@ -37,7 +37,7 @@ a{
 	}
 }
 
-.current-menu-item > a{
+.current-menu-item:not(.no-current) > a{
 	@extend a.active;
 }
 

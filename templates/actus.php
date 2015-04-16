@@ -16,7 +16,6 @@
 	<?php if ($auto) {
 		$args = array( /*'category_name' => 'actu', */'orderby' => 'date', 'posts_per_page' => 6 );
 		$lastposts = get_posts( $args ); 
-		var_dump($lastposts);
 
 		foreach ( $lastposts as $post ) : 
 			setup_postdata( $post );
@@ -28,7 +27,7 @@
 		$enAvant = get_sub_field('en_avant');
 		foreach ( $enAvant as $post ) : 
 			setup_postdata( $post );
-			$post->class = 'flex-6';
+			$post->class = 'flex-4 grow max-6';
 			get_template_part('templates/actu-highlight');
 			wp_reset_postdata();
 		endforeach;

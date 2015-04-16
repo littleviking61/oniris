@@ -33,17 +33,17 @@ a {
     color: #8b008b; }
   .cat-sculpture a:hover:not(.button) {
     color: #00bfff; }
-  a.active, .current-menu-item > a {
+  a.active, .current-menu-item:not(.no-current) > a {
     color: #ffbc17; }
-  .cat-peinture a.active, .cat-peinture .current-menu-item > a {
+  .cat-peinture a.active, .cat-peinture .current-menu-item:not(.no-current) > a {
     color: #0252cf; }
-  .cat-geometrie a.active, .cat-geometrie .current-menu-item > a {
+  .cat-geometrie a.active, .cat-geometrie .current-menu-item:not(.no-current) > a {
     color: #f23518; }
-  .cat-photographie a.active, .cat-photographie .current-menu-item > a {
+  .cat-photographie a.active, .cat-photographie .current-menu-item:not(.no-current) > a {
     color: #42b04f; }
-  .cat-multi a.active, .cat-multi .current-menu-item > a {
+  .cat-multi a.active, .cat-multi .current-menu-item:not(.no-current) > a {
     color: #8b008b; }
-  .cat-sculpture a.active, .cat-sculpture .current-menu-item > a {
+  .cat-sculpture a.active, .cat-sculpture .current-menu-item:not(.no-current) > a {
     color: #00bfff; }
   a:focus {
     outline: none; }
@@ -572,7 +572,7 @@ header[role="banner"] {
         border-bottom: solid 0.125rem transparent; }
         header[role="banner"] nav ul a i:before {
           margin-right: 0.3125rem; }
-      header[role="banner"] nav ul .current-menu-item a:not([href="#"]), header[role="banner"] nav ul a:hover:not([href="#"]), header[role="banner"] nav ul a.active:not([href="#"]), header[role="banner"] nav ul .current-menu-item > a:not([href="#"]) {
+      header[role="banner"] nav ul .current-menu-item a, header[role="banner"] nav ul a:hover, header[role="banner"] nav ul a.active, header[role="banner"] nav ul .current-menu-item:not(.no-current) > a {
         border-bottom: solid 0.125rem;
         margin-bottom: 0.5rem; }
 
@@ -909,6 +909,9 @@ form input[type="submit"] {
 /* aside */
 aside.main {
   margin: 0; }
+  @media only screen and (max-width: 48rem) {
+    aside.main {
+      margin-left: -11.5625rem; } }
   aside.main .nav-section {
     margin: 0; }
     aside.main .nav-section > li {
@@ -997,35 +1000,35 @@ aside.main {
             -ms-text-overflow: ellipsis;
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis; }
-          aside.main .nav-section > li .sub-menu li.current-menu-item a {
+          aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
             display: block; }
-            aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #ffbc17; }
-            .cat-peinture aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            .cat-peinture aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #0252cf; }
-            .cat-geometrie aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            .cat-geometrie aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #f23518; }
-            .cat-photographie aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            .cat-photographie aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #42b04f; }
-            .cat-multi aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            .cat-multi aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #8b008b; }
-            .cat-sculpture aside.main .nav-section > li .sub-menu li.current-menu-item a {
+            .cat-sculpture aside.main .nav-section > li .sub-menu li.current-menu-item:not(.no-current) a {
               border-color: #00bfff; }
-      aside.main .nav-section > li.current-menu-item > a span {
+      aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
         color: white; }
-        aside.main .nav-section > li.current-menu-item > a span {
+        aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #ffbc17; }
-        .cat-peinture aside.main .nav-section > li.current-menu-item > a span {
+        .cat-peinture aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #0252cf; }
-        .cat-geometrie aside.main .nav-section > li.current-menu-item > a span {
+        .cat-geometrie aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #f23518; }
-        .cat-photographie aside.main .nav-section > li.current-menu-item > a span {
+        .cat-photographie aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #42b04f; }
-        .cat-multi aside.main .nav-section > li.current-menu-item > a span {
+        .cat-multi aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #8b008b; }
-        .cat-sculpture aside.main .nav-section > li.current-menu-item > a span {
+        .cat-sculpture aside.main .nav-section > li.current-menu-item:not(.no-current) > a span {
           background-color: #00bfff; }
-      aside.main .nav-section > li.current-menu-item > ul {
+      aside.main .nav-section > li.current-menu-item:not(.no-current) > ul {
         display: initial; }
 
 /* simple bloc */
@@ -1154,6 +1157,9 @@ aside.main {
     color: #00bfff; }
 
 /* actu bloc */
+@media only screen and (max-width: 48rem) {
+  .actus {
+    display: block; } }
 .actus section[class^="flex-"] {
   margin-bottom: 0; }
   .actus section[class^="flex-"]:hover .thumbnail {
@@ -1182,7 +1188,8 @@ aside.main {
 .actu:hover:not(.highlight) .thumbnail {
   max-height: 8.75rem !important; }
 .actu.highlight {
-  margin-right: 0.9375rem; }
+  margin-right: 0.9375rem;
+  margin-bottom: 0.9375rem; }
   .actu.highlight .thumbnail {
     max-height: none; }
 
