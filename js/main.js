@@ -107,11 +107,21 @@ $(document).ready(function(){
 
 		$('[data-show]').click(function(e){
 			e.preventDefault();
+			e.stopPropagation();
 			cible = $($(this).data('show'));
 			if($(this).data('show') === '#aside'){
 				$('body').toggleClass('aside-open');
 			}
 			if(cible.length > 0) cible.toggleClass('open');
+		});
+
+		$( document ).on( "click", ".aside-open", function(e) {
+		  $this = $(this);
+		  if($('#aside:hover').length === 0) {
+		  	console.log('oui');
+		  	$('body').removeClass('aside-open');
+	  		$('#aside').removeClass('open');
+		  }
 		});
 
 });
@@ -150,9 +160,10 @@ function debounce( fn, threshold ) {
 				subLinkUls = $('>ul', subLis);
 
 			subLinks.click(function(e){
+				e.stopPropagation();
 				$this = $(this);
-				console.log($('i:hover', $this).length);
-				if($('span:hover', $this).length > 0) {
+
+				if($('span:hover', $this).length > 0 && $this.next().hasClass('sub-menu') ) {
 					e.preventDefault();
 					if (!$(this).next().hasClass('open')) {
 						subLinkUl = $(this).next('ul');
@@ -163,6 +174,7 @@ function debounce( fn, threshold ) {
 						subLinkUls.filter('.open').removeClass('open').velocity("slideUp", { delay: 50, duration: 200 });
 					}
 				}else return true;
+
 			});
 
 			$self.mouseenter(function(){

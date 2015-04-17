@@ -29,11 +29,11 @@
 
 		<?php wp_nav_menu( array( 
 			'container' => 'nav',
-			'container_class' => 'main',
+			'container_class' => 'main hide-for-small',
 			'theme_location' => 'primary' )); 
 		?>
 
-		<span class="show-for-medium" data-show="#aside"><?= __('Navigation rapide') ?></span>
+		<span class="show-for-medium show-menu" data-show="#aside"><?= __('Navigation rapide') ?></span>
 
 		<!-- End of Top-Bar -->
 	</header>
@@ -42,24 +42,29 @@
 
 		<aside class="main" id="aside">
 
-			<?php 
-				wp_nav_menu( array( 
-					'container' => false,
-					'menu_class' => 'nav-section',
-					'theme_location' => 'secondary' )
-				);
-			
-				$args = [
-					'meta_key' => 'nom',
-					'orderby' => 'meta_value',
-					'order' => 'ASC'
-				];
+			<span class="show-for-medium close-menu" data-show="#aside"><i class="fa fa-times"></i></span>
+	
+			<?php wp_nav_menu( array( 
+				'container' => 'div',
+				'container_class' => 'quick-nav show-for-small',
+				'theme_location' => 'primary' )); 
 
-				the_nav_section(8, $args);
+			wp_nav_menu( array( 
+				'container' => false,
+				'menu_class' => 'nav-section',
+				'theme_location' => 'secondary' )
+			);
+		
+			$args = [
+				'meta_key' => 'nom',
+				'orderby' => 'meta_value',
+				'order' => 'ASC'
+			];
 
-				the_nav_section(1390, [], 'nom');
+			the_nav_section(8, $args);
 
-				the_nav_section(2191);
+			the_nav_section(1390, [], 'nom');
+
+			the_nav_section(2191);
 			?>
-
 		</aside>

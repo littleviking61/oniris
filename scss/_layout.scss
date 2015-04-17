@@ -12,8 +12,6 @@ body{
 	background-color: $bg-color;
 	font-family: $body-font;
 	font-size: $ft-size-normal;
-
-
 }
 
 
@@ -26,7 +24,7 @@ header[role="banner"]{
 	font-family: $title-font;	
 	padding: $gutter-big;
 	padding-bottom: 0;
-	margin-bottom: $gutter-medium;
+	padding-bottom: $gutter-medium;
 
 	.banner{
 		@include flex-shrink(0);
@@ -80,13 +78,14 @@ main{
 	@extend %flex-column;
 	@include flex(1);
 
-	aside.main{
-		padding-top: $gutter-medium;
-		padding-left: $gutter-big;
-		padding-right: $gutter-large;
-		width: $aside-width;
-		z-index: 1;
-	}
+}
+
+aside.main{
+	padding-top: $gutter-medium;
+	padding-left: $gutter-big;
+	padding-right: $gutter-large;
+	width: $aside-width;
+	z-index: 1;
 }
 
 %section-gutter{
