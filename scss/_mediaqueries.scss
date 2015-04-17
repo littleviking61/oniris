@@ -28,7 +28,7 @@
 	}
 
 	header[role="banner"]{
-		position: fixed;
+		position: absolute;
 		width: 100%;
 		z-index: 5;
 		background-color: $lightest-grey;
@@ -96,7 +96,7 @@
 		}
 
 		&:before{
-			position: absolute;
+			position: fixed;
 			content: "";
 			background-color: black;
 			z-index: 6;
@@ -117,6 +117,32 @@
 
 	[class*="block-grid-"] li{
 		width: 100%;
+	}
+
+	// headroom
+	header[role="banner"]{
+		@include single-transition(transform, .2s);
+
+		&.headroom--not-top.headroom--unpinned{
+			position: fixed;
+			@include transform(translateY(-100%));
+		}
+		
+		// &.headroom--unpinned{
+		// 	position: fixed;
+		// 	@include transform(translateY(-100%));
+		// }
+
+		&.headroom--pinned{
+			position: fixed;
+			@include transform(translateY(0));
+			top: 0;
+		}
+		
+		&.headroom--top{
+			position: absolute;
+			@include transform(translateY(0));
+		}
 	}
 }
 

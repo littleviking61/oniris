@@ -25,6 +25,9 @@ header[role="banner"]{
 	padding: $gutter-big;
 	padding-bottom: 0;
 	padding-bottom: $gutter-medium;
+	width: 100%;
+	background-color: $lightest-grey;
+	z-index: 8;
 
 	.banner{
 		@include flex-shrink(0);

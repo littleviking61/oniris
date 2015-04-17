@@ -3,8 +3,23 @@ $ = jQuery;
 
 $(document).ready(function(){
 
+		// grab an element
+		var elem = document.querySelector("header[role='banner']");
+		// construct an instance of Headroom, passing the element
+		var headroom = new Headroom(elem, {
+		  "offset": 0,
+		  "tolerance": 10,
+		  "classes": {
+		    // "initial": "animated",
+		    // "pinned": "swingInX",
+		    // "unpinned": "swingOutX"
+		  }
+		});
+
+		// initialise
+		headroom.init();
+
 		var $isotop = $('.isotop');
-		
 		$isotop.imagesLoaded( function() {
 			$listArticle = $isotop.isotope({
 				// options

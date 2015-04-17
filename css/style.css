@@ -537,7 +537,10 @@ header[role="banner"] {
   font-family: "roboto", serif;
   padding: 1.875rem;
   padding-bottom: 0;
-  padding-bottom: 0.9375rem; }
+  padding-bottom: 0.9375rem;
+  width: 100%;
+  background-color: #f2f2f2;
+  z-index: 8; }
   header[role="banner"] .banner {
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
@@ -2273,7 +2276,7 @@ body > .fotorama-special {
     transition: transform 0.4s; }
 
   header[role="banner"] {
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 5;
     background-color: #f2f2f2;
@@ -2323,7 +2326,7 @@ body > .fotorama-special {
     .aside-open header[role="banner"] {
       padding-right: 1.5625rem; }
     .aside-open:before {
-      position: absolute;
+      position: fixed;
       content: "";
       background-color: black;
       z-index: 6;
@@ -2338,7 +2341,32 @@ body > .fotorama-special {
     width: 100%; }
 
   [class*="block-grid-"] li {
-    width: 100%; } }
+    width: 100%; }
+
+  header[role="banner"] {
+    -moz-transition: -moz-transform 0.2s;
+    -o-transition: -o-transform 0.2s;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s; }
+    header[role="banner"].headroom--not-top.headroom--unpinned {
+      position: fixed;
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%); }
+    header[role="banner"].headroom--pinned {
+      position: fixed;
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      top: 0; }
+    header[role="banner"].headroom--top {
+      position: absolute;
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0); } }
 @media only screen and (max-width: 28.75rem) {
   .hide-for-small {
     display: none; }

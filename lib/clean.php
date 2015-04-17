@@ -123,6 +123,7 @@ function reverie_scripts_and_styles() {
     wp_register_script( 'velocity-ui-js', get_template_directory_uri() . '/js/vendor/velocity.ui.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'isotop-js', get_template_directory_uri() . '/js/vendor/isotope.pkgd.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'modal-js', get_template_directory_uri() . '/js/vendor/jquery.magnific-popup.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'headroom-js', get_template_directory_uri() . '/js/vendor/headroom.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'main-js', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '', true );
 
     global $is_IE;
@@ -147,6 +148,7 @@ function reverie_scripts_and_styles() {
     wp_enqueue_script( 'velocity-ui-js' );
     wp_enqueue_script( 'isotop-js' );
     wp_enqueue_script( 'modal-js' );
+    wp_enqueue_script( 'headroom-js' );
     wp_enqueue_script( 'main-js' );
   }
 }
