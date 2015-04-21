@@ -11,18 +11,20 @@
 				<?php the_post_thumbnail('medium') ?>
 			</div>
 		<?php endif ?>
-		<?php if( get_field('intitule') ): ?>
-			<h5><?= do_shortcode(get_field('intitule')) ?></h5>
-		<?php endif ?>
-		<h2><?= get_field('titre') ?></h2>
-		<?php if( get_field('sous_titre') ): ?>
-			<h3><?= do_shortcode(get_field('sous_titre')) ?></h3>
-		<?php endif ?>
-		<?php if( get_field('resume') ): ?>
-			<hr>
-			<div class="content">
-				<p><?= do_shortcode(get_field('resume')) ?></p>
-			</div>
-		<?php endif ?>
+		<div class="details">
+			<?php if( get_field('intitule') ): ?>
+				<h5><?= do_shortcode(get_field('intitule')) ?></h5>
+			<?php endif ?>
+			<h2><?= get_field('titre') ?></h2>
+			<?php if( get_field('sous_titre') ): ?>
+				<h3><?= do_shortcode(get_field('sous_titre')) ?></h3>
+			<?php endif ?>
+			<?php if( get_field('resume') ): ?>
+				<hr>
+				<div class="content">
+					<p><?= do_shortcode(get_field('resume')) ?></p>
+				</div>
+			<?php endif ?>
+		</div>
 	</a>
 <?php endif ?>

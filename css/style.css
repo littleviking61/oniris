@@ -1235,32 +1235,49 @@ aside.main {
   margin-bottom: 0.9375rem; }
   .actu.highlight .thumbnail {
     max-height: none; }
+@media only screen and (max-width: 48rem) {
+  .actu a, .actu.highlight {
+    -webkit-flex-direction: row;
+    flex-direction: row; }
+    .actu a .thumbnail, .actu.highlight .thumbnail {
+      max-height: 8.75rem !important;
+      width: 40%;
+      margin: 0;
+      border: 0;
+      margin-right: 15px;
+      align-items: stretch; } }
 
 /* intro bloc */
-.intro .content {
-  font-family: "roboto", serif;
-  text-align: center;
-  padding: 1.25rem 0 0.9375rem; }
-  .intro .content p {
-    color: #ffbc17; }
-  .cat-peinture .intro .content p {
-    color: #0252cf; }
-  .cat-geometrie .intro .content p {
-    color: #f23518; }
-  .cat-photographie .intro .content p {
-    color: #42b04f; }
-  .cat-multi .intro .content p {
-    color: #8b008b; }
-  .cat-sculpture .intro .content p {
-    color: #00bfff; }
-.expositions .intro .detail {
-  margin-top: 1.25rem; }
-  .expositions .intro .detail .thumbnail {
-    border: none;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    margin: 0;
-    margin-right: 0.625rem; }
+.intro {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  display: flex; }
+  .intro .content {
+    font-family: "roboto", serif;
+    text-align: center;
+    padding: 1.25rem 0 0.9375rem; }
+    .intro .content p {
+      color: #ffbc17; }
+    .cat-peinture .intro .content p {
+      color: #0252cf; }
+    .cat-geometrie .intro .content p {
+      color: #f23518; }
+    .cat-photographie .intro .content p {
+      color: #42b04f; }
+    .cat-multi .intro .content p {
+      color: #8b008b; }
+    .cat-sculpture .intro .content p {
+      color: #00bfff; }
+  .expositions .intro .detail {
+    margin-top: 1.25rem; }
+    .expositions .intro .detail .thumbnail {
+      border: none;
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+      margin: 0;
+      margin-right: 0.625rem; }
 
 .foire .artistes, .expo .artistes {
   float: left; }

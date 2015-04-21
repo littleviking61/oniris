@@ -3,8 +3,13 @@
 	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
-	$flex = $width > 0 ? 'flex-' . $width : 'flex-7';
 	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
+
+	if($width === "0" || $width === 0) $flex = 'flex-5 grow max-7';
+	elseif ( count(explode(',', $width)) > 1) {
+		$width = explode(',', $width);
+		$flex = 'flex-' . $width[0] . ' grow max-' . $width[1]; 
+	} else $flex = 'flex-' . $width;
 	
 	global $nggdb; 
 	$gallery = 
