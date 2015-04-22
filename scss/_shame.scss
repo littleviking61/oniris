@@ -21,3 +21,18 @@ body > .fotorama-special{
 .uncolor{
 	color: $grey !important;
 }
+
+
+/* utilities class */
+
+.hide{
+	display: none;
+}
+
+.hidden{
+	display: none !important;
+}
+
+[data-show]{
+	cursor: pointer;
+}

@@ -175,13 +175,3 @@ p{
 .colored{
 	@include colors(&);
 }
-
-/* utilities class */
-
-.hide{
-	display: none;
-}
-
-[data-show]{
-	cursor: pointer;
-}

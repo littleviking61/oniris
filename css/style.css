@@ -316,13 +316,6 @@ p {
 .cat-sculpture .colored {
   color: #00bfff; }
 
-/* utilities class */
-.hide {
-  display: none; }
-
-[data-show] {
-  cursor: pointer; }
-
 @font-face {
   font-family: "roboto";
   src: url("../ft/robotoslab-thin_0-webfont.eot");
@@ -398,7 +391,7 @@ p {
 .icon-angle-right:before {
   content: "i"; }
 
-.icon-actu:before {
+.icon-salon:before {
   content: "j"; }
 
 .icon-expo:before {
@@ -407,8 +400,23 @@ p {
 .icon-artiste:before {
   content: "l"; }
 
-.icon-salon:before {
+.icon-actu:before {
   content: "m"; }
+
+.icon-peinture:before {
+  content: "n"; }
+
+.icon-photo:before {
+  content: "o"; }
+
+.icon-sculpture:before {
+  content: "p"; }
+
+.icon-geo:before {
+  content: "q"; }
+
+.icon-mixte:before {
+  content: "r"; }
 
 .flex-1 {
   -webkit-flex-basis: 6.25rem;
@@ -826,19 +834,35 @@ form input[type="submit"] {
   .filter-tools .isotop-links {
     margin-right: 1.25rem; }
     .filter-tools .isotop-links a {
-      margin-right: 0.3125rem; }
+      background-color: transparent;
+      margin-right: 0.3125rem;
+      font-family: "roboto", serif; }
       .filter-tools .isotop-links a.cat-peinture {
-        background-color: #0252cf; }
+        color: #0252cf; }
       .filter-tools .isotop-links a.cat-geometrie {
-        background-color: #f23518; }
+        color: #f23518; }
       .filter-tools .isotop-links a.cat-photographie {
-        background-color: #42b04f; }
+        color: #42b04f; }
       .filter-tools .isotop-links a.cat-multi {
-        background-color: #8b008b; }
+        color: #8b008b; }
       .filter-tools .isotop-links a.cat-sculpture {
-        background-color: #00bfff; }
+        color: #00bfff; }
+      .filter-tools .isotop-links a i {
+        margin-left: 0;
+        font-size: 1.2em; }
+      .filter-tools .isotop-links a:first-child {
+        padding-left: 0; }
       .filter-tools .isotop-links a:not(.check) {
-        background-color: #737373; }
+        color: #737373; }
+  .filter-tools .quicksearch {
+    margin-left: auto; }
+    .filter-tools .quicksearch input {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      text-align: center;
+      border: 0.125rem white solid;
+      background-color: transparent;
+      padding: 0.3125rem; }
 
 /* thumbnail */
 .thumbnail {
@@ -2266,6 +2290,16 @@ body > .fotorama-special {
 
 .uncolor {
   color: #353535 !important; }
+
+/* utilities class */
+.hide {
+  display: none; }
+
+.hidden {
+  display: none !important; }
+
+[data-show] {
+  cursor: pointer; }
 
 .show-for-medium {
   display: none; }

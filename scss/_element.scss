@@ -75,13 +75,36 @@ form{
 		@extend %flex-column-wrap;
 		
 		a{
+			background-color: transparent;
 			margin-right: $gutter-small;
-			@include colors("", "bg", &);
+			font-family: $title-font;
+			@include colors("", null, &);
+
+			i{
+				margin-left: 0;
+				font-size: 1.2em;
+			}
+
+			&:first-child{
+				padding-left: 0;
+			}
+
 			&:not(.check) {
-				background-color: $light-grey;
+				color: $light-grey;
 			}
 		}
+	}
 
+	.quicksearch{
+		margin-left: auto;
+	
+		input{
+			@include appearance(none);
+			text-align: center;
+			border: $two white solid;
+			background-color: transparent;
+			padding: $gutter-small;
+		}
 	}
 }
 

@@ -9,15 +9,13 @@
 
 <?php if ( $isotop ): ?>
 	<div class="filter-tools">
-		<div class="isotop-links" data-filter-group="all">
-	    <a href="#all" class="button check" data-filter="*">show all</a>
-	  </div>
 	  <div class="isotop-links" data-filter-group="cat">
-			<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie">geometrie</a>
-			<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture">peinture</a>
-			<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie">photographie</a>
-			<a href="#cat" class="button cat-multi check" data-filter=".cat-multi">multi</a>
-			<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture">sculpture</a>
+			<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie"><i class="icon-geo"></i> geometrie</a>
+			<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture"><i class="icon-peinture"></i> peinture</a>
+			<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie"><i class="icon-photo"></i> photographie</a>
+			<a href="#cat" class="button cat-multi check" data-filter=".cat-multi"><i class="icon-mixte"></i> multi</a>
+			<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture"><i class="icon-sculpture"></i> sculpture</a>
+	    <a href="#all" class="button check hide" data-filter="*"><i class="fa fa-refresh"></i></a>
 		</div>
 		<?php if ($list !== 'artiste'): ?>
 			<div class="isotop-links" data-filter-group="place">
@@ -34,7 +32,10 @@
 					<a href="#date" class="button check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
 			</div>
 		<?php endif ?>
-		<input type="text" id="quicksearch" placeholder="Search" />
+		<div class="quicksearch">
+			<input type="text" id="quicksearch" placeholder="<?= __('Rechercher') ?>" />
+		</div>
+		
 	</div>
 <?php endif ?>
 
