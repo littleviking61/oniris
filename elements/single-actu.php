@@ -1,6 +1,6 @@
 <?php 
 	$flex = 'flex-3'; 
-	$linkID =  get_field('lien')[0];
+	$linkID =  get_field('lien')[0] || get_field('lien_externe');
 	$specific = get_field('specific_details');
 	$actualDate = date('Ymd');
 

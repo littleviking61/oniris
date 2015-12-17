@@ -13,7 +13,7 @@
 	
 	$hasButton = get_sub_field('has_bouton');
 	$linkButton = get_sub_field('lien_btn');
-	$textButton = get_sub_field('texte_du_bouton');
+	$textButton = get_sub_field('texte_du_bouton') . get_sub_field('icon');
 
 	// $buttonPosition = get_sub_field('emplacement_du_bouton');
 ?>
@@ -37,17 +37,17 @@
 		<?php endif ?>
 	
 		<?php $text = apply_filters( 'the_content', get_sub_field('texte') ); ?>
-		<?php $text = str_replace('<p><!--more--></p>', '<a class="button right more" href="#more"><span>Lire </span><i class="icon-more"></i></a>', $text); ?>
-		<?php $text = str_replace('<!--more--></p>', '</p><a class="button right more" href="#more"><span>Lire </span><i class="icon-more"></i></a>', $text); ?>
+		<?php $text = str_replace('<p><!--more--></p>', '<a class="button right more" href="#more"><span>Lire </span><i class="fa fa-plus"></i></a>', $text); ?>
+		<?php $text = str_replace('<!--more--></p>', '</p><a class="button right more" href="#more"><span>Lire </span><i class="fa fa-plus"></i></a>', $text); ?>
 		<?= $text ?>
 
 		<?php if ($hasButton && !empty($linkButton) && !empty($textButton) ):
-			$plusPosition = strrpos($textButton, "+");
-			if($plusPosition == 0) :
-				$textButton = '<i class="icon-more"></i><span>' . substr($textButton, 1) . '</span>';
-			elseif($plusPosition == strlen($textButton) - 1) :
-				$textButton =  '<span>' . substr($textButton, 0, -1) . '</span><i class="icon-more"></i>';
-			endif ?>
+			// $plusPosition = strrpos($textButton, "+");
+			// if($plusPosition == 0) :
+			// 	$textButton = '<i class="icon-more"></i><span>' . substr($textButton, 1) . '</span>';
+			// elseif($plusPosition == strlen($textButton) - 1) :
+			// 	$textButton =  '<span>' . substr($textButton, 0, -1) . '</span><i class="icon-more"></i>';
+			// endif ?>
 			<a class="button right" href="<?= $linkButton ?>"><?= $textButton ?></a>
 		<?php endif ?>
 

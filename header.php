@@ -54,17 +54,15 @@
 				'menu_class' => 'nav-section',
 				'theme_location' => 'secondary' )
 			);
-		
-			$args = [
+
+			the_nav_section(8, [
 				'meta_key' => 'nom',
 				'orderby' => 'meta_value',
 				'order' => 'ASC'
-			];
-
-			the_nav_section(8, $args);
+			]);
 
 			the_nav_section(1390, [], 'nom');
 
-			the_nav_section(2191);
+			the_nav_section(2191, ['meta_key' => 'date_de_debut', 'orderby' => 'meta_value', 'order'	=> 'DESC']);
 			?>
 		</aside>

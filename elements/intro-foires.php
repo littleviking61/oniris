@@ -1,4 +1,6 @@
 <?php 
+	$width = get_field('largeur_du_bloc');
+	$flex = $width > 0 ? 'flex-' . $width : 'flex-3';
 	$artistes = get_field('relation_artistes');
 ?>
 
@@ -10,7 +12,7 @@
 		</div>
 	<?php endif ?>
 
-	<section class="intro flex-3">
+	<section class="intro <?= $flex ?>">
 		<h2 class=""><?= get_field('nom') ?></h2>
 		<h3 class=""><?= get_field('lieu') ?></h3>
 		<hr>
@@ -30,4 +32,3 @@
 			<?= do_shortcode(get_field('infos_pratiques')) ?>
 		<?php endif ?>
 	</section>
-</div>

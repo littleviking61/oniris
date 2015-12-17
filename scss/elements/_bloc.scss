@@ -165,9 +165,9 @@
 /* intro bloc */
 
 .intro{
-  @include flex-flow(row wrap);
- 	@include flex-grow(1);
-  display: flex;
+  // @include flex-flow(row wrap);
+ 	// @include flex-grow(1);
+  // display: flex;
 
 	.content{
 		font-family: $title-font;
@@ -216,12 +216,14 @@
 
 .videos{
 	ul{
+		width: 100%;
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
 		@extend %flex-column-wrap;
 
 		li{
+			min-width: 100%;
 			margin-bottom: $gutter-medium;
 			// padding: 0 $gutter $gutter 0;
 

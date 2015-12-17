@@ -1,6 +1,6 @@
 // layout.scss
 @include flex-grid();
-@include flex-grid(max);
+// @include flex-grid(max);
 @include block-grid();
 
 
@@ -151,8 +151,12 @@ aside.main{
 		@extend %section-gutter;
 	}
 
-	> .col{
+	.col{
 		@extend %section-gutter;
+
+		section{
+			margin-right: 0;
+		}
 
 		> [class*="flex-"]  {
 			@include flex-basis(initial);
@@ -184,7 +188,8 @@ aside.main{
 /* FOOTER */
 
 footer.main{
-	display: none;
+	padding-left: $aside-width;
+	// display: none;
 }
 
 /* flex LAYOUT */

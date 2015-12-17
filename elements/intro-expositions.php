@@ -1,12 +1,18 @@
 <?php 
+	$width = get_field('largeur_du_bloc');
+	$flex = $width > 0 ? 'flex-' . $width : 'flex-3';
 	$artistes = get_field('relation_artistes');
 ?>
 
-<div class="row"><h2 class="flex-3"><?= get_field('nom') ?></h2></div>
-<div class="row start">
-	<section class="flex-3 intro">
 
-		<?php if (count($artistes) > 1): ?>
+<?php if (count($artistes) > 1): ?>
+	<div class="row">
+		<h2>
+			<?= get_field('nom') ?>
+		</h2>
+	</div>
+	<div class="row start">
+		<section class="intro <?= $flex ?>">
 			<hr>
 
 			<?php if (get_field('intitule')): ?>
@@ -48,11 +54,20 @@
 					<?php endforeach ?>
 				</ul>
 			</div>
+		</section>
 
-		<?php else: ?>
+<?php else: ?>
 
-			<?php foreach ($artistes as $artiste): ?>
-				<h3><a href="<?= get_permalink($artiste) ?>"><?= get_field('prenom', $artiste) ?> <?= get_field('nom', $artiste) ?></a></h3>
+	<?php foreach ($artistes as $artiste): ?>
+		<div class="row">
+			<h2>
+				<a href="<?= get_permalink($artiste) ?>"><?= get_field('prenom', $artiste) ?> <?= get_field('nom', $artiste) ?></a>
+			</h2>
+		</div>
+		<div class="row start">
+			<section class="intro <?= $flex ?>">
+
+				<h3><?= get_field('nom') ?></h3>
 				<hr>
 				<?php if (get_field('intitule')): ?>
 					<h4><?= do_shortcode(get_field('intitule')) ?></h4>
@@ -68,11 +83,11 @@
 				<div class="detail">
 					<?php if (has_post_thumbnail()): ?>
 						<div class="thumbnail">
-							<?php the_post_thumbnail('thumbnail'); ?>
+							<?php the_post_thumbnail('small'); ?>
 						</div>
 					<?php elseif(has_post_thumbnail($artiste)) : ?>
 						<div class="thumbnail">
-							<?= get_the_post_thumbnail($artiste, 'thumbnail') ?>
+							<?= get_the_post_thumbnail($artiste, 'small') ?>
 						</div>
 					<?php endif ?>
 					
@@ -81,9 +96,9 @@
 					<?php endif ?>
 				</div>
 
-				<?php $test = 'ehoui'; get_template_file('elements/relation-artistes'); ?>
+			<!-- 	<?php get_template_file('elements/relation-artistes'); ?> -->
 			<?php endforeach ?>		
+		</section>
 
-		<?php endif ?>
+<?php endif ?>
 
-	</section>

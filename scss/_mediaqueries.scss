@@ -9,8 +9,12 @@
 	display: none;
 }
 
+body > header, body > footer, body > main{
+	max-width: $break-extra-large;
+}
+
 @media #{$medium-down}{
-	
+
 	.show-for-medium{
 		display: inherit;
 	}
@@ -77,6 +81,9 @@
 		padding-top: 0;
 		padding-right: $gutter;
 		padding-left: $gutter;
+
+		width: $break-small;
+		overflow: hidden;
 	}
 
 	main{

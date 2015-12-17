@@ -2,7 +2,7 @@
 
 /* button*/ 
 
-.button, button, %button{
+.button, button, %button, a.button{
 	@extend %flex-center-center;
 	@include single-transition(all, .2s);
 	border:none;
@@ -16,9 +16,10 @@
 		color: white;
 	};
 
-	&:hover{
+	&:hover,{
 		color: white;
 		@include colors(&, "bg");
+		text-decoration: none;
 
 		&.right{
 			padding-right: $gutter-large;
@@ -36,7 +37,7 @@
 
 	i:before{
 		display: block;
-		font-size: 1.6em;
+		// font-size: 1.2em;
 	}
 
 	i:first-child{

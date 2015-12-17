@@ -1,12 +1,16 @@
 	<?php
 
-	if (!empty(get_field('relation_artistes')[0])) {
+	// for bloc add manualy
+	if (!empty(get_sub_field('relation_artistes')[0])) {
+		$artisteID = get_sub_field('relation_artistes')[0];
+		$hideId = get_the_id();
+	}elseif (!empty(get_field('relation_artistes')[0])) {
 		$artisteID = get_field('relation_artistes')[0];
 		$hideId = get_the_id();
 	}else{
 		$artisteID = get_the_id();
 		$hideId = null;
-	}
+	};
 
 	$longevitee = get_field('longevitee') ?: 0;
 	$period = $longevitee > 0 ? [date('Ymd', strtotime("-{$longevitee} month")), date('Ymd')] : null;

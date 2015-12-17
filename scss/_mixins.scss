@@ -14,7 +14,7 @@
   }
 }
 
-@mixin flex-grid( $class: flex, $total-columns: 12, $prefix: ".", $percentage:false){
+@mixin flex-grid( $class: flex, $total-columns: 12, $prefix: ".", $percentage:true){
   @for $i from 1 through $total-columns {
     #{$prefix}#{$class}-#{$i}{
       @if $class == max{

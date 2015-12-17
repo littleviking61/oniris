@@ -17,7 +17,8 @@ function startup_theme_support() {
 		add_theme_support('menus');
 		register_nav_menus(array(
 				'primary' => __('Primary Navigation', 'reverie'),
-				'secondary' => __('Secondary Navigation', 'reverie')
+				'secondary' => __('Secondary Navigation', 'reverie'),
+				'social' => __('Social Navigation', 'reverie')
 		));
 }
 add_action('after_setup_theme', 'startup_theme_support'); /* end Reverie theme support */
@@ -288,6 +289,16 @@ add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
 add_filter('ngg_get_image_url', 'ngg_replace_plus_with_percenttwenty', 10, 3);
 function ngg_replace_plus_with_percenttwenty($url, $image, $size) {
     return str_replace('+', '%20', $url);
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+	acf_add_options_sub_page('Footer');
+	acf_add_options_sub_page('Newsletter');
+	acf_add_options_sub_page('Informations pratiques');
+	
 }
 
 ?>
