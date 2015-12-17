@@ -1,7 +1,7 @@
 <?php 
 	$class = $post->class; 
 	$id = $post->ID;
-	$linkID =  get_field('lien')[0] || get_field('lien_externe');
+	$linkID =  get_field('lien')[0];
 	$categorie = get_field('category', $linkID);
 
 ?>
@@ -9,7 +9,6 @@
 <?php if( get_field('titre') ): ?>
 	<li class="actu <?= $class ?> <?= $categorie ?>">
 		<a href="<?= get_permalink($linkID) ?>" class="container">
-		<?php var_dump($linkID); ?>
 			<?php if( has_post_thumbnail() ): ?>
 				<div class="thumbnail">
 					<?php the_post_thumbnail('small') ?>

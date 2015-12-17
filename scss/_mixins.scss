@@ -21,7 +21,7 @@
         max-width: ( grid-calc($i, $total-columns, $percentage) );
       } @else {
         @include flex-basis( grid-calc($i, $total-columns, $percentage) );
-        width: ( grid-calc($i, $total-columns, $percentage) );
+        width: calc( #{( grid-calc($i, $total-columns, $percentage) )} - #{(($i - 1)*$gutter-large)} );
       }
     }
   }

@@ -35,6 +35,12 @@
 		right: 0;
 	}
 
+	&.big{
+		font-size: $ft-size-largest;
+    // background-color: grey;
+    padding: 20px;
+	}
+
 	i:before{
 		display: block;
 		// font-size: 1.2em;
