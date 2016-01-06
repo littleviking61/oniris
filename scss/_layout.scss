@@ -154,6 +154,10 @@ aside.main{
 	.col{
 		@extend %section-gutter;
 
+		&[class*='flex-'] > [class*='flex-']{
+			width: auto;
+		}
+
 		section{
 			margin-right: 0;
 		}
@@ -166,7 +170,7 @@ aside.main{
 }
 
 .container{
-	padding: $gutter-medium;
+	padding: $gutter-large;
 	background-color: white;
 }
 

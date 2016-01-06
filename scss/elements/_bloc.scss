@@ -355,6 +355,16 @@
 	}
 }
 
+.galleryNg{
+
+	.selection > a{
+		margin-right: $gutter-small;
+		margin-bottom: $gutter-small;
+		display: inline-block;
+	}
+
+}
+
 .short{
 	b, strong{
 		// @include colors(&);

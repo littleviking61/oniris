@@ -605,6 +605,8 @@ aside.main {
     align-items: flex-start; }
     .wrap > section > header {
       width: 100%; }
+  .wrap .col[class*='flex-'] > [class*='flex-'] {
+    width: auto; }
   .wrap .col section {
     margin-right: 0; }
   .wrap .col > [class*="flex-"] {
@@ -613,7 +615,7 @@ aside.main {
     max-width: 100%; }
 
 .container {
-  padding: 0.9375rem;
+  padding: 1.25rem;
   background-color: white; }
 
 .row {
@@ -875,7 +877,7 @@ form input[type="submit"] {
 
 /* thumbnail */
 .thumbnail {
-  margin: -0.9375rem;
+  margin: -1.25rem;
   margin-bottom: 0.625rem;
   overflow: hidden;
   border-bottom: 0.1875rem solid; }
@@ -1507,6 +1509,11 @@ aside.main {
   margin: 0.3125rem 0; }
   .relations li:before {
     display: none; }
+
+.galleryNg .selection > a {
+  margin-right: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  display: inline-block; }
 
 /* fotorama */
 /* fotorama */

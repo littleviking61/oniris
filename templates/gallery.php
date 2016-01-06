@@ -3,6 +3,7 @@
 	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
 	$width = get_sub_field('largeur_du_bloc');
+	$nbCol = get_sub_field('nombre_de_colonne');
 	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
 
 	if($width === "0" || $width === 0) $flex = 'flex-5 grow max-7';
@@ -82,7 +83,7 @@
 					<h4><?= get_sub_field('titre') ?></h4>
 				<?php endif ?>
 				
-				<div class="selection">
+				<div class="selection bloc">
 					<?php foreach ($gallery as $image): 
 						$i++; 
 

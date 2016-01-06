@@ -18,7 +18,7 @@ if( have_rows('contenu') ) :
 
 				if( get_row_layout() == 'ligne'):
 
-					$width = get_sub_field('largeur_du_titre');
+					// $width = get_sub_field('largeur_du_titre');
 
 					// ferme la ligne suivante si infini ou nouvelle ligne avant la fin
 					if( (isset($closeAtEnd) && $closeAtEnd) || isset($closeAfter) ) {
@@ -27,7 +27,7 @@ if( have_rows('contenu') ) :
 					}
 
 					if(get_sub_field('nombre_de_bloc') > 0) {
-						// save number of bloc in this row
+					// 	// save number of bloc in this row
 						$closeAfter = get_sub_field('nombre_de_bloc');
 					}else{
 						// if number is infini
@@ -35,7 +35,7 @@ if( have_rows('contenu') ) :
 					};
 
 					// then open a row 
-					echo '<div class= "row '.get_sub_field('alignement').'">';
+					echo '<div class= "sep flex-12"></div>';
 				
 				elseif( get_row_layout() == 'col' ) :
 
