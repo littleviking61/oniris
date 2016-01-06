@@ -6,14 +6,16 @@
 
 <section class="links <?= $flex ?>">
 
-	<?php if( get_sub_field('titre_de_la_section') ): ?>
-		<h3><?= do_shortcode(get_sub_field('titre_de_la_section')) ?></h3>
-	<?php endif ?>
-	
-	<ul class="links-list">
-	    <?php foreach ($links as $link): ?>
-	    	<li class="link"><a href="<?= $link['link'] ?>"><?= wp_get_attachment_image( $link['image'], 'thumb' ); ?><h4><?= do_shortcode($link['titre']) ?></h4><p><?= do_shortcode($link['description']) ?></p></a></li>		
-	    <?php endforeach ?>
-	</ul>
+	<div class="contain">
+		<?php if( get_sub_field('titre_de_la_section') ): ?>
+			<h3><?= do_shortcode(get_sub_field('titre_de_la_section')) ?></h3>
+		<?php endif ?>
+		
+		<ul class="links-list">
+		    <?php foreach ($links as $link): ?>
+		    	<li class="link"><a href="<?= $link['link'] ?>"><?= wp_get_attachment_image( $link['image'], 'thumb' ); ?><h4><?= do_shortcode($link['titre']) ?></h4><p><?= do_shortcode($link['description']) ?></p></a></li>		
+		    <?php endforeach ?>
+		</ul>
+	</div>
 
 </section>

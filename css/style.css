@@ -567,11 +567,8 @@ aside.main {
   width: 13.4375rem;
   z-index: 1; }
 
-.wrap section, .wrap .col, .post-it, .actu a, .actu.highlight {
+.wrap section, .wrap .col, .post-it, .actu a {
   margin-bottom: 1.25rem; }
-  @media only screen and (min-width: 48rem) {
-    .wrap section, .wrap .col, .post-it, .actu a, .actu.highlight {
-      margin-right: 1.25rem; } }
 
 .wrap {
   padding-top: 0.9375rem;
@@ -644,6 +641,11 @@ footer.main {
 /* flex LAYOUT */
 header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .filter-tools .go-right, .videos ul .go-right, .links ul .go-right, .list-page .go-right {
   margin-left: auto; }
+header[role="banner"] .contain, .wrap > section .contain, .row .contain, .filter-tools .contain, .videos ul .contain, .links ul .contain, .list-page .contain {
+  width: -moz-calc(100% - 0.9375rem);
+  width: -webkit-calc(100% - 0.9375rem);
+  width: calc(100% - 0.9375rem);
+  margin-right: 0.9375rem; }
 header[role="banner"] .full, .wrap > section .full, .row .full, .filter-tools .full, .videos ul .full, .links ul .full, .list-page .full, header[role="banner"] .grow, .wrap > section .grow, .row .grow, .filter-tools .grow, .videos ul .grow, .links ul .grow, .list-page .grow {
   -webkit-flex-grow: 1;
   flex-grow: 1; }
@@ -661,7 +663,7 @@ main, .wrap, header[role="banner"], .wrap > section, .wrap > section > header, .
   -webkit-align-items: center;
   align-items: center; }
 
-body, .post-it, .actu a, .actu.highlight, aside.main .nav-section > li {
+body, .post-it, .actu a, aside.main .nav-section > li {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -908,12 +910,12 @@ form input[type="submit"] {
     height: auto; }
 
 /* list bloc */
-.post-it, .actu a, .actu.highlight {
+.post-it, .actu a {
   border: 0.0625rem dotted transparent; }
-  .post-it .thumbnail, .actu a .thumbnail, .actu.highlight .thumbnail {
+  .post-it .thumbnail, .actu a .thumbnail {
     margin: -1rem;
     margin-bottom: 0.625rem; }
-  .post-it.artiste .thumbnail, .actu a.artiste .thumbnail, .artiste.actu.highlight .thumbnail {
+  .post-it.artiste .thumbnail, .actu a.artiste .thumbnail {
     max-height: 8.4375rem; }
   .post-it:hover {
     border-color: #ffbc17; }
@@ -927,25 +929,25 @@ form input[type="submit"] {
     border-color: #8b008b; }
   .cat-sculpture.post-it:hover {
     border-color: #00bfff; }
-  .actu a:hover, .actu.highlight:hover {
+  .actu a:hover {
     border-color: #ffbc17; }
-  .actu a.cat-peinture:hover, .cat-peinture.actu.highlight:hover {
+  .actu a.cat-peinture:hover {
     border-color: #0252cf; }
-  .actu a.cat-geometrie:hover, .cat-geometrie.actu.highlight:hover {
+  .actu a.cat-geometrie:hover {
     border-color: #f23518; }
-  .actu a.cat-photographie:hover, .cat-photographie.actu.highlight:hover {
+  .actu a.cat-photographie:hover {
     border-color: #42b04f; }
-  .actu a.cat-multi:hover, .cat-multi.actu.highlight:hover {
+  .actu a.cat-multi:hover {
     border-color: #8b008b; }
-  .actu a.cat-sculpture:hover, .cat-sculpture.actu.highlight:hover {
+  .actu a.cat-sculpture:hover {
     border-color: #00bfff; }
-  .post-it h3, .actu a h3, .actu.highlight h3 {
+  .post-it h3, .actu a h3 {
     font-size: 1.125rem; }
-  .post-it .detail, .actu a .detail, .actu.highlight .detail {
+  .post-it .detail, .actu a .detail {
     overflow: hidden; }
-    .post-it .detail .content hr, .actu a .detail .content hr, .actu.highlight .detail .content hr {
+    .post-it .detail .content hr, .actu a .detail .content hr {
       display: none; }
-  .post-it hr:last-child, .actu a hr:last-child, .actu.highlight hr:last-child {
+  .post-it hr:last-child, .actu a hr:last-child {
     display: none; }
 
 /* aside */
@@ -1243,7 +1245,7 @@ aside.main {
   .actus ul li {
     padding-bottom: 0.9375rem; }
 
-.actu a, .actu.highlight {
+.actu a {
   margin-bottom: 0;
   margin-right: 0; }
 .actu .thumbnail {
@@ -1252,11 +1254,8 @@ aside.main {
   margin-bottom: 0; }
 .actu.no-img .thumbnail {
   display: none; }
-.actu.highlight {
-  margin-right: 0.9375rem;
-  margin-bottom: 0.9375rem; }
-  .actu.highlight .thumbnail {
-    max-height: none; }
+.actu.highlight .thumbnail {
+  max-height: none; }
 @media only screen and (max-width: 48rem) {
   .actu a, .actu.highlight {
     -webkit-flex-direction: row;
@@ -2065,7 +2064,7 @@ aside.main {
   .slideshowNg h5:first-child {
     position: absolute;
     bottom: 100%;
-    right: 0;
+    right: 0.9375rem;
     padding-bottom: 0.625rem;
     padding-right: 0.625rem;
     color: #a6a6a6; }

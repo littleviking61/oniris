@@ -10,7 +10,7 @@
 	h5:first-child{
 		position: absolute;
 		bottom: 100%;
-		right: 0;
+		right: $gutter-medium;
 		padding-bottom: $gutter;
 		padding-right: $gutter;
 		color: $lighter-grey;

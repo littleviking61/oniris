@@ -7,8 +7,8 @@
 ?>
 
 <?php if( get_field('titre') ): ?>
-	<li class="actu <?= $class ?> <?= $categorie ?>">
-		<a href="<?= get_permalink($linkID) ?>" class="container">
+	<li class="actu <?= $class ?>">
+		<a href="<?= get_permalink($linkID) ?>" class="container <?= $categorie ?>">
 			<?php if( has_post_thumbnail() ): ?>
 				<div class="thumbnail">
 					<?php the_post_thumbnail('small') ?>

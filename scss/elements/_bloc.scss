@@ -110,7 +110,7 @@
 
 .actu{
 
-	a, &.highlight{
+	a{
 		@extend %post-it;	
 		margin-bottom: 0;
 		margin-right: 0;
@@ -118,24 +118,12 @@
 	
 	.thumbnail{ 
 		overflow: hidden;
-		
-		// max-height:$small-actu-height;
-		// @include single-transition(max-height, .24s);
 	}
-
-
-	// &:first-child .thumbnail{
-		// max-height:$small-actu-height;
-	// }
 
 	&:last-child{
 		margin-bottom: 0;
 	}
 
-	// &:hover:not(.highlight) .thumbnail{
-		// max-height:$small-actu-height !important;
-	// }
-	// 
 	&.no-img{
 		.thumbnail{
 			display:none;
@@ -143,8 +131,8 @@
 	}
 
 	&.highlight{
-		margin-right: $gutter-medium;
-		margin-bottom: $gutter-medium;
+		// margin-right: $gutter-medium;
+		// margin-bottom: $gutter-medium;
 		.thumbnail{
 			max-height:none;
 		}

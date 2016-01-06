@@ -31,85 +31,87 @@
 	$gid = uniqid('gallery_');
 	?>
 
-	<section class="container gallery <?= $galleryType ?> <?= $flex ?>">
+	<section class="gallery <?= $galleryType ?> <?= $flex ?>">
 		
-		<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
+		<div class="contain container">
+			<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
 
-			<?php if( get_sub_field('titre') ): ?>
-				<h5><?= do_shortcode(get_sub_field('titre')) ?></h5>
+				<?php if( get_sub_field('titre') ): ?>
+					<h5><?= do_shortcode(get_sub_field('titre')) ?></h5>
+				<?php endif ?>
+				<div class="fotorama"
+					data-nav="thumbs"
+					data-autoplay="true"
+					data-loop="true"
+					data-fit="cover"
+					data-width="100%"
+					data-maxwidth="100%"
+					data-ratio="3/2"
+					data-thumbwidth="100px"
+					data-thumbheight="65px" data-thumbmargin="10"
+					data-arrows="false"
+					data-click="true"
+					data-swipe="true"
+					data-keyboard="true"
+					data-allowfullscreen="true">
+
+					<?php foreach ($gallery as $image):
+
+						$i++; 
+
+						$caption = $image->caption ?: $image['caption'];
+						$imageURL = $image->imageURL ?: $image['url'];
+						$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];
+						$description = $image->description ?: $image['title'];
+						$altText = $image->alttext ?: $image['title'];
+						$hidden = $image->hidden ?: false;
+						$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
+
+						<a href="<?= $imageURL ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" class="load-it" >
+							<?php if ( !$hidden ) { ?>
+								<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
+							<?php } ?>
+						</a>
+					<?php endforeach ?>
+
+				</div>
+
+			<?php elseif ($galleryType == 'galleryNg' || $galleryType == 'galleryWP'): ?>
+
+				<?php if( get_sub_field('titre') ): ?>
+					<h4><?= get_sub_field('titre') ?></h4>
+				<?php endif ?>
+				
+				<div class="selection">
+					<?php foreach ($gallery as $image): 
+						$i++; 
+
+						$caption = $image->caption ?: $image['caption'];
+						$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['thumbnail'];
+						$description = $image->description ?: $image['title'];
+						$altText = $image->alttext ?: $image['alt'];
+						$hidden = $image->hidden ?: false;
+						
+						$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
+
+						<a 	href="#show-gallery" 
+								data-gallery-id="<?= $galleryId ?>" 
+								data-gallery-img="<?= $gid ?>" 
+								data-index="<?= $i-1 ?>" 
+								title="<?= $description ?>" 
+								data-caption="<?= $i.'/'.count($gallery) . $caption ?>" 
+								class="" >
+							<?php if ( !$hidden ) { ?>
+								<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
+							<?php } ?>
+						</a>
+						<?php if($i >= $limitImage && $limitImage !== -1) break; ?>
+					<?php endforeach ?>
+
+				</div>
+
 			<?php endif ?>
-			<div class="fotorama"
-				data-nav="thumbs"
-				data-autoplay="true"
-				data-loop="true"
-				data-fit="cover"
-				data-width="100%"
-				data-maxwidth="100%"
-				data-ratio="3/2"
-				data-thumbwidth="100px"
-				data-thumbheight="65px" data-thumbmargin="10"
-				data-arrows="false"
-				data-click="true"
-				data-swipe="true"
-				data-keyboard="true"
-				data-allowfullscreen="true">
-
-				<?php foreach ($gallery as $image):
-
-					$i++; 
-
-					$caption = $image->caption ?: $image['caption'];
-					$imageURL = $image->imageURL ?: $image['url'];
-					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];
-					$description = $image->description ?: $image['title'];
-					$altText = $image->alttext ?: $image['title'];
-					$hidden = $image->hidden ?: false;
-					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
-
-					<a href="<?= $imageURL ?>" title="<?= $description ?>" data-caption="<?= $i.'/'.count($gallery) . $caption ?>" class="load-it" >
-						<?php if ( !$hidden ) { ?>
-							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
-						<?php } ?>
-					</a>
-				<?php endforeach ?>
-
-			</div>
-
-		<?php elseif ($galleryType == 'galleryNg' || $galleryType == 'galleryWP'): ?>
-
-			<?php if( get_sub_field('titre') ): ?>
-				<h4><?= get_sub_field('titre') ?></h4>
-			<?php endif ?>
-			
-			<div class="selection">
-				<?php foreach ($gallery as $image): 
-					$i++; 
-
-					$caption = $image->caption ?: $image['caption'];
-					$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['thumbnail'];
-					$description = $image->description ?: $image['title'];
-					$altText = $image->alttext ?: $image['alt'];
-					$hidden = $image->hidden ?: false;
-					
-					$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>
-
-					<a 	href="#show-gallery" 
-							data-gallery-id="<?= $galleryId ?>" 
-							data-gallery-img="<?= $gid ?>" 
-							data-index="<?= $i-1 ?>" 
-							title="<?= $description ?>" 
-							data-caption="<?= $i.'/'.count($gallery) . $caption ?>" 
-							class="" >
-						<?php if ( !$hidden ) { ?>
-							<img title="<?= $description ?>" alt="<?= $altText ?>" src="<?= $thumbnailURL ?>" <?= $image->size ?> />
-						<?php } ?>
-					</a>
-					<?php if($i >= $limitImage && $limitImage !== -1) break; ?>
-				<?php endforeach ?>
-
-			</div>
-
-		<?php endif ?>
+		</div>
 			
 	</section>
 

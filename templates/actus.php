@@ -33,8 +33,8 @@
 		endforeach;
 
 		$premiereColonne = get_sub_field('premiere_colonne'); ?>
-		<section class="flex-3">
-			<ul>
+		<section class="flex-4">
+			<ul class="contain">
 				<?php foreach ( $premiereColonne as $post ) :
 					setup_postdata( $post );
 					$post->class = 'full';
@@ -46,7 +46,7 @@
 
 		<?php	$deuxiemeColonne = get_sub_field('deuxième_colonne'); ?>
 		<section class="flex-3">
-			<ul>
+			<ul class="contain">
 				<?php foreach ( $deuxiemeColonne as $post ) : 
 					setup_postdata( $post );
 					$post->class = 'full no-img';
