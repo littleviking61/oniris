@@ -6,9 +6,10 @@
 	@extend %flex-center-center;
 	@include single-transition(all, .2s);
 	border:none;
+	font-weight: normal;
 	@include appearance(none);
 
-	padding: $gutter-mini $gutter-small $gutter-mini $gutter;
+	padding: $gutter-small $gutter;
 	@include colors(&, "bg"){
 		color: white;
 	};
@@ -22,14 +23,15 @@
 		text-decoration: none;
 
 		&.right{
-			padding-right: $gutter-large;
+			padding-right: $gutter-medium;
+			padding-left: $gutter-medium;
 			// padding-left: $gutter;
 		}
 	}
 
 	&.right{
-		margin-right: -($gutter-medium);
-		margin-bottom: -($gutter-medium);
+		margin-right: -($gutter-large);
+		margin-bottom: -($gutter-large);
 		position: absolute;
 		bottom: 0;
 		right: 0;

@@ -690,9 +690,10 @@ header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.butto
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
+  font-weight: normal;
   -moz-appearance: none;
   -webkit-appearance: none;
-  padding: 0.20833rem 0.3125rem 0.20833rem 0.625rem; }
+  padding: 0.3125rem 0.625rem; }
   .button {
     background-color: #ffbc17;
     color: white; }
@@ -811,10 +812,11 @@ header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.butto
     .cat-sculpture a.button:hover {
       background-color: #00bfff; }
     .button:hover.right, button:hover.right, a.button:hover.right {
-      padding-right: 1.25rem; }
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; }
   .button.right, button.right, a.button.right {
-    margin-right: -0.9375rem;
-    margin-bottom: -0.9375rem;
+    margin-right: -1.25rem;
+    margin-bottom: -1.25rem;
     position: absolute;
     bottom: 0;
     right: 0; }
@@ -2068,6 +2070,8 @@ aside.main {
 .slideshowNg {
   position: relative;
   padding: 0; }
+  .slideshowNg .container {
+    padding: 0; }
   .slideshowNg h5:first-child {
     position: absolute;
     bottom: 100%;
