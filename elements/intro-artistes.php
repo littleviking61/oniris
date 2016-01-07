@@ -17,8 +17,10 @@
 				<?= do_shortcode(get_field('courte_biographie')) ?>
 			</div>
 		</div>
-	  <div class="relation-artiste">
-	  	<?php get_template_file('elements/relation-'.get_field('page_type_acf')); ?>
-	  </div>
+	  <?php if (!get_field('afficher_les_actualites')): ?>
+		  <div class="relation-artiste">
+		  	<?php get_template_file('elements/relation-artistes'); ?>
+		  </div>
+	  <?php endif ?>
 	</div>
 </section>

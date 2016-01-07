@@ -2068,6 +2068,8 @@ aside.main {
 .slideshowNg {
   position: relative;
   padding: 0; }
+  .slideshowNg .container {
+    padding: 0; }
   .slideshowNg h5:first-child {
     position: absolute;
     bottom: 100%;

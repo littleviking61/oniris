@@ -4,15 +4,14 @@
 	$artistes = get_field('relation_artistes');
 ?>
 
-<div class="row start">
+<?php if (has_post_thumbnail()): ?>
+	<div class="cover flex-3">
+		<?php the_post_thumbnail('small'); ?>
+	</div>
+<?php endif ?>
 
-	<?php if (has_post_thumbnail()): ?>
-		<div class="grow max-2 cover">
-			<?php the_post_thumbnail('small'); ?>
-		</div>
-	<?php endif ?>
-
-	<section class="intro <?= $flex ?>">
+<div class="intro <?= $flex ?> grow">
+	<div class="contain">
 		<h2 class=""><?= get_field('nom') ?></h2>
 		<h3 class=""><?= get_field('lieu') ?></h3>
 		<hr>
@@ -31,4 +30,5 @@
 		<?php if (get_field('infos_pratiques')): ?>
 			<?= do_shortcode(get_field('infos_pratiques')) ?>
 		<?php endif ?>
-	</section>
+	</div>
+</div>
