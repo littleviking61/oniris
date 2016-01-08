@@ -2,7 +2,8 @@
 	$galleryType = get_sub_field('type');
 	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];
 	$galleryWp = get_sub_field('gallerie_img');
-	$width = get_sub_field('largeur_du_bloc');
+	$width = get_sub_field('largeur_du_bloc') ;
+	$flexClass = $width > 0 ? 'flex-' . $width : 'flex-7';
 	$nbCol = get_sub_field('nombre_de_colonne');
 	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
 
@@ -32,7 +33,7 @@
 	$gid = uniqid('gallery_');
 	?>
 
-	<section class="gallery <?= $galleryType ?> <?= $flex ?>">
+	<section class="gallery <?= $galleryType ?> <?= $flexClass ?>">
 		
 		<div class="contain container">
 			<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>

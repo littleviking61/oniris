@@ -333,7 +333,7 @@
 
 }
 
-.relations{
+.relations, %relations{
 	@extend %relationship;
 
 	ul:before, ul:after{
@@ -355,6 +355,14 @@
 	}
 }
 
+
+.liste-dartiste{
+	// @extend %relations;
+
+	> ul{
+		@extend %flex-column-wrap;
+	}
+}
 .galleryNg{
 
 	.selection > a{

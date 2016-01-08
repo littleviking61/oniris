@@ -28,6 +28,7 @@ aside.main{
 			@include align-items(flex-start);
 			margin-top: $gutter-small;
 
+
 			> a{
 				@include display-flex;
 				font-size: $ft-size-larger;
@@ -111,6 +112,12 @@ aside.main{
 					display: initial;
 				}
 			}
+		}
+
+		hr{
+			background-color: $light-grey;
+			margin: $gutter;
+			width: $gutter;
 		}
 	}
 }

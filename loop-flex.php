@@ -103,13 +103,3 @@ else : ?>
 		<?php the_content(); ?>
 	</div>   
 <?php endif ?>
-
-<?php if (!is_front_page()): ?>
-	<section class="row">
-		<h3>Ça vous interessera aussi</h3>
-	</section>
-
-	<section class="row">
-		<h3>Actualités de la galerie</h3>
-	</section>
-<?php endif ?>

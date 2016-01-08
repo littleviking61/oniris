@@ -28,8 +28,12 @@
 }
 
 @mixin block-grid( $class: ".block-grid", $total-columns: 6, $percentage:true){
+  #{$class}{
+
+  }
   @for $i from 1 through $total-columns {
     #{$class}-#{$i} li{
+      display: inline-block;
       width: #{100/$i}#{"%"};
     }
   }

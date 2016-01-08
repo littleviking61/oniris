@@ -214,7 +214,8 @@ function the_nav_section($pageId, $args = [], $result)
 		'post_parent'    => $pageId,
 		'orderby'        => 'date',
 		'post_type'      => 'page',
-		'posts_per_page' => -1
+		'posts_per_page' => -1,
+		'asTitle'				 => false
 	);
 
 	$args = array_merge($argsDefault, $args);
@@ -225,12 +226,18 @@ function the_nav_section($pageId, $args = [], $result)
 	<ul class="nav-section">
 		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current-menu-item' : null ?>">
 			<a href="<?= get_permalink($pageId) ?>">
-				<?php if(get_field('icon-menu', $pageId)) : ?>
-					<i class="<?= get_field('icon-menu', $pageId) ?>"></i>
+				<?php if ($args['asTitle'] !== false): ?>
+					<?= $args['asTitle'] ?>
+				<?php else: ?>
+					<?php if(get_field('icon-menu', $pageId)) : ?>
+						<i class="<?= get_field('icon-menu', $pageId) ?>"></i>
+					<?php endif ?>
+					<span><?= get_the_title($pageId) ?></span>
 				<?php endif ?>
-				<span><?= get_the_title($pageId) ?></span>
 			</a>
 			<ul class="sub-menu">
+					<li><a href="<?= get_the_permalink($pageId) ?>">Voir tous les <?= strtolower(get_the_title($pageId)) ?></a></li>
+					<hr>
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
 						<?php if (get_field('visible', $post->ID) == 'true'): ?>
@@ -295,10 +302,20 @@ if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
 	
-	acf_add_options_sub_page('Footer');
-	acf_add_options_sub_page('Newsletter');
 	acf_add_options_sub_page('Informations pratiques');
+	acf_add_options_sub_page('Newsletter');
+	acf_add_options_sub_page('Medias sociaux');
 	
+}
+
+/* disable wordpress notification */
+add_action('after_setup_theme','remove_core_updates');
+function remove_core_updates()
+{
+ if(! current_user_can('update_core')){return;}
+ add_action('init', create_function('$a',"remove_action( 'init', 'wp_version_check' );"),2);
+ add_filter('pre_option_update_core','__return_null');
+ add_filter('pre_site_transient_update_core','__return_null');
 }
 
 ?>

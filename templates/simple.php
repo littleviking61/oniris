@@ -21,11 +21,6 @@
 <section class="simple <?= $specificClass ?>">
 
 	<div class="contain container">
-		<?php if ($hasImage && !empty($image)): ?>
-			<div class="thumbnail <?= $imagePosition ?>">
-				<img src="<?= $image ?>">
-			</div>
-		<?php endif ?>
 
 		<div class="content<?= $hasButton ? " has-button" : "";?>">
 
