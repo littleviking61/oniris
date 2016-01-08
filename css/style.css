@@ -657,39 +657,37 @@ aside.main {
 /* FOOTER */
 footer.main {
   margin-top: 1.25rem; }
-  footer.main .footer-content {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    background-color: white; }
-    footer.main .footer-content h3, footer.main .footer-content h4 {
-      margin-bottom: 0.625rem;
-      padding-bottom: 0.3125rem;
-      border-bottom: thin solid;
-      display: inline-block; }
-      footer.main .footer-content h3 {
-        border-color: #ffbc17; }
-      .cat-peinture footer.main .footer-content h3 {
-        border-color: #0252cf; }
-      .cat-geometrie footer.main .footer-content h3 {
-        border-color: #f23518; }
-      .cat-photographie footer.main .footer-content h3 {
-        border-color: #42b04f; }
-      .cat-multi footer.main .footer-content h3 {
-        border-color: #8b008b; }
-      .cat-sculpture footer.main .footer-content h3 {
-        border-color: #00bfff; }
-      footer.main .footer-content h4 {
-        border-color: #ffbc17; }
-      .cat-peinture footer.main .footer-content h4 {
-        border-color: #0252cf; }
-      .cat-geometrie footer.main .footer-content h4 {
-        border-color: #f23518; }
-      .cat-photographie footer.main .footer-content h4 {
-        border-color: #42b04f; }
-      .cat-multi footer.main .footer-content h4 {
-        border-color: #8b008b; }
-      .cat-sculpture footer.main .footer-content h4 {
-        border-color: #00bfff; }
+  footer.main .footer-content h3, footer.main .footer-content h4 {
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.3125rem;
+    border-bottom: thin solid;
+    display: inline-block; }
+    footer.main .footer-content h3 {
+      border-color: #ffbc17; }
+    .cat-peinture footer.main .footer-content h3 {
+      border-color: #0252cf; }
+    .cat-geometrie footer.main .footer-content h3 {
+      border-color: #f23518; }
+    .cat-photographie footer.main .footer-content h3 {
+      border-color: #42b04f; }
+    .cat-multi footer.main .footer-content h3 {
+      border-color: #8b008b; }
+    .cat-sculpture footer.main .footer-content h3 {
+      border-color: #00bfff; }
+    footer.main .footer-content h4 {
+      border-color: #ffbc17; }
+    .cat-peinture footer.main .footer-content h4 {
+      border-color: #0252cf; }
+    .cat-geometrie footer.main .footer-content h4 {
+      border-color: #f23518; }
+    .cat-photographie footer.main .footer-content h4 {
+      border-color: #42b04f; }
+    .cat-multi footer.main .footer-content h4 {
+      border-color: #8b008b; }
+    .cat-sculpture footer.main .footer-content h4 {
+      border-color: #00bfff; }
+  footer.main .footer-content .liste-dartiste {
+    margin-bottom: 0.9375rem; }
     footer.main .footer-content .liste-dartiste h3 {
       display: inline-block; }
     footer.main .footer-content .liste-dartiste .artistes {
@@ -697,31 +695,36 @@ footer.main {
       margin: 0;
       -webkit-align-items: flex-end;
       align-items: flex-end; }
-    footer.main .footer-content .infos {
-      margin-bottom: 0; }
-      footer.main .footer-content .infos > div > .contain {
-        margin-right: 1.875rem; }
+  footer.main .footer-content .infos {
+    margin-bottom: 0; }
+    footer.main .footer-content .infos > div > .contain {
+      margin-right: 1.875rem; }
+    footer.main .footer-content .infos h3 {
+      border-bottom: solid thin;
+      padding-bottom: 0.625rem; }
       footer.main .footer-content .infos h3 {
-        border-bottom: solid thin;
-        padding-bottom: 0.625rem; }
-        footer.main .footer-content .infos h3 {
-          border-color: #ffbc17; }
-        .cat-peinture footer.main .footer-content .infos h3 {
-          border-color: #0252cf; }
-        .cat-geometrie footer.main .footer-content .infos h3 {
-          border-color: #f23518; }
-        .cat-photographie footer.main .footer-content .infos h3 {
-          border-color: #42b04f; }
-        .cat-multi footer.main .footer-content .infos h3 {
-          border-color: #8b008b; }
-        .cat-sculpture footer.main .footer-content .infos h3 {
-          border-color: #00bfff; }
+        border-color: #ffbc17; }
+      .cat-peinture footer.main .footer-content .infos h3 {
+        border-color: #0252cf; }
+      .cat-geometrie footer.main .footer-content .infos h3 {
+        border-color: #f23518; }
+      .cat-photographie footer.main .footer-content .infos h3 {
+        border-color: #42b04f; }
+      .cat-multi footer.main .footer-content .infos h3 {
+        border-color: #8b008b; }
+      .cat-sculpture footer.main .footer-content .infos h3 {
+        border-color: #00bfff; }
+  footer.main .footer-content .infos-pratiques {
+    width: 13.4375rem; }
+    footer.main .footer-content .infos-pratiques .contain {
+      margin-left: 1.25rem; }
   footer.main .copyright {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
     opacity: 0.5; }
-    footer.main .copyright > p {
-      margin-left: auto; }
+    footer.main .copyright > nav {
+      margin-left: auto;
+      margin-right: 0.625rem; }
     footer.main .copyright ul li {
       margin-right: 0.9375rem; }
       footer.main .copyright ul li i {

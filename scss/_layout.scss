@@ -201,9 +201,9 @@ footer.main{
 	margin-top: $gutter-large;
 
 	.footer-content{
-		padding-left: $gutter-hudge;
-		padding-right: $gutter-hudge;
-		background-color: white;
+		// padding-left: $gutter-hudge;
+		// padding-right: $gutter-hudge;
+		// background-color: white;
 		// padding-top: $gutter-large;
 		
 		h3,h4{
@@ -215,10 +215,10 @@ footer.main{
 		}
 
 		.liste-dartiste{
+			margin-bottom: $gutter-medium;
 			h3{
 				display: inline-block;
 			}
-			
 			
 			.artistes{
 				padding: 0;
@@ -242,17 +242,25 @@ footer.main{
 				@include colors(&, 'bd');
 			}
 		}
+
+		.infos-pratiques{
+			width: $aside-width;
+			.contain{
+				margin-left: $gutter-large;
+			}
+		}
 	}
 
 	.copyright{
-		padding-right: $gutter-hudge;
+			padding-right: $gutter-hudge;
 		padding-left: $gutter-hudge;
 		opacity: 0.5;
 
 		@extend %flex-column;
 
-		> p {
+		> nav {
 			margin-left: auto;
+			margin-right: $gutter;
 		}
 
 		ul{
