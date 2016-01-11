@@ -1,6 +1,8 @@
 // layout.scss
 @include flex-grid();
-// @include flex-grid(max);
+@include flex-grid(min);
+@include flex-grid(max);
+
 @include block-grid();
 
 
@@ -174,7 +176,7 @@ aside.main{
 	background-color: white;
 
 	&.special{
-		// border: 2px solid;
+		border: thin solid;
 		@include colors(&, "bd");
 		// background-color: $lightest-grey;
 	}
@@ -198,13 +200,16 @@ aside.main{
 /* FOOTER */
 
 footer.main{
+
 	margin-top: $gutter-large;
 
 	.footer-content{
-		// padding-left: $gutter-hudge;
-		// padding-right: $gutter-hudge;
-		// background-color: white;
-		// padding-top: $gutter-large;
+		background-color: #eee;
+		padding: $gutter-medium;
+		
+		.row{
+			@include justify-content(center);
+		}
 		
 		h3,h4{
 			margin-bottom: $gutter;
@@ -229,38 +234,23 @@ footer.main{
 			}
 		}
 
-		.infos{
-			margin-bottom: 0;
-
-			> div > .contain{
-				margin-right: $gutter-big;
-			}
-
-			h3{
-				border-bottom: solid thin;
-				padding-bottom: $gutter;
-				@include colors(&, 'bd');
-			}
-		}
-
-		.infos-pratiques{
-			width: $aside-width;
-			.contain{
-				margin-left: $gutter-large;
+		.socials{
+			h2{
+				font-size: $ft-size-hudge;
 			}
 		}
 	}
 
 	.copyright{
-			padding-right: $gutter-hudge;
+		padding-right: $gutter-hudge;
 		padding-left: $gutter-hudge;
 		opacity: 0.5;
 
 		@extend %flex-column;
 
-		> nav {
+		> p {
 			margin-left: auto;
-			margin-right: $gutter;
+			// margin-right: $gutter;
 		}
 
 		ul{

@@ -13,67 +13,78 @@
 		
 		<div class="row">
 
-			<?php get_template_part('content', 'infospratique') ?>
+			<div class="min-6 liste-dartiste">
+				<div class="contain container">
+					
+					<?php
 
-			<div class="flex-6 grow row">
-				<div class="full liste-dartiste">
-					<div class="contain container">
+						$args = array(
+							'post_parent'    => 8,
+							'meta_key' => 'nom',
+							'orderby' => 'meta_value',
+							'order' => 'ASC',
+							'post_type'      => 'page',
+							'posts_per_page' => -1,
+							'asTitle'				 => false
+						);
+
+						$childPage = get_posts( $args ); 
+					?>
+
+					
+					<ul class="block-grid-4 artistes">
+						<li>
+							<h3>
+								<a href="<?= get_permalink(8) ?>">Artistes</a>
+							</h3>
+						</li>
+						<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
+							<?php if (get_field('visible', $post->ID) == 'true'): ?>
+								<li>
+									<?php 
+										$text = isset($result)
+											? get_field($result, $post->ID)
+											: $post->post_title; ?>
+									<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
+										<?= apply_filters('the_title', $text) ?>
+									</a>
+								</li>
+							<?php endif ?>
 						
-						<?php
+						<?php endforeach ?>
+					</ul>
 
-							$args = array(
-								'post_parent'    => 8,
-								'meta_key' => 'nom',
-								'orderby' => 'meta_value',
-								'order' => 'ASC',
-								'post_type'      => 'page',
-								'posts_per_page' => -1,
-								'asTitle'				 => false
-							);
-
-							$childPage = get_posts( $args ); 
-						?>
-
-						
-						<ul class="block-grid-4 artistes">
-							<li>
-								<h3>
-									<a href="<?= get_permalink(8) ?>">Artistes</a>
-								</h3>
-							</li>
-							<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
-								<?php if (get_field('visible', $post->ID) == 'true'): ?>
-									<li>
-										<?php 
-											$text = isset($result)
-												? get_field($result, $post->ID)
-												: $post->post_title; ?>
-										<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
-											<?= apply_filters('the_title', $text) ?>
-										</a>
-									</li>
-								<?php endif ?>
-							
-							<?php endforeach ?>
-						</ul>
-
-						<?php wp_reset_postdata(); ?>
-					</div>
+					<?php wp_reset_postdata(); ?>
 				</div>
-				<div class="flex-6">
-					<div class="container contain">
-						<h4><?php the_field('titre_newsletter', 'option'); ?></h4>
-						<?php the_field('contenu_newsletter', 'option'); ?>
-					</div>
-				</div>
+			</div>
 
-				<div class="flex-4">
-					<div class="contain container">
-						<h4><?php the_field('titre_sociaux', 'option'); ?></h4>
-						<?php the_field('contenu_sociaux', 'option'); ?>
+			<div class="min-2 socials">
+				<div class="contain container">
+					<h4><?php the_field('titre_sociaux', 'option'); ?></h4>
+					<?php the_field('contenu_sociaux', 'option'); ?>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+
+			<div class="min-2">
+				<div class="container contain">
+					<h4><?php the_field('titre_newsletter', 'option'); ?></h4>
+					<?php the_field('contenu_newsletter', 'option'); ?>
+				</div>
+			</div>
+
+			<div class="infos-pratiques min-6">
+				<div class="contain container special">
+					<h4><?php the_field('titre_infos', 'option'); ?></h4>
+					<div class="content has-button">
+						<?php the_field('contenu_du_footer', 'option'); ?>
+						<a class="button right" href="<?php the_field('page_en_lien', 'option') ?>"><?php the_field('icone_du_lien', 'option') ?> <?php the_field('texte_du_lien', 'option') ?></a>
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 	</div>

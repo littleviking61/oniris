@@ -18,7 +18,10 @@
   @for $i from 1 through $total-columns {
     #{$prefix}#{$class}-#{$i}{
       @if $class == max{
-        max-width: ( grid-calc($i, $total-columns, $percentage) );
+        max-width: ( grid-calc($i, $total-columns, false) );
+      } @elseif $class == min{
+        min-width: ( grid-calc($i, $total-columns, false) );
+        @include flex-basis( grid-calc($i, $total-columns, false) );
       } @else {
         @include flex-basis( grid-calc($i, $total-columns, $percentage) );
         width: calc( #{( grid-calc($i, $total-columns, $percentage) )} - #{(($i - 1)*$gutter-large)} );
