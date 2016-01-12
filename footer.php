@@ -1,12 +1,6 @@
 
 </main><!-- Container End -->
 
-<?php if (!is_front_page()): ?>
-	<section class="related row">
-		<h3>Ça vous interessera aussi</h3>
-	</section>
-<?php endif ?>
-
 <footer class="main" role="contentinfo">
 	
 	<div class="footer-content">

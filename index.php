@@ -19,7 +19,13 @@
 						<?php get_template_part( 'loop', 'flex' ); ?>
 
 					<?php endif; ?>
+					
+					<!-- <section class="related row">
+						<h2>À lire aussi</h2>
+						<?php wpb_related_pages(); ?>
+					</section> -->
 				</div>
+
 
 			<?php endwhile; ?>
 			

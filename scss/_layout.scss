@@ -205,7 +205,8 @@ footer.main{
 
 	.footer-content{
 		background-color: #eee;
-		padding: $gutter-medium;
+		padding-top: $gutter-hudge;
+		padding-bottom: $gutter-hudge;
 		
 		.row{
 			@include justify-content(center);

@@ -766,7 +766,8 @@ footer.main {
   margin-top: 1.25rem; }
   footer.main .footer-content {
     background-color: #eee;
-    padding: 0.9375rem; }
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; }
     footer.main .footer-content .row {
       -webkit-justify-content: center;
       justify-content: center; }

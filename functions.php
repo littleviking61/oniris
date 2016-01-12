@@ -318,4 +318,38 @@ function remove_core_updates()
  add_filter('pre_site_transient_update_core','__return_null');
 }
 
+function wpb_related_pages() { 
+	$orig_post = $post;
+	global $post;
+	$tags = wp_get_post_tags($post->ID);
+	
+	var_dump($tags);
+	if ($tags) {
+		$tag_ids = array();
+		foreach($tags as $individual_tag) :
+
+			$tag_ids[] = $individual_tag->term_id;
+			$args = array(
+				'post_type' => 'page',
+				// 'tag__in' => $tag_ids,
+				// 'post__not_in' => array($post->ID),
+				'posts_per_page'=>5
+				);
+			$my_query = new WP_Query( $args );
+			if( $my_query->have_posts() ) {
+				echo '<div id="relatedpages"><h3>Related Pages</h3><ul>';
+				while( $my_query->have_posts() ) { ?>
+					<li>
+						<h3><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+					</li>
+				<?php };
+			echo '</ul></div>';
+			} else { 
+			echo "No Related Pages Found:";
+			}
+			$post = $orig_post;
+		endforeach;
+		wp_reset_query(); 
+	}
+}
 ?>
