@@ -30,7 +30,7 @@
 				get_template_part('templates/actu');
 				wp_reset_postdata();
 			endforeach; ?>
-			<a href="/actualites" class="container special">Cliquez-ici pour voir plus d'actualites</a>
+			<a href="/actualites" class="container special"><?php the_field('icon_du_lien') ?><?php the_field('texte_de_lien') ?></a>
 		</ul>
 	</section>
 </section>

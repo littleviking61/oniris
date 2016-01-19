@@ -764,57 +764,51 @@ aside.main {
 /* FOOTER */
 footer.main {
   margin-top: 1.25rem; }
+  footer.main, footer.main a, footer.main p {
+    color: #999999; }
+  footer.main li.current_page_item a, footer.main li.current-menu-item a, footer.main a:hover {
+    color: white !important; }
   footer.main .footer-content {
-    background-color: #eee;
+    background-color: #2d2d2d;
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem; }
-    footer.main .footer-content .row {
+    padding-bottom: 2.5rem;
+    padding-left: 1.25rem; }
+    footer.main .footer-content h4 {
+      font-family: "asap", Helvetica, Arial, sans-serif;
+      display: block;
+      text-transform: uppercase;
+      color: white;
+      font-size: 1rem;
+      padding-bottom: 0.20833rem;
+      margin-bottom: 0.625rem;
+      border-bottom: thin white solid; }
+    footer.main .footer-content .menus {
       -webkit-justify-content: center;
       justify-content: center; }
-    footer.main .footer-content h3, footer.main .footer-content h4 {
-      margin-bottom: 0.625rem;
-      padding-bottom: 0.3125rem;
-      border-bottom: thin solid;
-      display: inline-block; }
-      footer.main .footer-content h3 {
-        border-color: #ffbc17; }
-      .cat-peinture footer.main .footer-content h3 {
-        border-color: #0252cf; }
-      .cat-geometrie footer.main .footer-content h3 {
-        border-color: #f23518; }
-      .cat-photographie footer.main .footer-content h3 {
-        border-color: #42b04f; }
-      .cat-multi footer.main .footer-content h3 {
-        border-color: #8b008b; }
-      .cat-sculpture footer.main .footer-content h3 {
-        border-color: #00bfff; }
-      footer.main .footer-content h4 {
-        border-color: #ffbc17; }
-      .cat-peinture footer.main .footer-content h4 {
-        border-color: #0252cf; }
-      .cat-geometrie footer.main .footer-content h4 {
-        border-color: #f23518; }
-      .cat-photographie footer.main .footer-content h4 {
-        border-color: #42b04f; }
-      .cat-multi footer.main .footer-content h4 {
-        border-color: #8b008b; }
-      .cat-sculpture footer.main .footer-content h4 {
-        border-color: #00bfff; }
-    footer.main .footer-content .liste-dartiste {
-      margin-bottom: 0.9375rem; }
-      footer.main .footer-content .liste-dartiste h3 {
-        display: inline-block; }
-      footer.main .footer-content .liste-dartiste .artistes {
-        padding: 0;
-        margin: 0;
-        -webkit-align-items: flex-end;
-        align-items: flex-end; }
-    footer.main .footer-content .socials h2 {
-      font-size: 2.5rem; }
+      footer.main .footer-content .menus .menu {
+        margin: 0; }
+        footer.main .footer-content .menus .menu > li {
+          margin-top: 1.25rem; }
+          footer.main .footer-content .menus .menu > li:first-child {
+            margin-top: 0; }
+          footer.main .footer-content .menus .menu > li > a {
+            display: block;
+            text-transform: uppercase;
+            color: white;
+            font-size: 1rem;
+            padding-bottom: 0.20833rem;
+            margin-bottom: 0.625rem;
+            border-bottom: thin white solid; }
+      footer.main .footer-content .menus > div {
+        margin: 50px 2vw 0; }
+        footer.main .footer-content .menus > div:first-child {
+          margin-top: 0; }
   footer.main .copyright {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
-    opacity: 0.5; }
+    background-color: #202020; }
+    footer.main .copyright li.current_page_item a, footer.main .copyright li.current-menu-item a, footer.main .copyright a:hover {
+      color: white; }
     footer.main .copyright > p {
       margin-left: auto; }
     footer.main .copyright ul li {
@@ -823,27 +817,30 @@ footer.main {
         margin-right: 0.3125rem; }
 
 /* flex LAYOUT */
-header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, footer.main .footer-content .liste-dartiste .artistes .go-right, .filter-tools .go-right, .videos ul .go-right, .links ul .go-right, .liste-dartiste > ul .go-right, .list-page .go-right {
+header[role="banner"] .go-right, .wrap > section .go-right, .row .go-right, .filter-tools .go-right, .videos ul .go-right, .links ul .go-right, .liste-dartiste > ul .go-right, .list-page .go-right {
   margin-left: auto; }
-header[role="banner"] .contain, .wrap > section .contain, .row .contain, footer.main .footer-content .liste-dartiste .artistes .contain, .filter-tools .contain, .videos ul .contain, .links ul .contain, .liste-dartiste > ul .contain, .list-page .contain {
+header[role="banner"] .contain, .wrap > section .contain, .row .contain, .filter-tools .contain, .videos ul .contain, .links ul .contain, .liste-dartiste > ul .contain, .list-page .contain {
   max-width: -moz-calc(100% - 0.9375rem);
   max-width: -webkit-calc(100% - 0.9375rem);
   max-width: calc(100% - 0.9375rem);
   margin-right: 0.9375rem;
   -webkit-flex-grow: 1;
   flex-grow: 1; }
-header[role="banner"] .content-column, .wrap > section .content-column, .row .content-column, footer.main .footer-content .liste-dartiste .artistes .content-column, .filter-tools .content-column, .videos ul .content-column, .links ul .content-column, .liste-dartiste > ul .content-column, .list-page .content-column {
+header[role="banner"] .content-column, .wrap > section .content-column, .row .content-column, .filter-tools .content-column, .videos ul .content-column, .links ul .content-column, .liste-dartiste > ul .content-column, .list-page .content-column {
   padding-right: 0.9375rem; }
-  header[role="banner"] .content-column img, .wrap > section .content-column img, .row .content-column img, footer.main .footer-content .liste-dartiste .artistes .content-column img, .filter-tools .content-column img, .videos ul .content-column img, .links ul .content-column img, .liste-dartiste > ul .content-column img, .list-page .content-column img {
+  header[role="banner"] .content-column img, .wrap > section .content-column img, .row .content-column img, .filter-tools .content-column img, .videos ul .content-column img, .links ul .content-column img, .liste-dartiste > ul .content-column img, .list-page .content-column img {
     max-width: 100%; }
-header[role="banner"] .full, .wrap > section .full, .row .full, footer.main .footer-content .liste-dartiste .artistes .full, .filter-tools .full, .videos ul .full, .links ul .full, .liste-dartiste > ul .full, .list-page .full, header[role="banner"] .grow, .wrap > section .grow, .row .grow, footer.main .footer-content .liste-dartiste .artistes .grow, .filter-tools .grow, .videos ul .grow, .links ul .grow, .liste-dartiste > ul .grow, .list-page .grow {
+header[role="banner"] .full, .wrap > section .full, .row .full, .filter-tools .full, .videos ul .full, .links ul .full, .liste-dartiste > ul .full, .list-page .full, header[role="banner"] .grow, .wrap > section .grow, .row .grow, .filter-tools .grow, .videos ul .grow, .links ul .grow, .liste-dartiste > ul .grow, .list-page .grow {
   -webkit-flex-grow: 1;
   flex-grow: 1; }
-header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, footer.main .footer-content .liste-dartiste .artistes .unbreak, .filter-tools .unbreak, .videos ul .unbreak, .links ul .unbreak, .liste-dartiste > ul .unbreak, .list-page .unbreak {
+header.center[role="banner"], .wrap > section.center, .wrap > section > header.center, .center.row, .row > header.center, .center.filter-tools, .filter-tools .center.isotop-links, .videos ul.center, .links ul.center, .liste-dartiste > ul.center, .center.list-page {
+  -webkit-justify-content: center;
+  justify-content: center; }
+header[role="banner"] .unbreak, .wrap > section .unbreak, .row .unbreak, .filter-tools .unbreak, .videos ul .unbreak, .links ul .unbreak, .liste-dartiste > ul .unbreak, .list-page .unbreak {
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, .wrap, footer.main .copyright, footer.main .copyright ul, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, footer.main .footer-content .liste-dartiste .artistes, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.button, .simple, .expositions .intro .detail {
+main, .wrap, footer.main .copyright, footer.main .copyright ul, header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.button, .simple, .expositions .intro .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -859,7 +856,7 @@ body, .post-it, .actu a, aside.main .nav-section > li {
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, footer.main .footer-content .liste-dartiste .artistes, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .liste-dartiste > ul, .list-page {
+header[role="banner"], .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .liste-dartiste > ul, .list-page {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
@@ -1440,6 +1437,16 @@ aside.main {
   margin: 0; }
   .actus ul li {
     padding-bottom: 0.9375rem; }
+.actus .special {
+  display: inline-block;
+  background-color: #2d2d2d;
+  border-color: transparent;
+  color: white; }
+  .actus .special:hover {
+    border-color: #f2f2f2;
+    color: white; }
+  .actus .special i {
+    margin-right: 0.625rem; }
 
 .actu a {
   margin-bottom: 0;
@@ -2518,9 +2525,6 @@ body > .fotorama-special {
 
 .show-for-small {
   display: none; }
-
-body > header, body > footer, body > main {
-  max-width: 100rem; }
 
 @media only screen and (max-width: 48rem) {
   .show-for-medium {

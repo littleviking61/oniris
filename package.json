@@ -1,6 +1,7 @@
 {
   "name": "oniris",
-  "version": "2.0.0",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
   "description": "Oniris v2",
   "repository": {
     "type": "git",
@@ -17,7 +18,6 @@
     "load-grunt-tasks": "^2.0.0"
   },
   "author": "",
-  "license": "nuagegraphik",
   "main": "Gruntfile.js",
   "dependencies": {},
   "scripts": {

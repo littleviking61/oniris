@@ -18,7 +18,10 @@ function startup_theme_support() {
 		register_nav_menus(array(
 				'primary' => __('Primary Navigation', 'reverie'),
 				'secondary' => __('Secondary Navigation', 'reverie'),
-				'social' => __('Social Navigation', 'reverie')
+				'social' => __('Social Navigation', 'reverie'),
+				'footer1' => __('Footer colonne 1', 'reverie'),
+				'footer2' => __('Footer colonne 2', 'reverie'),
+				'footer3' => __('Footer colonne 3', 'reverie'),
 		));
 }
 add_action('after_setup_theme', 'startup_theme_support'); /* end Reverie theme support */

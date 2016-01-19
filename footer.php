@@ -2,85 +2,68 @@
 </main><!-- Container End -->
 
 <footer class="main" role="contentinfo">
-	
+
 	<div class="footer-content">
-		
-		<div class="row">
 
-			<div class="min-6 liste-dartiste">
-				<div class="contain container">
-					
-					<?php
-
-						$args = array(
-							'post_parent'    => 8,
-							'meta_key' => 'nom',
-							'orderby' => 'meta_value',
-							'order' => 'ASC',
-							'post_type'      => 'page',
-							'posts_per_page' => -1,
-							'asTitle'				 => false
-						);
-
-						$childPage = get_posts( $args ); 
-					?>
-
-					
-					<ul class="block-grid-4 artistes">
-						<li>
-							<h3>
-								<a href="<?= get_permalink(8) ?>">Artistes</a>
-							</h3>
-						</li>
-						<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
-							<?php if (get_field('visible', $post->ID) == 'true'): ?>
+		<div class="row menus">
+				<div class="">
+					<?php $menu = wp_nav_menu( array(
+						'echo' => false, 
+						'container' => 'nav',
+						'container_class' => 'main hide-for-small',
+						'theme_location' => 'footer1' )); 
+						$logo = '<img src="'.get_template_directory_uri().'/img/logo-oniris-white.svg" alt="">';
+						$menu = str_replace('logo', $logo, $menu); ?>
+						<?= $menu ?>
+				</div>
+				<?php $posts = get_field('relations');
+				if( $posts ): ?>
+				<div>
+					<nav>
+						<ul class="menu">
+							<li>
+								<a href="#">
+									<?php the_field('titre_relations'); ?>
+								</a>
+							</li>
+							<ul class="sub-menu">
+							<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+								<?php setup_postdata($post); ?>
 								<li>
-									<?php 
-										$text = isset($result)
-											? get_field($result, $post->ID)
-											: $post->post_title; ?>
-									<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
-										<?= apply_filters('the_title', $text) ?>
+									<a href="<?php the_permalink(); ?>">
+										<?php the_field('nom'); ?> <?php the_field('prenom'); ?>
 									</a>
 								</li>
-							<?php endif ?>
-						
-						<?php endforeach ?>
-					</ul>
-
-					<?php wp_reset_postdata(); ?>
+							<?php endforeach; wp_reset_postdata(); ?>
+							</ul>
+						</ul>
+					</nav>
 				</div>
-			</div>
-
-			<div class="min-2 socials">
-				<div class="contain container">
-					<h4><?php the_field('titre_sociaux', 'option'); ?></h4>
-					<?php the_field('contenu_sociaux', 'option'); ?>
+				<?php endif; ?>
+				<div class="">
+					<?php wp_nav_menu( array( 
+						'container' => 'nav',
+						'container_class' => 'main hide-for-small',
+						'theme_location' => 'footer2' )); 
+						?>
 				</div>
-			</div>
+				<div class="">
+					<?php wp_nav_menu( array( 
+						'container' => 'nav',
+						'container_class' => 'main hide-for-small',
+						'theme_location' => 'footer3' )); 
+						?>
+				</div>
 
-		</div>
-		<div class="row">
+			<div class="flex-3 socials">
 
-			<div class="min-2">
-				<div class="container contain">
+				<div class="contain">
 					<h4><?php the_field('titre_newsletter', 'option'); ?></h4>
 					<?php the_field('contenu_newsletter', 'option'); ?>
-				</div>
-			</div>
-
-			<div class="infos-pratiques min-6">
-				<div class="contain container special">
-					<h4><?php the_field('titre_infos', 'option'); ?></h4>
-					<div class="content has-button">
-						<?php the_field('contenu_du_footer', 'option'); ?>
-						<a class="button right" href="<?php the_field('page_en_lien', 'option') ?>"><?php the_field('icone_du_lien', 'option') ?> <?php the_field('texte_du_lien', 'option') ?></a>
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 
 	<section class="copyright">

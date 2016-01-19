@@ -203,41 +203,59 @@ footer.main{
 
 	margin-top: $gutter-large;
 
+	&, a, p{
+		color: #999999;
+	}
+
+	li.current_page_item a, li.current-menu-item a, a:hover{
+		color: white !important;
+		//@include colors(&);
+	}
+
 	.footer-content{
-		background-color: #eee;
+		background-color: $black;
 		padding-top: $gutter-hudge;
 		padding-bottom: $gutter-hudge;
+		padding-left: $gutter-large;
 		
-		.row{
-			@include justify-content(center);
-		}
-		
-		h3,h4{
+		h4{
+			font-family: $body-font;
+			display: block;
+			text-transform: uppercase;
+			color: white;
+			font-size: $ft-size-large;
+			padding-bottom: $gutter-mini;
 			margin-bottom: $gutter;
-			padding-bottom: $gutter-small;
-			border-bottom: thin solid;
-			display: inline-block;
-			@include colors(&, "bd");
+			border-bottom: thin white solid;
 		}
 
-		.liste-dartiste{
-			margin-bottom: $gutter-medium;
-			h3{
-				display: inline-block;
-			}
-			
-			.artistes{
-				padding: 0;
+		.menus{
+			@include justify-content(center);
+
+			.menu{
 				margin: 0;
-
-				@extend %flex-column-wrap;
-				@include align-items(flex-end);
+				> li{
+					margin-top: $gutter-large;
+					&:first-child{
+						margin-top: 0;
+					}
+					> a{
+						display: block;
+						text-transform: uppercase;
+						color: white;
+						font-size: $ft-size-large;
+						padding-bottom: $gutter-mini;
+						margin-bottom: $gutter;
+						border-bottom: thin white solid;
+					}
+				}
 			}
-		}
 
-		.socials{
-			h2{
-				font-size: $ft-size-hudge;
+			>div{
+				margin: 50px 2vw 0;
+				&:first-child{
+					margin-top: 0;
+				}
 			}
 		}
 	}
@@ -245,7 +263,12 @@ footer.main{
 	.copyright{
 		padding-right: $gutter-hudge;
 		padding-left: $gutter-hudge;
-		opacity: 0.5;
+		background-color: #202020;
+
+		li.current_page_item a, li.current-menu-item a, a:hover{
+			color: white;
+			//@include colors(&);
+		}
 
 		@extend %flex-column;
 
@@ -278,8 +301,8 @@ footer.main{
 
 	.contain{
 		max-width: -moz-calc(100% - #{$gutter-medium});
-    max-width: -webkit-calc(100% - #{$gutter-medium});
-    max-width: calc(100% - #{$gutter-medium});;
+		max-width: -webkit-calc(100% - #{$gutter-medium});
+		max-width: calc(100% - #{$gutter-medium});;
 		margin-right: $gutter-medium;
 		@include flex-grow(1);
 	}
@@ -293,6 +316,10 @@ footer.main{
 
 	.full, .grow{
 		@include flex-grow(1);
+	}
+
+	&.center{
+		@include justify-content(center);
 	}
 
 	.unbreak{

@@ -106,6 +106,22 @@
 			padding-bottom: $gutter-medium;
 		}
 	}
+
+	.special{
+		display: inline-block;
+		background-color: $black;
+		border-color: transparent;
+		color: white;
+		
+		&:hover{
+			border-color: $lightest-grey;
+			color: white;
+		}
+
+		i{
+			margin-right: $gutter;
+		}
+	}
 }
 
 .actu{
