@@ -583,6 +583,66 @@ p {
 .max-12 {
   max-width: 88.75rem; }
 
+.fixed-1 {
+  -webkit-flex-basis: 6.25rem;
+  flex-basis: 6.25rem;
+  width: calc( 6.25rem - 0rem ); }
+
+.fixed-2 {
+  -webkit-flex-basis: 13.75rem;
+  flex-basis: 13.75rem;
+  width: calc( 13.75rem - 1.25rem ); }
+
+.fixed-3 {
+  -webkit-flex-basis: 21.25rem;
+  flex-basis: 21.25rem;
+  width: calc( 21.25rem - 2.5rem ); }
+
+.fixed-4 {
+  -webkit-flex-basis: 28.75rem;
+  flex-basis: 28.75rem;
+  width: calc( 28.75rem - 3.75rem ); }
+
+.fixed-5 {
+  -webkit-flex-basis: 36.25rem;
+  flex-basis: 36.25rem;
+  width: calc( 36.25rem - 5rem ); }
+
+.fixed-6 {
+  -webkit-flex-basis: 43.75rem;
+  flex-basis: 43.75rem;
+  width: calc( 43.75rem - 6.25rem ); }
+
+.fixed-7 {
+  -webkit-flex-basis: 51.25rem;
+  flex-basis: 51.25rem;
+  width: calc( 51.25rem - 7.5rem ); }
+
+.fixed-8 {
+  -webkit-flex-basis: 58.75rem;
+  flex-basis: 58.75rem;
+  width: calc( 58.75rem - 8.75rem ); }
+
+.fixed-9 {
+  -webkit-flex-basis: 66.25rem;
+  flex-basis: 66.25rem;
+  width: calc( 66.25rem - 10rem ); }
+
+.fixed-10 {
+  -webkit-flex-basis: 73.75rem;
+  flex-basis: 73.75rem;
+  width: calc( 73.75rem - 11.25rem ); }
+
+.fixed-11 {
+  -webkit-flex-basis: 81.25rem;
+  flex-basis: 81.25rem;
+  width: calc( 81.25rem - 12.5rem ); }
+
+.fixed-12 {
+  -webkit-flex-basis: 88.75rem;
+  flex-basis: 88.75rem;
+  width: calc( 88.75rem - 13.75rem ); }
+
 .block-grid-1 li {
   display: inline-block;
   width: 100%; }
@@ -742,6 +802,21 @@ aside.main {
       border-color: #8b008b; }
     .cat-sculpture .container.special {
       border-color: #00bfff; }
+
+.special > .container {
+  border: thin solid; }
+  .special > .container {
+    border-color: #ffbc17; }
+  .cat-peinture .special > .container {
+    border-color: #0252cf; }
+  .cat-geometrie .special > .container {
+    border-color: #f23518; }
+  .cat-photographie .special > .container {
+    border-color: #42b04f; }
+  .cat-multi .special > .container {
+    border-color: #8b008b; }
+  .cat-sculpture .special > .container {
+    border-color: #00bfff; }
 
 .row {
   -webkit-align-items: flex-start;
@@ -1100,6 +1175,7 @@ form input[type="submit"] {
 
 /* list bloc */
 .post-it, .actu a {
+  position: relative;
   border: 0.0625rem dotted transparent; }
   .post-it .thumbnail, .actu a .thumbnail {
     margin: -1.3125rem;

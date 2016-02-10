@@ -23,8 +23,8 @@ $(document).ready(function(){
 		$isotop.imagesLoaded( function() {
 			$listArticle = $isotop.isotope({
 				// options
-				itemSelector: '.container',
-				layoutMode: 'masonry'
+				itemSelector: '.item',
+				layoutMode: 'masonry',
 			});
 
 			// store filter for each group

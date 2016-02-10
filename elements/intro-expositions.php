@@ -2,6 +2,7 @@
 	$width = get_field('largeur_du_bloc');
 	$flex = $width > 0 ? 'flex-' . $width : 'flex-3';
 	$artistes = get_field('relation_artistes');
+	$thumbnailSize = get_field('taille_de_limage') ?: 'medium';
 ?>
 
 
@@ -29,11 +30,11 @@
 			<div class="detail">
 				<?php if (has_post_thumbnail()): ?>
 					<div class="thumbnail">
-						<?php the_post_thumbnail('thumbnail'); ?>
+						<?php the_post_thumbnail($thumbnailSize); ?>
 					</div>
 				<?php elseif(has_post_thumbnail($artiste)) : ?>
 					<div class="thumbnail">
-						<?= get_the_post_thumbnail($artiste, 'thumbnail') ?>
+						<?= get_the_post_thumbnail($artiste, $thumbnailSize) ?>
 					</div>
 				<?php endif ?>
 
@@ -84,11 +85,11 @@
 				<div class="detail">
 					<?php if (has_post_thumbnail()): ?>
 						<div class="thumbnail">
-							<?php the_post_thumbnail('small'); ?>
+							<?php the_post_thumbnail($thumbnailSize); ?>
 						</div>
 					<?php elseif(has_post_thumbnail($artiste)) : ?>
 						<div class="thumbnail">
-							<?= get_the_post_thumbnail($artiste, 'small') ?>
+							<?= get_the_post_thumbnail($artiste, $thumbnailSize) ?>
 						</div>
 					<?php endif ?>
 					

@@ -4,12 +4,248 @@
 		"selected_items":
 		[
 			[
+				"r",
+				"rgba	rgba()"
+			],
+			[
+				"gutter",
+				"gutter-big"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"to",
+				"toggleClass"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
 				"mar",
-				"margin-top"
+				"margin-right"
+			],
+			[
+				"padd",
+				"padding-left"
 			],
 			[
 				"margin",
-				"margin"
+				"margin-left"
+			],
+			[
+				"gut",
+				"gutter-big"
+			],
+			[
+				"html",
+				"html5blank"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"get_template",
+				"get_template_directory_uri"
+			],
+			[
+				"te",
+				"text-color-light"
+			],
+			[
+				"off",
+				"offset"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"is",
+				"isotopeArgNew"
+			],
+			[
+				"iso",
+				"isotope"
+			],
+			[
+				"isot",
+				"isotopeArgDefault"
+			],
+			[
+				"isop",
+				"isotopeArgDefault"
+			],
+			[
+				"remo",
+				"removeClass〔function〕"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"share",
+				"sharebutton"
+			],
+			[
+				"image",
+				"imagesLoaded"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"push",
+				"pushState"
+			],
+			[
+				"marb",
+				"margin-bottom"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"guter",
+				"gutter-big"
+			],
+			[
+				"move",
+				"moveByHistoty"
+			],
+			[
+				"as",
+				"absolute"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"loading",
+				"loading-flat"
+			],
+			[
+				"get_category",
+				"get_category_link"
+			],
+			[
+				"get_the",
+				"get_the_ID"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"rea",
+				"ready"
+			],
+			[
+				"bakc",
+				"background-color"
+			],
+			[
+				"text",
+				"text-color-light"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"page",
+				"pageActu"
+			],
+			[
+				"th",
+				"$thumbnail〔variable〕"
+			],
+			[
+				"gu",
+				"gutter"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"whi",
+				"white-space"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"rgb",
+				"rgba	rgba()"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"rb",
+				"rgba	rgba()"
+			],
+			[
+				"actu",
+				"actualités"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"list-",
+				"list-basic"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"vide",
+				"video_a_lhonneur"
 			],
 			[
 				"bodcolo",
@@ -20,24 +256,12 @@
 				"font-size"
 			],
 			[
-				"bac",
-				"background-color"
-			],
-			[
 				"fz",
 				"font-size"
 			],
 			[
 				"endfore",
 				"endforeach〔keyword〕"
-			],
-			[
-				"gutter",
-				"gutter-medium"
-			],
-			[
-				"pad",
-				"padding"
 			],
 			[
 				"flex-",
@@ -54,10 +278,6 @@
 			[
 				"s",
 				"stretch"
-			],
-			[
-				"gut",
-				"gutter-large"
 			],
 			[
 				"the_",
@@ -84,10 +304,6 @@
 				"relations"
 			],
 			[
-				"actu",
-				"actualites"
-			],
-			[
 				"artiste",
 				"$artisteID〔variable〕"
 			],
@@ -96,24 +312,12 @@
 				"orderby"
 			],
 			[
-				"min",
-				"min-width"
-			],
-			[
-				"bor",
-				"border"
-			],
-			[
 				"aside",
 				"aside-open"
 			],
 			[
 				"pd",
 				"padding-left"
-			],
-			[
-				"gu",
-				"gutter-medium"
 			],
 			[
 				"re",
@@ -138,10 +342,6 @@
 			[
 				"nav",
 				"nav-menu"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"togl",
@@ -172,10 +372,6 @@
 				"gutter-small"
 			],
 			[
-				"ba",
-				"background-color"
-			],
-			[
 				"get_the_c",
 				"get_the_content"
 			],
@@ -202,10 +398,6 @@
 			[
 				"flex-co",
 				"flex-column"
-			],
-			[
-				"guter",
-				"gutter-large"
 			],
 			[
 				"title",
@@ -240,16 +432,8 @@
 				"flex-column-wrap"
 			],
 			[
-				"padd",
-				"padding-left"
-			],
-			[
 				"vi",
 				"videos"
-			],
-			[
-				"var",
-				"var_dump〔function〕"
 			],
 			[
 				"ca",
@@ -272,14 +456,6 @@
 				"position"
 			],
 			[
-				"di",
-				"display"
-			],
-			[
-				"get_template",
-				"get_template_part"
-			],
-			[
 				"gallerie",
 				"gallerieId"
 			],
@@ -290,10 +466,6 @@
 			[
 				"galel",
 				"gallerie_id"
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"catego",
@@ -308,10 +480,6 @@
 				"hidden"
 			],
 			[
-				"over",
-				"overflow"
-			],
-			[
 				"add",
 				"addClass〔function〕"
 			],
@@ -324,24 +492,8 @@
 				"lighter〔value〕"
 			],
 			[
-				"tex",
-				"textButton"
-			],
-			[
-				"r",
-				"right"
-			],
-			[
 				"background-",
 				"background-color: 〔property〕"
-			],
-			[
-				"text",
-				"text-transform"
-			],
-			[
-				"border",
-				"border-bottom:   (property)"
 			],
 			[
 				"wid",
@@ -364,26 +516,50 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
-			"settings":
-			{
-				"buffer_size": 2475,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/header.php",
 			"settings":
 			{
-				"buffer_size": 1773,
+				"buffer_size": 2694,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 352,
+				"buffer_size": 13491,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
+			"settings":
+			{
+				"buffer_size": 23930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/single.php",
+			"settings":
+			{
+				"buffer_size": 3638,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+			"settings":
+			{
+				"buffer_size": 2690,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/entry-meta.php",
+			"settings":
+			{
+				"buffer_size": 836,
 				"line_ending": "Unix"
 			}
 		},
@@ -391,31 +567,15 @@
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
 			"settings":
 			{
-				"buffer_size": 1104,
+				"buffer_size": 1799,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/author.php",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/page.scss",
 			"settings":
 			{
-				"buffer_size": 2199,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
-			"settings":
-			{
-				"buffer_size": 548,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss",
-			"settings":
-			{
-				"buffer_size": 883,
+				"buffer_size": 459,
 				"line_ending": "Unix"
 			}
 		},
@@ -423,7 +583,63 @@
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
 			"settings":
 			{
-				"buffer_size": 61,
+				"buffer_size": 12108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+			"settings":
+			{
+				"buffer_size": 3719,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+			"settings":
+			{
+				"buffer_size": 3987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
+			"settings":
+			{
+				"buffer_size": 3391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
+			"settings":
+			{
+				"buffer_size": 760,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
+			"settings":
+			{
+				"buffer_size": 633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/mediaqueries.scss",
+			"settings":
+			{
+				"buffer_size": 2547,
 				"line_ending": "Unix"
 			}
 		}
@@ -435,8 +651,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "pc",
+		"height": 379.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -521,25 +737,90 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/nuagegraphik/Sites/vikingDiaries"
 	],
 	"file_history":
 	[
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/Gruntfile.js",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/js/scripts.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/page.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/index.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
 		"/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454498034/mapped/var/www/html/laventurierviking-dev/wp-config.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454451490/mapped/var/www/html/laventurierviking-dev/wp-config.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454356963/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/abstracts/abstract-social-count-plus-counter.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/nav.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/reset.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/comments.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454356883/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/class-social-count-plus-view.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/maps/map-eurasie.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/css/style.css",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454271331/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/social-count-plus.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/comment.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/languages/HTML5Blank.pot",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454271386/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/class-social-count-plus-shortcodes.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/single.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.mo",
+		"/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/comments.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/pagination.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/category.php",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454254113/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/wp-showhide/wp-showhide.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/entry-meta.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/map.php",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/functions.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/modules/comments.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/tag.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/comment.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/comments.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/post-like.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/magnific.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/index.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/share-button.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/css/share-button.min.css",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/templates/comments.php",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/comments.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/ajax-header.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/loop.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/ajax-category.php",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/scripts.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/fotorama.scss",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/gallery.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/style.css",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/isotope.pkgd.min.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/imagesloaded.pkgd.min.js",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/post-like.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-no-semi.less",
+		"/Users/nuagegraphik/Sites/vikingDiaries/archive.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/laventurierviking/viking-logo/ameriquedunord/vikingcaribous.svg",
+		"/Users/nuagegraphik/Sites/vikingDiaries/header.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/25900188b937c20dbdbaf17c0b4475fa5fd3d2ec/nav.scssc",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/jquery-1.12.0.min.js",
+		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/utils.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/tests/basic.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/img/fond.jpg",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/templates/head.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
-		"/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/fonts.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/less/flat/layout.less",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/less/flat/flat.less",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/wrapper.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/css/style.css",
 		"/usr/local/SUPPORTERS.md",
 		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/nuagegraphik/Sites/vikingDiaries/modules/is-debug.php",
@@ -587,71 +868,7 @@
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1446650846/mapped/var/www/html/client/oniris/wp-config.php",
 		"/Users/nuagegraphik/Desktop/commandling-util",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-expo.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/img/logo-oniriss.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icon.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/img/logo-oniris.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/favicon.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_aside.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/style.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/bbcode.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/normalize.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/archive.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_list.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-bold-demo.html",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/custom.modernizr.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/robotoslab-thin_0-webfont.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-V112.jpg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/map.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/links_section.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/logo-oniris.ai",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_colors.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/Dossier ONIRIS-2014-1440x900/Document fonts/SourceSansPro-Regular.otf",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1425392411/mapped/var/www/html/client/oniris/wp-config.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/404.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/fotorama.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_fotorama-base.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/fotorama.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/galerie-oniris/sav2014/wp-content/plugins/mailpress/mp-includes/class/options/form/field_types/captcha_gd2/captcha/words/en.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ajax-gallery.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.modal.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/imagesloaded.pkgd.min.js",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670560/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v4.php",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423670124/mapped/var/www/html/client/oniris/wp-content/plugins/advanced-custom-fields-nextgen-gallery-field-add-on/acf-ngg-v5.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/style.css.map",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/content.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_font.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/fotorama.css.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/enqueue-sass.php",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1423580500/mapped/var/www/html/client/oniris/wp-content/plugins/mqtranslate/mqtranslate_javascript.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/UPDATE",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/mongolia/recherche/mailing",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-salon.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artistes.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-actu.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/simple-actu.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/simple-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/icons/link.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-list.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/fetch.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/view.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/isotope.pkgd.min.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/icons/search.svg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_page.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/searchform.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artistes.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/artiste-thumbnail.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-actualites.php"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php"
 	],
 	"find":
 	{
@@ -662,6 +879,7 @@
 		"height": 109.0,
 		"where_history":
 		[
+			"/Users/nuagegraphik/Sites/vikingDiaries",
 			"",
 			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
 			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss",
@@ -677,134 +895,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"php echo ",
-			"create_post_type_html5",
-			"Article personnalisé",
-			"article",
-			");",
-			"d=\"menu-item-",
-			"dw_timeline_Nav_Walker",
-			"extra",
-			"5px",
-			"HTML5_DEBUG",
-			"html5blank",
-			"modules/",
-			"wp_head",
-			"related_pages",
-			"// ",
-			"// 	",
-			"// ",
-			"// 		",
-			"// ",
-			"infos",
-			"center",
+			"vendor",
+			"history",
+			"ga",
+			"ga(",
+			"history",
+			"console.log",
+			"the_post_thumbnail",
+			".single-dairies article.open, .dairies article.open",
+			"&.active ",
+			"#nav-toggle",
+			"#nav-toggle ",
+			":hover",
+			"dw_timeline_nav_menu_args",
+			"break-extra-large",
 			".content",
-			"content",
-			"text-center",
-			"texte-center",
-			"h3",
-			"h2",
-			"h3",
-			"section",
-			"$gutter",
-			"div",
-			"h3",
-			"get_sub_field",
-			"h4",
-			"h3",
-			"h4",
-			"post-it",
-			"relation",
-			".simple",
-			"infos",
-			"ewsletter",
-			"page_type_acf",
-			"column",
-			"medium",
-			"150px",
-			"gutter",
-			".gallery",
-			"slideshow",
-			"20px",
-			"100px",
-			"%flex-general",
-			"thumbnail",
-			"flex",
-			"ac",
-			"%post-it",
-			".container",
-			"max-height:",
-			"var_dump",
-			"search-home",
-			"serch-home",
-			"get_template_part('templates/actu');",
-			"row",
-			"video",
-			"hideId",
-			"the_nav_section",
-			"button",
-			"icon-more",
-			"slideshowNg",
-			"thumbnail",
-			".intro",
-			"quicksearch",
+			"_e(",
+			"edit",
+			"article",
+			"shortco",
+			"Social_Count_Plus_Shortcodes",
+			"add_image",
+			"page",
+			"Page:",
+			"Page",
+			"Page Voyages",
+			"__(",
+			"       '<input placeholder=\"' . __( 'Website', 'html5blank' ) . '\" id=\"url\" name=\"url\" type=\"text\" value=\"' . esc_attr( $commenter['comment_author_url'] ) .\n",
+			"__(",
+			"_e(",
+			"_e",
+			"Comments are closed here.",
+			"__",
+			" __(",
+			"__(",
+			" __(",
+			"__(",
+			"__",
+			"html5blank",
+			"__",
+			"__('",
+			"1000px",
+			"100%",
+			"data-icon=\"<?= get_template_directory_uri(); ?>/img/icons/",
+			"/img/",
+			"carte",
+			"console.",
+			"scrollTo",
+			"comments_template(\n\n:not(.no-current));",
+			"DW_Timeline_Walker_Comment",
+			"comment",
+			"'/templates/comments.php'",
+			"comment",
+			"'content'",
+			"entry-meta",
+			"tools",
+			"console.log",
+			"$wrapper-width",
+			"rem-calc(800)",
+			"extend",
+			"scrollTo",
 			"button ",
-			"isotop-links",
-			"flex-2",
-			"transform",
-			", aside.main",
-			"search-home",
-			"search",
-			"22",
-			"10",
-			"16",
-			"22",
-			"14",
-			"$gutter",
-			"22",
-			"16",
-			"$grey",
-			"22px",
-			"16px",
-			"1px",
-			"10px",
-			"#fff",
-			" 	",
-			"	",
-			"toggleClass",
-			"initial",
-			"section-gutter",
-			": ",
-			"px",
-			":not(.no-current)",
-			":not([href=\"#\"])",
-			":not(.no-current)",
-			":not([href*=\"#\"])",
-			"current-menu-item",
-			"current",
-			"'current'",
-			"current",
-			".current-menu-item",
-			"<?php do_shortcode(the_field(",
-			"do_shortcode(the_field",
-			"h4",
-			"&.",
-			"current",
-			"$(this)",
-			"videos-list",
-			"310",
-			"70",
-			"310",
-			"64",
-			"280",
-			"60",
-			"260",
-			"/<?= $category ?>",
-			"<?= get_bloginfo('template_directory') ?>/<?= $category ?>",
-			"directory') ",
-			"directory') ?>/icons",
-			"directory') ",
-			"directory')"
+			"button",
+			"init_share",
+			"share",
+			"toolsInit",
+			"jm",
+			"console.log",
+			"&nbsp;",
+			"8",
+			"share",
+			"40px",
+			"notify",
+			"i",
+			"toolsInit",
+			"dairies",
+			"init_actions",
+			"dairies",
+			"tools",
+			"div",
+			"mfp",
+			"li",
+			".open",
+			"share",
+			"share-b",
+			"custom_shortcode",
+			"share-button",
+			"waypointssticky",
+			"mfp",
+			"header",
+			"', 'html5blank').'",
+			"'.__('",
+			"commentInit",
+			"comment",
+			"30px",
+			"glyphicon",
+			"       ",
+			"dw-timeline",
+			"DW_Timeline_Walker_Comment",
+			"dw-timeline",
+			"number_format_i18n",
+			"$i",
+			"comments",
+			"comment",
+			"post-formats",
+			"format",
+			"2.1.3",
+			"urlChange",
+			"history",
+			"pushState",
+			"before",
+			"element",
+			"more",
+			"get_the_id()",
+			"var ",
+			"content",
+			"thumbnail",
+			"php echo",
+			"urlsplit",
+			"do_ajax_request",
+			"get",
+			"get_gallery\nget_gallery",
+			"get_gallery",
+			"bimLa_gallery",
+			"timelineInfinitescroll",
+			"fotoramaLightbox",
+			"gallery",
+			"dw_timeline_gallery",
+			"gallery"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -812,6 +1030,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"comments_template();",
+			"",
 			"\n\n:not(.no-current)",
 			"",
 			"<?= do_shortcode(get_field(",
@@ -834,32 +1054,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2475,
+						"buffer_size": 2694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2198,
-								2198
+								168,
+								168
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
+							"history_list_is_closing": true,
 							"incomplete_sync": null,
-							"open_with_edit": true,
 							"remote_loading": false,
+							"sftp_duplicate_views": 0,
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 4.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -868,19 +1089,86 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/header.php",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1773,
+						"buffer_size": 13491,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1773
+								6996,
+								6996
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6779.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 248.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/single.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1863,
+								1881
 							]
 						],
 						"settings":
@@ -893,196 +1181,71 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 491.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1104,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								337,
-								337
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/author.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2199,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								502,
-								502
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 883,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1249.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
+					"buffer": 4,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 61,
+						"buffer_size": 2690,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								58
+								1094,
+								1094
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
-							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 527.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/entry-meta.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								426,
+								426
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1092,11 +1255,348 @@
 					"type": "text"
 				}
 			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1439,
+								1428
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1705.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/page.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2404,
+								2404
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3641,
+								3641
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2690.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2982,
+								2956
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 84.0,
+						"translation.y": 2234.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								367
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								729,
+								729
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 954.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 760,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								607,
+								629
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 509.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								480,
+								480
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 679.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/mediaqueries.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								443,
+								443
+							],
+							[
+								1128,
+								1128
+							],
+							[
+								2482,
+								2482
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3629.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 45.0
 	},
 	"input":
 	{
@@ -1111,6 +1611,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -1121,6 +1627,7 @@
 		"rows":
 		[
 			0.0,
+			0.297352263766,
 			1.0
 		]
 	},
@@ -1151,28 +1658,152 @@
 		"selected_items":
 		[
 			[
+				"func",
+				"vikingDiaries/functions.php"
+			],
+			[
+				"scri",
+				"vikingDiaries/js/scripts.js"
+			],
+			[
+				"scrip",
+				"dwlaventurier/assets/js/scripts.js"
+			],
+			[
+				"sin",
+				"vikingDiaries/single.php"
+			],
+			[
+				"var",
+				"vikingDiaries/scss/modules/variables.scss"
+			],
+			[
+				"nav",
+				"dwlaventurier/lib/nav.php"
+			],
+			[
+				"ajax",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"singl",
+				"vikingDiaries/single.php"
+			],
+			[
+				"mapeur",
+				"vikingDiaries/maps/map-eurasie.php"
+			],
+			[
+				"ajas",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"aj",
+				"vikingDiaries/ajax-single.php"
+			],
+			[
+				"heade",
+				"vikingDiaries/header-projet.php"
+			],
+			[
+				"page",
+				"vikingDiaries/page.php"
+			],
+			[
+				"head",
+				"vikingDiaries/header-projet.php"
+			],
+			[
+				"comments",
+				"vikingDiaries/modules/comments.php"
+			],
+			[
+				"pos",
+				"vikingDiaries/js/lib/post-like.js"
+			],
+			[
+				"posli",
+				"vikingDiaries/js/lib/post-like.js"
+			],
+			[
+				"fun",
+				"vikingDiaries/functions.php"
+			],
+			[
+				"hea",
+				"vikingDiaries/header-projet.php"
+			],
+			[
+				"header",
+				"vikingDiaries/header-projet.php"
+			],
+			[
+				"shame",
+				"vikingDiaries/scss/partials/shame.scss"
+			],
+			[
+				"layou",
+				"vikingDiaries/scss/partials/layout.scss"
+			],
+			[
+				"loop",
+				"vikingDiaries/loop.php"
+			],
+			[
+				"scr",
+				"vikingDiaries/js/scripts.js"
+			],
+			[
+				"function",
+				"dwlaventurier/functions.php"
+			],
+			[
+				"style",
+				"vikingDiaries/scss/style.scss"
+			],
+			[
+				"sytl",
+				"vikingDiaries/style.css"
+			],
+			[
+				"inde",
+				"vikingDiaries/index.php"
+			],
+			[
+				"in",
+				"dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-no-semi.less"
+			],
+			[
+				"arch",
+				"vikingDiaries/archive.php"
+			],
+			[
 				"footer",
 				"vikingDiaries/footer.php"
+			],
+			[
+				"",
+				"vikingDiaries/scss/partials/utils.scss"
+			],
+			[
+				"util",
+				"dwlaventurier/lib/utils.php"
+			],
+			[
+				"basi",
+				"vikingDiaries/node_modules/grunt-rsync/tests/basic.js"
+			],
+			[
+				"mix",
+				"vikingDiaries/scss/modules/mixins.scss"
 			],
 			[
 				"medi",
 				"oniris/scss/_mediaqueries.scss"
 			],
 			[
-				"basi",
-				"oniris/scss/_basic.scss"
-			],
-			[
 				"info",
 				"oniris/templates/infos_pratiques.php"
-			],
-			[
-				"func",
-				"oniris/functions.php"
-			],
-			[
-				"fun",
-				"oniris/functions.php"
 			],
 			[
 				"blo",
@@ -1184,10 +1815,6 @@
 			],
 			[
 				"mi",
-				"oniris/scss/_mixins.scss"
-			],
-			[
-				"mix",
 				"oniris/scss/_mixins.scss"
 			],
 			[
@@ -1259,10 +1886,6 @@
 				"oniris/search-home.php"
 			],
 			[
-				"hea",
-				"oniris/header.php"
-			],
-			[
 				"actuhi",
 				"oniris/templates/actu-highlight.php"
 			],
@@ -1285,14 +1908,6 @@
 			[
 				"loo",
 				"oniris/loop-list.php"
-			],
-			[
-				"sin",
-				"oniris/single-artiste.php"
-			],
-			[
-				"style",
-				"oniris/css/style.css"
 			],
 			[
 				"video",
@@ -1359,14 +1974,6 @@
 				"oniris/functions.php"
 			],
 			[
-				"loop",
-				"oniris/loop-flex.php"
-			],
-			[
-				"layou",
-				"oniris/scss/_layout.scss"
-			],
-			[
 				"ma",
 				"oniris/js/main.js"
 			],
@@ -1423,14 +2030,6 @@
 				"oniris/loop-flex.php"
 			],
 			[
-				"head",
-				"oniris/header.php"
-			],
-			[
-				"inde",
-				"oniris/index.php"
-			],
-			[
 				"sham",
 				"oniris/scss/_shame.scss"
 			],
@@ -1444,10 +2043,6 @@
 			],
 			[
 				"single",
-				"oniris/single.php"
-			],
-			[
-				"singl",
 				"oniris/single.php"
 			],
 			[
@@ -1511,10 +2106,6 @@
 				"oniris/lib/clean.php"
 			],
 			[
-				"in",
-				"oniris/index.php"
-			],
-			[
 				"bas",
 				"oniris/scss/_basic.scss"
 			],
@@ -1527,28 +2118,12 @@
 				"oniris/index.php"
 			],
 			[
-				"function",
-				"oniris/functions.php"
-			],
-			[
-				"page",
-				"oniris/scss/_page.scss"
-			],
-			[
 				"font",
 				"oniris/scss/_font.scss"
 			],
 			[
 				"fle",
 				"oniris/loop-flex.php"
-			],
-			[
-				"heade",
-				"oniris/header.php"
-			],
-			[
-				"sytl",
-				"oniris/scss/style.scss"
 			],
 			[
 				"icon.s",
@@ -1615,7 +2190,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1623,7 +2198,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 203.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

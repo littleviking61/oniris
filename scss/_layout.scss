@@ -2,6 +2,7 @@
 @include flex-grid();
 @include flex-grid(min);
 @include flex-grid(max);
+@include flex-grid(fixed, 12, '.', false);
 
 @include block-grid();
 
@@ -179,6 +180,13 @@ aside.main{
 		border: thin solid;
 		@include colors(&, "bd");
 		// background-color: $lightest-grey;
+	}
+}
+
+.special{
+	> .container{
+		border: thin solid;
+		@include colors(&, "bd");
 	}
 }
 

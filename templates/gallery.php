@@ -5,6 +5,7 @@
 	$width = get_sub_field('largeur_du_bloc') ;
 	$flexClass = $width > 0 ? 'flex-' . $width : 'flex-7';
 	$nbCol = get_sub_field('nombre_de_colonne');
+	$fit = get_sub_field('format_dimage') ?: 'contain';
 	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
 
 	if($width === "0" || $width === 0) $flex = 'flex-5 grow max-7';
@@ -45,7 +46,7 @@
 					data-nav="thumbs"
 					data-autoplay="true"
 					data-loop="true"
-					data-fit="cover"
+					data-fit="<?= $fit ?>"
 					data-width="100%"
 					data-maxwidth="100%"
 					data-ratio="3/2"

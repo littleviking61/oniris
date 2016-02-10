@@ -151,6 +151,7 @@ form{
 .post-it, %post-it{
 	@extend %flex-row;
 	@extend %section-gutter;
+	position: relative;
 	border: $one dotted transparent;
 
 	.thumbnail{
