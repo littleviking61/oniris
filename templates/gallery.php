@@ -6,6 +6,9 @@
 	$flexClass = $width > 0 ? 'flex-' . $width : 'flex-7';
 	$nbCol = get_sub_field('nombre_de_colonne');
 	$fit = get_sub_field('format_dimage') ?: 'contain';
+	$titre = get_sub_field('titre') ?: false;
+	$nextgenPro = get_sub_field('nextgen_pro') ?: false;
+	$sousTitre = get_sub_field('sous-titre') ?: false;
 	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;
 
 	if($width === "0" || $width === 0) $flex = 'flex-5 grow max-7';
@@ -14,6 +17,31 @@
 		$flex = 'flex-' . $width[0] . ' grow max-' . $width[1]; 
 	} else $flex = 'flex-' . $width;
 	
+
+if ($galleryType == 'nextgenPro') : ?>
+	<section class="gallery <?= $galleryType ?> <?= $flexClass ?>">
+		
+		<div class="contain container">
+
+			<?php if( $titre ): ?>
+				<h4 class="title"><?= do_shortcode($titre) ?></h4>
+			<?php endif ?>
+			<?php if( $sousTitre ): ?>
+				<h4><?= do_shortcode($sousTitre) ?></h4>
+			<?php endif ?>
+
+			<?php if( $nextgenPro ): ?>
+				<div class="content">
+					<?= apply_filters('the_content', $nextgenPro) ?>
+				</div>
+			<?php endif ?>
+
+		</div>
+	</section>
+		
+		
+<?php else :
+
 	global $nggdb; 
 	$gallery = 
 		($galleryType == 'slideshowNg' || $galleryType == 'galleryNg') 
@@ -39,9 +67,13 @@
 		<div class="contain container">
 			<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>
 
-				<?php if( get_sub_field('titre') ): ?>
-					<h5><?= do_shortcode(get_sub_field('titre')) ?></h5>
+				<?php if( $titre ): ?>
+					<h4 class="title"><?= do_shortcode($titre) ?></h4>
 				<?php endif ?>
+				<?php if( $sousTitre ): ?>
+					<h4><?= do_shortcode($sousTitre) ?></h4>
+				<?php endif ?>
+
 				<div class="fotorama"
 					data-nav="thumbs"
 					data-autoplay="true"
@@ -81,8 +113,11 @@
 
 			<?php elseif ($galleryType == 'galleryNg' || $galleryType == 'galleryWP'): ?>
 
-				<?php if( get_sub_field('titre') ): ?>
-					<h4><?= get_sub_field('titre') ?></h4>
+				<?php if( $titre ): ?>
+					<h3 class="title"><?= do_shortcode($titre) ?></h3>
+				<?php endif ?>
+				<?php if( $sousTitre ): ?>
+					<h4><?= do_shortcode($sousTitre) ?></h4>
 				<?php endif ?>
 				
 				<div class="selection bloc">
@@ -124,4 +159,5 @@
 		</script>
 	<?php endif; ?>
 
+	<?php endif ?>
 <?php endif ?>

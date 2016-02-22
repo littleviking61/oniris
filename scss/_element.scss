@@ -72,6 +72,36 @@ form{
 			background: $lighter-grey;
 		}
 	}
+
+	&.search{
+		background-color: rgba(white, 0.4);
+		height: rem-calc(30);
+		margin-top: $gutter-small;
+		margin-right: $gutter-large;
+
+		> *{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		button{
+			background: transparent;
+			width: rem-calc(30);
+			color: $grey;
+			i{
+				margin: 0;
+			}
+		}
+
+		input{
+			width: calc(100% - #{rem-calc(30)});
+			color: $grey;
+			margin-top: 0;
+			background: transparent;
+			width: rem-calc(100);
+			overflow: hidden;
+		}
+	}
 }
 
 .filter-tools{

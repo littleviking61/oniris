@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"cont",
+				"container"
+			],
+			[
 				"gutter",
 				"gutter-large"
 			],
@@ -359,7 +363,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 6258,
+				"buffer_size": 6254,
 				"line_ending": "Unix"
 			}
 		},
@@ -396,13 +400,50 @@
 			}
 		},
 		{
-			"contents": "<?php \n	$galleryType = get_sub_field('type');\n	$galleryId = get_sub_field('gallerie_id')[0]['ngg_id'];\n	$galleryWp = get_sub_field('gallerie_img');\n	$width = get_sub_field('largeur_du_bloc') ;\n	$flexClass = $width > 0 ? 'flex-' . $width : 'flex-7';\n	$nbCol = get_sub_field('nombre_de_colonne');\n	$fit = get_sub_field('format_dimage') ?: 'contain';\n	$limitImage = (int) get_sub_field('nombre_dimage') ?: 8;\n\n	if($width === \"0\" || $width === 0) $flex = 'flex-5 grow max-7';\n	elseif ( count(explode(',', $width)) > 1) {\n		$width = explode(',', $width);\n		$flex = 'flex-' . $width[0] . ' grow max-' . $width[1]; \n	} else $flex = 'flex-' . $width;\n	\n	global $nggdb; \n	$gallery = \n		($galleryType == 'slideshowNg' || $galleryType == 'galleryNg') \n		? $nggdb->get_gallery($galleryId, 'sortorder', 'ASC', true, 0, 0)\n		: $galleryWp;\n	$i = 0;\n\n	/*\n	slideshowNg : Slideshow NG\n	slideshowWP : Slideshow WP\n	galleryNg : Gallery NG\n	galleryWP : Gallery WP\n	 */\n	// var_dump($galleryWp);\n	\n	if (!empty($gallery)):\n\n	$gid = uniqid('gallery_');\n	?>\n\n	<section class=\"gallery <?= $galleryType ?> <?= $flexClass ?>\">\n		\n		<div class=\"contain container\">\n			<?php if ($galleryType == 'slideshowNg' || $galleryType == 'slideshowWP'): ?>\n\n				<?php if( get_sub_field('titre') ): ?>\n					<h5><?= do_shortcode(get_sub_field('titre')) ?></h5>\n				<?php endif ?>\n				<div class=\"fotorama\"\n					data-nav=\"thumbs\"\n					data-autoplay=\"true\"\n					data-loop=\"true\"\n					data-fit=\"<?= $data-fit ?>\"\n					data-width=\"100%\"\n					data-maxwidth=\"100%\"\n					data-ratio=\"3/2\"\n					data-thumbwidth=\"100px\"\n					data-thumbheight=\"65px\" data-thumbmargin=\"10\"\n					data-arrows=\"false\"\n					data-click=\"true\"\n					data-swipe=\"true\"\n					data-keyboard=\"true\"\n					data-allowfullscreen=\"true\">\n\n					<?php foreach ($gallery as $image):\n\n						$i++; \n\n						$caption = $image->caption ?: $image['caption'];\n						$imageURL = $image->imageURL ?: $image['url'];\n						$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['small'];\n						$description = $image->description ?: $image['title'];\n						$altText = $image->alttext ?: $image['title'];\n						$hidden = $image->hidden ?: false;\n						$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>\n\n						<a href=\"<?= $imageURL ?>\" title=\"<?= $description ?>\" data-caption=\"<?= $i.'/'.count($gallery) . $caption ?>\" class=\"load-it\" >\n							<?php if ( !$hidden ) { ?>\n								<img title=\"<?= $description ?>\" alt=\"<?= $altText ?>\" src=\"<?= $thumbnailURL ?>\" <?= $image->size ?> />\n							<?php } ?>\n						</a>\n					<?php endforeach ?>\n\n				</div>\n\n			<?php elseif ($galleryType == 'galleryNg' || $galleryType == 'galleryWP'): ?>\n\n				<?php if( get_sub_field('titre') ): ?>\n					<h4><?= get_sub_field('titre') ?></h4>\n				<?php endif ?>\n				\n				<div class=\"selection bloc\">\n					<?php foreach ($gallery as $image): \n						$i++; \n\n						$caption = $image->caption ?: $image['caption'];\n						$thumbnailURL = $image->thumbnailURL ?: $image['sizes']['thumbnail'];\n						$description = $image->description ?: $image['title'];\n						$altText = $image->alttext ?: $image['alt'];\n						$hidden = $image->hidden ?: false;\n						\n						$caption = strlen($caption) > 1 ? ' - '. $caption : ''; ?>\n\n						<a 	href=\"#show-gallery\" \n								data-gallery-id=\"<?= $galleryId ?>\" \n								data-gallery-img=\"<?= $gid ?>\" \n								data-index=\"<?= $i-1 ?>\" \n								title=\"<?= $description ?>\" \n								data-caption=\"<?= $i.'/'.count($gallery) . $caption ?>\" \n								class=\"\" >\n							<?php if ( !$hidden ) { ?>\n								<img title=\"<?= $description ?>\" alt=\"<?= $altText ?>\" src=\"<?= $thumbnailURL ?>\" <?= $image->size ?> />\n							<?php } ?>\n						</a>\n						<?php if($i >= $limitImage && $limitImage !== -1) break; ?>\n					<?php endforeach ?>\n\n				</div>\n\n			<?php endif ?>\n		</div>\n			\n	</section>\n\n	<?php if( empty($galleryId) ) : ?>\n		<script type=\"text/javascript\">\n			var <?= $gid ?> = <?= json_encode( $gallery) ?>;\n		</script>\n	<?php endif; ?>\n\n<?php endif ?>",
-			"file": "templates/gallery.php",
-			"file_size": 3953,
-			"file_write_time": 130991574650000000,
+			"file": "elements/intro-expositions.php",
 			"settings":
 			{
-				"buffer_size": 3958,
+				"buffer_size": 3032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "elements/single-artiste.php",
+			"settings":
+			{
+				"buffer_size": 589,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/gallery.php",
+			"settings":
+			{
+				"buffer_size": 4807,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sftp-config.json",
+			"settings":
+			{
+				"buffer_size": 1566,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/video.php",
+			"settings":
+			{
+				"buffer_size": 654,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/videos-list.php",
+			"settings":
+			{
+				"buffer_size": 771,
 				"line_ending": "Unix"
 			}
 		},
@@ -418,7 +459,23 @@
 			"file": "scss/_layout.scss",
 			"settings":
 			{
-				"buffer_size": 5454,
+				"buffer_size": 5620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_element.scss",
+			"settings":
+			{
+				"buffer_size": 2970,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 79066,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,14 +496,6 @@
 			}
 		},
 		{
-			"file": "scss/_mediaqueries.scss",
-			"settings":
-			{
-				"buffer_size": 2601,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "scss/_shame.scss",
 			"settings":
 			{
@@ -458,8 +507,42 @@
 			"file": "scss/elements/_bloc.scss",
 			"settings":
 			{
-				"buffer_size": 4979,
+				"buffer_size": 5777,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/elements/_fotorama.scss",
+			"settings":
+			{
+				"buffer_size": 536,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 3182,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 2547 files for \"font-face-bb\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/e1ae9bcd99c18d3140f5ebbed9ea696d2f64d9f8/_font.scssc:\n    <binary>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/e1ae9bcd99c18d3140f5ebbed9ea696d2f64d9f8/_icons.scssc:\n    <binary>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/.sass-cache/e1ae9bcd99c18d3140f5ebbed9ea696d2f64d9f8/_mixins.scssc:\n    <binary>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_font.scss:\n    1  // font\n    2  \n    3: @include font-face-bb('roboto', '../ft/robotoslab-thin_0-webfont', 100);\n    4: @include font-face-bb('roboto', '../ft/robotoslab-light_0-webfont', normal);\n    5: @include font-face-bb('roboto', '../ft/robotoslab-regular_0-webfont', bold);\n    6  \n    7: @include font-face-bb('asap', '../ft/asap-regular-webfont', normal);\n    8: @include font-face-bb('asap', '../ft/asap-bold-webfont', bold);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_icons.scss:\n    1: @include font-face-bb('icon-oniris', '../icons/icon-oniris');\n    2  \n    3  [class^=\"icon-\"]:before,\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_mixins.scss:\n    2  \n    3  // Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss\n    4: @mixin font-face-bb($font-family, $file-path, $weight: normal, $style: normal, $svg-name: $font-family ) {\n    5    @font-face {\n    6        font-family: $font-family;\n\n21 matches across 6 files\n",
+			"settings":
+			{
+				"buffer_size": 1645,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "scss/_font.scss",
+			"settings":
+			{
+				"buffer_size": 369,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -548,17 +631,25 @@
 	"expanded_folders":
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates"
 	],
 	"file_history":
 	[
-		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454498006/mapped/var/www/html/client/oniris/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
+		"/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/.htaccess",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-salon.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-expo.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icons/favicon/cat-mutli/browserconfig.xml",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
+		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454498006/mapped/var/www/html/client/oniris/wp-config.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/simple.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/links_section.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/infos_pratiques.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/newsletter.php",
@@ -594,14 +685,11 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-salon.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Users/nuagegraphik/Desktop/php.ini",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1446650846/mapped/var/www/html/client/oniris/wp-config.php",
 		"/Users/nuagegraphik/Desktop/commandling-util",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-expo.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/img/logo-oniriss.svg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/icon.php",
@@ -620,7 +708,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/custom.modernizr.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/robotoslab-thin_0-webfont.svg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/ONIRIS-2014-V112.jpg",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/map.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/oniris/logo-oniris.ai",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_colors.scss",
@@ -632,7 +719,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_fotorama-base.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/fotorama.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/boulot/galerie-oniris/sav2014/wp-content/plugins/mailpress/mp-includes/class/options/form/field_types/captcha_gd2/captcha/words/en.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ajax-gallery.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
@@ -679,9 +765,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/search.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/test.php",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421405097/mapped/var/www/client/oniris/php.ini",
-		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1421402668/mapped/var/www/client/oniris/wp-config.php",
-		"/Users/nuagegraphik/.ssh/config"
+		"/Users/nuagegraphik/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log"
 	],
 	"find":
 	{
@@ -706,6 +790,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"font-face-bb",
+			"h3",
+			":first-child",
+			".slideshowNg",
+			".slideshowNg h5:first-child",
+			"gallery",
+			"content",
+			".content",
+			"content",
+			"h4",
+			"h5",
+			"container",
+			"h3",
+			"h4",
+			"h5",
+			"sous-titre",
+			"h4",
+			"h5",
+			"'medium'",
+			"thumbnail('medium'",
 			"fotorama",
 			"loading",
 			"h4",
@@ -813,27 +917,7 @@
 			"'current'",
 			"current",
 			".current-menu-item",
-			"<?php do_shortcode(the_field(",
-			"do_shortcode(the_field",
-			"h4",
-			"&.",
-			"current",
-			"$(this)",
-			"videos-list",
-			"310",
-			"70",
-			"310",
-			"64",
-			"280",
-			"60",
-			"260",
-			"/<?= $category ?>",
-			"<?= get_bloginfo('template_directory') ?>/<?= $category ?>",
-			"directory') ",
-			"directory') ?>/icons",
-			"directory') ",
-			"directory')",
-			"href=\"/"
+			"<?php do_shortcode(the_field("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -867,15 +951,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6258,
+						"buffer_size": 6254,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3508,
-								3516
+								593,
+								593
 							]
 						],
 						"settings":
@@ -889,10 +973,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3225.0,
+						"translation.y": 346.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -925,7 +1009,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -958,7 +1042,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -991,7 +1075,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1026,24 +1110,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "templates/gallery.php",
+					"file": "elements/intro-expositions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3958,
+						"buffer_size": 3032,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1463,
-								1463
+								201,
+								201
 							]
 						],
 						"settings":
@@ -1056,20 +1140,186 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 993.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "elements/single-artiste.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								548
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 27.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "templates/gallery.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1238,
+								1238
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sftp-config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1566,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "templates/video.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								232,
+								232
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "templates/videos-list.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 18.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 11,
 			"sheets":
 			[
 				{
-					"buffer": 6,
+					"buffer": 11,
 					"file": "scss/_variables.scss",
 					"semi_transient": false,
 					"settings":
@@ -1081,8 +1331,8 @@
 						"selection":
 						[
 							[
-								1924,
-								1383
+								30,
+								30
 							]
 						],
 						"settings":
@@ -1094,27 +1344,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1441.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 12,
 					"file": "scss/_layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5454,
+						"buffer_size": 5620,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3044,
-								3044
+								3237,
+								3237
 							]
 						],
 						"settings":
@@ -1128,27 +1378,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4970.0,
+						"translation.y": 5373.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "scss/_basic.scss",
+					"buffer": 13,
+					"file": "scss/_element.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2327,
+						"buffer_size": 2970,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								79,
-								79
+								16,
+								16
 							]
 						],
 						"settings":
@@ -1163,11 +1413,76 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 14,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 79066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "scss/_basic.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								857
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1910.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
 					"file": "scss/elements/_aside.scss",
 					"semi_transient": false,
 					"settings":
@@ -1195,43 +1510,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "scss/_mediaqueries.scss",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2601,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								199,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
+					"buffer": 17,
 					"file": "scss/_shame.scss",
 					"semi_transient": false,
 					"settings":
@@ -1259,24 +1542,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 18,
 					"file": "scss/elements/_bloc.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4979,
+						"buffer_size": 5777,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1446,
-								1446
+								3530,
+								3513
 							]
 						],
 						"settings":
@@ -1288,10 +1571,178 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5974.0,
+						"translation.y": 7742.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "scss/elements/_fotorama.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "scss/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								178
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1645,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										612,
+										624
+									],
+									[
+										692,
+										704
+									],
+									[
+										776,
+										788
+									],
+									[
+										868,
+										880
+									],
+									[
+										944,
+										956
+									],
+									[
+										1102,
+										1114
+									],
+									[
+										1456,
+										1468
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								998,
+								935
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "scss/_font.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								306
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1361,6 +1812,30 @@
 		"selected_items":
 		[
 			[
+				"mixi",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"moda",
+				"oniris/scss/elements/_modal.scss"
+			],
+			[
+				"ele",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"mix",
+				"oniris/icons/favicon/cat-mutli/browserconfig.xml"
+			],
+			[
+				"m",
+				"oniris/js/main.js"
+			],
+			[
+				"expo",
+				"oniris/elements/intro-expositions.php"
+			],
+			[
 				"func",
 				"oniris/functions.php"
 			],
@@ -1401,16 +1876,8 @@
 				"oniris/scss/_mixins.scss"
 			],
 			[
-				"mix",
-				"oniris/scss/_mixins.scss"
-			],
-			[
 				"foo",
 				"oniris/footer.php"
-			],
-			[
-				"ele",
-				"oniris/scss/_element.scss"
 			],
 			[
 				"sim",
@@ -1419,10 +1886,6 @@
 			[
 				"el",
 				"oniris/scss/_element.scss"
-			],
-			[
-				"mixi",
-				"oniris/scss/_mixins.scss"
 			],
 			[
 				"vari",
@@ -1555,10 +2018,6 @@
 			[
 				"layo",
 				"oniris/scss/_layout.scss"
-			],
-			[
-				"m",
-				"oniris/js/main.js"
 			],
 			[
 				"flex",
@@ -1833,7 +2292,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 204.0,
+	"side_bar_width": 219.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

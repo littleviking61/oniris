@@ -9,13 +9,15 @@
 
 <?php if ( $isotop ): ?>
 	<div class="filter-tools">
-	  <div class="isotop-links" data-filter-group="cat">
+		<div class="isotop-links" data-filter-group="all">
+	    <a href="#all" class="button normal check hide" data-filter="*">Tous</a>
+    </div>
+	  <div class="isotop-links combine" data-filter-group="cat">
 			<a href="#cat" class="button cat-geometrie check" data-filter=".cat-geometrie"><i class="icon-geo"></i> geometrie</a>
 			<a href="#cat" class="button cat-peinture check" data-filter=".cat-peinture"><i class="icon-peinture"></i> peinture</a>
 			<a href="#cat" class="button cat-photographie check" data-filter=".cat-photographie"><i class="icon-photo"></i> photographie</a>
 			<a href="#cat" class="button cat-multi check" data-filter=".cat-multi"><i class="icon-mixte"></i> multi</a>
 			<a href="#cat" class="button cat-sculpture check" data-filter=".cat-sculpture"><i class="icon-sculpture"></i> sculpture</a>
-	    <a href="#all" class="button check hide" data-filter="*"><i class="fa fa-refresh"></i></a>
 		</div>
 		<?php if ($list !== 'artiste'): ?>
 			<div class="isotop-links" data-filter-group="place">

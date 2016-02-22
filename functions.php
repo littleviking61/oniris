@@ -55,7 +55,7 @@ Menu
 
 function add_search_form($items, $args) {
 	if( $args->theme_location == 'primary' )
-		$items .=  file_get_contents(locate_template('search-home.php'));
+		$items .=  '<li class="my-nav-menu-search">' . get_search_form(false) . '</li>';
 	return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
@@ -355,4 +355,5 @@ function wpb_related_pages() {
 		wp_reset_query(); 
 	}
 }
+
 ?>

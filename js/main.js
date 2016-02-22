@@ -38,13 +38,20 @@ $(document).ready(function(){
 			  var $buttonGroup = $this.parents('.isotop-links');
 			  var filterGroup = $buttonGroup.attr('data-filter-group');
 			  // set filter for group
-			  if(filters[ filterGroup ] !== undefined){
+			  // si le groupe de filtre existe deja et est combiné sinon
+			  if(filters[ filterGroup ] !== undefined && $buttonGroup.hasClass('combine')){
+			  	// si le filtre est deja dans le tab sinon tu l'ajoute
 			 		if($.inArray($this.attr('data-filter'),filters[ filterGroup ]) !== -1) {
+			 			// si il reste un seul attr sinon supprime l'attribut actu
 			 			if(filters[ filterGroup ].length === 1) delete filters[ filterGroup ];
 		 				else filters[ filterGroup ].splice($.inArray($this.attr('data-filter'),filters[ filterGroup ]), 1);
-		 			}else filters[ filterGroup ].push($this.attr('data-filter'));
-			  }else filters[ filterGroup ] = [$this.attr('data-filter')];
-
+		 			}else	filters[ filterGroup ].push($this.attr('data-filter'));
+			  }else{
+			  	// si pas combiné et deja dans les filtres supprime sinon ajoute
+			  	if($.inArray($this.attr('data-filter'),filters[ filterGroup ]) !== -1) {
+						delete filters[ filterGroup ];
+			  	}else filters[ filterGroup ] = [$this.attr('data-filter')];
+			  }
 			  // combine filters
 				filterValue = [];
 			  if(filterGroup === 'all') {
@@ -61,8 +68,9 @@ $(document).ready(function(){
 				if(filterValue.length === 0) $('.isotop-links [href="#all"]').addClass('check');
 				else $('.isotop-links [href="#all"]').removeClass('check');
 
-				// console.log(filterValue.join(','));
 			  // set filter for Isotope
+			  // console.log(filterValue.join(','));
+			  // history todo
 			  $isotop.isotope({ filter: ':not('+filterValue.join(',')+')' });
 			});
 		

@@ -1,25 +1,7 @@
 /* fotorama */
 @import "fotorama-base.scss";
-// shame
 // 
-.slideshowNg{
-	position: relative;
-	padding: 0;
 
-	.container{
-		padding: 0;
-	}
-	// max-height: rem-calc(662);
-
-	h5:first-child{
-		position: absolute;
-		bottom: 100%;
-		right: $gutter-medium;
-		padding-bottom: $gutter;
-		padding-right: $gutter;
-		color: $lighter-grey;
-	}
-}
 
 .fotorama{
 	width: 100%;

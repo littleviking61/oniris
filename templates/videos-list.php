@@ -4,15 +4,17 @@
 	$flex = $width > 0 ? 'flex-' . $width : 'flex-5';
 	$col = $col > 0 ? ' block-grid-' . $col : '';
 	$videos = get_sub_field('videos');
+	$titre = get_sub_field('titre') ?: false;
+	$sousTitre = get_sub_field('sous_titre') ?: false;
 ?>
 
 <section class="videos <?= $flex ?>">
 	<div class="contain container">
-		<?php if( get_sub_field('titre') ): ?>
-			<h4><?= do_shortcode(get_sub_field('titre')) ?></h4>
+		<?php if( $titre ): ?>
+			<h3><?= do_shortcode($titre) ?></h3>
 		<?php endif ?>
-		<?php if( get_sub_field('sous_titre') ): ?>
-			<h4 class="sub-title"><?= do_shortcode(get_sub_field('sous_titre')) ?></h4>
+		<?php if( $sousTitre ): ?>
+			<h4><?= do_shortcode($sousTitre) ?></h4>
 		<?php endif ?>
 		
 		<ul class="videos-list">

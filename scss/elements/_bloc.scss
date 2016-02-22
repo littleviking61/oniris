@@ -25,10 +25,6 @@
 		}
 	}
 
-	.title{
-		margin-bottom: $gutter-small;
-	}
-
 	h5{
 		@include colors(&) { 
 			color: $light-grey; 
@@ -55,7 +51,7 @@
 		@include colors(&){
 			color: $lighter-grey;
 		};
-
+		margin-bottom: $gutter;
 	}
 
 	ul{
@@ -220,12 +216,29 @@
 }
 
 .video{
+	h3{
+		margin-bottom: $gutter;
+	}
+
 	iframe{
 		max-width: 100%;
 	}
 }
 
 .videos{
+	h3{
+		margin-bottom: $gutter;
+	}
+
+	h4{
+		font-size: $ft-size-medium;
+		border-bottom: $one solid;
+		@include colors(&, "bd") {
+			border-color: $light-grey;
+		};
+		padding-bottom: $gutter-small;
+	}
+
 	ul{
 		width: 100%;
 		list-style: none;
@@ -245,6 +258,58 @@
 		}	
 	}
 }
+
+.gallery{
+	h3{
+		margin-bottom: $gutter;
+	}
+	
+	h4{
+		font-size: $ft-size-medium;
+		border-bottom: $one solid;
+		@include colors(&, "bd") {
+			border-color: $light-grey;
+		};
+		padding-bottom: $gutter-small;
+	}
+}
+
+.galleryNg{
+
+	.selection > a{
+		margin-right: $gutter-small;
+		margin-bottom: $gutter-small;
+		display: inline-block;
+	}
+
+}
+
+.slideshowNg{
+	position: relative;
+	padding: 0;
+
+	.container{
+		padding: 0;
+		
+		> .title{
+			position: absolute;
+			bottom: 100%;
+			right: $gutter-medium;
+			padding-bottom: $gutter;
+			padding-right: $gutter;
+			color: $lighter-grey;
+			margin-bottom: 0;
+			border: none;
+		}
+
+		> h4:not(.title){
+			margin: $gutter-large;
+		}
+	}
+	// max-height: rem-calc(662);
+
+}
+
 
 .links{
 
@@ -379,15 +444,6 @@
 	> ul{
 		@extend %flex-column-wrap;
 	}
-}
-.galleryNg{
-
-	.selection > a{
-		margin-right: $gutter-small;
-		margin-bottom: $gutter-small;
-		display: inline-block;
-	}
-
 }
 
 .short{

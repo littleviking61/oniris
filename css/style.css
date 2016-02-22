@@ -787,7 +787,8 @@ aside.main {
 
 .container {
   padding: 1.25rem;
-  background-color: white; }
+  background-color: white;
+  background-color: rgba(250, 250, 250, 0.9); }
   .container.special {
     border: thin solid; }
     .container.special {
@@ -1100,6 +1101,27 @@ form input[type="submit"] {
   width: auto; }
   form input[type="submit"]:hover {
     background: #a6a6a6; }
+form.search {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 1.875rem;
+  margin-top: 0.3125rem;
+  margin-right: 1.25rem; }
+  form.search > * {
+    display: inline-block;
+    vertical-align: middle; }
+  form.search button {
+    background: transparent;
+    width: 1.875rem;
+    color: #353535; }
+    form.search button i {
+      margin: 0; }
+  form.search input {
+    width: calc(100% - 1.875rem);
+    color: #353535;
+    margin-top: 0;
+    background: transparent;
+    width: 6.25rem;
+    overflow: hidden; }
 
 .filter-tools {
   width: 100%;
@@ -1394,8 +1416,6 @@ aside.main {
     max-height: 100%;
     min-width: 100%;
     width: auto; }
-.simple .title {
-  margin-bottom: 0.3125rem; }
 .simple h5 {
   font-size: 0.875rem; }
   .simple h5 {
@@ -1441,18 +1461,20 @@ aside.main {
   .cat-sculpture .simple h4 {
     border-color: #00bfff; }
 .simple h3 {
-  color: #ffbc17;
-  color: #a6a6a6; }
-.cat-peinture .simple h3 {
-  color: #0252cf; }
-.cat-geometrie .simple h3 {
-  color: #f23518; }
-.cat-photographie .simple h3 {
-  color: #42b04f; }
-.cat-multi .simple h3 {
-  color: #8b008b; }
-.cat-sculpture .simple h3 {
-  color: #00bfff; }
+  margin-bottom: 0.625rem; }
+  .simple h3 {
+    color: #ffbc17;
+    color: #a6a6a6; }
+  .cat-peinture .simple h3 {
+    color: #0252cf; }
+  .cat-geometrie .simple h3 {
+    color: #f23518; }
+  .cat-photographie .simple h3 {
+    color: #42b04f; }
+  .cat-multi .simple h3 {
+    color: #8b008b; }
+  .cat-sculpture .simple h3 {
+    color: #00bfff; }
 .simple ul {
   list-style: none;
   padding-left: 0.3125rem; }
@@ -1576,9 +1598,30 @@ aside.main {
 .foire .artistes, .expo .artistes {
   float: left; }
 
+.video h3 {
+  margin-bottom: 0.625rem; }
 .video iframe {
   max-width: 100%; }
 
+.videos h3 {
+  margin-bottom: 0.625rem; }
+.videos h4 {
+  font-size: 0.875rem;
+  border-bottom: 0.0625rem solid;
+  padding-bottom: 0.3125rem; }
+  .videos h4 {
+    border-color: #ffbc17;
+    border-color: #737373; }
+  .cat-peinture .videos h4 {
+    border-color: #0252cf; }
+  .cat-geometrie .videos h4 {
+    border-color: #f23518; }
+  .cat-photographie .videos h4 {
+    border-color: #42b04f; }
+  .cat-multi .videos h4 {
+    border-color: #8b008b; }
+  .cat-sculpture .videos h4 {
+    border-color: #00bfff; }
 .videos ul {
   width: 100%;
   list-style: none;
@@ -1589,6 +1632,48 @@ aside.main {
     margin-bottom: 0.9375rem; }
     .videos ul li iframe {
       width: 100%; }
+
+.gallery h3 {
+  margin-bottom: 0.625rem; }
+.gallery h4 {
+  font-size: 0.875rem;
+  border-bottom: 0.0625rem solid;
+  padding-bottom: 0.3125rem; }
+  .gallery h4 {
+    border-color: #ffbc17;
+    border-color: #737373; }
+  .cat-peinture .gallery h4 {
+    border-color: #0252cf; }
+  .cat-geometrie .gallery h4 {
+    border-color: #f23518; }
+  .cat-photographie .gallery h4 {
+    border-color: #42b04f; }
+  .cat-multi .gallery h4 {
+    border-color: #8b008b; }
+  .cat-sculpture .gallery h4 {
+    border-color: #00bfff; }
+
+.galleryNg .selection > a {
+  margin-right: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  display: inline-block; }
+
+.slideshowNg {
+  position: relative;
+  padding: 0; }
+  .slideshowNg .container {
+    padding: 0; }
+    .slideshowNg .container > .title {
+      position: absolute;
+      bottom: 100%;
+      right: 0.9375rem;
+      padding-bottom: 0.625rem;
+      padding-right: 0.625rem;
+      color: #a6a6a6;
+      margin-bottom: 0;
+      border: none; }
+    .slideshowNg .container > h4:not(.title) {
+      margin: 1.25rem; }
 
 .links h3, .links h4 {
   color: #a6a6a6; }
@@ -1786,11 +1871,6 @@ aside.main {
   margin: 0.3125rem 0; }
   .relations li:before {
     display: none; }
-
-.galleryNg .selection > a {
-  margin-right: 0.3125rem;
-  margin-bottom: 0.3125rem;
-  display: inline-block; }
 
 /* fotorama */
 /* fotorama */
@@ -2341,19 +2421,6 @@ aside.main {
 
 .fotorama--fullscreen .fotorama__nav:after, .fotorama--fullscreen .fotorama__nav:before, .fotorama--fullscreen .fotorama__stage:after, .fotorama--fullscreen .fotorama__stage:before, .fotorama__wrap--fade .fotorama__stage:after, .fotorama__wrap--fade .fotorama__stage:before, .fotorama__wrap--no-shadows .fotorama__nav:after, .fotorama__wrap--no-shadows .fotorama__nav:before, .fotorama__wrap--no-shadows .fotorama__stage:after, .fotorama__wrap--no-shadows .fotorama__stage:before {
   display: none; }
-
-.slideshowNg {
-  position: relative;
-  padding: 0; }
-  .slideshowNg .container {
-    padding: 0; }
-  .slideshowNg h5:first-child {
-    position: absolute;
-    bottom: 100%;
-    right: 0.9375rem;
-    padding-bottom: 0.625rem;
-    padding-right: 0.625rem;
-    color: #a6a6a6; }
 
 .fotorama {
   width: 100%; }
