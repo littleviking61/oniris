@@ -21,17 +21,17 @@
 		</div>
 		<?php if ($list !== 'artiste'): ?>
 			<div class="isotop-links" data-filter-group="place">
-					<a href="#place" class="button check" data-filter='[data-place="in"]' data-place="in">in</a>
-					<a href="#place" class="button check" data-filter='[data-place="out"]' data-place="out">out</a>
+					<a href="#place" class="button normal check" data-filter='[data-place="in"]' data-place="in">in</a>
+					<a href="#place" class="button normal check" data-filter='[data-place="out"]' data-place="out">out</a>
 			</div>	
 			<div class="isotop-links" data-filter-group="type">
-					<a href="#place" class="button check" data-filter='[data-type="group"]' data-type="group">group</a>
-					<a href="#place" class="button check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
+					<a href="#place" class="button normal check" data-filter='[data-type="group"]' data-type="group">group</a>
+					<a href="#place" class="button normal check" data-filter='[data-type="alone"]' data-type="alone">alone</a>
 			</div>	
-			<div class="isotop-links" data-filter-group="date">
-					<a href="#date" class="button check" data-filter='[data-date="upcoming"]' data-date="upcoming">upcoming</a>
-					<a href="#date" class="button check" data-filter='[data-date="now"]' data-date="now">now</a>
-					<a href="#date" class="button check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
+			<div class="isotop-links combine" data-filter-group="date">
+					<a href="#date" class="button normal check" data-filter='[data-date="upcoming"]' data-date="upcoming">upcoming</a>
+					<a href="#date" class="button normal check" data-filter='[data-date="now"]' data-date="now">now</a>
+					<a href="#date" class="button normal check" data-filter='[data-date="gone"]' data-date="gone">gone</a>
 			</div>
 		<?php endif ?>
 		<div class="quicksearch">

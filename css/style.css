@@ -1149,6 +1149,12 @@ form.search {
         padding-left: 0; }
       .filter-tools .isotop-links a:not(.check) {
         color: #737373; }
+      .filter-tools .isotop-links a.normal {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #737373;
+        padding-left: 0.625rem; }
+        .filter-tools .isotop-links a.normal.check {
+          background-color: white; }
   .filter-tools .quicksearch {
     margin-left: auto; }
     .filter-tools .quicksearch input {

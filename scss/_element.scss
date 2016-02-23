@@ -131,6 +131,15 @@ form{
 			&:not(.check) {
 				color: $light-grey;
 			}
+			
+			&.normal{
+				background-color: rgba(white, 0.2);
+				color: $light-grey;
+				padding-left: $gutter;
+				&.check{
+					background-color: white;
+				}
+			}
 		}
 	}
 

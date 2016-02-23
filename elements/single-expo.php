@@ -1,6 +1,14 @@
 <?php if (!empty(get_field('nom'))): ?>
 
-	<div class="item fixed-2 expo <?php the_field('category') ?>">
+	<?php 
+	$date = new DateTime(get_field('date_de_debut'));
+	$endDate = new DateTime(get_field('date_de_fin'));
+	$now = new DateTime(); ?>
+
+	<div class="item fixed-2 expo <?php the_field('category') ?>" 
+		data-place="<?= get_field('a_la_galerie') ? 'in' : 'out'; ?>"
+		data-type="<?= count(get_field('relation_artistes')) > 1 ? 'group' : 'alone' ?>"
+		data-date="<?= $date < $now ? ($endDate < $now ? 'gone' : 'now') : 'upcoming' ?>"> 
 		<a href="<?php the_permalink() ?>" class="container contain post-it <?php the_field('category') ?>">
 
 			<?php if( has_post_thumbnail() ): ?>
