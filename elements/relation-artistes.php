@@ -57,26 +57,27 @@
 
 	// The Loop ?>
 	<?php if( $the_query->have_posts() ): $i = 0; ?>
-		<div class="relationship">
-			<h5><?= __('Actualitées de l\'artiste') ?></h5>
-			<ul>
+		<div class="links contain">
+			<h3><?= __('Actualitées de l\'artiste') ?></h3>
+			<ul class="links-list">
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); $i++; ?>
 				<?php if ($hideId === get_the_id()) continue; ?>
-				<li>
+				<li class="link">
 					<a href="<?php the_permalink(); ?>">
-						<div class="short">
+						<?php if( has_post_thumbnail() ): ?>
+								<?php the_post_thumbnail('thumbnail') ?>
+						<?php endif ?>
+						<h4>
+							<?php the_field('nom') ?>
+						</h4>
+						<?php if (get_field('intitule')): ?>
+							<p><?= do_shortcode(get_field('intitule')) ?></p>
+						<?php else: ?>
 							<p>
-								<i><?php the_field('nom') ?></i>
+								du <?= date_i18n("d F", strtotime(get_field('date_de_debut'))) ?><br>
+								au <?= date_i18n("d F Y", strtotime(get_field('date_de_fin'))) ?>
 							</p>
-							<?php if (get_field('intitule')): ?>
-								<p><?= do_shortcode(get_field('intitule')) ?></p>
-							<?php else: ?>
-								<p>
-									du <?= date_i18n("d F", strtotime(get_field('date_de_debut'))) ?><br>
-									au <?= date_i18n("d F Y", strtotime(get_field('date_de_fin'))) ?>
-								</p>
-							<?php endif ?>
-						</div>
+						<?php endif ?>
 					</a>
 				</li>
 				<?php if($i >= 3) break; ?>

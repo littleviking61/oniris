@@ -1,4 +1,8 @@
-<section class="infos-pratiques">
+<?php 
+	$width = get_sub_field('largeur_du_bloc');
+	$flexClass = $width > 0 ? 'flex-' . $width : '';
+?>
+<section class="infos-pratiques <?= $flexClass ?>">
 	<div class="contain container special text-<?= get_sub_field('alignement')[0] ?>">
 		<?php if (get_sub_field('titre')): ?>
 			<h4><?= do_shortcode(get_sub_field('titre')) ?></h4>
