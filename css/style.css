@@ -842,12 +842,12 @@ footer.main {
   margin-top: 1.25rem; }
   footer.main, footer.main a, footer.main p {
     color: #999999; }
-  footer.main li.current_page_item a, footer.main li.current-menu-item a, footer.main a:hover {
+  footer.main li.current_page_item > a, footer.main li.current-menu-item > a, footer.main a:hover {
     color: white !important; }
   footer.main .footer-content {
     background-color: #2d2d2d;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
     padding-left: 1.25rem; }
     footer.main .footer-content h4 {
       font-family: "asap", Helvetica, Arial, sans-serif;
@@ -858,6 +858,8 @@ footer.main {
       padding-bottom: 0.20833rem;
       margin-bottom: 0.625rem;
       border-bottom: thin white solid; }
+    footer.main .footer-content nav + nav {
+      padding-top: 0.625rem; }
     footer.main .footer-content .menus {
       -webkit-justify-content: center;
       justify-content: center; }
@@ -875,6 +877,10 @@ footer.main {
             padding-bottom: 0.20833rem;
             margin-bottom: 0.625rem;
             border-bottom: thin white solid; }
+            footer.main .footer-content .menus .menu > li > a i {
+              display: none; }
+        footer.main .footer-content .menus .menu hr {
+          display: none; }
       footer.main .footer-content .menus > div {
         margin: 50px 2vw 0; }
         footer.main .footer-content .menus > div:first-child {

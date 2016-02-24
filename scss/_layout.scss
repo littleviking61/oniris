@@ -216,15 +216,15 @@ footer.main{
 		color: #999999;
 	}
 
-	li.current_page_item a, li.current-menu-item a, a:hover{
+	li.current_page_item > a, li.current-menu-item > a, a:hover{
 		color: white !important;
 		//@include colors(&);
 	}
 
 	.footer-content{
 		background-color: $black;
-		padding-top: $gutter-hudge;
-		padding-bottom: $gutter-hudge;
+		padding-top: $gutter-big;
+		padding-bottom: $gutter-big;
 		padding-left: $gutter-large;
 		
 		h4{
@@ -238,16 +238,22 @@ footer.main{
 			border-bottom: thin white solid;
 		}
 
+		nav + nav{
+			padding-top: $gutter;
+		}
+
 		.menus{
 			@include justify-content(center);
 
 			.menu{
 				margin: 0;
 				> li{
+
 					margin-top: $gutter-large;
 					&:first-child{
 						margin-top: 0;
 					}
+
 					> a{
 						display: block;
 						text-transform: uppercase;
@@ -256,7 +262,15 @@ footer.main{
 						padding-bottom: $gutter-mini;
 						margin-bottom: $gutter;
 						border-bottom: thin white solid;
+
+						i{
+							display: none;
+						}
 					}
+				}
+
+				hr{
+					display: none;
 				}
 			}
 

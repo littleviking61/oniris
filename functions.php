@@ -211,7 +211,7 @@ add_filter('body_class', 'add_body_class');
 Navigation
  **********************/
 
-function the_nav_section($pageId, $args = [], $result)
+function the_nav_section($pageId, $args = [], $class = 'nav-section')
 {
 	$argsDefault = array(
 		'post_parent'    => $pageId,
@@ -226,7 +226,7 @@ function the_nav_section($pageId, $args = [], $result)
 	$childPage = get_posts( $args ); 
 	?>
 
-	<ul class="nav-section">
+	<ul class="<?= $class ?>">
 		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current-menu-item' : null ?>">
 			<a href="<?= get_permalink($pageId) ?>">
 				<?php if ($args['asTitle'] !== false): ?>
@@ -239,7 +239,9 @@ function the_nav_section($pageId, $args = [], $result)
 				<?php endif ?>
 			</a>
 			<ul class="sub-menu">
-					<li><a href="<?= get_the_permalink($pageId) ?>">Voir tous les <?= strtolower(get_the_title($pageId)) ?></a></li>
+					<?php if ($class === 'nav-section'): ?>
+						<li><a href="<?= get_the_permalink($pageId) ?>"><?= __('Voir tous les', 'reverie') ?> <?= strtolower(get_the_title($pageId)) ?></a></li>
+					<?php endif ?>
 					<hr>
 					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
@@ -326,7 +328,6 @@ function wpb_related_pages() {
 	global $post;
 	$tags = wp_get_post_tags($post->ID);
 	
-	var_dump($tags);
 	if ($tags) {
 		$tag_ids = array();
 		foreach($tags as $individual_tag) :

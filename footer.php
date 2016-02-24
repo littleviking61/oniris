@@ -10,7 +10,7 @@
 					<?php $menu = wp_nav_menu( array(
 						'echo' => false, 
 						'container' => 'nav',
-						'container_class' => 'main hide-for-small',
+						'container_class' => 'hide-for-small',
 						'theme_location' => 'footer1' )); 
 						$logo = '<img src="'.get_template_directory_uri().'/img/logo-oniris-white.svg" alt="">';
 						$menu = str_replace('logo', $logo, $menu); ?>
@@ -43,16 +43,21 @@
 				<div class="">
 					<?php wp_nav_menu( array( 
 						'container' => 'nav',
-						'container_class' => 'main hide-for-small',
+						'container_class' => 'hide-for-small',
 						'theme_location' => 'footer2' )); 
 						?>
 				</div>
 				<div class="">
 					<?php wp_nav_menu( array( 
 						'container' => 'nav',
-						'container_class' => 'main hide-for-small',
+						'container_class' => 'hide-for-small',
 						'theme_location' => 'footer3' )); 
 						?>
+						<nav>
+							<?php 
+								the_nav_section(2191, ['meta_key' => 'date_de_debut', 'orderby' => 'meta_value', 'order'	=> 'DESC', 'posts_per_page' => 8], 'menu');
+							 ?>
+						</nav>
 				</div>
 
 			<div class="flex-3 socials">
@@ -69,7 +74,7 @@
 	<section class="copyright">
 		<?php wp_nav_menu( array( 
 				'container' => 'nav',
-				'container_class' => 'main hide-for-small',
+				'container_class' => 'hide-for-small',
 				'theme_location' => 'primary' )); 
 		?>
 		<p>
