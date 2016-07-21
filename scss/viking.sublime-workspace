@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-right"
+			],
+			[
 				"r",
 				"rgba	rgba()"
 			],
@@ -34,10 +38,6 @@
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"mar",
-				"margin-right"
 			],
 			[
 				"padd",
@@ -519,26 +519,23 @@
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/header.php",
 			"settings":
 			{
-				"buffer_size": 2694,
+				"buffer_size": 2620,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "(function( root, $, undefined ) {\n	\"use strict\";\n\n	var $grid, lastPage, dairies, menuNav, taille, initialUrl, isotopeArgDefault, goComment, moveByHistoty = false;\n\n	$(function () {\n		// DOM ready, take it away\n		// init Isotope\n		dairies = $('.dairies');\n		menuNav = $('nav.nav > ul');\n\n		isotopeArgDefault = {\n			sortBy : 'date',\n			sortAscending: false,\n\n			getSortData: {\n				date: '[data-date]'\n			},\n\n			masonry: {\n			  columnWidth: (dairies.width() / 2) - 30,\n			  //columnWidth: function() { return 408; }, \n			  gutter: 60\n			},\n			isResizeBound: false\n\n		};\n		$grid = dairies.isotope(isotopeArgDefault);\n\n		// layout Isotope after each image loads\n		$grid.imagesLoaded().progress( function() {\n		  $grid.isotope('layout');\n		});\n\n		init_actions();\n		toolsInit($('.single-dairies'));\n\n		lastPage = $('.pagination-links .current');\n		\n		$(document).on( 'click', '.pagination .more', function(e){\n			e.preventDefault();\n\n			$(this).addClass('loading');\n\n			if($(this).hasClass('next')){\n		    lastPage = lastPage.nextAll('a:not(.loaded)').first();\n			}else{\n		    lastPage = lastPage.prevAll('a:not(.loaded)').first();\n			}\n\n	    if(!lastPage.hasClass('next') && !lastPage.hasClass('prev')) {\n		    var url = lastPage.attr( 'href');\n				if(url !== undefined) {\n					lastPage.addClass('loaded');\n		      loadPagedArticle(url, lastPage);\n				}\n				// check si supprimer bouton\n				if($(this).hasClass('next')){\n			    if(lastPage.next().hasClass('next')) $(this).addClass('disable');\n				}else{\n			    if(lastPage.prev().hasClass('prev')) $(this).addClass('disable');\n				}\n\n		  }else{\n		  	$(this).addClass('disable');\n		  }\n		});\n\n		dairies.on('click', '.ajax-go, .post .more-link', function(e) {\n			if ( !e.ctrlKey && !e.metaKey )\n			{\n				e.preventDefault();\n				var target = $(this).closest('.post');\n\n				if(target.hasClass('open') && !moveByHistoty) {\n					closeArticle(target, true);\n				}else{\n					// check open\n					var open = $('.post.open', dairies);\n					if(open.length > 0) closeArticle(open, false, true);\n					// load article\n					goComment = $(this).hasClass('comment');\n					loadArticle($(this).attr('href'), target);\n				}\n			}\n		});\n\n		// tools init\n		dairies.on('click', '.post .close', function(e) {\n			e.preventDefault();\n			var target = $(this).closest('.post');\n			closeArticle(target, true);\n		});\n\n		$(document).on( 'click', '.show-menu', function(e){\n			e.preventDefault();\n			$(this).toggleClass('active');\n			menuNav.toggleClass('active');\n		});\n\n		// close article on esc\n		$(document).keyup(function(e){\n			if(e.keyCode === 27) {\n				var open = $('.post.open', dairies);\n				if(open.length > 0) closeArticle(open, true);\n			}\n		});\n\n\n		window.addEventListener('popstate', function(event) {\n			urlChange(event);\n		});\n\n		initialUrl = location.href;\n		history.replaceState({initial: true}, 'Initial', initialUrl);\n\n	});\n\n	/* function resize */\n\n	// debulked onresize handler\n	function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,150)};return c};\n\n	on_resize(function() {\n		var newWidth = dairies.width() > 615 ? (dairies.width() / 2) - 30 : dairies.width();\n		var isotopeArgNew = { masonry : {  columnWidth: newWidth,  gutter: 60 }  };\n  	$grid.isotope($.extend({}, isotopeArgDefault, isotopeArgNew)).isotope('layout');\n	});\n \n  /*********** FINISH READY *************/\n\n  // Back off, browser, I got this...\n	if ('scrollRestoration' in history) {\n	  history.scrollRestoration = 'manual';\n	}\n\n	function urlChange(event) {\n		// console.log('change');\n		if(event.isTrusted) {\n\n			var currentState = history.state;\n			if(typeof currentState == 'object') {\n				\n				if(typeof currentState.article == 'string') {\n					moveByHistoty = true;\n					$(currentState.article + ' .entry-title .ajax-go', dairies).trigger('click');\n					moveByHistoty = false;\n				}\n\n				if(typeof currentState.initial == 'boolean' || typeof currentState.page == 'string') {\n					// check open\n					var open = $('.post.open', dairies);\n					if(open.length > 0) closeArticle(open, true, true);\n				}\n			}\n\n		}\n	}\n\n	function init_actions(container, scroll, tools) {\n		container = container || $('main');\n\n		$('.oEmbed, .entry-content iframe[src*=\"=oembed\"]', container).fitVids();\n\n		fotoramaLightbox(container);\n		popupInit(container);\n		commentInit(container);	\n		init_share();\n\n	  $grid.isotope('layout');\n\n		$grid.one( 'layoutComplete', function() {\n			if(scroll) $(window).scrollTo(container.offset().top-70, 400, \n				{ onAfter : function() {  \n					if(tools) toolsInit(container); \n				}}); // check tools and activate\n		});\n\n		container.imagesLoaded().always( function() {\n		  $grid.isotope('layout');\n			\n			$grid.one( 'layoutComplete', function() {\n			  if(goComment) {\n			  	$(window).scrollTo($('.entry-comments', container).offset().top-70, 300);\n			  	goComment = false;\n			  }\n			});\n			dairies.removeClass('loading');\n		});\n	}\n\n	var sticky, inview, tools;\n	function toolsInit(container, destroy) {\n\n		tools = $('.tools', container);\n		if(tools.length > 0 && !destroy) {\n			// console.log('stuck');\n			sticky = new Waypoint.Sticky({\n			  element: tools[0]\n			});\n			\n			if($('.tools', container.next()).length > 0 && !destroy) {\n				inview = new Waypoint.Inview({\n				  element: $('.tools', container.next())[0],\n				  exit: function(direction) {\n				  	// console.log('exit', $('.tools', container.next()));\n				    if(direction === 'down') tools.removeClass('stuck');\n				  },\n				  enter: function(direction) {\n				  	// console.log('enter', $('.tools', container.next()));\n				    tools.addClass('stuck');\n				  },\n				})\n			}\n		}else if(destroy) {\n			if(sticky!==undefined) sticky.destroy() \n			if(inview!==undefined) inview.destroy() \n		}\n\n		$('a.comment',tools).click(function(e) {\n			e.preventDefault();\n			$(window).scrollTo($('.entry-comments' ,tools.closest('.post')).offset().top - 70, 400);\n		});\n	}\n\n	function fotoramaLightbox(container) {\n\n		$('.gallery', container).not('.fotorama')\n		 .on('fotorama:fullscreenenter', function (e, fotorama, extra) {\n			 	fotorama.setOptions({\n				  margin: 10,\n				  thumbmargin: 10\n				});\n      })\n		 .on('fotorama:fullscreenexit', function (e, fotorama, extra) {\n			 	fotorama.setOptions({\n				  margin: 2,\n				  thumbmargin: 2\n				});\n      })\n			.fotorama({\n				width: '100%',\n				maxwidth: '100%',\n			  ratio: 3/2,\n			  allowfullscreen: true,\n			  nav: 'thumbs',\n			  thumbborderwidth: 0,\n			  fit: 'cover',\n			}).children().addClass('fotorama__wrap--no-controls');\n\n		$(window).trigger('resize');\n	} \n\n	// magnifying popup\n	function popupInit(container) {\n   $('.popup-youtube, .popup-vimeo, .popup-gmaps', container).magnificPopup({\n      disableOn: 700,\n      type: 'iframe',\n      mainClass: 'mfp-fade',\n      removalDelay: 160,\n      preloader: true,\n\n      fixedContentPos: false,\n\n      callbacks: {\n    		open: function() {\n    			ga('send', 'event', 'iframe', 'click', 'popup a', this.currItem.src);\n				}\n			}\n    });\n\n	  $('.simple-ajax-popup', container).magnificPopup({\n	    type: 'ajax',0\n      alignTop: true,\n      overflowY: 'scroll',\n      closeOnBgClick: true,\n	    tError: '<a href=\"%url%\">The content</a> could not be loaded.',\n	    callbacks: {\n				ajaxContentAdded: function(data) {\n					history.pushState({actu: this.currItem.el[0].href}, 'Actu' + this.currItem.el[0].title, this.currItem.el[0].href );\n  				ga('send', 'pageview', this.currItem.el[0].href);\n					init_actions(this.container);\n				},\n				elementParse: function() {\n					this.st.ajax.settings = {\n						headers: { 'X-Requested-With':'BAWXMLHttpRequest' },\n					};\n				},\n				close: function() {\n					history.go(-1);\n				}\n			}\n	  });\n	}\n\n	function commentInit(container) {\n\n		var \n			commentform = $('#commentform', container); // find the comment form\n		// to avoid multiple call\n		if($('.comment-status', container).length < 1) var statusdiv = $('<div id=\"comment-status\" ></div>').prependTo(commentform); // add info panel before the form to provide feedback or errors\n\n		commentform.unbind('submit').submit(function(){\n		    //serialize and store form data in a variable\n		    var formdata = commentform.serialize();\n		    //Add a status message\n		    statusdiv.html('<p>Processing...</p>');\n		    //Extract action URL from commentform\n		    var formurl = commentform.attr('action');\n		    //Post Form with data\n		    $.ajax({\n		        type: 'post',\n		        url: formurl,\n		        data: formdata,\n		        error: function(XMLHttpRequest, textStatus, errorThrown)\n	            {\n	                statusdiv.html('<p class=\"ajax-error\" >Vous avez peut-être laisser l\\'un des éléments requis vide, ou vous posté trop rapidement</p>');\n	            },\n		        success: function(data, textStatus){\n	            if(data == \"success\" || textStatus == \"success\"){\n	                statusdiv.html('<p class=\"ajax-success\" >Merci pour votre commentaire, il sera approuvé rapidement.</p>');\n	            }else{\n	                statusdiv.html('<p class=\"ajax-error\" >Veuillez attendre un petit peu avant de poster votre réponse</p>');\n	                commentform.find('textarea[name=comment]').val('');\n	            }\n		        }\n		    });\n		    return false;\n		});\n	}\n\n		// load more page\n	function loadPagedArticle(url, lastPage) {\n    $.ajax({\n      url    : url,\n      type   : 'POST',\n      headers: {\n          'X-Requested-With':'BAWXMLHttpRequest'\n      }\n    }).done( function( data ) {\n      $grid.isotope( 'insert', $(data).filter('article') );\n      init_actions($grid);\n      // push state history (no more need with share on post)\n      // if(!moveByHistoty) history.pushState({page: url}, 'Page ' + lastPage.text(), url);\n      $('.pagination .loading').removeClass('loading').removeClass('error');\n    }).error( function() {\n    	dairies.removeClass('loading');\n    	console.log('Error', url, lastPage);\n    	$('.pagination .loading').removeClass('loading').addClass('error');\n    });\n	}\n\n	// load single ajax\n	function loadArticle(url, target) {\n		\n		if($('.complete' ,target).length < 1) {\n			target.addClass('loading');\n			dairies.addClass('loading');\n\n			$grid.isotope('layout');\n			$grid.one( 'layoutComplete', function() { $(window).scrollTo(target.offset().top-70, 400); });\n\n			$.ajax({\n	      url    : url,\n	      type   : 'POST',\n	      headers: {\n	          'X-Requested-With':'BAWXMLHttpRequest'\n	      }\n	    }).done( function( data ) {\n				target.addClass('open');\n\n	    	target.append(data);\n	     	target.removeClass('loading').removeClass('error');\n\n	    	init_actions(target, true, true);\n	    	// change URL\n	      if(!moveByHistoty) {\n					if(typeof history.state.article == 'string') {\n		      	history.replaceState({article: '#'+target.attr('id')}, 'Article' + target.attr('id'), url);\n		      	ga('send', 'pageview', url);\n					}else{\n		      	history.pushState({article: '#'+target.attr('id')}, 'Article' + target.attr('id'), url);\n		      	ga('send', 'pageview', url);\n					}\n	      } \n	    }).error( function() {\n	    	dairies.removeClass('loading');\n	    	console.log('Error', url, lastPage);\n	    	target.removeClass('loading').addClass('error');\n	    });\n		}else{\n			target.addClass('open');\n			init_actions(target, true, true);\n			// change URL\n			if(!moveByHistoty) {\n				if(typeof history.state.article == 'string') {\n	      	history.replaceState({article: '#'+target.attr('id')}, 'Article' + target.attr('id'), url);\n	      	ga('send', 'pageview', url);\n				}else{\n	      	history.pushState({article: '#'+target.attr('id')}, 'Article' + target.attr('id'), url);\n	      	ga('send', 'pageview', url);\n				}\n      } \n		}\n	}\n\n	// close single\n	function closeArticle(target, scroll, nochange) {\n		// came back to page state\n		if(!moveByHistoty && !nochange) {\n			var url = lastPage.attr('href') || initialUrl;\n			history.go(-1);\n		}else{\n			target.removeClass('open');\n			init_actions(target, scroll);\n			toolsInit(target, true);\n		}\n	}\n\n	var configDefaultShare = {\n		enabledNetworks: 0,\n		protocol: '//',\n		url: window.location.href,\n\n		ui: {\n		  flyout: 'middle left',\n		  buttonText: '<i class=\"fa fa-share-alt\"></i>',\n		  button_font: false,\n		  icon_font: false,\n		  networkOrder: ['facebook', 'twitter', 'whatsapp', 'googlePlus', 'linkedin'],\n		},\n\n		networks: {\n		  googlePlus: {\n		    enabled: true,\n		    before: function(element) {\n		    	checkShareLink(this, element);\n        },\n		  },\n		  twitter: {\n		    enabled: true,\n		    description: '#trueadventure with @VikingDiaries ',\n		    before: function(element) {\n		    	checkShareLink(this, element);\n        },\n		  },\n		  facebook: {\n		    enabled: true,\n		    loadSdk: true,\n		    description: '#trueadventure with @laventurierviking ',\n		    app_id: 1677971055822056,\n		    before: function(element) {\n		    	checkShareLink(this, element);\n        },\n		  },\n		  linkedin: { enabled: true, before: function(element) { checkShareLink(this, element); }, },\n		  whatsapp: { enabled: true, before: function(element) { checkShareLink(this, element); }, },\n		  pinterest: { enabled: false },\n		  reddit: { enabled: false },\n		  email: { enabled: false }\n		}\n	};\n\n	function checkShareLink($this, element){\n		$this.url = element.getAttribute(\"data-url\") || location.href;\n		$this.title = element.getAttribute(\"data-title\") || null;\n	}\n\n	function init_share(container, args) {\n		var config = $.extend({}, configDefaultShare, args);\n		var share = new ShareButton(config);\n\n		$('share-button').click(function() {\n			$(this).toggleClass('active');\n		});\n		// console.log(share.config);\n	}\n\n} ( this, jQuery ));",
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
-			"file_size": 13498,
-			"file_write_time": 130990642350000000,
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
 			"settings":
 			{
-				"buffer_size": 13492,
+				"buffer_size": 1027,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/ajax-category.php",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
 			"settings":
 			{
-				"buffer_size": 380,
+				"buffer_size": 4018,
 				"line_ending": "Unix"
 			}
 		},
@@ -551,10 +548,34 @@
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
 			"settings":
 			{
-				"buffer_size": 2690,
+				"buffer_size": 2504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
+			"settings":
+			{
+				"buffer_size": 907,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
+			"settings":
+			{
+				"buffer_size": 1539,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
+			"settings":
+			{
+				"buffer_size": 947,
 				"line_ending": "Unix"
 			}
 		},
@@ -570,15 +591,7 @@
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
 			"settings":
 			{
-				"buffer_size": 23930,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/main.min.js",
-			"settings":
-			{
-				"buffer_size": 7368,
+				"buffer_size": 23931,
 				"line_ending": "Unix"
 			}
 		},
@@ -594,56 +607,32 @@
 			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
 			"settings":
 			{
-				"buffer_size": 12108,
+				"buffer_size": 12210,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
 			"settings":
 			{
-				"buffer_size": 935,
+				"buffer_size": 14359,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
 			"settings":
 			{
-				"buffer_size": 3719,
+				"buffer_size": 2698,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
+			"file": "/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 3391,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
-			"settings":
-			{
-				"buffer_size": 746,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
-			"settings":
-			{
-				"buffer_size": 760,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
-			"settings":
-			{
-				"buffer_size": 633,
-				"line_ending": "Unix"
+				"buffer_size": 2682,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -748,20 +737,31 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nuagegraphik/Sites/vikingDiaries",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss"
+		"/Users/nuagegraphik/Sites/vikingDiaries"
 	],
 	"file_history":
 	[
-		"/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/simple-likes-public.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/app.min.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/post-like.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
+		"/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+		"/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
+		"/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
+		"/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/Gruntfile.js",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/js/scripts.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/page.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454498034/mapped/var/www/html/laventurierviking-dev/wp-config.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454451490/mapped/var/www/html/laventurierviking-dev/wp-config.php",
@@ -769,18 +769,13 @@
 		"/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/6d00ae1f521ae6bd89137c7dab70ae1fdf7d80c6/variables.scssc",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/nav.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/reset.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/comments.scss",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/mixins.scss",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454356883/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/class-social-count-plus-view.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/maps/map-eurasie.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/css/style.css",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454271331/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/social-count-plus.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/templates/comment.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/languages/HTML5Blank.pot",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454271386/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/social-count-plus/includes/class-social-count-plus-shortcodes.php",
@@ -788,7 +783,6 @@
 		"/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.mo",
 		"/Users/nuagegraphik/Sites/vikingDiaries/languages/fr_FR.po",
 		"/Users/nuagegraphik/Sites/vikingDiaries/templates/comments.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/pagination.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/category.php",
 		"/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/sublime-sftp-browse-1454254113/mapped/var/www/html/laventurierviking-dev/wp-content/plugins/wp-showhide/wp-showhide.php",
@@ -799,7 +793,6 @@
 		"/Users/nuagegraphik/Sites/vikingDiaries/tag.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/comment.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/comments.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/post-like.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/magnific.scss",
 		"/Users/nuagegraphik/Sites/vikingDiaries/index.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/share-button.js",
@@ -817,19 +810,16 @@
 		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/imagesloaded.pkgd.min.js",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/post-like.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/less/errors/import-no-semi.less",
 		"/Users/nuagegraphik/Sites/vikingDiaries/archive.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Pictures/Créations graphiques/laventurierviking/viking-logo/ameriquedunord/vikingcaribous.svg",
 		"/Users/nuagegraphik/Sites/vikingDiaries/header.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/.sass-cache/25900188b937c20dbdbaf17c0b4475fa5fd3d2ec/nav.scssc",
-		"/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
 		"/Users/nuagegraphik/Sites/vikingDiaries/js/lib/jquery-1.12.0.min.js",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/lib/utils.php",
 		"/Users/nuagegraphik/Sites/vikingDiaries/node_modules/grunt-rsync/tests/basic.js",
 		"/Users/nuagegraphik/Sites/vikingDiaries/img/fond.jpg",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/templates/head.php",
-		"/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
 		"/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/fonts.scss",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/less/flat/layout.less",
 		"/Users/nuagegraphik/Sites/theme/dwlaventurier/assets/less/flat/flat.less",
@@ -878,10 +868,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Users/nuagegraphik/Desktop/php.ini",
-		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1446650846/mapped/var/www/html/client/oniris/wp-config.php",
-		"/Users/nuagegraphik/Desktop/commandling-util",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-expo.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php"
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1446650846/mapped/var/www/html/client/oniris/wp-config.php"
 	],
 	"find":
 	{
@@ -889,7 +876,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 109.0,
+		"height": 173.0,
 		"where_history":
 		[
 			"/Users/nuagegraphik/Sites/vikingDiaries",
@@ -908,6 +895,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"like",
+			"jm",
+			"loader",
+			"jm-post-like",
+			"loader",
+			"YourThemeTextDomain",
+			"getPostLikeLink",
+			"post-like",
+			"jm_post_like",
+			"ajax_var",
+			"break-large",
 			"vendor",
 			"history",
 			"ga",
@@ -1024,18 +1022,7 @@
 			"var ",
 			"content",
 			"thumbnail",
-			"php echo",
-			"urlsplit",
-			"do_ajax_request",
-			"get",
-			"get_gallery\nget_gallery",
-			"get_gallery",
-			"bimLa_gallery",
-			"timelineInfinitescroll",
-			"fotoramaLightbox",
-			"gallery",
-			"dw_timeline_gallery",
-			"gallery"
+			"php echo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,6 +1030,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"get_simple_likes_button",
 			"comments_template();",
 			"",
 			"\n\n:not(.no-current)",
@@ -1062,7 +1050,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -1071,15 +1059,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2694,
+						"buffer_size": 2620,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								168,
-								168
+								2162,
+								2201
 							]
 						],
 						"settings":
@@ -1094,27 +1082,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1580.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/scripts.js",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13492,
+						"buffer_size": 1027,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10708,
-								10617
+								431,
+								431
 							]
 						],
 						"settings":
@@ -1123,45 +1111,47 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11211.0,
+						"translation.y": 205.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/ajax-category.php",
-					"semi_transient": true,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-home.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 380,
+						"buffer_size": 4018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2887,
+								2887
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 137.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1177,8 +1167,8 @@
 						"selection":
 						[
 							[
-								1863,
-								1881
+								1091,
+								1143
 							]
 						],
 						"settings":
@@ -1191,27 +1181,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1249.0,
+						"translation.y": 1069.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/header-projet.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2690,
+						"buffer_size": 2504,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238,
-								205
+								2173,
+								2175
 							]
 						],
 						"settings":
@@ -1220,9 +1210,106 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2017.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/ajax-single.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 272.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/sftp-config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								676
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 199.0,
+						"translation.y": 473.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/content-tools.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 947,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								947
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1234,11 +1321,11 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/modules/variables.scss",
 					"semi_transient": false,
 					"settings":
@@ -1250,8 +1337,8 @@
 						"selection":
 						[
 							[
-								38,
-								1799
+								1389,
+								1389
 							]
 						],
 						"settings":
@@ -1262,27 +1349,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1484.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "/Users/nuagegraphik/Sites/vikingDiaries/functions.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23930,
+						"buffer_size": 23931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3853,
-								3853
+								209,
+								213
 							]
 						],
 						"settings":
@@ -1296,45 +1383,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3212.0,
+						"translation.y": 55.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/js/main.min.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 7368,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/page.scss",
 					"semi_transient": false,
 					"settings":
@@ -1363,24 +1419,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/element.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12108,
+						"buffer_size": 12210,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2404,
-								2404
+								8523,
+								8523
 							]
 						],
 						"settings":
@@ -1392,58 +1448,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 14932.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/style.scss",
+					"buffer": 12,
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/modules/post-like.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 935,
+						"buffer_size": 14359,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								494,
-								494
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 418.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/template-voyages.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3719,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3641,
-								3641
+								1124,
+								1124
 							]
 						],
 						"settings":
@@ -1452,147 +1477,86 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2690.0,
+						"translation.y": 1358.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/nav.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3391,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								322,
-								367
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 459.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 13,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/shame.scss",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/templates/content.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 746,
+						"buffer_size": 2698,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								729,
-								729
+								1515,
+								1515
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 954.0,
+						"translation.y": 1034.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 14,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/layout.scss",
+					"file": "/Users/nuagegraphik/Sites/vikingDiaries/Gruntfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 760,
+						"buffer_size": 2682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								289,
-								0
+								476,
+								476
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"open_with_edit": true,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 894.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/utils.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 633,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								480,
-								480
-							]
-						],
-						"settings":
-						{
+							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 679.0,
+						"translation.y": 286.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 15,
 					"file": "/Users/nuagegraphik/Sites/vikingDiaries/scss/partials/mediaqueries.scss",
 					"semi_transient": false,
 					"settings":
@@ -1604,16 +1568,8 @@
 						"selection":
 						[
 							[
-								443,
-								443
-							],
-							[
-								1128,
-								1128
-							],
-							[
-								2482,
-								2482
+								802,
+								813
 							]
 						],
 						"settings":
@@ -1625,11 +1581,11 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 3629.0,
+						"translation.x": 216.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]
@@ -1668,7 +1624,7 @@
 		"rows":
 		[
 			0.0,
-			0.892608529833,
+			0.460895887473,
 			1.0
 		]
 	},
