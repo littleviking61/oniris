@@ -74,10 +74,10 @@ form{
 	}
 
 	&.search{
-		background-color: rgba(white, 0.4);
+		//background-color: rgba(white, 0.4);
 		height: rem-calc(30);
-		margin-top: $gutter-small;
-		margin-right: $gutter-large;
+		//margin-top: $gutter-small;
+		//margin-right: $gutter-large;
 
 		> *{
 			display: inline-block;

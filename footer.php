@@ -72,14 +72,16 @@
 	</div>
 
 	<section class="copyright">
-		<?php wp_nav_menu( array( 
-				'container' => 'nav',
-				'container_class' => 'hide-for-small',
-				'theme_location' => 'primary' )); 
-		?>
-		<p>
-			<?php echo date('Y'); ?> &copy; Oniris Néo - <a href="http://http://www.wordpress-fr.net/" rel="nofollow" title="Wordpress CMS">Wordpress</a> - design by <a href="http://www.nuagegraphik.com" rel="nofollow" title="Nuagegraphik">Nuagegraphik</a>
-		</p>
+		<div class="copyright-content">
+			<p>
+				<?php echo date('Y'); ?> &copy; Oniris Néo - <a href="http://http://www.wordpress-fr.net/" rel="nofollow" title="Wordpress CMS">Wordpress</a> - design by <a href="http://www.nuagegraphik.com" rel="nofollow" title="Nuagegraphik">Nuagegraphik</a>
+			</p>
+			<?php wp_nav_menu( array( 
+					'container' => 'nav',
+					'container_class' => 'hide-for-small',
+					'theme_location' => 'primary' )); 
+			?>
+		</div>
 	</section>
 </footer>
 

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-top"
+			],
+			[
 				"pad",
 				"padding-top"
 			],
@@ -26,10 +30,6 @@
 			[
 				"gutter",
 				"gutter-small"
-			],
-			[
-				"mar",
-				"margin-right"
 			],
 			[
 				"cont",
@@ -380,10 +380,10 @@
 			}
 		},
 		{
-			"file": "footer.php",
+			"file": "loop-flex.php",
 			"settings":
 			{
-				"buffer_size": 2434,
+				"buffer_size": 2725,
 				"line_ending": "Unix"
 			}
 		},
@@ -391,7 +391,31 @@
 			"file": "header.php",
 			"settings":
 			{
-				"buffer_size": 2188,
+				"buffer_size": 1451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/aside.php",
+			"settings":
+			{
+				"buffer_size": 786,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/wysiwyg.php",
+			"settings":
+			{
+				"buffer_size": 5434,
 				"line_ending": "Unix"
 			}
 		},
@@ -412,26 +436,34 @@
 			}
 		},
 		{
-			"file": "scss/_layout.scss",
+			"file": "scss/_element.scss",
 			"settings":
 			{
-				"buffer_size": 5740,
+				"buffer_size": 3613,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sftp-config.json",
+			"file": "scss/_icons.scss",
 			"settings":
 			{
-				"buffer_size": 1581,
-				"line_ending": "Windows"
+				"buffer_size": 1140,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 81332,
+				"buffer_size": 81108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "footer.php",
+			"settings":
+			{
+				"buffer_size": 2485,
 				"line_ending": "Unix"
 			}
 		},
@@ -569,14 +601,16 @@
 	"expanded_folders":
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/footer.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/content-home.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/relation-artistes.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
@@ -587,7 +621,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/newsletter.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/infos_pratiques.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/sftp-config.json",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/intro-artistes.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_shame.scss",
@@ -621,10 +654,8 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu-highlight.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-artiste.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_icons.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_variables.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/elements/single.php",
 		"/Users/nuagegraphik/Desktop/php.ini",
@@ -726,6 +757,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nav-menu",
 			"the_nav_section",
 			"$result",
 			"main ",
@@ -852,8 +884,7 @@
 			"10px",
 			"#fff",
 			" 	",
-			"	",
-			"toggleClass"
+			"	"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -878,7 +909,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -908,27 +939,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2352.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "footer.php",
+					"file": "loop-flex.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2434,
+						"buffer_size": 2725,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1670,
-								1670
+								0,
+								2725
 							]
 						],
 						"settings":
@@ -941,10 +972,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1284.0,
+						"translation.y": 341.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -953,15 +984,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2188,
+						"buffer_size": 1451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2039,
-								2039
+								1419,
+								1419
 							]
 						],
 						"settings":
@@ -975,14 +1006,110 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1704.0,
+						"translation.y": 652.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								403
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 484.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "templates/aside.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 786,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								786,
+								786
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/private/var/folders/rx/11qk3hl119s6btqp4j8p1bj80000gn/T/fz3temp-1/wysiwyg.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4570,
+								4570
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3691.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "functions.php",
 					"semi_transient": false,
 					"settings":
@@ -1008,20 +1135,20 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6832.0,
+						"translation.y": 6496.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "scss/_variables.scss",
 					"semi_transient": false,
 					"settings":
@@ -1033,8 +1160,8 @@
 						"selection":
 						[
 							[
-								137,
-								144
+								780,
+								765
 							]
 						],
 						"settings":
@@ -1046,90 +1173,83 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 84.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "scss/_layout.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5740,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3761,
-								3761
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"sftp_duplicate_views": 0,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6515.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "sftp-config.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1581,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								193,
-								409
-							],
-							[
-								810,
-								1157
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 991.0,
+						"translation.y": 984.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
+					"file": "scss/_element.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1426,
+								1426
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "scss/_icons.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 81332,
+						"buffer_size": 81108,
 						"regions":
 						{
 						},
@@ -1153,11 +1273,46 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
+					"file": "footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1984,
+								2001
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"history_list_is_closing": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"sftp_duplicate_views": 0,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "scss/_basic.scss",
 					"semi_transient": false,
 					"settings":
@@ -1185,11 +1340,11 @@
 						"translation.y": 3301.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "scss/elements/_aside.scss",
 					"semi_transient": false,
 					"settings":
@@ -1217,11 +1372,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 14,
 					"file": "scss/elements/_bloc.scss",
 					"semi_transient": false,
 					"settings":
@@ -1249,11 +1404,11 @@
 						"translation.y": 8945.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 15,
 					"file": "scss/elements/_fotorama.scss",
 					"semi_transient": false,
 					"settings":
@@ -1281,11 +1436,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "scss/_mixins.scss",
 					"semi_transient": false,
 					"settings":
@@ -1314,11 +1469,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 17,
 					"file": "scss/_font.scss",
 					"semi_transient": false,
 					"settings":
@@ -1345,7 +1500,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]
@@ -1384,7 +1539,7 @@
 		"rows":
 		[
 			0.0,
-			0.531153628701,
+			0.255837635694,
 			1.0
 		]
 	},
@@ -1415,12 +1570,24 @@
 		"selected_items":
 		[
 			[
-				"fun",
-				"oniris/functions.php"
+				"home",
+				"oniris/content-home.php"
 			],
 			[
 				"head",
 				"oniris/header.php"
+			],
+			[
+				"elem",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"footer",
+				"oniris/footer.php"
+			],
+			[
+				"fun",
+				"oniris/functions.php"
 			],
 			[
 				"sim",
@@ -1471,10 +1638,6 @@
 				"oniris/scss/elements/_bloc.scss"
 			],
 			[
-				"footer",
-				"oniris/footer.php"
-			],
-			[
 				"medi",
 				"oniris/scss/_mediaqueries.scss"
 			],
@@ -1489,10 +1652,6 @@
 			[
 				"blo",
 				"oniris/scss/elements/_bloc.scss"
-			],
-			[
-				"elem",
-				"oniris/scss/_element.scss"
 			],
 			[
 				"mi",

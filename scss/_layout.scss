@@ -11,6 +11,7 @@
 
 body{
 	@extend %flex-row;
+	@include align-items(center);
 
 	background-color: $bg-color;
 	font-family: $body-font;
@@ -23,13 +24,14 @@ body{
 header[role="banner"]{
 	@extend %flex-column-wrap;
 	@include align-items(flex-end);
+	max-width: $break-large;
 
-	font-family: $title-font;	
-	padding: $gutter-big;
+	font-family: $title-font;
+	font-size: $ft-size-large;	
+	padding-top: $gutter-big;
 	padding-bottom: 0;
 	padding-bottom: $gutter-medium;
 	width: 100%;
-	background-color: $lightest-grey;
 	z-index: 8;
 
 	.banner{
@@ -47,7 +49,11 @@ header[role="banner"]{
 
 	nav{
 		@extend %nav-menu;
-		margin-bottom: $gutter-medium;
+		margin-bottom: -($gutter-mini);
+
+		.menu-item i._mi{
+			margin-top: 0.125em;
+		}
 	}
 }
 
@@ -72,8 +78,8 @@ header[role="banner"]{
 		}
 
 		.current-menu-item a, a:hover, a.active{
-			border-bottom: solid $two;
-			margin-bottom: rem-calc(8);
+			//border-bottom: solid $two;
+			//margin-bottom: rem-calc(8);
 		}
 	}
 }
@@ -83,7 +89,7 @@ header[role="banner"]{
 main{
 	@extend %flex-column;
 	@include flex(1);
-
+	max-width: $break-large;
 }
 
 aside.main{
@@ -103,7 +109,7 @@ aside.main{
 
 .wrap{
 	padding-top: $gutter-medium;
-	padding-right: $gutter-big;
+	//padding-right: $gutter-big;
 	@extend %flex-column;
 	@include flex(1);
 	@include flex-wrap(wrap);
@@ -209,8 +215,9 @@ aside.main{
 /* FOOTER */
 
 footer.main{
-
+	width: 100%;
 	margin-top: $gutter-large;
+	background-color: $black;
 
 	&, a, p{
 		color: #999999;
@@ -222,10 +229,10 @@ footer.main{
 	}
 
 	.footer-content{
-		background-color: $black;
 		padding-top: $gutter-big;
 		padding-bottom: $gutter-big;
-		padding-left: $gutter-large;
+		max-width: $break-large;
+		margin: 0 auto;
 		
 		h4{
 			font-family: $body-font;
@@ -243,7 +250,7 @@ footer.main{
 		}
 
 		.menus{
-			@include justify-content(center);
+			@include justify-content(space-between);
 
 			.menu{
 				margin: 0;
@@ -275,7 +282,9 @@ footer.main{
 			}
 
 			>div{
-				margin: 50px 2vw 0;
+				margin: 50px $gutter-big 0 0;
+				@include flex(1);
+
 				&:first-child{
 					margin-top: 0;
 				}
@@ -287,21 +296,26 @@ footer.main{
 		padding-right: $gutter-hudge;
 		padding-left: $gutter-hudge;
 		background-color: #202020;
+		
+		.copyright-content{
+			max-width: $break-large;
+			margin: 0 auto;
+			@extend %flex-column;
+
+			> nav {
+				margin-left: auto;
+				// margin-right: $gutter;
+			}
+		}
 
 		li.current_page_item a, li.current-menu-item a, a:hover{
 			color: white;
 			//@include colors(&);
 		}
 
-		@extend %flex-column;
-
-		> p {
-			margin-left: auto;
-			// margin-right: $gutter;
-		}
-
 		ul{
 			@extend %flex-column; 
+			margin-left: auto;
 			li{
 				margin-right: $gutter-medium;
 				i{
