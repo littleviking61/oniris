@@ -22,9 +22,9 @@
 				<?php include(locate_template('icon.php')) ?>
 				<span class="hide"><?php bloginfo('name'); ?></span></a>
 			</h1>
-			<div class="switch-lang">
+			<!-- <div class="switch-lang">
 				<a href="#" class="fr active">FR</a> / <a href="#" class="en">EN</a>
-			</div>
+			</div> -->
 		</div>
 
 		<?php wp_nav_menu( array( 
