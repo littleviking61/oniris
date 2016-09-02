@@ -94,6 +94,7 @@
 	}
 
 	ul{
+		@extend %flex-column;
 		padding-left: 0;
 		list-style: none;
 		margin: 0;
@@ -118,12 +119,13 @@
 			margin-right: $gutter;
 		}
 	}
+
 }
 
 .actu{
 
 	a{
-		@extend %post-it;	
+		@extend %post-it;
 		margin-bottom: 0;
 		margin-right: 0;
 	}
@@ -143,10 +145,16 @@
 	}
 
 	&.highlight{
+		a{
+			@include flex-direction(row);
+		}
 		// margin-right: $gutter-medium;
 		// margin-bottom: $gutter-medium;
 		.thumbnail{
 			max-height:none;
+			border-bottom: none;
+			margin-right: $gutter-large;
+			margin-bottom: -($gutter-large + $one);
 		}
 	}
 	

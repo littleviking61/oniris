@@ -1008,7 +1008,7 @@ header[role="banner"] .header-content .unbreak, .wrap > section .unbreak, .row .
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main .wrap, .wrap, footer.main .copyright .copyright-content, footer.main .copyright ul, header[role="banner"] .header-content, .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .events ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.button, .simple, .expositions .intro .detail {
+main .wrap, .wrap, footer.main .copyright .copyright-content, footer.main .copyright ul, header[role="banner"] .header-content, .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .events ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside.main .quick-nav ul, .button, button, a.button, .simple, .actus ul, .expositions .intro .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -1650,8 +1650,14 @@ aside.main {
   margin-bottom: 0; }
 .actu.no-img .thumbnail {
   display: none; }
+.actu.highlight a {
+  -webkit-flex-direction: row;
+  flex-direction: row; }
 .actu.highlight .thumbnail {
-  max-height: none; }
+  max-height: none;
+  border-bottom: none;
+  margin-right: 1.25rem;
+  margin-bottom: -1.3125rem; }
 @media only screen and (max-width: 48rem) {
   .actu a, .actu.highlight {
     -webkit-flex-direction: row;

@@ -4,11 +4,6 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="wrap row<?= ' '.get_field('page_type_acf') ?>">
-					<?php if(is_front_page()) : ?>
-							
-							<?php get_template_part( 'content', 'home' ); ?>
-
-					<?php endif; ?>
 
 					<?php if ( !empty(get_field('liste')) ) : ?>
 						
