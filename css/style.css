@@ -685,7 +685,6 @@ header[role="banner"] {
   header[role="banner"] .header-content {
     -webkit-align-items: flex-end;
     align-items: flex-end;
-    max-width: 75rem;
     margin: 0 auto; }
   header[role="banner"] .header-banner {
     padding: 0.625rem 0 0.20833rem; }
@@ -811,7 +810,6 @@ main {
   main .wrap {
     -webkit-flex: 1;
     flex: 1;
-    max-width: 75rem;
     margin: 0 auto; }
 
 aside.main {
@@ -930,7 +928,6 @@ footer.main {
   footer.main .footer-content {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
-    max-width: 75rem;
     margin: 0 auto; }
     footer.main .footer-content h4 {
       font-family: "asap", Helvetica, Arial, sans-serif;
@@ -975,7 +972,6 @@ footer.main {
     padding-left: 2.5rem;
     background-color: #202020; }
     footer.main .copyright .copyright-content {
-      max-width: 75rem;
       margin: 0 auto; }
       footer.main .copyright .copyright-content > nav {
         margin-left: auto; }
@@ -2798,6 +2794,21 @@ body > .fotorama-special {
 .show-for-small {
   display: none; }
 
+main .wrap, .footer-content, .copyright-content, .header-content {
+  max-width: 93.75rem; }
+
+@media only screen and (max-width: 100rem) {
+  main .wrap, .footer-content, .copyright-content, .header-content {
+    max-width: 68.75rem; } }
+@media only screen and (max-width: 75rem) {
+  main .wrap, .footer-content, .copyright-content, .header-content {
+    max-width: 57.75rem; } }
+@media only screen and (max-width: 64rem) {
+  main .wrap, .footer-content, .copyright-content, .header-content {
+    max-width: 41.75rem; } }
+@media only screen and (max-width: 48rem) {
+  main .wrap, .footer-content, .copyright-content, .header-content {
+    max-width: 22.5rem; } }
 @media only screen and (max-width: 48rem) {
   .show-for-medium {
     display: inherit; }
