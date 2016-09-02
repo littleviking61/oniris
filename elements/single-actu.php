@@ -2,6 +2,7 @@
 	$flex = 'flex-3'; 
 	$linkID =  get_field('lien')[0] || get_field('lien_externe');
 	$specific = get_field('specific_details');
+	$when = get_field('when');
 	$actualDate = date('Ymd');
 
 	if($specific === true) {
@@ -9,30 +10,17 @@
 		$place = get_field('a_la_galerie');
 	}else{
 		$categorie = get_field('category', $linkID);
-		$relations = get_field('relation_artistes', $linkID);
-		$relations = is_array($relations) ? count($relations) : '';
-		$startDate = get_field('date_de_debut', $linkID);
-		$endDate = get_field('date_de_fin', $linkID);
+		$relations = get_field('type', $linkID);
 		$place = get_field('a_la_galerie', $linkID);
 	}
-
-  if ($actualDate > $startDate && $actualDate < $endDate){
-    $when = "now";
-  }elseif($actualDate < $startDate){
-  	$when = "upcoming";
-  }else{
-  	$when = "gone";
-  }
-
-	if(is_null($startDate)) $startDate = get_the_date('Ymd');
 ?>
 
 <?php if( get_field('titre') ): ?>
-	<a 	href="<?= get_permalink($linkID) ?>" 
-			class="actu highlight container <?= $flex ?> <?= $categorie ?>"
-			data-date="<?= $when ?>"
-			data-type="<?= $relations > 1 ? 'group' : 'single' ?>"
-			data-place="<?= $place || is_null($place) ? 'in' :  'out' ?>">
+<div class="item fixed-2 actu <?= $categorie ?>"
+		data-date="<?= is_null($when) ? 'gone' : $when ?>"
+		data-type="<?= $relations === "groupe" ? 'group' : 'alone' ?>"
+		data-place="<?= $place || is_null($place) ? 'in' :  'out' ?>">
+		<a href="<?= get_permalink($linkID) ?>" class="highlight container contain <?= $categorie ?>">
 		
 		<?php if( has_post_thumbnail() ): ?>		
 			<div class="thumbnail">
@@ -54,4 +42,5 @@
 			</div>
 		<?php endif ?>
 	</a>
+</div>
 <?php endif ?>

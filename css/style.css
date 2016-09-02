@@ -678,7 +678,6 @@ body {
 /* HEADER */
 header[role="banner"] {
   background-color: white;
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05);
   font-family: "roboto", serif;
   font-size: 1rem;
   width: 100%;
@@ -718,28 +717,24 @@ header[role="banner"] {
       margin-top: 0.125em; }
   header[role="banner"] .header-info {
     font-size: 0.75rem;
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05); }
+    background-color: #2d2d2d; }
     header[role="banner"] .header-info, header[role="banner"] .header-info a {
-      color: #c1c1c1; }
+      color: white; }
     header[role="banner"] .header-info .header-social {
-      border-left: 0.0625rem solid rgba(0, 0, 0, 0.05);
-      border-right: 0.0625rem solid rgba(0, 0, 0, 0.05);
       padding: 0 1.25rem; }
       header[role="banner"] .header-info .header-social a > span {
         display: none; }
     header[role="banner"] .header-info ul {
       list-style: none;
       padding: 0;
-      margin: 0;
-      border-left: 0.0625rem solid rgba(0, 0, 0, 0.05); }
+      margin: 0; }
     header[role="banner"] .header-info li {
       display: inline-block;
       padding: 0.625rem 0.3125rem; }
     header[role="banner"] .header-info .infos {
       margin-left: auto; }
       header[role="banner"] .header-info .infos li {
-        padding: 0.625rem 1.25rem;
-        border-right: 0.0625rem solid rgba(0, 0, 0, 0.05); }
+        padding: 0.625rem 1.25rem; }
 
 header[role="banner"] nav ul, aside.main .quick-nav ul {
   min-height: 2.125rem; }
@@ -751,10 +746,8 @@ header[role="banner"] nav ul, aside.main .quick-nav ul {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     font-size: 0.875rem;
-    text-transform: lowercase;
     padding-top: 0.3125rem;
-    margin: 0 0.625rem;
-    border-bottom: solid 0.125rem transparent; }
+    margin: 0 0.625rem; }
     header[role="banner"] nav ul a i:before, aside.main .quick-nav ul a i:before {
       margin-right: 0.3125rem; }
   header[role="banner"] nav ul .current-menu-item a, aside.main .quick-nav ul .current-menu-item a {

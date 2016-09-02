@@ -23,7 +23,7 @@ body{
 
 header[role="banner"]{
 	background-color: white;
-	border-bottom: $one solid rgba(0, 0, 0, 0.05);
+	// border-bottom: $one solid rgba(0, 0, 0, 0.05);
 
 	font-family: $title-font;
 	font-size: $ft-size-large;	
@@ -70,15 +70,16 @@ header[role="banner"]{
 
 	.header-info{
 		font-size: $ft-size-normal;
-    border-bottom: $one solid rgba(0, 0, 0, 0.05);
+    // border-bottom: $one solid rgba(0, 0, 0, 0.05);
+		background-color: $black;
 
 		&, a{
-			color: #c1c1c1;
+			color: white;
 		}
 		
 		.header-social{
-			border-left: $one solid rgba(0, 0, 0, 0.05);
-			border-right: $one solid rgba(0, 0, 0, 0.05);
+			// border-left: $one solid rgba(0, 0, 0, 0.05);
+			// border-right: $one solid rgba(0, 0, 0, 0.05);
 			padding: 0 $gutter-large;
 			a > span{
 				display: none;
@@ -89,7 +90,7 @@ header[role="banner"]{
 			list-style: none;
 			padding: 0;
 			margin: 0;
-	    border-left: $one solid rgba(0, 0, 0, 0.05);
+	    // border-left: $one solid rgba(0, 0, 0, 0.05);
 		}
 
 		li{
@@ -101,7 +102,7 @@ header[role="banner"]{
 			margin-left: auto;
 			li{
 				padding: $gutter $gutter-large;
-				border-right: $one solid rgba(0, 0, 0, 0.05);
+				// border-right: $one solid rgba(0, 0, 0, 0.05);
 			}
 		}
 	}
@@ -117,10 +118,9 @@ header[role="banner"]{
 			@include transition(all .3s);
 
 			font-size: $ft-size-medium;
-			text-transform: lowercase;
+			//text-transform: lowercase;
 			padding-top: $gutter-small;
 			margin: 0 $gutter;
-			border-bottom: solid $two transparent;
 			
 			i:before{
 				margin-right: $gutter-small;

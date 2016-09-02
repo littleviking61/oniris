@@ -88,7 +88,7 @@ $(document).ready(function(){
 		  }, 200 ) );
 		});
 
-		$('aside.main').nav();
+		//$('aside.main').nav();
 
 		$(".content .more").click(function(){
 			$p = $(this).nextAll();
