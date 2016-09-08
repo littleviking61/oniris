@@ -20,7 +20,7 @@
 				<?php endif ?>
 				<h3><?= do_shortcode(get_field('titre')) ?></h3>
 				<?php if( get_field('sous_titre') ): ?>
-					<hr>
+					<!-- <hr> -->
 					<div class="content">
 						<p><?= do_shortcode(get_field('sous_titre')) ?></p>
 					</div>

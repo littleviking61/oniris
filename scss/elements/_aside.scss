@@ -1,6 +1,6 @@
 /* aside */
 
-aside.main{
+aside{
 	margin: 0;
 
 	.quick-nav{
@@ -51,7 +51,7 @@ aside.main{
 					margin-bottom: $gutter-small;
 					font-family: $title-font;
 					font-weight: bold;
-					text-transform: lowercase;
+					//text-transform: lowercase;
 					height: 34px;
 					color: $grey;
 
@@ -120,6 +120,37 @@ aside.main{
 			width: $gutter;
 		}
 	}
+}
+
+.aside-artistes{
+	.thumbnail{
+		border-bottom: none;
+		margin: 0;
+	}
+
+	.info{
+		.bio{
+			hr{ display: none; }
+			h4{
+				font-size: $ft-size-medium;
+				color: $black;
+			}
+		}
+
+		h2{
+			margin-top: $gutter-medium;
+			display: inline-block;
+			@include colors(&, "bg");
+			padding: $gutter-mini $gutter;
+			margin-bottom: $gutter-small;
+			font-family: $title-font;
+			font-weight: bold;
+			height: 34px;
+			color: white;
+			font-size: $ft-size-larger;
+		}
+	}
+
 }
 
 .close-menu{

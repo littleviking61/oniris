@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 
                     src: "./css",
                     dest: "/var/www/html/client/oniris-fr/wp-content/themes/oniris-v2/",
-                    host: "laventurier@onlinet",
+                    host: "laventurier@online",
                 }
             }
         },

@@ -65,7 +65,7 @@ $column-width-small: rem-calc(100);
 $column-width-medium: rem-calc(100);
 $column-gutter: $gutter-large;
 
-$aside-width: rem-calc(215);
+$aside-width: $column-width * 3;
 
 $small-actu-height: rem-calc(140);
 

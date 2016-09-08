@@ -138,6 +138,8 @@ header[role="banner"]{
 
 main{
 	@include background-image(linear-gradient(white, $lightest-grey rem-calc(100)));
+	@extend %flex-column;
+
 	width: 100%;
 
 	.wrap{
@@ -147,9 +149,9 @@ main{
 	}
 }
 
-aside.main{
+aside{
 	padding-top: $gutter-medium;
-	padding-left: $gutter-big;
+	// padding-left: $gutter-big;
 	padding-right: $gutter-large;
 	width: $aside-width;
 	z-index: 1;

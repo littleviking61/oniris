@@ -2,7 +2,6 @@
 	$width = get_field('largeur_du_bloc');
 	$flex = $width > 0 ? 'flex-' . $width : 'flex-3';
 ?>
-
 <h2><?= get_field('prenom') . ' ' . get_field('nom') ?></h2>
 
 <section class="intro <?= $flex ?>">

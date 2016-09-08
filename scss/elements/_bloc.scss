@@ -48,9 +48,10 @@
 	}
 
 	h3{
-		@include colors(&){
-			color: $lighter-grey;
-		};
+		color: $block;
+		// @include colors(&){
+		// 	color: $lighter-grey;
+		// };
 		margin-bottom: $gutter;
 	}
 

@@ -22,7 +22,7 @@
 					<h3><?= do_shortcode(get_field('sous_titre')) ?></h3>
 				<?php endif ?>
 				<?php if( get_field('resume') ): ?>
-					<hr>
+					<!-- <hr> -->
 					<div class="content">
 						<p><?= do_shortcode(get_field('resume')) ?></p>
 					</div>

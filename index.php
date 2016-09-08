@@ -3,8 +3,9 @@
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="wrap row<?= ' '.get_field('page_type_acf') ?>">
 
+				<div class="wrap row<?= ' '.get_field('page_type_acf') ?>">
+			
 					<?php if ( !empty(get_field('liste')) ) : ?>
 						
 						<?php get_template_part( 'loop', 'list' ); ?>
