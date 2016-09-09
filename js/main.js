@@ -89,6 +89,11 @@ $(document).ready(function(){
 		});
 
 		//$('aside.main').nav();
+		// $('nav.main li.menu-item').hover(function() {
+		// 	$('ul.sub-menu.'+$(this).attr('id'),'aside.main').addClass('open');
+		// }, function(){
+		// 	$('ul.sub-menu.'+$(this).attr('id'),'aside.main').removeClass('open');
+		// });
 
 		$(".content .more").click(function(){
 			$p = $(this).nextAll();

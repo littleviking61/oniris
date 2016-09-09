@@ -226,42 +226,25 @@ function the_nav_section($pageId, $args = [], $class = 'nav-section')
 	$childPage = get_posts( $args ); 
 	?>
 
-	<ul class="<?= $class ?>">
-		<li class="<?= $pageId == $currentId || in_array( $pageId, get_post_ancestors($currentId) ) ? 'current-menu-item' : null ?>">
-			<a href="<?= get_permalink($pageId) ?>">
-				<?php if ($args['asTitle'] !== false): ?>
-					<?= $args['asTitle'] ?>
-				<?php else: ?>
-					<?php if(get_field('icon-menu', $pageId)) : ?>
-						<i class="<?= get_field('icon-menu', $pageId) ?>"></i>
-					<?php endif ?>
-					<span><?= get_the_title($pageId) ?></span>
+	<section class="<?= $class ?>">
+		<ul class="sub-menu <?= 'menu-item-'.$pageId ?>">
+			<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
+
+				<?php if (get_field('visible', $post->ID) == 'true'): ?>
+					<li class="<?= $post->ID == $currentId ? 'current-menu-item' : null ?><?= ''//get_field('category', $post->ID) ?>">
+						<?php 
+							$text = isset($result)
+								? get_field($result, $post->ID)
+								: $post->post_title; ?>
+						<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
+							<?= apply_filters('the_title', $text) ?>
+						</a>
+					</li>
 				<?php endif ?>
-			</a>
-			<ul class="sub-menu">
-					<?php if ($class === 'nav-section'): ?>
-						<li><a href="<?= get_the_permalink($pageId) ?>"><?= __('Voir tous les', 'reverie') ?> <?= strtolower(get_the_title($pageId)) ?></a></li>
-					<?php endif ?>
-					<hr>
-					<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
-
-						<?php if (get_field('visible', $post->ID) == 'true'): ?>
-							<li class="<?= $post->ID == $currentId ? 'current-menu-item' : null ?><?= ''//get_field('category', $post->ID) ?>">
-								<?php 
-									$text = isset($result)
-										? get_field($result, $post->ID)
-										: $post->post_title; ?>
-								<a href="<?= get_permalink($post->ID) ?>" title="<?= $text ?>">
-									<?= apply_filters('the_title', $text) ?>
-								</a>
-							</li>
-						<?php endif ?>
-					
-					<?php endforeach ?>
-			</ul>
-		</li>
-	</ul>
-
+			
+			<?php endforeach ?>
+		</ul>
+	</section>
 
 	<?php wp_reset_postdata();
 }

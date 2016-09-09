@@ -59,12 +59,12 @@ h2, h2 a{
 }
 
 h3, h3 a{
-	@include colors(&);
+	// @include colors(&);
 	font-size: $ft-size-largest;
 }
 
 h4, h4 a{
-	@include colors(&);
+	// @include colors(&);
 	font-size: $ft-size-larger;
 	margin-bottom: $gutter;
 }

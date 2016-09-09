@@ -49,7 +49,7 @@
 			?>
 
 			<span class="show-for-medium show-menu" data-show="#aside"><?= __('Navigation rapide') ?></span>
-
+			<?php get_template_part('templates/aside') ?>
 		</div>
 		<!-- End of Top-Bar -->
 	</header>

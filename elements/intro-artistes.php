@@ -7,6 +7,7 @@
 <section class="intro <?= $flex ?>">
 	<div class="contain">
 		<div class="container">
+			<?php $nav = get_field('element_du_menu'); var_dump($nav) ?>
 			<?php if( has_post_thumbnail() ): ?>
 				<div class="thumbnail">
 					<?php the_post_thumbnail('medium') ?>
