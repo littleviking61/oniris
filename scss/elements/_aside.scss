@@ -62,42 +62,44 @@ aside{
 			
 		}
 
-		.sub-menu{
-			@extend %flex-column-center;
-			@include flex-wrap(wrap);
-			@include justify-content(flex-end);
-			@include single-transition(max-height, 0.4s);
-			max-height: 0;
-			overflow: hidden;
-			width: 100%;
-			margin: 0;
-
-			&.open{
-				max-height: 300px;
-			}
-
-			li{
-				margin-bottom: $gutter-mini;
-
-				
-				a{
-					&:before:not(:first-child){
-						content: " / ";
-					}
-
-					display: block;
-					padding-left: $gutter-small;
-					border-left: $border-width solid transparent;
-					@include ellipsis();
-				}
-	
-			}
-		}
+		
 
 		hr{
 			background-color: $light-grey;
 			margin: $gutter;
 			width: $gutter;
+		}
+	}
+
+	.sub-menu{
+		@extend %flex-column-center;
+		@include flex-wrap(wrap);
+		@include justify-content(flex-end);
+		@include single-transition(max-height, 0.4s);
+		max-height: 0;
+		overflow: hidden;
+		width: 100%;
+		margin: 0;
+
+		&.open{
+			max-height: 300px;
+		}
+
+		li{
+			margin-bottom: $gutter-mini;
+
+			&:not(:first-child) a:before{
+				content: " / ";
+			}
+			
+			a{
+
+				display: block;
+				padding-left: $gutter-small;
+				border-left: $border-width solid transparent;
+				@include ellipsis();
+			}
+	
 		}
 	}
 

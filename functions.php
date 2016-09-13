@@ -60,57 +60,6 @@ function add_search_form($items, $args) {
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 
-// font on menu
-function menu( $nav ){
-		$menu_item = preg_replace_callback(
-				'/(<li[^>]+class=")([^"]+)("?[^>]+>[^>]+>)([^<]+)<\/a>/',
-				'replace',
-				$nav
-		);
-		return $menu_item;
-}
-		
-function replace( $a ){
-	$start = $a[ 1 ];
-	$classes = $a[ 2 ];
-	$rest = $a[ 3 ];
-	$text = $a[ 4 ];
-	$before = true;
-
-	$class_array = explode( ' ', $classes );
-	$icon_class = array();
-	foreach( $class_array as $key => $val ){
-		if( 'icon' == substr( $val, 0, 4 ) ){
-			if( 'icon' == $val ){
-				unset( $class_array[ $key ] );
-			} elseif( 'icon-after' == $val ){
-				$before = false;
-				unset( $class_array[ $key ] );
-			} else {
-				$icon_class[] = $val;
-				unset( $class_array[ $key ] );
-			}
-		}
-	}
-
-	if( !empty( $icon_class ) ){
-		$icon_class[] = 'icon';
-				//$settings = get_option( 'n9m-font-awesome-4-menus', $this->defaults );
-		if( $before ){
-			$newtext = '<i class="'.implode( ' ', $icon_class ).'"></i><span>'.$text.'</span>';
-		} else {
-			$newtext = '<span>'.$text.'</span><i class="'.implode( ' ', $icon_class ).'"></i>';
-		}
-	} else {
-		$newtext = $text;
-	}
-
-	$item = $start.implode( ' ', $class_array ).$rest.$newtext.'</a>';
-
-	return $item;
-}
-add_filter( 'wp_nav_menu' , 'menu', 10, 2 );
-
 add_action( 'walker_nav_menu_start_el', 'empty_nav_links_to_span', 10, 4 );
 function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {
 	$ancre = parse_url($item->url)["fragment"];
@@ -225,9 +174,8 @@ function the_nav_section($pageId, $args = [], $class = 'nav-section')
 	$currentId = get_the_ID();
 	$childPage = get_posts( $args ); 
 	?>
-
-	<section class="<?= $class ?>">
-		<ul class="sub-menu <?= 'menu-item-'.$pageId ?>">
+	<section class="nav-section">
+		<ul class="sub-menu <?= $class ?>">
 			<?php foreach ( $childPage as $post ) : setup_postdata( $post ); ?>
 
 				<?php if (get_field('visible', $post->ID) == 'true'): ?>
@@ -245,7 +193,6 @@ function the_nav_section($pageId, $args = [], $class = 'nav-section')
 			<?php endforeach ?>
 		</ul>
 	</section>
-
 	<?php wp_reset_postdata();
 }
 
@@ -339,5 +286,12 @@ function wpb_related_pages() {
 		wp_reset_query(); 
 	}
 }
+
+function filter_plugin_updates( $value ) {
+    unset( $value->response['advanced-custom-fields-pro/acf.php'] );
+    unset( $value->response['qtranslate-x/qtranslate.php'] );
+    return $value;
+}
+add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );
 
 ?>

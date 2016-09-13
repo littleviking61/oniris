@@ -55,7 +55,7 @@
 						?>
 						<nav>
 							<?php 
-								the_nav_section(2191, ['meta_key' => 'date_de_debut', 'orderby' => 'meta_value', 'order'	=> 'DESC', 'posts_per_page' => 8], 'menu');
+								the_nav_section(2191, ['meta_key' => 'date_de_debut', 'orderby' => 'meta_value', 'order'	=> 'DESC', 'posts_per_page' => 8]);
 							 ?>
 						</nav>
 				</div>

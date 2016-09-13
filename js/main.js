@@ -1,8 +1,11 @@
 jQuery.noConflict(false);
 $ = jQuery;
 
+
 $(document).ready(function(){
 
+		var $abcd = 'abcd';
+		var $leave = false;
 		// grab an element
 		var elem = document.querySelector("header[role='banner']");
 		// construct an instance of Headroom, passing the element
@@ -88,13 +91,6 @@ $(document).ready(function(){
 		  }, 200 ) );
 		});
 
-		//$('aside.main').nav();
-		// $('nav.main li.menu-item').hover(function() {
-		// 	$('ul.sub-menu.'+$(this).attr('id'),'aside.main').addClass('open');
-		// }, function(){
-		// 	$('ul.sub-menu.'+$(this).attr('id'),'aside.main').removeClass('open');
-		// });
-
 		$(".content .more").click(function(){
 			$p = $(this).nextAll();
 			if($(this).hasClass('view')) {
@@ -143,15 +139,21 @@ $(document).ready(function(){
 			if(cible.length > 0) cible.toggleClass('open');
 		});
 
-		$( document ).on( "click", ".aside-open", function(e) {
-		  $this = $(this);
-		  if($('#aside:hover').length === 0) {
-		  	console.log('oui');
-		  	$('body').removeClass('aside-open');
-	  		$('#aside').removeClass('open');
-		  }
+		// $('aside.main').nav();
+		$('nav.main li.menu-item a[title*="list-"], aside.main').mouseenter(function() {
+			if(this.tagName == 'A') $('aside.main .sub-menu.open').removeClass('open');
+			$('ul.sub-menu.'+$(this).attr('title'),'aside.main').addClass('open');
+			$leave = false;
+			if($abcd !== 'abcd') clearTimeout($abcd);
+		}).mouseleave(function(){
+			$leave = true;
+			$abcd = setTimeout(closeSub, 500);
 		});
 
+		function closeSub() {
+			console.log($leave);
+			if($leave) $('aside.main .sub-menu.open').removeClass('open');
+		}
 });
 
 // debounce so filtering doesn't happen every millisecond

@@ -918,6 +918,21 @@ footer.main {
         flex: 1; }
         footer.main .footer-content .menus > div:first-child {
           margin-top: 0; }
+    footer.main .footer-content input[type="text"] {
+      background: white;
+      border: none;
+      padding: 0.20833rem 0.3125rem;
+      width: 100%;
+      margin-bottom: 5px; }
+    footer.main .footer-content input[type="submit"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      color: white;
+      text-decoration: underline;
+      margin-top: 0.20833rem; }
   footer.main .copyright {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
@@ -963,7 +978,7 @@ main, main .wrap, .wrap, footer.main .copyright .copyright-content, footer.main 
   display: -webkit-flex;
   display: flex; }
 
-.wrap > header:first-child, aside .nav-section .sub-menu {
+.wrap > header:first-child, aside .sub-menu {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1378,38 +1393,38 @@ aside {
             background-color: #8b008b; }
           .cat-sculpture aside .nav-section > li > span:hover:not(.button) {
             background-color: #00bfff; }
-    aside .nav-section .sub-menu {
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-justify-content: flex-end;
-      justify-content: flex-end;
-      -moz-transition: max-height 0.4s;
-      -o-transition: max-height 0.4s;
-      -webkit-transition: max-height 0.4s;
-      transition: max-height 0.4s;
-      max-height: 0;
-      overflow: hidden;
-      width: 100%;
-      margin: 0; }
-      aside .nav-section .sub-menu.open {
-        max-height: 300px; }
-      aside .nav-section .sub-menu li {
-        margin-bottom: 0.20833rem; }
-        aside .nav-section .sub-menu li a {
-          display: block;
-          padding-left: 0.3125rem;
-          border-left: 0.1875rem solid transparent;
-          white-space: nowrap;
-          overflow: hidden;
-          -ms-text-overflow: ellipsis;
-          -o-text-overflow: ellipsis;
-          text-overflow: ellipsis; }
-          aside .nav-section .sub-menu li a:before:not(:first-child) {
-            content: " / "; }
     aside .nav-section hr {
       background-color: #737373;
       margin: 0.625rem;
       width: 0.625rem; }
+  aside .sub-menu {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -webkit-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0; }
+    aside .sub-menu.open {
+      max-height: 300px; }
+    aside .sub-menu li {
+      margin-bottom: 0.20833rem; }
+      aside .sub-menu li:not(:first-child) a:before {
+        content: " / "; }
+      aside .sub-menu li a {
+        display: block;
+        padding-left: 0.3125rem;
+        border-left: 0.1875rem solid transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis; }
   aside.main {
     width: 100%;
     padding-top: 0; }
