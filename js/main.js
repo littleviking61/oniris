@@ -141,18 +141,26 @@ $(document).ready(function(){
 
 		// $('aside.main').nav();
 		$('nav.main li.menu-item a[title*="list-"], aside.main').mouseenter(function() {
-			if(this.tagName == 'A') $('aside.main .sub-menu.open').removeClass('open');
-			$('ul.sub-menu.'+$(this).attr('title'),'aside.main').addClass('open');
+			var onHover = this;
 			$leave = false;
 			if($abcd !== 'abcd') clearTimeout($abcd);
+			$abcd = setTimeout(function() {closeSub(false, onHover)}, 200);
 		}).mouseleave(function(){
+			var onHover = this;
 			$leave = true;
-			$abcd = setTimeout(closeSub, 500);
+			if($abcd !== 'abcd') clearTimeout($abcd);
+			$abcd = setTimeout(function() {closeSub(true, onHover)}, 500);
 		});
 
-		function closeSub() {
-			console.log($leave);
-			if($leave) $('aside.main .sub-menu.open').removeClass('open');
+		function closeSub(close, element) {
+			//
+			console.log(element);
+			if (!close) {
+				if(element.tagName == 'A') $('aside.main .sub-menu.open').removeClass('open');
+				$('ul.sub-menu.'+$(element).attr('title'),'aside.main').addClass('open');
+			}	else {
+				if($leave) $('aside.main .sub-menu.open').removeClass('open');
+			}
 		}
 });
 

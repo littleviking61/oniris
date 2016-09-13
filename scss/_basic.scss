@@ -52,9 +52,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h2, h2 a{
-	@include colors(&) {
-		color: $lighter-grey;
-	};
+	// @include colors(&) {
+	// 	color: $lighter-grey;
+	// };
 	font-size: $ft-size-big;
 }
 
@@ -121,7 +121,7 @@ blockquote {
 
 %basic-color{
 	color: initial;
-	@include colors((h2,h3,h4), null, ".container");
+	@include colors((h2,h3,h4),null,'a:hover');
 	@include colors(hr, "bg", ".container");
 	@include colors(".thumbnail", "bd", ".container");
 }

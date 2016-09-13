@@ -102,6 +102,7 @@
 
 		li{
 			padding-bottom: $gutter-medium;
+			margin-right: $gutter-large;
 		}
 	}
 
@@ -148,14 +149,30 @@
 	&.highlight{
 		a{
 			@include flex-direction(row);
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			
+			.details{
+				border: $one dotted transparent;
+			}
+
+			&:hover .details{
+				@include colors(&, "bd");
+			}
 		}
 		// margin-right: $gutter-medium;
 		// margin-bottom: $gutter-medium;
 		.thumbnail{
 			max-height:none;
 			border-bottom: none;
+			margin: 0;
 			margin-right: $gutter-large;
-			margin-bottom: -($gutter-large + $one);
+		}
+		.details{
+			background-color: white;
+			padding: 20px;
+			flex-grow: 1;
 		}
 	}
 	

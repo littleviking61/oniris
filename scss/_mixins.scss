@@ -61,6 +61,16 @@
     // $colors: $colors, unquote(#{$element}) !global;
     @include renderColors($element, $force, $space) { @content };
   }
+} 
+
+@mixin colorsHover($elements: &) {
+  @each $element in $elements {
+    @each $categorie, $color in $categories {
+      @at-root a:hover.cat-#{$categorie} #{$element} {
+        color: $color;
+      }
+   }
+  }
 }
 
 @mixin renderColors($elements, $force, $space, $attribut: color) {
