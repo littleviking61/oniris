@@ -13,8 +13,8 @@
 			</div>
 		</div>
 	</section>
-	<hr>
 	<?php if( have_rows('element_du_menu') ): ?>
+		<hr>
 		<ul class="nav-section">
 	    <?php while ( have_rows('element_du_menu') ) : the_row(); ?>
 				<?php
@@ -29,9 +29,10 @@
 							<span><?= the_sub_field('icon'); ?> <?= the_sub_field('texte'); ?></span>
 						<?php endif ?>
 					</li>
-
-	    <?php endwhile; ?>
-	   </ul>
-	 <?php endif ?>
-
+			<?php endwhile; ?>
+	  </ul>
+	<?php endif ?>
+  <?php if (get_field('afficher_les_actualites')): ?>
+  	<?php get_template_file('elements/relation-artistes'); ?>
+  <?php endif ?>
 </aside>

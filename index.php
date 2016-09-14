@@ -5,7 +5,10 @@
 
 
 				<div class="wrap row<?= ' '.get_field('page_type_acf') ?>">
-			
+					<?php 
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb('<div class="breadcrumbs">','</div>');
+					} ?>
 					<?php if ( !empty(get_field('liste')) ) : ?>
 						
 						<?php get_template_part( 'loop', 'list' ); ?>

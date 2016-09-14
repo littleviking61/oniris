@@ -146,6 +146,12 @@
 		}
 	}
 
+	&.single{
+		h2{
+			font-size: $ft-size-largest;
+		}
+	}
+
 	&.highlight{
 		a{
 			@include flex-direction(row);
@@ -360,7 +366,7 @@
 		a{
 			display: block;
 			width: 100%;
-			padding: $gutter;
+			padding: $gutter $gutter-large;
 
 			&:after{
 				content: "";
@@ -371,15 +377,17 @@
 
 		h4{
 			margin-top: $gutter-small;
-			@include colors(&) {
-				color: $grey;
-			}
+			color: $black;
+		}
+		
+		&:hover h4{
+			@include colors(&);
 		}
 
 		border: dotted thin transparent;
 
 		&:hover{
-			border-color: $light-grey;
+			@include colors(&, 'bd');
 		}
 
 		img, .thumbnail{
@@ -449,27 +457,27 @@
 
 }
 
-.relations, %relations{
-	@extend %relationship;
+// .relations, %relations{
+// 	@extend %relationship;
 
-	ul:before, ul:after{
-		content: "";
-		display: block;
-		width: $gutter-large;
-		height: $one;
-		@include colors(&, "bg") {
-			background-color: $lighter-grey;
-		};
-		margin: 0 auto;
-	}
+// 	ul:before, ul:after{
+// 		content: "";
+// 		display: block;
+// 		width: $gutter-large;
+// 		height: $one;
+// 		@include colors(&, "bg") {
+// 			background-color: $lighter-grey;
+// 		};
+// 		margin: 0 auto;
+// 	}
 
-	li{
-		margin: $gutter-small 0; 
-		&:before{
-			display: none;
-		}
-	}
-}
+// 	li{
+// 		margin: $gutter-small 0; 
+// 		&:before{
+// 			display: none;
+// 		}
+// 	}
+// }
 
 
 .liste-dartiste{

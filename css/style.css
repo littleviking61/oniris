@@ -670,11 +670,22 @@ header[role="banner"] nav ul, aside .quick-nav ul {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    position: relative;
     font-size: 0.875rem;
     padding-top: 0.3125rem;
     margin: 0 0.625rem; }
     header[role="banner"] nav ul a i:before, aside .quick-nav ul a i:before {
       margin-right: 0.3125rem; }
+    header[role="banner"] nav ul a[title*="list-"]:after, aside .quick-nav ul a[title*="list-"]:after {
+      content: "\f107";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 55%;
+      color: #353535;
+      font: normal normal normal 14px/1 FontAwesome; }
+    header[role="banner"] nav ul a[title*="list-"]:hover:after, aside .quick-nav ul a[title*="list-"]:hover:after {
+      color: inherit; }
   header[role="banner"] nav ul .current-menu-item a, aside .quick-nav ul .current-menu-item a {
     color: #ffbc17; }
   .cat-peinture header[role="banner"] nav ul .current-menu-item a, header[role="banner"] .cat-peinture nav ul .current-menu-item a, .cat-peinture aside .quick-nav ul .current-menu-item a, aside .cat-peinture .quick-nav ul .current-menu-item a {
@@ -743,6 +754,10 @@ aside {
   padding-right: 1.25rem;
   width: 18.75rem;
   z-index: 1; }
+
+.breadcrumbs {
+  width: 100%;
+  padding-top: 0.9375rem; }
 
 .wrap section, .wrap .col, .post-it, .actu a {
   margin-bottom: 1.25rem; }
@@ -1265,6 +1280,8 @@ form.search {
     border-color: #00bfff; }
   .post-it h3, .actu a h3 {
     font-size: 1.125rem; }
+  .post-it .content h4, .actu a .content h4 {
+    color: #2d2d2d; }
   .post-it .detail, .actu a .detail {
     overflow: hidden; }
     .post-it .detail .content hr, .actu a .detail .content hr {
@@ -1402,41 +1419,65 @@ aside {
   aside.main {
     width: 100%;
     padding-top: 0; }
+  aside .relation-artiste h3 {
+    display: none; }
 
-.aside-artistes .thumbnail {
+.aside-artistes .thumbnail, .aside-expositions .thumbnail, .aside-foires .thumbnail {
   border-bottom: none;
   margin-top: -1.25rem; }
-.aside-artistes .info {
+.aside-artistes .info .bio, .aside-expositions .info .bio, .aside-foires .info .bio {
   margin-top: 0.9375rem; }
-  .aside-artistes .info .bio {
-    margin-top: 0.9375rem; }
-    .aside-artistes .info .bio hr {
-      display: none; }
-    .aside-artistes .info .bio h4 {
-      font-size: 0.875rem;
-      color: #2d2d2d; }
-  .aside-artistes .info h2 {
-    display: inline-block;
-    padding: 0.20833rem 0.625rem;
-    margin-bottom: 0.9375rem;
-    font-family: "roboto", serif;
-    font-weight: bold;
-    height: 34px;
-    color: white;
-    font-size: 1.125rem; }
-    .aside-artistes .info h2 {
-      background-color: #ffbc17; }
-    .cat-peinture .aside-artistes .info h2 {
-      background-color: #0252cf; }
-    .cat-geometrie .aside-artistes .info h2 {
-      background-color: #f23518; }
-    .cat-photographie .aside-artistes .info h2 {
-      background-color: #42b04f; }
-    .cat-multi .aside-artistes .info h2 {
-      background-color: #8b008b; }
-    .cat-sculpture .aside-artistes .info h2 {
-      background-color: #00bfff; }
-.aside-artistes hr {
+  .aside-artistes .info .bio hr, .aside-expositions .info .bio hr, .aside-foires .info .bio hr {
+    display: none; }
+  .aside-artistes .info .bio h4, .aside-expositions .info .bio h4, .aside-foires .info .bio h4 {
+    font-size: 0.875rem;
+    color: #2d2d2d; }
+.aside-artistes h2, .aside-expositions h2, .aside-foires h2 {
+  display: inline-block;
+  padding: 0.20833rem 0.625rem;
+  margin-bottom: 0.9375rem;
+  font-family: "roboto", serif;
+  font-weight: bold;
+  min-height: 34px;
+  color: white;
+  font-size: 1.125rem; }
+  .aside-artistes h2 {
+    background-color: #ffbc17; }
+  .cat-peinture .aside-artistes h2 {
+    background-color: #0252cf; }
+  .cat-geometrie .aside-artistes h2 {
+    background-color: #f23518; }
+  .cat-photographie .aside-artistes h2 {
+    background-color: #42b04f; }
+  .cat-multi .aside-artistes h2 {
+    background-color: #8b008b; }
+  .cat-sculpture .aside-artistes h2 {
+    background-color: #00bfff; }
+  .aside-expositions h2 {
+    background-color: #ffbc17; }
+  .cat-peinture .aside-expositions h2 {
+    background-color: #0252cf; }
+  .cat-geometrie .aside-expositions h2 {
+    background-color: #f23518; }
+  .cat-photographie .aside-expositions h2 {
+    background-color: #42b04f; }
+  .cat-multi .aside-expositions h2 {
+    background-color: #8b008b; }
+  .cat-sculpture .aside-expositions h2 {
+    background-color: #00bfff; }
+  .aside-foires h2 {
+    background-color: #ffbc17; }
+  .cat-peinture .aside-foires h2 {
+    background-color: #0252cf; }
+  .cat-geometrie .aside-foires h2 {
+    background-color: #f23518; }
+  .cat-photographie .aside-foires h2 {
+    background-color: #42b04f; }
+  .cat-multi .aside-foires h2 {
+    background-color: #8b008b; }
+  .cat-sculpture .aside-foires h2 {
+    background-color: #00bfff; }
+.aside-artistes hr, .aside-expositions hr, .aside-foires hr {
   width: auto;
   background-color: #bfbfbf;
   margin: 1.25rem 1.25rem 1.25rem 0; }
@@ -1609,6 +1650,8 @@ aside {
   margin-bottom: 0; }
 .actu.no-img .thumbnail {
   display: none; }
+.actu.single h2 {
+  font-size: 1.375rem; }
 .actu.highlight a {
   -webkit-flex-direction: row;
   flex-direction: row;
@@ -1772,41 +1815,62 @@ aside {
   .links li a, .events li a {
     display: block;
     width: 100%;
-    padding: 0.625rem; }
+    padding: 0.625rem 1.25rem; }
     .links li a:after, .events li a:after {
       content: "";
       display: block;
       clear: both; }
   .links li h4, .events li h4 {
-    margin-top: 0.3125rem; }
-    .links li h4 {
-      color: #ffbc17;
-      color: #353535; }
-    .cat-peinture .links li h4 {
-      color: #0252cf; }
-    .cat-geometrie .links li h4 {
-      color: #f23518; }
-    .cat-photographie .links li h4 {
-      color: #42b04f; }
-    .cat-multi .links li h4 {
-      color: #8b008b; }
-    .cat-sculpture .links li h4 {
-      color: #00bfff; }
-    .events li h4 {
-      color: #ffbc17;
-      color: #353535; }
-    .cat-peinture .events li h4 {
-      color: #0252cf; }
-    .cat-geometrie .events li h4 {
-      color: #f23518; }
-    .cat-photographie .events li h4 {
-      color: #42b04f; }
-    .cat-multi .events li h4 {
-      color: #8b008b; }
-    .cat-sculpture .events li h4 {
-      color: #00bfff; }
-  .links li:hover, .events li:hover {
-    border-color: #737373; }
+    margin-top: 0.3125rem;
+    color: #2d2d2d; }
+  .links li:hover h4 {
+    color: #ffbc17; }
+  .cat-peinture .links li:hover h4 {
+    color: #0252cf; }
+  .cat-geometrie .links li:hover h4 {
+    color: #f23518; }
+  .cat-photographie .links li:hover h4 {
+    color: #42b04f; }
+  .cat-multi .links li:hover h4 {
+    color: #8b008b; }
+  .cat-sculpture .links li:hover h4 {
+    color: #00bfff; }
+  .events li:hover h4 {
+    color: #ffbc17; }
+  .cat-peinture .events li:hover h4 {
+    color: #0252cf; }
+  .cat-geometrie .events li:hover h4 {
+    color: #f23518; }
+  .cat-photographie .events li:hover h4 {
+    color: #42b04f; }
+  .cat-multi .events li:hover h4 {
+    color: #8b008b; }
+  .cat-sculpture .events li:hover h4 {
+    color: #00bfff; }
+  .links li:hover {
+    border-color: #ffbc17; }
+  .cat-peinture .links li:hover {
+    border-color: #0252cf; }
+  .cat-geometrie .links li:hover {
+    border-color: #f23518; }
+  .cat-photographie .links li:hover {
+    border-color: #42b04f; }
+  .cat-multi .links li:hover {
+    border-color: #8b008b; }
+  .cat-sculpture .links li:hover {
+    border-color: #00bfff; }
+  .events li:hover {
+    border-color: #ffbc17; }
+  .cat-peinture .events li:hover {
+    border-color: #0252cf; }
+  .cat-geometrie .events li:hover {
+    border-color: #f23518; }
+  .cat-photographie .events li:hover {
+    border-color: #42b04f; }
+  .cat-multi .events li:hover {
+    border-color: #8b008b; }
+  .cat-sculpture .events li:hover {
+    border-color: #00bfff; }
   .links li img, .links li .thumbnail, .events li img, .events li .thumbnail {
     float: left;
     margin-right: 0.625rem; }
@@ -1814,16 +1878,16 @@ aside {
       float: inherit; }
 
 /* relationship */
-.relationship, .relations {
+.relationship {
   width: 100%;
   margin-top: 2.5rem;
   text-align: center; }
-  .relationship h5, .relations h5 {
+  .relationship h5 {
     text-transform: uppercase; }
-  .relationship ul, .relations ul {
+  .relationship ul {
     list-style: none;
     padding-left: 0; }
-    .relationship ul.artistes, .relations ul.artistes {
+    .relationship ul.artistes {
       list-style: none;
       padding-left: 0;
       font-family: "roboto", serif;
@@ -1831,7 +1895,7 @@ aside {
       -moz-column-count: 2;
       -webkit-column-count: 2;
       column-count: 2; }
-    .relationship ul:after, .relations ul:after {
+    .relationship ul:after {
       content: "";
       display: block;
       width: 1.25rem;
@@ -1850,20 +1914,7 @@ aside {
         background-color: #8b008b; }
       .cat-sculpture .relationship ul:after {
         background-color: #00bfff; }
-      .relations ul:after {
-        background-color: #ffbc17;
-        background-color: #a6a6a6; }
-      .cat-peinture .relations ul:after {
-        background-color: #0252cf; }
-      .cat-geometrie .relations ul:after {
-        background-color: #f23518; }
-      .cat-photographie .relations ul:after {
-        background-color: #42b04f; }
-      .cat-multi .relations ul:after {
-        background-color: #8b008b; }
-      .cat-sculpture .relations ul:after {
-        background-color: #00bfff; }
-  .relationship li, .relations li {
+  .relationship li {
     margin: 0.625rem 0; }
     .relationship li:hover {
       color: #ffbc17; }
@@ -1889,31 +1940,7 @@ aside {
       color: #8b008b; }
     .cat-sculpture .relationship li:hover p {
       color: #00bfff; }
-    .relations li:hover {
-      color: #ffbc17; }
-    .cat-peinture .relations li:hover {
-      color: #0252cf; }
-    .cat-geometrie .relations li:hover {
-      color: #f23518; }
-    .cat-photographie .relations li:hover {
-      color: #42b04f; }
-    .cat-multi .relations li:hover {
-      color: #8b008b; }
-    .cat-sculpture .relations li:hover {
-      color: #00bfff; }
-    .relations li:hover p {
-      color: #ffbc17; }
-    .cat-peinture .relations li:hover p {
-      color: #0252cf; }
-    .cat-geometrie .relations li:hover p {
-      color: #f23518; }
-    .cat-photographie .relations li:hover p {
-      color: #42b04f; }
-    .cat-multi .relations li:hover p {
-      color: #8b008b; }
-    .cat-sculpture .relations li:hover p {
-      color: #00bfff; }
-    .relationship li:before, .relations li:before {
+    .relationship li:before {
       content: "";
       display: block;
       width: 1.25rem;
@@ -1932,57 +1959,6 @@ aside {
         background-color: #8b008b; }
       .cat-sculpture .relationship li:before {
         background-color: #00bfff; }
-      .relations li:before {
-        background-color: #ffbc17;
-        background-color: #a6a6a6; }
-      .cat-peinture .relations li:before {
-        background-color: #0252cf; }
-      .cat-geometrie .relations li:before {
-        background-color: #f23518; }
-      .cat-photographie .relations li:before {
-        background-color: #42b04f; }
-      .cat-multi .relations li:before {
-        background-color: #8b008b; }
-      .cat-sculpture .relations li:before {
-        background-color: #00bfff; }
-
-.relations ul:before, .relations ul:after {
-  content: "";
-  display: block;
-  width: 1.25rem;
-  height: 0.0625rem;
-  margin: 0 auto; }
-  .relations ul:before {
-    background-color: #ffbc17;
-    background-color: #a6a6a6; }
-  .cat-peinture .relations ul:before {
-    background-color: #0252cf; }
-  .cat-geometrie .relations ul:before {
-    background-color: #f23518; }
-  .cat-photographie .relations ul:before {
-    background-color: #42b04f; }
-  .cat-multi .relations ul:before {
-    background-color: #8b008b; }
-  .cat-sculpture .relations ul:before {
-    background-color: #00bfff; }
-  .relations ul:after {
-    background-color: #ffbc17;
-    background-color: #a6a6a6; }
-  .cat-peinture .relations ul:after {
-    background-color: #0252cf; }
-  .cat-geometrie .relations ul:after {
-    background-color: #f23518; }
-  .cat-photographie .relations ul:after {
-    background-color: #42b04f; }
-  .cat-multi .relations ul:after {
-    background-color: #8b008b; }
-  .cat-sculpture .relations ul:after {
-    background-color: #00bfff; }
-.relations li {
-  margin: 0.3125rem 0; }
-  .relations li:before {
-    display: none; }
-
 /* fotorama */
 /* fotorama */
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe {

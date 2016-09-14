@@ -1,5 +1,5 @@
 <?php 
-	$flex = 'flex-3'; 
+	$flex = 'min-2 flex-3'; 
 	$linkID =  get_field('lien')[0] || get_field('lien_externe');
 	$specific = get_field('specific_details');
 	$when = get_field('when');
@@ -16,7 +16,7 @@
 ?>
 
 <?php if( get_field('titre') ): ?>
-<div class="item fixed-2 actu <?= $categorie ?>"
+<div class="item <?= $flex ?> actu single <?= $categorie ?>"
 		data-date="<?= is_null($when) ? 'gone' : $when ?>"
 		data-type="<?= $relations === "groupe" ? 'group' : 'alone' ?>"
 		data-place="<?= $place || is_null($place) ? 'in' :  'out' ?>">

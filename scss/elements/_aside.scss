@@ -107,10 +107,16 @@ aside{
 		width: 100%;
 		padding-top: 0;
 	}
+
+	.relation-artiste{
+		h3{
+			display: none;
+		}
+	}
 }
 
 
-.aside-artistes{
+.aside-artistes, .aside-expositions, .aside-foires{
 	.thumbnail{
 		border-bottom: none;
 		margin-top: - $gutter-large;
@@ -118,7 +124,6 @@ aside{
 	}
 
 	.info{
-		margin-top: $gutter-medium;
 		.bio{
 			margin-top: $gutter-medium;
 			hr{ display: none; }
@@ -127,18 +132,18 @@ aside{
 				color: $black;
 			}
 		}
+	}
 
-		h2{
-			display: inline-block;
-			@include colors(&, "bg");
-			padding: $gutter-mini $gutter;
-			margin-bottom: $gutter-medium;
-			font-family: $title-font;
-			font-weight: bold;
-			height: 34px;
-			color: white;
-			font-size: $ft-size-larger;
-		}
+	h2{
+		display: inline-block;
+		@include colors(&, "bg");
+		padding: $gutter-mini $gutter;
+		margin-bottom: $gutter-medium;
+		font-family: $title-font;
+		font-weight: bold;
+		min-height: 34px;
+		color: white;
+		font-size: $ft-size-larger;
 	}
 
 	hr{

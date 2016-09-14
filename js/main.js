@@ -153,8 +153,6 @@ $(document).ready(function(){
 		});
 
 		function closeSub(close, element) {
-			//
-			console.log(element);
 			if (!close) {
 				if(element.tagName == 'A') $('aside.main .sub-menu.open').removeClass('open');
 				$('ul.sub-menu.'+$(element).attr('title'),'aside.main').addClass('open');

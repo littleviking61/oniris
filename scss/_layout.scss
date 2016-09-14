@@ -107,6 +107,7 @@ header[role="banner"]{
 	}
 }
 
+
 %nav-menu{
 	ul{
 		@extend %flex-center-center;
@@ -115,6 +116,7 @@ header[role="banner"]{
 		a{
 			@include display-flex;
 			@include transition(all .3s);
+			position: relative;
 
 			font-size: $ft-size-medium;
 			//text-transform: lowercase;
@@ -123,6 +125,19 @@ header[role="banner"]{
 			
 			i:before{
 				margin-right: $gutter-small;
+			}
+
+			&[title*="list-"]{
+				&:after{
+					content: "\f107";
+					display: block;
+					position: absolute;
+					top: 20px;
+					left: 55%;
+					color: $grey;
+					font: normal normal normal 14px/1 FontAwesome;
+				}
+				&:hover:after{ color: inherit; }
 			}
 		}
 
@@ -156,6 +171,12 @@ aside{
 	width: $aside-width;
 	z-index: 1;
 
+}
+
+
+.breadcrumbs{
+	width: 100%;
+	padding-top: $gutter-medium;
 }
 
 %section-gutter{

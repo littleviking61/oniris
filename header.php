@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+	<title><?php wp_title(); ?></title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,10 +50,11 @@
 
 			<span class="show-for-medium show-menu" data-show="#aside"><?= __('Navigation rapide') ?></span>
 			<?php get_template_part('templates/aside') ?>
+
 		</div>
 		<!-- End of Top-Bar -->
 	</header>
 
 	<main role="document">
-
+		
 		<?php //get_template_part( 'aside' ); ?>

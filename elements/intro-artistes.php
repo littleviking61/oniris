@@ -17,10 +17,10 @@
 				<?= do_shortcode(get_field('courte_biographie')) ?>
 			</div>
 		</div>
-	  <?php if (!get_field('afficher_les_actualites')): ?>
+	  <?php //if (!get_field('afficher_les_actualites')): ?>
 		  <div class="relation-artiste">
 		  	<?php get_template_file('elements/relation-artistes'); ?>
 		  </div>
-	  <?php endif ?>
+	  <?php //endif ?>
 	</div>
 </section>

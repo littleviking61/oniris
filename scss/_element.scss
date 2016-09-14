@@ -217,6 +217,10 @@ form{
 		font-size: $ft-size-larger;
 	}
 
+	.content h4{
+		color: $black;
+	}
+
 	.detail{
 		// @include flex-shrink(0);
 		overflow: hidden;

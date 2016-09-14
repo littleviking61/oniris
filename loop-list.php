@@ -41,7 +41,7 @@
 	</div>
 <?php endif ?>
 
-<div class="list-page full<?php if($isotop) echo ' isotop' ?>">
+<div class="list-page full<?= $isotop ? ' isotop' : ''; ?>">
 	<?php 
 		if($list == 'actu') {
 			$args = array(
@@ -63,7 +63,7 @@
 
 		foreach ( $listPosts as $post ) :	 
 			setup_postdata( $post );
-			$post->class = 'flex-4';
+			$post->class = 'flex-5';
 			get_template_file($template, 'elements/single' );
 		
 		endforeach; wp_reset_postdata();
