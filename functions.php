@@ -55,10 +55,19 @@ Menu
 
 function add_search_form($items, $args) {
 	if( $args->theme_location == 'primary' )
-		$items .=  '<li class="my-nav-menu-search">' . get_search_form(false) . '</li>';
+		$items .=  '<li class="my-nav-menu-search"><a href="#search"><i class="fa fa-search"></i></a></li>';
 	return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+function SearchFilter($query) {
+	if ($query->is_search) {
+		$query->set('post_type', 'page');
+	}
+	return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
 
 add_action( 'walker_nav_menu_start_el', 'empty_nav_links_to_span', 10, 4 );
 function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {

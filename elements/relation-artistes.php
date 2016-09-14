@@ -59,12 +59,14 @@
 	// The Loop ?>
 	<?php if( $the_query->have_posts() ): $i = 0; ?>
 	  <div class="relation-artiste">
-	  	<hr>
-	  	<?php if (get_field('titre_actualites')): ?>
-		  	<div class="info">
-  				<h2><?= get_field('titre_actualites') ?></h2>
-  			</div>
-  		<?php endif; ?>
+	  	<?php if ($hideId === null): ?>
+	  		<hr>
+		  	<?php if (get_field('titre_actualites')): ?>
+			  	<div class="info">
+	  				<h2><?= get_field('titre_actualites') ?></h2>
+	  			</div>
+	  		<?php endif; ?>
+	  	<?php endif ?>
 			<div class="links contain">
 				<h3><?= __('Actualitées de l\'artiste') ?></h3>
 				<ul class="links-list">

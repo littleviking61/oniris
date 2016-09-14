@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
-	
+	<div class="wrap row">
+
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<header>
 				<h1 class="entry-title"><?php _e('File Not Found', 'reverie'); ?></h1>
@@ -21,6 +21,5 @@
 		</article>
 
 	</div>
-	<?php get_sidebar(); ?>
 		
 <?php get_footer(); ?>

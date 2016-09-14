@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 		var $abcd = 'abcd';
 		var $leave = false;
+		var search = $('.site-search');
 		// grab an element
 		var elem = document.querySelector("header[role='banner']");
 		// construct an instance of Headroom, passing the element
@@ -151,6 +152,12 @@ $(document).ready(function(){
 			if($abcd !== 'abcd') clearTimeout($abcd);
 			$abcd = setTimeout(function() {closeSub(true, onHover)}, 500);
 		});
+
+		$('nav.main li.my-nav-menu-search a, .site-search span.close').click(function(){
+			if(!search.hasClass('open')) $('input[type="text"]', search).focus();
+			search.toggleClass('open');
+			return false;
+		})
 
 		function closeSub(close, element) {
 			if (!close) {

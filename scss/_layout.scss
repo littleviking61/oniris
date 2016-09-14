@@ -105,6 +105,50 @@ header[role="banner"]{
 			}
 		}
 	}
+
+	.site-search{
+		@include single-transition(max-height, 0.4s);
+		overflow: hidden;
+		background-color: $lightest-grey;
+		width: 100%;
+		max-height: 0;
+		
+		&.open{
+			max-height: rem-calc(100);
+		}
+
+		form{
+			@extend %flex-column;
+			@include align-items(center);
+			margin: 0 auto;
+			font-size: $ft-size-large;
+
+			input[type="text"]{
+				@include flex-grow(1);
+				outline: 0;
+				text-align: center;
+				padding: $gutter-small $gutter;
+				border: none;
+			}
+
+			button[type="submit"], span.close{
+				@include appearance(none);
+				display: block;
+				background-color: transparent;
+				color: $light-grey;
+				font-size: $ft-size-larger;
+				padding: $gutter-small;
+				width: rem-calc(40);
+				text-align: center;
+				border: none;
+				outline: 0;
+				cursor: pointer;
+				&:hover{
+					color: $black;
+				}
+			}
+		}
+	}
 }
 
 
@@ -154,6 +198,7 @@ header[role="banner"]{
 main{
 	@include background-image(linear-gradient(white, $lightest-grey rem-calc(100)));
 	@extend %flex-column;
+	@include flex-grow(1);
 
 	width: 100%;
 

@@ -40,7 +40,7 @@ if($type){
 						};
 
 						// then open a row 
-						echo '<div class= "sep flex-12"></div>';
+						echo '<div class= "row '.get_sub_field('alignement').'">';
 					
 					elseif( get_row_layout() == 'col' ) :
 
@@ -85,15 +85,16 @@ if($type){
 
 					endif;
 
-					// to close div.row
-					if(isset($closeAfter) && $closeAfter == 0){
-							echo '</div>';
-							unset($closeAfter);
-					}
 
 					if(isset($closeColAfter) && $closeColAfter == 0){
 							echo '</div>';
 							unset($closeColAfter);
+					}
+
+					// to close div.row
+					if(isset($closeAfter) && $closeAfter == 0){
+							echo '</div>';
+							unset($closeAfter);
 					}
 
 			endwhile;

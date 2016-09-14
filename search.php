@@ -1,29 +1,33 @@
 <?php get_header(); ?>
 
 <!-- Row for main content area -->
-	<div class="small-12 large-8 columns" role="main">
+	<div class="wrap row">
 	
 		<h2><?php _e('Search Results for', 'reverie'); ?> "<?php echo get_search_query(); ?>"</h2>
 	
 	<?php if ( have_posts() ) : ?>
 	
 		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+			<div class="links row">
+				<ul>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<li class="link">
+							<a href="<?= get_permalink(); ?>" class="<?php the_field('category') ?>">
+								<?php if( get_field('page_type_acf') ): ?>
+									<h4><?= get_field('page_type_acf') ?> > <?= get_field('prenom') . ' ' . get_field('nom') ?></h3>
+								<?php else: ?>
+									<h4><?= get_the_title( ); ?></h4>
+								<?php endif ?>
+							</a>
+						</li>
+					<?php endwhile; ?>
+				</ul>
+			</div>
 		
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
+	<?php else : ?>
+		<h3><?= __('Désolé, la recherche n\'a donné aucun résultat.', 'reverie') ?></h3>
 		
 	<?php endif; // end have_posts() check ?>
-	
-	<?php /* Display navigation to next/previous pages when applicable */ ?>
-	<?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
-		</nav>
-	<?php } ?>
 
 	</div>
 	<?php get_sidebar(); ?>

@@ -660,6 +660,44 @@ header[role="banner"] {
       margin-left: auto; }
       header[role="banner"] .header-info .infos li {
         padding: 0.625rem 1.25rem; }
+  header[role="banner"] .site-search {
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -webkit-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    width: 100%;
+    max-height: 0; }
+    header[role="banner"] .site-search.open {
+      max-height: 6.25rem; }
+    header[role="banner"] .site-search form {
+      -webkit-align-items: center;
+      align-items: center;
+      margin: 0 auto;
+      font-size: 1rem; }
+      header[role="banner"] .site-search form input[type="text"] {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        outline: 0;
+        text-align: center;
+        padding: 0.3125rem 0.625rem;
+        border: none; }
+      header[role="banner"] .site-search form button[type="submit"], header[role="banner"] .site-search form span.close {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        display: block;
+        background-color: transparent;
+        color: #737373;
+        font-size: 1.125rem;
+        padding: 0.3125rem;
+        width: 2.5rem;
+        text-align: center;
+        border: none;
+        outline: 0;
+        cursor: pointer; }
+        header[role="banner"] .site-search form button[type="submit"]:hover, header[role="banner"] .site-search form span.close:hover {
+          color: #2d2d2d; }
 
 header[role="banner"] nav ul, aside .quick-nav ul {
   min-height: 2.125rem; }
@@ -743,6 +781,8 @@ main {
   background-image: -moz-linear-gradient(#ffffff, #f2f2f2 6.25rem);
   background-image: -webkit-linear-gradient(#ffffff, #f2f2f2 6.25rem);
   background-image: linear-gradient(#ffffff, #f2f2f2 6.25rem);
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
   width: 100%; }
   main .wrap {
     -webkit-flex: 1;
@@ -963,7 +1003,7 @@ header[role="banner"] .header-content .unbreak, .wrap > section .unbreak, .row .
   -webkit-flex-shrink: 0;
   flex-shrink: 0; }
 
-main, main .wrap, .wrap, footer.main .copyright .copyright-content, footer.main .copyright ul, header[role="banner"] .header-content, .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .events ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside .quick-nav ul, .button, button, a.button, .simple, .actus ul, .expositions .intro .detail {
+header[role="banner"] .site-search form, main, main .wrap, .wrap, footer.main .copyright .copyright-content, footer.main .copyright ul, header[role="banner"] .header-content, .wrap > section, .wrap > section > header, .row, .row > header, .filter-tools, .filter-tools .isotop-links, .videos ul, .links ul, .events ul, .liste-dartiste > ul, .list-page, header[role="banner"] nav ul, aside .quick-nav ul, .button, button, a.button, .simple, .actus ul, .expositions .intro .detail {
   display: -webkit-flex;
   display: flex; }
 
@@ -2756,20 +2796,20 @@ body > .fotorama-special {
 .show-for-small {
   display: none; }
 
-main > .wrap, .footer-content, .copyright-content, .header-content {
+main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content {
   max-width: 93.75rem; }
 
 @media only screen and (max-width: 100rem) {
-  main > .wrap, .footer-content, .copyright-content, .header-content {
+  main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content {
     max-width: 68.75rem; } }
 @media only screen and (max-width: 75rem) {
-  main > .wrap, .footer-content, .copyright-content, .header-content {
+  main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content {
     max-width: 57.75rem; } }
 @media only screen and (max-width: 64rem) {
-  main > .wrap, .footer-content, .copyright-content, .header-content {
+  main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content {
     max-width: 41.75rem; } }
 @media only screen and (max-width: 48rem) {
-  main > .wrap, .footer-content, .copyright-content, .header-content {
+  main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content {
     max-width: 22.5rem; } }
 @media only screen and (max-width: 48rem) {
   .show-for-medium {

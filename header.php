@@ -14,7 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	
 	<header class="main" role="banner">
 		<!-- Starting the nav -->
 		<div class="header-info">
@@ -29,6 +29,7 @@
 					<?php the_field('contenu_du_header', 'option'); ?>
 				</div>
 			</div>
+			<?php get_search_form(); ?>
 		</div>
         
 		<div class="header-content header-banner">

@@ -13,30 +13,30 @@ body > header, body > footer, body > main{
 	// max-width: $break-extra-large;
 }
 
-main > .wrap, .footer-content, .copyright-content, .header-content{
+main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 	max-width: $break-extra-large - rem-calc(100);
 }
 
 @media #{$extra-large-down}{
-	main > .wrap, .footer-content, .copyright-content, .header-content{
+	main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 		max-width: $break-large - rem-calc(100);
 	}
 }
 
 @media #{$large-down}{
-	main > .wrap, .footer-content, .copyright-content, .header-content{
+	main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 		max-width: $break-medium-large - rem-calc(100);
 	}
 }
 
 @media #{$medium-large-down}{
-	main > .wrap, .footer-content, .copyright-content, .header-content{
+	main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 		max-width: $break-medium - rem-calc(100);
 	}
 }
 
 @media #{$medium-down}{
-	main > .wrap, .footer-content, .copyright-content, .header-content{
+	main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 		max-width: $break-small - rem-calc(100);
 	}
 }
