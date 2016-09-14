@@ -153,7 +153,7 @@ $(document).ready(function(){
 			$abcd = setTimeout(function() {closeSub(true, onHover)}, 500);
 		});
 
-		$('nav.main li.my-nav-menu-search a, .site-search span.close').click(function(){
+		$('.my-nav-menu-search a, .site-search span.close').click(function(){
 			if(!search.hasClass('open')) $('input[type="text"]', search).focus();
 			search.toggleClass('open');
 			return false;
