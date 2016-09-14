@@ -27,6 +27,9 @@ main > .wrap, .site-search form, .footer-content, .copyright-content, .header-co
 	main > .wrap, .site-search form, .footer-content, .copyright-content, .header-content{
 		max-width: $break-medium-large - rem-calc(100);
 	}
+	*[class*="flex-"]:not(aside){
+		@include flex-basis(100%);
+	}
 }
 
 @media #{$medium-large-down}{

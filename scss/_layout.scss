@@ -37,7 +37,7 @@ header[role="banner"]{
 	}
 	
 	.header-banner{
-		padding: $gutter 0 $gutter-mini;
+		padding: $gutter $gutter $gutter-mini 0;
 	}
 
 	.banner{
@@ -212,8 +212,8 @@ main{
 aside{
 	padding-top: $gutter-medium;
 	// padding-left: $gutter-big;
-	padding-right: $gutter-large;
-	width: $aside-width;
+	//padding-right: $gutter-large;
+	//width: $aside-width;
 	z-index: 1;
 
 }
@@ -239,7 +239,7 @@ aside{
 	@include flex-wrap(wrap);
 	@include align-content(flex-start);
 	@include align-items(flex-start);
-	
+
 	>header:first-child{
 		width: 100%;
 		@extend %flex-column-center;

@@ -1,4 +1,4 @@
-<aside class="aside-artistes">
+<aside class="aside-artistes flex-3">
 
 	<section class="info">
 		<h2><?= get_field('prenom') . ' ' . get_field('nom') ?></h2>

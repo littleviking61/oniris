@@ -4,7 +4,7 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 
-				<div class="wrap row<?= ' '.get_field('page_type_acf') ?>">
+				<div class="wrap row<?= get_field('page_type_acf') ? ' ' . get_field('page_type_acf').' special' : '' ?>">
 					<?php 
 						if ( function_exists('yoast_breadcrumb') ) {
 							yoast_breadcrumb('<div class="breadcrumbs">','</div>');

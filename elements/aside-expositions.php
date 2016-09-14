@@ -3,7 +3,7 @@
 	$thumbnailSize = get_field('taille_de_limage') ?: 'medium';
 ?>
 
-<aside class="aside-expositions">
+<aside class="aside-expositions flex-3">
 
 	<section class="info">
 		<h2><?= get_field('nom') ?></h2>
